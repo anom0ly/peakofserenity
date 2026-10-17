@@ -493,9 +493,9 @@ def convert_post(item, authors):
         "slug": "/%s/%s/%s/%s" % (y, m, d, item["slug"]),
         "date": item["date"].replace(" ", "T"),
         "authors": [author_key(a) for a in author_keys(item, authors)],
-        "categories": specs,
-        "patches": patches,
-        "tags": tags,
+        # One tag list for authors: spec categories first, then patch numbers, then WordPress tags.
+        # /category/<name>/ URLs redirect to the matching /tag/<name>/ page.
+        "tags": dedupe(specs + patches + tags),
         "description": desc,
         "wp_id": int(item["id"]),
         "original_url": item["link"],
@@ -504,6 +504,15 @@ def convert_post(item, authors):
     if thumb:
         fm["image"] = rewrite_url(thumb, where)
     return "%s-%s.mdx" % (date, item["slug"]), fm, md
+
+
+def dedupe(names):
+    seen, out = set(), []
+    for n in names:
+        if n.lower() not in seen:
+            seen.add(n.lower())
+            out.append(n)
+    return out
 
 
 # ------------------------------------------------------------------ output
@@ -583,7 +592,9 @@ def main():
         used_authors.update(author_keys(it, authors))
         urlmap.append((SITE_RE.sub("", it["link"]), fm["slug"] + "/", "post", pid))
 
-    authors_yml = {author_key(n): {"name": n, "page": True} for n in sorted(used_authors, key=str.lower)}
+    # Every author account in the export (display names only), so new posts can pick anyone
+    everyone = set(authors.values()) | used_authors
+    authors_yml = {author_key(n): {"name": n, "page": n in used_authors} for n in sorted(everyone, key=str.lower)}
     with open(os.path.join(a.outdir, "blog", "authors.yml"), "w") as f:
         yaml.dump(authors_yml, f, sort_keys=False, allow_unicode=True)
 

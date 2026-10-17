@@ -60,7 +60,7 @@ def main():
         text += SECTION + "".join("- /wp-content/uploads/%s\n" % f for f in failed)
     open(review, "w").write(text)
     print("downloaded %d, failed %d, already present %d" % (got, len(failed), len(needed) - got - len(failed)))
-    return 1 if failed and not got else 0
+    return 1 if failed and len(failed) == len(needed) else 0
 
 
 if __name__ == "__main__":

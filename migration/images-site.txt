@@ -7,3 +7,5 @@
 2018/02/WW.png
 2018/07/Recent-Articles-Button.png
 2018/07/PvE-Guide-Button.png
+2018/02/No_margin_transparent.png
+2018/02/cropped-No_margin_transparent.png

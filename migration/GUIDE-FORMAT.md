@@ -28,7 +28,11 @@ Field values are Markdown. Two pieces of raw HTML are allowed inside tab fields:
 (`<span style="color: #339966">…</span>`, used for the talent-colour legend) and tables whose cells hold lists
 or images. Everything else is plain Markdown.
 
-What the site build still needs (next step): a guide layout that renders `intro`, then each group's heading,
-intro and `<Tabs>` in the order above, then the body; it also adds the group headings to the page's table of
-contents. Tab labels come from the guide-type config (`guide_type: windwalker-pve`), which `.pages.yml`
-uses for the editor's field labels too.
+The guide layout (`src/components/GuideTabs`, hooked in through `src/theme/DocItem/Content`) renders the
+banner, `intro`, then each group's heading, intro and tabs in the order above, then the body. The group
+headings are added to the table of contents (`src/theme/DocItem/TOC`). Tab labels and order come from
+`src/guideTypes.js` (`guide_type: windwalker-pve`); `.pages.yml` uses the same field names and labels.
+`last_update.date` is Docusaurus's own "Last updated" stamp.
+
+Adding another guide type: add an entry to `GUIDE_TAB_MAPS` in `tools/wp2mdx.py`, to `src/guideTypes.js`,
+and a matching set of fields to the Guides collection in `.pages.yml`.

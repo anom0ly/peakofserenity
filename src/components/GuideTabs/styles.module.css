@@ -1,0 +1,25 @@
+.banner {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  margin-bottom: 0;
+}
+
+.guide section {
+  margin-bottom: 2.5rem;
+}
+
+.guide :global(.tabs-container) {
+  border: 1px solid var(--pos-tab-border);
+  border-radius: 6px;
+  padding: 0 1rem 1rem;
+}
