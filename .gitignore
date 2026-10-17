@@ -1,0 +1,7 @@
+# WordPress export contains author emails; keep it in the project's shared folder only
+*.WordPress.*.xml
+migration/source/
+node_modules/
+.docusaurus/
+build/
+__pycache__/
