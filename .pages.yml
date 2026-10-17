@@ -1,5 +1,6 @@
 # Pages CMS configuration (https://pagescms.org). Authors sign in by email invite; every Save commits to
 # this repo and Cloudflare Pages rebuilds the site. Guide tab fields mirror src/guideTypes.js.
+# Checked against the Pages CMS docs (pagescms.org/docs) on 2026-10-17.
 media:
   input: static/img
   output: /img
@@ -30,11 +31,13 @@ content:
     label: Publish date
     type: date
     required: true
-    description: The date in the post address comes from this date when the post is first created.
+    description: When the post goes up. The post's web address uses the day you first create it.
+    options:
+      time: true
+      format: yyyy-MM-dd'T'HH:mm:ss
   - name: authors
     label: Author(s)
     type: select
-    list: true
     required: true
     options:
       values:
@@ -73,6 +76,7 @@ content:
       - total
       - xes
       - zuggie
+      multiple: true
     description: Pick yourself. Add co-authors if you wrote it together.
   - name: tags
     label: Tags
@@ -90,6 +94,8 @@ content:
   - name: body
     label: Post
     type: rich-text
+    options:
+      format: markdown
   - name: slug
     type: string
     hidden: true
@@ -101,6 +107,8 @@ content:
     hidden: true
   exclude:
   - authors.yml
+  operations:
+    rename: false
 - name: guides
   label: Guides
   type: collection
@@ -125,10 +133,11 @@ content:
     - name: date
       label: Date
       type: date
+      options:
+        format: yyyy-MM-dd
   - name: authors
     label: Authors
     type: select
-    list: true
     options:
       values:
       - abelito75
@@ -166,6 +175,7 @@ content:
       - total
       - xes
       - zuggie
+      multiple: true
   - name: description
     label: Short summary
     type: text
@@ -174,6 +184,8 @@ content:
     label: Introduction
     type: rich-text
     description: The text at the top of the guide, under the banner.
+    options:
+      format: markdown
   - name: builds
     label: Talent Builds
     type: object
@@ -186,33 +198,47 @@ content:
       label: Text above the tabs
       type: rich-text
       description: Optional. Shown between the heading and the tabs.
+      options:
+        format: markdown
     - name: classtree
       label: 'Tab: Class Tree'
       type: rich-text
       description: Everything shown when a reader clicks the "Class Tree" tab. Paste talent import strings exactly as they
         are.
+      options:
+        format: markdown
     - name: raid
       label: 'Tab: Raid'
       type: rich-text
       description: Everything shown when a reader clicks the "Raid" tab. Paste talent import strings exactly as they are.
+      options:
+        format: markdown
     - name: mythicplus
       label: 'Tab: Mythic+'
       type: rich-text
       description: Everything shown when a reader clicks the "Mythic+" tab. Paste talent import strings exactly as they are.
+      options:
+        format: markdown
     - name: delves
       label: 'Tab: Delves'
       type: rich-text
       description: Everything shown when a reader clicks the "Delves" tab. Paste talent import strings exactly as they are.
+      options:
+        format: markdown
     - name: flowchart
       label: 'Tab: Flowchart'
       type: rich-text
       description: Everything shown when a reader clicks the "Flowchart" tab. Paste talent import strings exactly as they
         are.
+      options:
+        format: markdown
     - name: omniumfolio
       label: 'Tab: Omnium Folio'
       type: rich-text
       description: Everything shown when a reader clicks the "Omnium Folio" tab. Paste talent import strings exactly as they
         are.
+      options:
+        format: markdown
   - name: cooldowns
     label: Abilities
     type: object
@@ -225,35 +251,49 @@ content:
       label: Text above the tabs
       type: rich-text
       description: Optional. Shown between the heading and the tabs.
+      options:
+        format: markdown
     - name: celestialconduit
       label: 'Tab: Celestial Conduit'
       type: rich-text
       description: Everything shown when a reader clicks the "Celestial Conduit" tab. Paste talent import strings exactly
         as they are.
+      options:
+        format: markdown
     - name: fortifyingbrew
       label: 'Tab: Fortifying Brew'
       type: rich-text
       description: Everything shown when a reader clicks the "Fortifying Brew" tab. Paste talent import strings exactly as
         they are.
+      options:
+        format: markdown
     - name: invokexuen
       label: 'Tab: Invoke Xuen'
       type: rich-text
       description: Everything shown when a reader clicks the "Invoke Xuen" tab. Paste talent import strings exactly as they
         are.
+      options:
+        format: markdown
     - name: touchofdeath
       label: 'Tab: Touch of Death'
       type: rich-text
       description: Everything shown when a reader clicks the "Touch of Death" tab. Paste talent import strings exactly as
         they are.
+      options:
+        format: markdown
     - name: touchofkarma
       label: 'Tab: Touch of Karma'
       type: rich-text
       description: Everything shown when a reader clicks the "Touch of Karma" tab. Paste talent import strings exactly as
         they are.
+      options:
+        format: markdown
     - name: zenith
       label: 'Tab: Zenith'
       type: rich-text
       description: Everything shown when a reader clicks the "Zenith" tab. Paste talent import strings exactly as they are.
+      options:
+        format: markdown
   - name: priority
     label: Priority Lists
     type: object
@@ -270,26 +310,36 @@ content:
         label: Text above the tabs
         type: rich-text
         description: Optional. Shown between the heading and the tabs.
+        options:
+          format: markdown
       - name: default_shadopan
         label: 'Tab: Default SP'
         type: rich-text
         description: Everything shown when a reader clicks the "Default SP" tab. Paste talent import strings exactly as they
           are.
+        options:
+          format: markdown
       - name: default_conduit
         label: 'Tab: Default Conduit'
         type: rich-text
         description: Everything shown when a reader clicks the "Default Conduit" tab. Paste talent import strings exactly
           as they are.
+        options:
+          format: markdown
       - name: advanced_shadopan
         label: 'Tab: Advanced Shado-Pan'
         type: rich-text
         description: Everything shown when a reader clicks the "Advanced Shado-Pan" tab. Paste talent import strings exactly
           as they are.
+        options:
+          format: markdown
       - name: advanced_conduit
         label: 'Tab: Advanced Conduit'
         type: rich-text
         description: Everything shown when a reader clicks the "Advanced Conduit" tab. Paste talent import strings exactly
           as they are.
+        options:
+          format: markdown
     - name: aoe
       label: AOE priority
       type: object
@@ -302,16 +352,22 @@ content:
         label: Text above the tabs
         type: rich-text
         description: Optional. Shown between the heading and the tabs.
+        options:
+          format: markdown
       - name: shadopan
         label: 'Tab: Shado-Pan'
         type: rich-text
         description: Everything shown when a reader clicks the "Shado-Pan" tab. Paste talent import strings exactly as they
           are.
+        options:
+          format: markdown
       - name: conduit
         label: 'Tab: Conduit of the Celestials'
         type: rich-text
         description: Everything shown when a reader clicks the "Conduit of the Celestials" tab. Paste talent import strings
           exactly as they are.
+        options:
+          format: markdown
   - name: openers
     label: Openers
     type: object
@@ -324,20 +380,28 @@ content:
       label: Text above the tabs
       type: rich-text
       description: Optional. Shown between the heading and the tabs.
+      options:
+        format: markdown
     - name: shadopan
       label: 'Tab: Shado-Pan'
       type: rich-text
       description: Everything shown when a reader clicks the "Shado-Pan" tab. Paste talent import strings exactly as they
         are.
+      options:
+        format: markdown
     - name: conduit
       label: 'Tab: Conduit of the Celestials'
       type: rich-text
       description: Everything shown when a reader clicks the "Conduit of the Celestials" tab. Paste talent import strings
         exactly as they are.
+      options:
+        format: markdown
   - name: body
     label: Rest of the guide
     type: rich-text
     description: 'Everything below the tabbed sections: ability notes, gearing, enchants, macros, changelog.'
+    options:
+      format: markdown
   - name: slug
     label: Page address
     type: string
@@ -352,10 +416,12 @@ content:
   - name: original_url
     type: string
     hidden: true
+  operations:
+    create: false
+    rename: false
+    delete: false
 - name: authors
   label: Authors
   type: file
   path: blog/authors.yml
   format: code
-  options:
-    language: yaml

@@ -20,7 +20,9 @@ _Last updated 2026-10-17._ Current phase: **1. Pilot**.
     spec hub pages for /tww/windwalker/, /tww/brewmaster/, /tww/mistweaver/, /mop/windwalker/
   - Wowhead tooltip script site-wide, re-scanned after each page change
   - `static/_redirects` with the retired Mistweaver guides, /category/ pages and the old /df/ and /sl/ links
-- `.pages.yml` for News Posts, Guides (every tab is a labelled field), Authors and `static/img`.
+- `.pages.yml` for News Posts, Guides (every tab is a labelled field), Authors and `static/img`, checked
+  against the Pages CMS docs. Posts can't be renamed (it would change their URL); guides can be edited but not
+  created, renamed or deleted from the editor.
 
 ## In progress
 - Nothing running.
@@ -28,8 +30,9 @@ _Last updated 2026-10-17._ Current phase: **1. Pilot**.
 ## Next
 - Owner: connect the repo to Cloudflare Pages (build `npm run build`, output `build`) and to Pages CMS, so the pilot
   can be previewed and 1–2 authors can test.
-- In the author test, check what Pages CMS's rich-text editor saves into `.mdx` files (Markdown or HTML), and that
-  talent strings and the coloured legend survive a save.
+- In the author test, check that a save in the rich-text editor (set to write Markdown) keeps talent strings, the
+  coloured talent legend (raw `<span>` HTML) and escaped `\{ \}` intact; an unescaped `{` in a `.mdx` body breaks
+  the build. If it doesn't, switch posts to `.md` with Docusaurus `markdown.format: 'detect'`.
 - Full conversion: remaining guides (each needs a guide type in `src/guideTypes.js` + `.pages.yml`), all posts,
   podcasts plus their archive page, generated redirects.
 - Compress images before the full download (33 pilot images are 37 MB).
