@@ -1,0 +1,18 @@
+# Cloudflare Pages redirects (max 2,000 static rules). Generated entries go below the hand-written ones.
+
+# WordPress category archives -> tag pages
+/category/windwalker/ /tag/windwalker/ 301
+/category/brewmaster/ /tag/brewmaster/ 301
+/category/mistweaver/ /tag/mistweaver/ 301
+/category/general/ /tag/general/ 301
+
+# Retired Mistweaver guides (decision 2026-10-17) -> current Mistweaver guide
+/tww/mistweaver/pve-guide-shadowlands/ /tww/mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-rising-mist/ /tww/mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-soothing-mist/ /tww/mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-thunder-focus-tea/ /tww/mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-renewing-mist/ /tww/mistweaver/pve-guide/ 301
+
+# Old expansion prefixes still linked from content
+/df/windwalker/pve-guide/references/ /tww/windwalker/pve-guide/references/ 301
+/sl/windwalker/pve-guide/advanced-tricks/ /tww/windwalker/pve-guide/advanced-tricks/ 301

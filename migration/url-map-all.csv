@@ -1,0 +1,569 @@
+old_url,new_url,type,wp_status,wp_id,title
+/,/,page,publish,10409,Peak of Serenity Home Page
+/2016/05/23/panda-on-legion-rsk-vs-bok-in-new-rotation/,/2016/05/23/panda-on-legion-rsk-vs-bok-in-new-rotation/,post,archive,1387,Panda on Legion  1: RSK vs BOK in Legion Rotation
+/2016/05/27/panda-on-legion-2-energy-management/,/2016/05/27/panda-on-legion-2-energy-management/,post,archive,1472,Panda on Legion 2: Energy Management
+/2016/06/03/panda-on-legion-3-relative-power-of-spells/,/2016/06/03/panda-on-legion-3-relative-power-of-spells/,post,archive,1506,Panda on Legion 3: Relative Power of Spells
+/2016/06/06/panda-in-legion-4-aoe-tools/,/2016/06/06/panda-in-legion-4-aoe-tools/,post,archive,1509,Panda in Legion 4: AoE Tools
+/2016/06/10/panda-in-legion-5-spinning-crane-krazyness/,/2016/06/10/panda-in-legion-5-spinning-crane-krazyness/,post,archive,1511,Panda in Legion 5: Spinning Crane Krazyness
+/2016/06/14/panda-on-legion-6-personal-feelingsopinions/,/2016/06/14/panda-on-legion-6-personal-feelingsopinions/,post,archive,1513,Panda on Legion 6: Personal Feelings/Opinions
+/2016/07/13/legion-mistweaver-faq/,/2016/07/13/legion-mistweaver-faq/,post,archive,3867,Legion Mistweaver FAQ
+/2016/07/13/legion-mistweaving-guide-legendaries/,/2016/07/13/legion-mistweaving-guide-legendaries/,post,archive,3866,Legion Mistweaving Guide - Legendaries
+/2016/07/22/post-prepatch-hype/,/2016/07/22/post-prepatch-hype/,post,archive,1968,Post Prepatch Hype
+/2016/07/24/mistweavers-and-our-melee-immunity/,/2016/07/24/mistweavers-and-our-melee-immunity/,post,archive,3863,Mistweavers and Our Melee Immunity
+/2016/07/26/spotlight-hit-combo-and-mastery/,/2016/07/26/spotlight-hit-combo-and-mastery/,post,publish,1979,Spotlight: Hit Combo and Mastery
+/2016/07/31/windwalkers-rotation-ressources-versus-cooldowns/,/2016/07/31/windwalkers-rotation-ressources-versus-cooldowns/,post,archive,2008,Rotation: Resources vs Cooldowns
+/2016/08/08/mistweaver-legendaries-an-in-depth-look/,/2016/08/08/mistweaver-legendaries-an-in-depth-look/,post,archive,3862,Mistweaver Legendaries: An In-Depth Look
+/2016/08/17/serenity-theorycrafting/,/2016/08/17/serenity-theorycrafting/,post,archive,2124,Serenity: Theorycrafting
+/2016/08/18/serenity-quick-guide/,/2016/08/18/serenity-quick-guide/,post,archive,2180,"Serenity: ""Quick"" Guide"
+/2016/08/20/spinning-crane-kick-theorycrafting/,/2016/08/20/spinning-crane-kick-theorycrafting/,post,publish,2200,Spinning Crane Kick: Theorycrafting
+/2016/09/14/spotlight-storm-earth-and-fire/,/2016/09/14/spotlight-storm-earth-and-fire/,post,publish,2379,"Spotlight: Storm, Earth, and Fire"
+/2016/09/14/stat-weights-and-you/,/2016/09/14/stat-weights-and-you/,post,publish,2385,Stat Weights and You
+/2016/09/18/gear-basics/,/2016/09/18/gear-basics/,post,archive,2435,Gear Basics
+/2016/10/02/legion-sims-10-1-trinkets-food-potions-and-talents/,/2016/10/02/legion-sims-10-1-trinkets-food-potions-and-talents/,post,archive,2498,"Legion Sims 10.1: Trinkets, Food, Potions, and Talents"
+/2016/10/08/windwalker-in-emerald-nightmare/,/2016/10/08/windwalker-in-emerald-nightmare/,post,archive,2528,Windwalker in Emerald Nightmare
+/2016/10/11/what-is-up-with-sef-and-serenity/,/2016/10/11/what-is-up-with-sef-and-serenity/,post,archive,2581,What is up with SEF and Serenity?
+/2016/10/15/encounter-guides-have-been-added/,/2016/10/15/encounter-guides-have-been-added/,post,archive,2622,Encounter Guides Have Been Added!
+/2016/10/15/simulations-what-are-they/,/2016/10/15/simulations-what-are-they/,post,publish,2470,Simulations: What Are They?
+/2016/10/16/legendaries/,/2016/10/16/legendaries/,post,archive,2637,Legendaries
+/2016/10/23/legion-sims-10-22-races-potions-and-gear-compendium/,/2016/10/23/legion-sims-10-22-races-potions-and-gear-compendium/,post,archive,2717,"Legion Sims: 10.22: Races, Potions, and Gear Compendium"
+/2016/11/06/legion-sims-11-6-simyoself-relic-trinkets/,/2016/11/06/legion-sims-11-6-simyoself-relic-trinkets/,post,archive,2768,"Legion Sims 11.6 - SimYoSelf, Relic, Trinkets"
+/2016/11/22/mythic-plus-vs-raids-and-ww-scaling/,/2016/11/22/mythic-plus-vs-raids-and-ww-scaling/,post,archive,2892,Mythic Plus vs Raids and WW Scaling
+/2016/11/30/ptr-7-1-5-notes-nov-29-part-2/,/2016/11/30/ptr-7-1-5-notes-nov-29-part-2/,post,archive,2932,PTR: 7.1.5 Notes (Nov 29) Part 2
+/2016/11/30/ptr-7-1-5-notes-nov-29/,/2016/11/30/ptr-7-1-5-notes-nov-29/,post,publish,2924,PTR: 7.1.5 Notes (Nov 29)
+/2016/12/01/ptr-7-1-5-nov-30-part-3-serenity-changes/,/2016/12/01/ptr-7-1-5-nov-30-part-3-serenity-changes/,post,archive,2937,PTR 7.1.5 (Nov 30) Part 3: Serenity Changes
+/2016/12/06/ptr-7-1-5-build-23178-changes-and-communication/,/2016/12/06/ptr-7-1-5-build-23178-changes-and-communication/,post,archive,2970,PTR 7.1.5 (Build 23178) Changes and Communication
+/2016/12/06/ptr-7-1-5-build-23178-part-2-moar-changes/,/2016/12/06/ptr-7-1-5-build-23178-part-2-moar-changes/,post,archive,2982,PTR 7.1.5 (Build 23178) Part 2: Moar Changes
+/2016/12/07/blizz-qa-what-matters-to-ww/,/2016/12/07/blizz-qa-what-matters-to-ww/,post,archive,2984,Blizz Q&A: What matters to WW
+/2016/12/12/legion-sims-12-11-relics-i-done-goofed/,/2016/12/12/legion-sims-12-11-relics-i-done-goofed/,post,archive,2997,Legion Sims 12.11 - Relics (I done goofed)
+/2016/12/14/mistweaver-tldr-raid/,/2016/12/14/mistweaver-tldr-raid/,post,archive,3858,Mistweaver TL;DR - Raid
+/2016/12/15/ptr-7-1-5-build-23244-spell-and-legendary-updates/,/2016/12/15/ptr-7-1-5-build-23244-spell-and-legendary-updates/,post,archive,3003,PTR 7.1.5 (Build 23244) Spell and Legendary Updates
+/2016/12/23/ptr-7-1-5-dec-22-aura-and-xuen-buffs/,/2016/12/23/ptr-7-1-5-dec-22-aura-and-xuen-buffs/,post,archive,3022,PTR 7.1.5 (Dec 22) - Aura and Xuen Buffs
+/2016/12/29/legion-sims-12-28-the-path-to-7-1-5/,/2016/12/29/legion-sims-12-28-the-path-to-7-1-5/,post,archive,3034,Legion Sims 12.28 - The Path to 7.1.5
+/2016/12/31/legion-sims-12-31-path-to-7-1-5-round-2/,/2016/12/31/legion-sims-12-31-path-to-7-1-5-round-2/,post,archive,3055,Legion Sims 12.31 - Path to 7.1.5: Round 2
+/2017/01/07/7-1-5-guide-changelog/,/2017/01/07/7-1-5-guide-changelog/,post,archive,3081,7.1.5 Guide Changelog
+/2017/01/07/storm-earth-and-fire-is-fixed/,/2017/01/07/storm-earth-and-fire-is-fixed/,post,archive,3072,Storm Earth and Fire is FIXED!!
+/2017/01/09/7-1-5-sim-extravaganza-part-1/,/2017/01/09/7-1-5-sim-extravaganza-part-1/,post,archive,3121,7.1.5 Sim-Extravaganza: Part 1
+/2017/01/09/patch-7-1-5-for-mistweaver/,/2017/01/09/patch-7-1-5-for-mistweaver/,post,archive,3857,Patch 7.1.5 for Mistweaver
+/2017/01/11/7-1-5-sim-extravaganza-2/,/2017/01/11/7-1-5-sim-extravaganza-2/,post,archive,3152,7.1.5 Sim-Extravaganza 2.0
+/2017/01/22/ptr-7-2-new-stuff/,/2017/01/22/ptr-7-2-new-stuff/,post,archive,3292,PTR 7.2 - New Stuff
+/2017/01/25/jan-23-trinket-changes-part-2/,/2017/01/25/jan-23-trinket-changes-part-2/,post,archive,3428,Jan 23 Trinket Changes: Part 2
+/2017/01/25/jan-23-trinket-changes/,/2017/01/25/jan-23-trinket-changes/,post,archive,3407,Jan 23 Trinket Changes
+/2017/02/05/legendary-tierlist-and-qa/,/2017/02/05/legendary-tierlist-and-qa/,post,archive,3504,Legendary Tierlist and Q&A
+/2017/02/20/7-2-ptr-changes/,/2017/02/20/7-2-ptr-changes/,post,archive,3856,7.2 PTR Changes
+/2017/02/22/7-2-ptr-builds-2357823623-catching-up/,/2017/02/22/7-2-ptr-builds-2357823623-catching-up/,post,archive,3553,"7.2 PTR, Spreadsheet, and Videos - Catching Up"
+/2017/02/24/teachings-of-the-red-crane-mistweaver-spreadsheet/,/2017/02/24/teachings-of-the-red-crane-mistweaver-spreadsheet/,post,archive,3855,Teachings of the Red Crane - Mistweaver Spreadsheet
+/2017/03/16/7-2-ptr-build-23758-legendary-changes/,/2017/03/16/7-2-ptr-build-23758-legendary-changes/,post,archive,4396,7.2 PTR Build 23758 – Legendary Changes
+/2017/03/19/ptr-build-7-2-0-23789-mistweaver-legendary-changes/,/2017/03/19/ptr-build-7-2-0-23789-mistweaver-legendary-changes/,post,archive,4488,PTR Build 7.2.0.23789 - Mistweaver Legendary Changes
+/2017/03/27/first-post/,/2017/03/27/first-post/,post,archive,5706,First Post?
+/2017/03/27/windwalkers-in-7-2/,/2017/03/27/windwalkers-in-7-2/,post,archive,5516,Windwalkers in 7.2
+/2017/03/28/mathweaving-cooldown-reductions/,/2017/03/28/mathweaving-cooldown-reductions/,post,archive,5922,Mathweaving: External Cooldown Reductions and Why They Shouldn't Be Stacked
+/2017/04/08/ww-content-updates-april-4/,/2017/04/08/ww-content-updates-april-4/,post,archive,6140,WW Content Updates - April 4
+/2017/04/09/windwalker-and-scaling-looking-back-at-nighthold/,/2017/04/09/windwalker-and-scaling-looking-back-at-nighthold/,post,publish,6179,Windwalker and Scaling: Looking back at Nighthold
+/2017/04/09/windwalker-and-scaling/,/2017/04/09/windwalker-and-scaling/,post,publish,6163,Windwalker and scaling: a comparison with demon hunters
+/2017/04/10/brewmaster-changes-in-7-2-5-summary/,/2017/04/10/brewmaster-changes-in-7-2-5-summary/,post,archive,6257,Brewmaster changes in 7.2.5 Summary
+/2017/04/12/mistweaver-artifact-challenge/,/2017/04/12/mistweaver-artifact-challenge/,post,archive,6388,Mistweaver Artifact Challenge Guide
+/2017/04/12/ptr-changes-for-mistweaver-7-2-5/,/2017/04/12/ptr-changes-for-mistweaver-7-2-5/,post,archive,6380,PTR changes for Mistweaver (7.2.5)
+/2017/04/12/windwalker-artifact-challenge-guide/,/2017/04/12/windwalker-artifact-challenge-guide/,post,publish,6342,Windwalker Artifact Challenge Guide
+/2017/04/13/mistweaver-ptr-update/,/2017/04/13/mistweaver-ptr-update/,post,archive,6417,Mistweaver PTR update
+/2017/04/13/windwalkers-7-2-5-ptr-april-13/,/2017/04/13/windwalkers-7-2-5-ptr-april-13/,post,archive,6412,Windwalkers 7.2.5 PTR - April 13
+/2017/04/15/mistweavers-7-2-5-april-13/,/2017/04/15/mistweavers-7-2-5-april-13/,post,archive,6411,Mistweavers 7.2.5 PTR - April 13
+/2017/04/18/lament-of-the-windwalkers-mastery/,/2017/04/18/lament-of-the-windwalkers-mastery/,post,publish,6265,Lament of the Windwalkers: Mastery
+/2017/04/20/lament-of-the-windwalker-the-incident/,/2017/04/20/lament-of-the-windwalker-the-incident/,post,publish,6456,Lament of the Windwalker: The Incident
+/2017/04/22/lament-of-the-windwalker-the-present/,/2017/04/22/lament-of-the-windwalker-the-present/,post,publish,6444,Lament of the Windwalker: AOE vs ST
+/2017/04/26/7-2-5-ptr-mistweaver-changes-build-23993-april-26/,/2017/04/26/7-2-5-ptr-mistweaver-changes-build-23993-april-26/,post,archive,6551,7.2.5 PTR Mistweaver Changes - Build 23993 (April 26)
+/2017/04/26/windwalkers-7-2-5-ptr-build-23993-april-26/,/2017/04/26/windwalkers-7-2-5-ptr-build-23993-april-26/,post,archive,6548,Windwalkers 7.2.5 PTR Build 23993 - April 26
+/2017/05/02/7-2-5-ptr-mistweaver-changes-build-24026-may-2/,/2017/05/02/7-2-5-ptr-mistweaver-changes-build-24026-may-2/,post,archive,6592,7.2.5 PTR Mistweaver Changes - Build 24026 (May 2)
+/2017/05/04/the-wonderful-world-of-warcraft-logs/,/2017/05/04/the-wonderful-world-of-warcraft-logs/,post,archive,6615,The wonderful world (of Warcraft) logs
+/2017/05/05/the-emperors-capacitor-when-why-and-how-to-use-it/,/2017/05/05/the-emperors-capacitor-when-why-and-how-to-use-it/,post,publish,6651,"The emperor's capacitor - When, why and how to use it"
+/2017/05/09/7-2-5-mistweaver-ptr-changes-build-24076-may-09/,/2017/05/09/7-2-5-mistweaver-ptr-changes-build-24076-may-09/,post,archive,6699,7.2.5 Mistweaver PTR Changes - Build 24076 (May 09)
+/2017/05/09/windwalkers-7-2-5-ptr-build-24076-may-9/,/2017/05/09/windwalkers-7-2-5-ptr-build-24076-may-9/,post,archive,6700,Windwalkers 7.2.5 PTR Build 24076 – May 9
+/2017/05/10/summertime-babs/,/2017/05/10/summertime-babs/,post,archive,6715,Summertime Babs
+/2017/05/13/windwalker-tier-bonuses/,/2017/05/13/windwalker-tier-bonuses/,post,archive,6723,Windwalker Tier Bonuses
+/2017/05/16/7-2-5-mistweaver-ptr-changes-build-24116-may-16/,/2017/05/16/7-2-5-mistweaver-ptr-changes-build-24116-may-16/,post,archive,6851,7.2.5 Mistweaver PTR Changes - Build 24116 (May 16)
+/2017/05/16/windwalkers-7-2-5-ptr-build-24116-may-16/,/2017/05/16/windwalkers-7-2-5-ptr-build-24116-may-16/,post,archive,6849,Windwalkers 7.2.5 PTR Build 24116 – May 16
+/2017/05/24/7-2-5-mistweaver-ptr-changes-build-24163-may-24/,/2017/05/24/7-2-5-mistweaver-ptr-changes-build-24163-may-24/,post,archive,6908,7.2.5 Mistweaver PTR Changes - Build 24163 (May 24)
+/2017/05/24/windwalkers-7-2-5-ptr-build-24163-may-24/,/2017/05/24/windwalkers-7-2-5-ptr-build-24163-may-24/,post,archive,6905,Windwalkers 7.2.5 PTR Build 24163 – May 24
+/2017/05/29/windwalker-ptr-testing-may-28/,/2017/05/29/windwalker-ptr-testing-may-28/,post,archive,6938,Windwalker PTR Testing - May 28
+/2017/05/30/lets-talk-about-stagger/,/2017/05/30/lets-talk-about-stagger/,post,archive,6924,Let's talk about stagger
+/2017/05/31/7-2-5-mistweaver-ptr-changes-build-24218-may-31/,/2017/05/31/7-2-5-mistweaver-ptr-changes-build-24218-may-31/,post,archive,6974,7.2.5 Mistweaver PTR Changes - Build 24218 (May 31)
+/2017/06/04/windwalkers-in-7-2-5-compiled-changes/,/2017/06/04/windwalkers-in-7-2-5-compiled-changes/,post,archive,6983,Windwalkers in 7.2.5: Compiled Changes
+/2017/06/08/mistweavers-in-7-2-5-all-changes/,/2017/06/08/mistweavers-in-7-2-5-all-changes/,post,archive,7143,Mistweavers in 7.2.5 - All Changes That Are Going Live
+/2017/06/13/brewing-mastery-7-2-5-changes-thoughts/,/2017/06/13/brewing-mastery-7-2-5-changes-thoughts/,post,archive,7178,Brewing Mastery - 7.2.5 Changes & Thoughts
+/2017/06/13/windwalker-june-13-hotfixes/,/2017/06/13/windwalker-june-13-hotfixes/,post,archive,7228,Windwalker June 13 Hotfixes
+/2017/06/14/core-gameplay-and-when-its-detrimental-to-non-healers/,/2017/06/14/core-gameplay-and-when-its-detrimental-to-non-healers/,post,archive,7236,"Core gameplay, and when it's detrimental (to non-healers)"
+/2017/06/16/going-into-7-2-5-as-a-windwalker-competitive/,/2017/06/16/going-into-7-2-5-as-a-windwalker-competitive/,post,archive,7303,Going into 7.2.5 as a windwalker (competitive)
+/2017/06/16/walking-the-wind-in-tomb-week-1/,/2017/06/16/walking-the-wind-in-tomb-week-1/,post,archive,7332,Walking the Wind in Tomb: Week 1
+/2017/06/18/understanding-windwalker-priorities/,/2017/06/18/understanding-windwalker-priorities/,post,publish,7347,Understanding Windwalker Priorities
+/2017/06/20/serenity-and-you-tomb-of-sargeras/,/2017/06/20/serenity-and-you-tomb-of-sargeras/,post,archive,7398,Serenity and You: Tomb of Sargeras
+/2017/06/23/post-ama-discussion/,/2017/06/23/post-ama-discussion/,post,archive,7421,Post AMA Discussion
+/2017/06/24/post-ama-discussion-round-2/,/2017/06/24/post-ama-discussion-round-2/,post,archive,7433,Post AMA Discussion: Round 2
+/2017/06/26/class-tuning-june-27th-windwalker-buffs/,/2017/06/26/class-tuning-june-27th-windwalker-buffs/,post,archive,7472,Class Tuning: June 27th - Windwalker Buffs
+/2017/07/04/hacking-and-raiding-and-scaling/,/2017/07/04/hacking-and-raiding-and-scaling/,post,archive,7518,"Hacking, Raiding, and Scaling"
+/2017/07/06/7-3-ptr-build-24500-tier-21-bonuses/,/2017/07/06/7-3-ptr-build-24500-tier-21-bonuses/,post,archive,7532,7.3 PTR Build 24500 - Tier 21 Bonuses
+/2017/07/09/windwalker-scaling/,/2017/07/09/windwalker-scaling/,post,publish,7515,Windwalker Scaling
+/2017/07/12/windwalker-stat-scaling-some-solutions/,/2017/07/12/windwalker-stat-scaling-some-solutions/,post,archive,7644,Windwalker Stat Scaling - Some Solutions
+/2017/07/15/tomb-of-sargeras-faq-windwalker/,/2017/07/15/tomb-of-sargeras-faq-windwalker/,post,archive,7657,Tomb of sargeras FAQ - Windwalker
+/2017/07/17/getting-the-feral-treatment/,/2017/07/17/getting-the-feral-treatment/,post,archive,7662,"Getting the ""Feral Treatment""?"
+/2017/07/18/7-3-mistweaver-ptr-changes-build-24608-july-18/,/2017/07/18/7-3-mistweaver-ptr-changes-build-24608-july-18/,post,archive,7671,7.3 Mistweaver PTR Changes - Build 24608 (July 18)
+/2017/07/18/7-3-ptr-build-24608-set-bonuses-round-2/,/2017/07/18/7-3-ptr-build-24608-set-bonuses-round-2/,post,archive,7669,7.3 PTR Build 24608 - Set Bonuses Round 2
+/2017/08/01/7-3-ptr-build-24727-baking-and-buffs/,/2017/08/01/7-3-ptr-build-24727-baking-and-buffs/,post,archive,7856,7.3 PTR Build 24727 - Baking and Buffs
+/2017/08/04/the-limit-of-windwalking-interview-with-notxes/,/2017/08/04/the-limit-of-windwalking-interview-with-notxes/,post,archive,7875,The LIMIT of Windwalking: Interview with NotXes
+/2017/08/13/shedding-netherlight-on-the-nether-crucible/,/2017/08/13/shedding-netherlight-on-the-nether-crucible/,post,publish,8003,Shedding (Nether)Light on the Nether Crucible
+/2017/08/18/7-3-ptr-build-24853-omg-nerfed/,/2017/08/18/7-3-ptr-build-24853-omg-nerfed/,post,archive,8017,7.3 PTR Build 24853 - OMG NERFED!!
+/2017/08/23/7-3-patch-notes-and-more/,/2017/08/23/7-3-patch-notes-and-more/,post,archive,8022,7.3 Patch Notes and more
+/2017/09/08/buffed-then-nerfed-now-buffed-more/,/2017/09/08/buffed-then-nerfed-now-buffed-more/,post,archive,8151,"Buffed then Nerfed, now Buffed more?"
+/2017/09/17/simulationcraft-and-windwalkers-opportunities-and-errors/,/2017/09/17/simulationcraft-and-windwalkers-opportunities-and-errors/,post,publish,8181,Simulationcraft and Windwalkers - Opportunities and Errors
+/2017/09/20/babstrodamus-7-3-5-prognostication/,/2017/09/20/babstrodamus-7-3-5-prognostication/,post,archive,8216,Babstrodamus: 7.3.5 Prognostication
+/2017/09/28/simulationcraft-and-windwalkers-a-little-extra/,/2017/09/28/simulationcraft-and-windwalkers-a-little-extra/,post,publish,8238,Simulationcraft and Windwalkers - A little extra
+/2017/10/16/stat-weights-and-you-round-2/,/2017/10/16/stat-weights-and-you-round-2/,post,publish,8284,Stat Weights and You: Round 2
+/2017/10/17/7-3-2-ptr-build-25326-well-thats-one-way/,/2017/10/17/7-3-2-ptr-build-25326-well-thats-one-way/,post,archive,8289,"7.3.2 PTR Build 25326 - Well, that's one way..."
+/2017/10/20/7-3-2-ptr-impressions/,/2017/10/20/7-3-2-ptr-impressions/,post,archive,8294,7.3.2 PTR Impressions
+/2017/10/20/my-essay-to-blizzard/,/2017/10/20/my-essay-to-blizzard/,post,archive,8296,My Essay to Blizzard
+/2017/10/22/windwalker-t21-eureka/,/2017/10/22/windwalker-t21-eureka/,post,archive,8312,Windwalker t21; Eureka?
+/2017/10/24/7-3-2-patch-notes/,/2017/10/24/7-3-2-patch-notes/,post,archive,8315,7.3.2 Patch Notes
+/2017/10/26/windwalker-hotfixes-oct-26/,/2017/10/26/windwalker-hotfixes-oct-26/,post,archive,8320,Windwalker Hotfixes Oct 26
+/2017/11/02/m-talk-with-jasonbrew/,/2017/11/02/m-talk-with-jasonbrew/,post,archive,8339,M+ talk with Jason (Zqs)
+/2017/11/04/battle-for-azeroth-windwalker-wishlist-abilities/,/2017/11/04/battle-for-azeroth-windwalker-wishlist-abilities/,post,publish,8415,Battle for Azeroth Windwalker Wishlist: Abilities
+/2017/11/04/battle-for-azeroth-windwalker-wishlist-miscellaneous/,/2017/11/04/battle-for-azeroth-windwalker-wishlist-miscellaneous/,post,publish,8423,Battle for Azeroth Windwalker Wishlist: Artifacts and Miscellaneous
+/2017/11/04/battle-for-azeroth-windwalker-wishlist-stats/,/2017/11/04/battle-for-azeroth-windwalker-wishlist-stats/,post,publish,8377,Battle for Azeroth Windwalker Wishlist: Stats
+/2017/11/04/battle-for-azeroth-windwalker-wishlist-talents/,/2017/11/04/battle-for-azeroth-windwalker-wishlist-talents/,post,publish,8421,Battle for Azeroth Windwalker Wishlist: Talents
+/2017/11/20/windwalker-in-antorus-what-do-i-need-to-know/,/2017/11/20/windwalker-in-antorus-what-do-i-need-to-know/,post,publish,8471,Windwalker in Antorus: What Do I Need to Know?
+/2017/11/23/mistweavers-in-antorus-the-burning-throne/,/2017/11/23/mistweavers-in-antorus-the-burning-throne/,post,publish,8510,"Mistweavers in Antorus, the Burning Throne"
+/2017/11/28/introducing-the-windwalker-wow-analyzer/,/2017/11/28/introducing-the-windwalker-wow-analyzer/,post,publish,8635,Introducing the Windwalker WoW Analyzer!
+/2017/12/02/storm-earth-and-fire-in-antorus/,/2017/12/02/storm-earth-and-fire-in-antorus/,post,publish,8654,"Storm, Earth, and Fire in Antorus"
+/2017/12/04/antorus-class-tuning/,/2017/12/04/antorus-class-tuning/,post,publish,8671,Antorus Class Tuning
+/2017/12/23/antorus-news-state-of-windwalker-what-is-going-on/,/2017/12/23/antorus-news-state-of-windwalker-what-is-going-on/,post,publish,8738,"Antorus news: state of windwalker, what is going on"
+/2018/01/15/windwalker-in-7-3-5-what-you-need-to-know/,/2018/01/15/windwalker-in-7-3-5-what-you-need-to-know/,post,publish,8760,Windwalker in 7.3.5; What you need to know
+/2018/01/21/final-additions-for-legion/,/2018/01/21/final-additions-for-legion/,post,publish,8921,Final Additions for Legion
+/2018/01/25/omg-8-0-1-build-25902/,/2018/01/25/omg-8-0-1-build-25902/,post,publish,9015,OMG 8.0.1!! Build 25902
+/2018/02/09/battle-for-azeroth-26010-updates-and-class-changes/,/2018/02/09/battle-for-azeroth-26010-updates-and-class-changes/,post,publish,9088,Battle for Azeroth 26010 Updates and Class Changes
+/2018/02/11/battle-for-azeroth-alpha/,/2018/02/11/battle-for-azeroth-alpha/,post,archive,9115,Battle for Azeroth Alpha
+/2018/02/11/new-mw-content-in-the-pipeline/,/2018/02/11/new-mw-content-in-the-pipeline/,post,archive,9139,New MW content in the pipeline!
+/2018/02/15/battle-for-azeroth-dungeon-overview-freehold/,/2018/02/15/battle-for-azeroth-dungeon-overview-freehold/,post,publish,9209,Battle for Azeroth: Dungeon Overview - Freehold
+/2018/02/16/first-look-at-mistweaver-in-battle-for-azeroth-8-0-1-build-26032/,/2018/02/16/first-look-at-mistweaver-in-battle-for-azeroth-8-0-1-build-26032/,post,publish,9226,First Look at Mistweaver in Battle for Azeroth (8.0.1 Build 26032)
+/2018/02/18/battle-for-azeroth-dungeon-overview-ataldazar/,/2018/02/18/battle-for-azeroth-dungeon-overview-ataldazar/,post,publish,9285,Battle for Azeroth: Dungeon Overview - Atal'Dazar
+/2018/03/01/reaching-peak-bfa-site-improvements/,/2018/03/01/reaching-peak-bfa-site-improvements/,post,publish,9342,Reaching the Peak in BfA; Site Improvements
+/2018/03/18/catching-up-on-alpha-builds-26095-and-26231/,/2018/03/18/catching-up-on-alpha-builds-26095-and-26231/,post,publish,9505,Catching up on Alpha: Builds 26095 and 26231
+/2018/03/23/windwalker-changes-battle-for-azeroth-alpha-build-26287/,/2018/03/23/windwalker-changes-battle-for-azeroth-alpha-build-26287/,post,publish,9568,Windwalker Changes: Battle for Azeroth Alpha Build 26287
+/2018/03/31/windwalker-alpha-talent-impressions/,/2018/03/31/windwalker-alpha-talent-impressions/,post,publish,9592,Windwalker Alpha: Talent Impressions
+/2018/04/04/windwalker-changes-battle-for-azeroth-build-26367/,/2018/04/04/windwalker-changes-battle-for-azeroth-build-26367/,post,publish,9620,Windwalker Changes: Battle for Azeroth Build 26367
+/2018/04/13/mistweaver-changes-battle-for-azeroth-alpha-build-26433/,/2018/04/13/mistweaver-changes-battle-for-azeroth-alpha-build-26433/,post,publish,9618,Mistweaver Changes: Battle for Azeroth Alpha Build 26433
+/2018/04/13/windwalker-alpha-build-26433-and-raid-testing/,/2018/04/13/windwalker-alpha-build-26433-and-raid-testing/,post,publish,9650,Windwalker Alpha: Build 26433 and Raid Testing
+/2018/04/20/mistweaver-changes-battle-for-azeroth-alpha-build-26476/,/2018/04/20/mistweaver-changes-battle-for-azeroth-alpha-build-26476/,post,publish,9679,Mistweaver Changes: Battle For Azeroth Alpha Build 26476
+/2018/04/20/upper-karazhan/,/2018/04/20/upper-karazhan/,post,publish,9708,Upper Karazhan
+/2018/04/20/windwalker-alpha-build-26476-talent-shuffle/,/2018/04/20/windwalker-alpha-build-26476-talent-shuffle/,post,publish,9681,Windwalker Alpha: Build 26476 - Talent Shuffle
+/2018/04/21/court-of-stars/,/2018/04/21/court-of-stars/,post,publish,9774,Court of Stars
+/2018/04/21/halls-of-valor/,/2018/04/21/halls-of-valor/,post,publish,9754,Halls of Valor
+/2018/04/21/maw-of-souls/,/2018/04/21/maw-of-souls/,post,publish,9761,Maw of Souls
+/2018/04/22/lower-karazhan/,/2018/04/22/lower-karazhan/,post,publish,9800,Lower Karazhan
+/2018/04/22/neltharions-lair/,/2018/04/22/neltharions-lair/,post,publish,9780,Neltharion's Lair
+/2018/04/22/the-arcway/,/2018/04/22/the-arcway/,post,publish,9784,The Arcway
+/2018/04/29/windwalker-beta-dungeon-impressions/,/2018/04/29/windwalker-beta-dungeon-impressions/,post,publish,9824,Windwalker Beta: Dungeon Impressions
+/2018/04/30/mistweaver-changes-battle-for-azeroth-beta-build-26522/,/2018/04/30/mistweaver-changes-battle-for-azeroth-beta-build-26522/,post,publish,9834,Mistweaver Changes: Battle for Azeroth Beta Build 26522
+/2018/05/03/eye-of-azshara/,/2018/05/03/eye-of-azshara/,post,publish,9862,Eye of Azshara
+/2018/05/06/windwalker-beta-raid-testing-pt-2/,/2018/05/06/windwalker-beta-raid-testing-pt-2/,post,publish,9876,Windwalker Beta: Raid Testing pt 2
+/2018/05/08/mistweaver-changes-battle-for-azeroth-beta-build-26567/,/2018/05/08/mistweaver-changes-battle-for-azeroth-beta-build-26567/,post,publish,9895,Mistweaver Changes: Battle for Azeroth Beta Build 26567
+/2018/05/10/windwalker-bfa-theorycrafting-3-questions/,/2018/05/10/windwalker-bfa-theorycrafting-3-questions/,post,publish,9924,Windwalker BfA Theorycrafting; 3 Questions.
+/2018/05/24/windwalker-beta-build-26707/,/2018/05/24/windwalker-beta-build-26707/,post,publish,10048,Windwalker Beta: Build 26707
+/2018/05/31/mistweaver-changes-battle-for-azeroth-beta-build-26734/,/2018/05/31/mistweaver-changes-battle-for-azeroth-beta-build-26734/,post,publish,10145,Mistweaver Changes: Battle for Azeroth Beta Build 26734
+/2018/06/08/state-of-bfa-windwalkers-rotation-priority/,/2018/06/08/state-of-bfa-windwalkers-rotation-priority/,post,publish,10183,State of BfA Windwalkers - Rotation/Priority
+/2018/06/10/state-of-bfa-windwalker-stats/,/2018/06/10/state-of-bfa-windwalker-stats/,post,publish,10191,State of BfA Windwalkers - Stats
+/2018/06/11/state-of-bfa-windwalkers-talents/,/2018/06/11/state-of-bfa-windwalkers-talents/,post,publish,10194,State of BfA Windwalkers - Talents
+/2018/06/12/brewmaster-changes-in-battle-for-azeroth-build-26812/,/2018/06/12/brewmaster-changes-in-battle-for-azeroth-build-26812/,post,publish,10211,Brewmaster Changes in Battle for Azeroth Build 26812
+/2018/06/12/mistweaver-changes-battle-for-azeroth-beta-build-26812/,/2018/06/12/mistweaver-changes-battle-for-azeroth-beta-build-26812/,post,publish,10206,Mistweaver Changes: Battle for Azeroth Beta Build 26812
+/2018/06/13/soothing_mist/,/2018/06/13/soothing_mist/,post,publish,10232,Mistweaver Ability Spotlight - Soothing Mist
+/2018/06/19/brewmaster-changes-in-battle-for-azeroth-beta-build-26871/,/2018/06/19/brewmaster-changes-in-battle-for-azeroth-beta-build-26871/,post,publish,10287,Brewmaster Changes in Battle for Azeroth Beta Build 26871
+/2018/06/19/mistweaver-changes-battle-for-azeroth-beta-build-26871/,/2018/06/19/mistweaver-changes-battle-for-azeroth-beta-build-26871/,post,publish,10285,Mistweaver Changes: Battle for Azeroth Beta Build 26871
+/2018/06/19/tankysitting-kickweaving/,/2018/06/19/tankysitting-kickweaving/,post,publish,10292,Tankysitting and Kickweaving; A Tale of Two Raid Builds - Mistweaver
+/2018/06/27/windwalker-beta-build-26936/,/2018/06/27/windwalker-beta-build-26936/,post,publish,10381,Windwalker Beta: Build 26936
+/2018/07/10/renewing-mist/,/2018/07/10/renewing-mist/,post,publish,10610,Mistweaver Ability Spotlight - Renewing Mist
+/2018/07/13/peak-ing-into-battle-for-azeroth/,/2018/07/13/peak-ing-into-battle-for-azeroth/,post,publish,10708,Peak-ing into Battle for Azeroth
+/2018/07/13/secret-brewmaster-changes-in-battle-for-azeroth-build-27026/,/2018/07/13/secret-brewmaster-changes-in-battle-for-azeroth-build-27026/,post,publish,10711,(Secret) Brewmaster Changes in Battle for Azeroth Build 27026
+/2018/07/14/mistweaver-changes-battle-for-azeroth-beta-build-27075/,/2018/07/14/mistweaver-changes-battle-for-azeroth-beta-build-27075/,post,publish,10746,Mistweaver Changes: Battle for Azeroth Beta Build 27075
+/2018/07/16/windwalker-guide-to-pre-patch-changes/,/2018/07/16/windwalker-guide-to-pre-patch-changes/,post,publish,10927,Windwalker Guide to Pre-Patch Changes
+/2018/07/18/legion-ww-gets-its-ass-blackout-kicked/,/2018/07/18/legion-ww-gets-its-ass-blackout-kicked/,post,publish,10946,Legion WW Gets its Ass (Blackout) KICKED!
+/2018/07/21/playing-windwalker-the-right-way/,/2018/07/21/playing-windwalker-the-right-way/,post,publish,10997,"Playing Windwalker the ""Right"" Way"
+/2018/07/21/thunder-focus-tea/,/2018/07/21/thunder-focus-tea/,post,publish,10964,Mistweaver Ability Spotlight - Thunder Focus Tea
+/2018/07/31/the-good-karma-problem/,/2018/07/31/the-good-karma-problem/,post,publish,11127,The Good Karma Problem
+/2018/08/07/ding-dong-the-witch-is-dead/,/2018/08/07/ding-dong-the-witch-is-dead/,post,publish,11419,Ding Dong the Witch is Dead!
+/2018/08/12/extended-and-alternate-storm-earth-and-fire-openers/,/2018/08/12/extended-and-alternate-storm-earth-and-fire-openers/,post,publish,12055,"Extended and Alternate Storm, Earth, and Fire Openers"
+/2018/08/23/advanced-swift-roundhouse/,/2018/08/23/advanced-swift-roundhouse/,post,publish,12193,Advanced: Swift Roundhouse
+/2018/08/24/in-record-time/,/2018/08/24/in-record-time/,post,publish,12230,In Record Time
+/2018/09/08/mistweaver-talent-builds/,/2018/09/08/mistweaver-talent-builds/,post,publish,12352,Mistweaver Talent Builds
+/2018/09/11/windwalker-in-week-1-comparing-to-others/,/2018/09/11/windwalker-in-week-1-comparing-to-others/,post,publish,12379,Windwalker in Week 1: Comparing to Others
+/2018/09/16/touch-of-karma-improvements/,/2018/09/16/touch-of-karma-improvements/,post,publish,12450,Touch of Karma Improvements
+/2018/09/18/welp-that-happened/,/2018/09/18/welp-that-happened/,post,publish,12467,Welp... that happened
+/2018/09/20/advanced-cancelaura-macros-for-storm-earth-and-fire/,/2018/09/20/advanced-cancelaura-macros-for-storm-earth-and-fire/,post,publish,12487,"Advanced: Extra Damage at the End of Storm, Earth, and Fire"
+/2018/09/21/windwalker-ptr-build-27826-putting-the-good-back-in-good-karma/,/2018/09/21/windwalker-ptr-build-27826-putting-the-good-back-in-good-karma/,post,publish,12500,Windwalker PTR Build 27826: Putting the Good back in Good Karma
+/2018/09/27/cant-spell-its-op-without-ops-a-psa-about-the-latest-hotfix/,/2018/09/27/cant-spell-its-op-without-ops-a-psa-about-the-latest-hotfix/,post,publish,12571,Can't spell IT'S OP without OPS: A PSA about the latest hotfix!
+/2018/09/30/lament-of-the-windwalker-constant-changes/,/2018/09/30/lament-of-the-windwalker-constant-changes/,post,publish,12587,Lament of the Windwalker: Constant Changes
+/2018/10/03/windwalker-ptr-build-27985/,/2018/10/03/windwalker-ptr-build-27985/,post,publish,12616,Windwalker PTR Build 27985
+/2018/10/06/gift-of-the-ox/,/2018/10/06/gift-of-the-ox/,post,publish,12623,"Gift of the Ox, a Zen Meditation"
+/2018/10/09/the-fetid-log/,/2018/10/09/the-fetid-log/,post,publish,12711,"The Fetid Log, a Zen Meditation"
+/2018/10/11/mythic-plus-talk-with-trellsky/,/2018/10/11/mythic-plus-talk-with-trellsky/,post,publish,12544,Mythic Plus Talk with Trellsky
+/2018/10/12/windwalker-ptr-build-28085/,/2018/10/12/windwalker-ptr-build-28085/,post,publish,12781,Windwalker PTR Build 28085
+/2018/10/16/open-letter-windwalker/,/2018/10/16/open-letter-windwalker/,post,publish,12858,Open Letter: Windwalker
+/2018/10/17/open-letter-brewmaster/,/2018/10/17/open-letter-brewmaster/,post,publish,12877,Open Letter: Brewmaster
+/2018/10/23/windwalker-ptr-build-28202/,/2018/10/23/windwalker-ptr-build-28202/,post,publish,12921,Windwalker PTR Build 28202
+/2018/11/07/celestial-fortune-bug/,/2018/11/07/celestial-fortune-bug/,post,publish,12928,"Celestial Misfortune, a Zen Meditation"
+/2018/11/21/windwalker-guide-to-8-1-changes/,/2018/11/21/windwalker-guide-to-8-1-changes/,post,publish,12968,Windwalker Guide to 8.1 Changes
+/2018/12/11/staggering-8-1-brewmaster-edition/,/2018/12/11/staggering-8-1-brewmaster-edition/,post,publish,13109,"Staggering Patch 8.1, Brewmaster Edition"
+/2018/12/23/state-of-the-spec-windwalker-in-8-1/,/2018/12/23/state-of-the-spec-windwalker-in-8-1/,post,publish,13250,State of the Spec: Windwalker in 8.1
+/2018/12/29/stat-weights-and-you-round-3/,/2018/12/29/stat-weights-and-you-round-3/,post,publish,13260,Stat Weights and You: Round 3
+/2019/01/26/what-gem-should-i/,/2019/01/26/what-gem-should-i/,post,publish,13425,What gem should I....
+/2019/01/27/windwalkers-in-bod-fun-detected-fun-destroyed/,/2019/01/27/windwalkers-in-bod-fun-detected-fun-destroyed/,post,publish,13434,"Windwalkers in BoD; Fun: Detected, Fun: Destroyed"
+/2019/02/02/windwalker-improvements-1a-level-15-talent-balance/,/2019/02/02/windwalker-improvements-1a-level-15-talent-balance/,post,publish,13548,Windwalker Improvements 1A: Level 15 Talent Balance
+/2019/02/12/windwalker-improvements-1b-level-45-talent-balance/,/2019/02/12/windwalker-improvements-1b-level-45-talent-balance/,post,publish,13563,Windwalker Improvements 1B: Level 45 Talent Balance
+/2019/03/01/secret-infusion-and-you/,/2019/03/01/secret-infusion-and-you/,post,publish,13730,Secret Infusion and You
+/2019/03/10/windwalker-8-1-5-survival-guide/,/2019/03/10/windwalker-8-1-5-survival-guide/,post,publish,13761,Windwalker 8.1.5 Survival Guide
+/2019/04/11/8-2-heart-of-azeroth-preview/,/2019/04/11/8-2-heart-of-azeroth-preview/,post,publish,13885,8.2 Preview-Thoughts on Azerite and Tank Traits
+/2019/04/22/jaina-a-zen-meditation/,/2019/04/22/jaina-a-zen-meditation/,post,publish,13955,"Jaina, a Zen Meditation"
+/2019/04/22/my-thoughts-on-the-state-of-windwalker-monk-going-into-8-2/,/2019/04/22/my-thoughts-on-the-state-of-windwalker-monk-going-into-8-2/,post,publish,13986,My thoughts on the state of Windwalker Monk going into 8.2
+/2019/05/07/finalbosstv-mistweaver-monks/,/2019/05/07/finalbosstv-mistweaver-monks/,post,publish,14003,FinalbossTV - Mistweaver Monks
+/2019/05/15/wowanalyzer-and-qe-live-import/,/2019/05/15/wowanalyzer-and-qe-live-import/,post,publish,14017,WoWAnalyzer and QE Live Import
+/2019/05/19/may-windwalker-site-updates-and-blizzcon/,/2019/05/19/may-windwalker-site-updates-and-blizzcon/,post,publish,14067,May Windwalker Site Updates and Blizzcon
+/2019/05/26/8-2-preview-spec-dependent-essences/,/2019/05/26/8-2-preview-spec-dependent-essences/,post,publish,14077,8.2 Preview -  Spec Dependent Essences
+/2019/06/10/babylonius-on-windwalkers/,/2019/06/10/babylonius-on-windwalkers/,post,publish,14092,Babylonius on Windwalkers
+/2019/06/22/windwalker-essences-napkin-math/,/2019/06/22/windwalker-essences-napkin-math/,post,publish,14150,Windwalker Essences: Napkin Math
+/2019/06/23/windwalker-guide-to-8-2/,/2019/06/23/windwalker-guide-to-8-2/,post,publish,14159,Windwalker Guide to 8.2
+/2019/06/25/staggering-8-2-brewmaster-edition/,/2019/06/25/staggering-8-2-brewmaster-edition/,post,publish,14196,"Staggering Patch 8.2, Brewmaster Edition"
+/2019/07/14/advanced-reverse-harm/,/2019/07/14/advanced-reverse-harm/,post,publish,14696,Advanced: Reverse Harm
+/2019/07/20/elusive-brawling-a-zen-meditation/,/2019/07/20/elusive-brawling-a-zen-meditation/,post,publish,14516,"Elusive Brawling, a Zen Meditation"
+/2019/07/28/mistweaver-ability-spotlight-way-of-the-crane/,/2019/07/28/mistweaver-ability-spotlight-way-of-the-crane/,post,publish,14771,Mistweaver Ability Spotlight - Way of the Crane
+/2019/08/18/dropping-rsk-from-our-priority/,/2019/08/18/dropping-rsk-from-our-priority/,post,publish,14827,Dropping RSK from our Priority
+/2019/08/22/dps-class-spec-balance-in-eternal-palace/,/2019/08/22/dps-class-spec-balance-in-eternal-palace/,post,publish,14844,DPS Class/Spec Balance in Eternal Palace
+/2019/10/04/analyzing-the-analyzer-the-basics/,/2019/10/04/analyzing-the-analyzer-the-basics/,post,publish,14917,Analyzing the Analyzer: The Basics
+/2019/10/08/8-3-ptr-build-32044-single-target-buffs/,/2019/10/08/8-3-ptr-build-32044-single-target-buffs/,post,publish,14946,8.3 PTR Build 32044 - Single Target Buffs!?!
+/2019/10/12/making-serenity-great-again/,/2019/10/12/making-serenity-great-again/,post,publish,14957,Making Serenity Great Again
+/2019/10/13/mistweaver-changes-battle-for-azeroth-8-3-build-32151/,/2019/10/13/mistweaver-changes-battle-for-azeroth-8-3-build-32151/,post,publish,14973,Mistweaver Changes: Battle for Azeroth 8.3 Build 32151
+/2019/10/14/mistweaver-feedback-thread-week-1/,/2019/10/14/mistweaver-feedback-thread-week-1/,post,publish,14997,Mistweaver Feedback Thread: Week 1
+/2019/10/15/inactive-mitigation-a-zen-meditation/,/2019/10/15/inactive-mitigation-a-zen-meditation/,post,publish,14979,"Inactive Mitigation, a Zen Meditation"
+/2019/10/21/mistweaver-feedback-thread-week-2/,/2019/10/21/mistweaver-feedback-thread-week-2/,post,publish,15050,Mistweaver Feedback Thread: Week 2
+/2019/10/28/mistweaver-feedback-thread-week-3/,/2019/10/28/mistweaver-feedback-thread-week-3/,post,publish,15063,Mistweaver Feedback Thread: Week 3
+/2019/11/16/dear-monk-community/,/2019/11/16/dear-monk-community/,post,publish,15082,Dear Monk Community...
+/2019/11/22/windwalker-feedback-thread-my-ideas/,/2019/11/22/windwalker-feedback-thread-my-ideas/,post,publish,15070,Windwalker Feedback Thread: My Ideas
+/2019/12/19/mistweaver-changes-battle-for-azeroth-8-3-build-32805/,/2019/12/19/mistweaver-changes-battle-for-azeroth-8-3-build-32805/,post,publish,15116,Mistweaver Changes: Battle for Azeroth 8.3 Build 32805
+/2019/12/31/windwalker-vs-havoc-historical-data/,/2019/12/31/windwalker-vs-havoc-historical-data/,post,publish,15127,Windwalker vs Havoc: Historical Data
+/2020/01/01/windwalker-vs-havoc-ii-simplicity/,/2020/01/01/windwalker-vs-havoc-ii-simplicity/,post,publish,15171,"Windwalker vs Havoc II: ""Simplicity"""
+/2020/01/05/windwalker-vs-havoc-iii-offense/,/2020/01/05/windwalker-vs-havoc-iii-offense/,post,publish,15159,Windwalker vs Havoc III: Offense
+/2020/01/14/mistweaver-ability-spotlight-rising-mist/,/2020/01/14/mistweaver-ability-spotlight-rising-mist/,post,publish,15133,Mistweaver Ability Spotlight - Rising Mist
+/2020/01/14/staggering-8-3-brewmaster-edition/,/2020/01/14/staggering-8-3-brewmaster-edition/,post,publish,15227,"Staggering Patch 8.3, Brewmaster Edition"
+/2020/02/21/february-25-windwalker-buffs/,/2020/02/21/february-25-windwalker-buffs/,post,publish,15460,February 25 Windwalker Buffs!!!
+/2020/04/07/shadowlands-april-7-class-changes-and-philosophy/,/2020/04/07/shadowlands-april-7-class-changes-and-philosophy/,post,publish,15498,Shadowlands: April 7 Class Changes and Philosophy
+/2020/04/08/shadowlands-alpha-preview-brewmaster-impressions/,/2020/04/08/shadowlands-alpha-preview-brewmaster-impressions/,post,publish,15511,Shadowlands Alpha Preview: Brewmaster Impressions
+/2020/04/10/brewmaster-mitigation-in-shadowlands/,/2020/04/10/brewmaster-mitigation-in-shadowlands/,post,publish,15587,Brewmaster Mitigation in Shadowlands
+/2020/04/11/shadowlands-week-0-5-opinions-impressions-ideas/,/2020/04/11/shadowlands-week-0-5-opinions-impressions-ideas/,post,publish,15675,"Shadowlands Week 0.5: Opinions, Impressions, Ideas"
+/2020/04/12/shadowlands-alpha-preview-mistweaver-impressions/,/2020/04/12/shadowlands-alpha-preview-mistweaver-impressions/,post,publish,15707,Shadowlands Alpha Preview: Mistweaver Impressions
+/2020/04/18/rising-mist-nerfs/,/2020/04/18/rising-mist-nerfs/,post,publish,15736,Rising Mist Nerf
+/2020/04/20/babylonius-on-windwalker-covenant-abilities/,/2020/04/20/babylonius-on-windwalker-covenant-abilities/,post,publish,15746,Babylonius on Windwalker Covenant Abilities
+/2020/05/07/simming-your-windwalker/,/2020/05/07/simming-your-windwalker/,post,publish,15773,Simming Your Windwalker
+/2020/05/13/shadowlands-alpha-build-34278-covenant-updates-and-monk-torghast-powers/,/2020/05/13/shadowlands-alpha-build-34278-covenant-updates-and-monk-torghast-powers/,post,publish,15792,Shadowlands Alpha Build 34278; Covenant Updates and Monk Torghast Powers
+/2020/05/23/windwalker-monk-best-in-slot-setups/,/2020/05/23/windwalker-monk-best-in-slot-setups/,post,publish,15819,Windwalker Monk Best-in-Slot Setups
+/2020/06/10/what-windwalkers-do-in-the-shadowlands-more-ideas/,/2020/06/10/what-windwalkers-do-in-the-shadowlands-more-ideas/,post,publish,15864,What Windwalkers Do in the Shadow(land)s: More Ideas
+/2020/07/15/windwalkers-in-shadowlands-xuen-conduits-and-legendaries/,/2020/07/15/windwalkers-in-shadowlands-xuen-conduits-and-legendaries/,post,publish,15888,"Windwalkers in Shadowlands; Xuen, Conduits, and Legendaries"
+/2020/08/03/mistweaver-state-in-beta/,/2020/08/03/mistweaver-state-in-beta/,post,publish,15921,Mistweaver State in Beta
+/2020/09/09/if-i-ruled-the-world-of-warcraft/,/2020/09/09/if-i-ruled-the-world-of-warcraft/,post,publish,16090,If I Ruled the World (of Warcraft)
+/2020/09/23/it-happened/,/2020/09/23/it-happened/,post,publish,16125,It Happened!?!
+/2020/10/01/windwalker-ted-talk-the-best-kind-of-broken/,/2020/10/01/windwalker-ted-talk-the-best-kind-of-broken/,post,publish,16152,Windwalker TED Talk: The Best Kind of Broken
+/2020/10/11/shadowlands-prepatch-brewmaster/,/2020/10/11/shadowlands-prepatch-brewmaster/,post,publish,16269,The Shadowlands Prepatch: Staggering 9.0
+/2020/10/14/raid-week-1-impressions-fun-detected-fun-destroyed/,/2020/10/14/raid-week-1-impressions-fun-detected-fun-destroyed/,post,publish,16469,"Raid Week 1 Impressions; Fun Detected, Fun Destroyed"
+/2020/11/22/windwalker-monk-shadowlands-survival-guide/,/2020/11/22/windwalker-monk-shadowlands-survival-guide/,post,publish,17940,Windwalker Monk Shadowlands Survival Guide
+/2020/11/30/mwslweek1faq/,/2020/11/30/mwslweek1faq/,post,publish,18675,Mistweaver Week 1 FAQ
+/2020/12/05/how-to-train-your-celestial-yulon-and-chi-ji-edition/,/2020/12/05/how-to-train-your-celestial-yulon-and-chi-ji-edition/,post,publish,18684,How to Train Your Celestial: Yu'lon and Chi-ji Edition
+/2021/01/03/windwalker-scaling-the-sky-thats-always-falling/,/2021/01/03/windwalker-scaling-the-sky-thats-always-falling/,post,publish,19195,Windwalker Scaling: The Sky That's Always Falling?
+/2021/03/02/ptr-bug-fixes-bug-fix-good-bug-fix-bad/,/2021/03/02/ptr-bug-fixes-bug-fix-good-bug-fix-bad/,post,publish,19540,PTR Bug Fixes: Bug Fix Good? Bug Fix Bad?
+/2021/03/06/mistweaver-changes-in-patch-9-0-5/,/2021/03/06/mistweaver-changes-in-patch-9-0-5/,post,publish,19570,Mistweaver changes in patch 9.0.5
+/2021/03/08/windwalker-9-0-5-survival-guide/,/2021/03/08/windwalker-9-0-5-survival-guide/,post,publish,19591,Windwalker 9.0.5 Survival Guide
+/2021/03/09/staggering-9-0-5-brewmaster-edition/,/2021/03/09/staggering-9-0-5-brewmaster-edition/,post,publish,19611,"Staggering Patch 9.0.5, Brewmaster Edition"
+/2021/03/22/3-23-windwalker-compensation-buffs/,/2021/03/22/3-23-windwalker-compensation-buffs/,post,publish,19741,3/23 Windwalker Compensation Buffs
+/2021/05/20/mistweaver-changes-shadowlands-9-1-build-38709/,/2021/05/20/mistweaver-changes-shadowlands-9-1-build-38709/,post,publish,19807,Mistweaver Changes: Shadowlands 9.1 Build 38709
+/2021/05/22/9-1-windwalker-monk-ptr-legendaries/,/2021/05/22/9-1-windwalker-monk-ptr-legendaries/,post,publish,19803,9.1 Windwalker Monk PTR Legendaries
+/2021/06/13/all-mistweaver-interactions/,/2021/06/13/all-mistweaver-interactions/,post,publish,19861,All Mistweaver Interactions
+/2021/06/18/windwalker-monk-9-1-survival-guide/,/2021/06/18/windwalker-monk-9-1-survival-guide/,post,publish,19870,Windwalker Monk 9.1 Survival Guide
+/2021/06/29/staggering-9-1-brewmaster-edition/,/2021/06/29/staggering-9-1-brewmaster-edition/,post,publish,20213,"Staggering Patch 9.1, Brewmaster Edition"
+/2021/07/31/windwalker-approaching-cooldowns-and-desyncs/,/2021/07/31/windwalker-approaching-cooldowns-and-desyncs/,post,publish,20487,Windwalker: Approaching cooldowns and Desyncs!
+/2021/08/01/storm-earth-and-fire-past-present-and-future/,/2021/08/01/storm-earth-and-fire-past-present-and-future/,post,publish,20483,"Storm, Earth, and Fire; Past, Present, and Future"
+/2021/09/15/9-1-5-ptr-windwalker-and-aoe-caps/,/2021/09/15/9-1-5-ptr-windwalker-and-aoe-caps/,post,publish,20749,9.1.5 PTR: Windwalker and AOE Caps
+/2021/10/19/windwalker-monk-m-tips-and-tricks/,/2021/10/19/windwalker-monk-m-tips-and-tricks/,post,publish,20802,Windwalker Monk M+ Tips and Tricks
+/2021/11/16/mist-secrets-teachings-of-the-vampire-diaries/,/2021/11/16/mist-secrets-teachings-of-the-vampire-diaries/,post,publish,20896,Mist-Secrets: Teachings of the Vampire Diaries
+/2021/11/18/9-2-ptr-windwalkers-set-bonuses/,/2021/11/18/9-2-ptr-windwalkers-set-bonuses/,post,publish,20916,9.2 PTR - Windwalkers Set Bonuses
+/2021/12/15/opinion-windwalker-is-a-toxic-spec/,/2021/12/15/opinion-windwalker-is-a-toxic-spec/,post,publish,20933,OPINION: Windwalker is a Toxic Spec
+/2022/01/24/unveiling-the-future-mist/,/2022/01/24/unveiling-the-future-mist/,post,publish,20963,Unveiling the Future Mist
+/2022/01/30/a-glimpse-into-theorycrafting-rsk-versus-fof/,/2022/01/30/a-glimpse-into-theorycrafting-rsk-versus-fof/,post,publish,20976,A glimpse into theorycrafting: RSK versus FoF
+/2022/02/20/brewmaster-tldr-patch-9-2/,/2022/02/20/brewmaster-tldr-patch-9-2/,post,publish,21099,Brewmaster tl;dr - Patch 9.2
+/2022/02/20/windwalker-monk-9-2-survival-guide/,/2022/02/20/windwalker-monk-9-2-survival-guide/,post,publish,21164,Windwalker Monk 9.2 Survival Guide
+/2022/03/08/the-great-vault-almanac-shadowlands-season-3-week-2/,/2022/03/08/the-great-vault-almanac-shadowlands-season-3-week-2/,post,publish,21220,"The Great Vault Almanac - Shadowlands Season 3, Week 2"
+/2022/07/23/windwalker-talent-tree-wishlist-2-0/,/2022/07/23/windwalker-talent-tree-wishlist-2-0/,post,publish,21673,Windwalker Talent Tree Wishlist 2.0
+/2022/08/08/j-funks-dragonflight-monk-talent-wishlist/,/2022/08/08/j-funks-dragonflight-monk-talent-wishlist/,post,publish,21720,J-Funk's Dragonflight Monk Talent Wishlist
+/2022/08/18/windwalker-monk-dragonflight-talents-first-impressions/,/2022/08/18/windwalker-monk-dragonflight-talents-first-impressions/,post,publish,21738,Windwalker Monk Dragonflight Talents: First Impressions
+/2022/10/23/windwalker-monk-dragonflight-pre-patch-survival-guide/,/2022/10/23/windwalker-monk-dragonflight-pre-patch-survival-guide/,post,publish,21805,Windwalker Monk Dragonflight Pre-Patch Survival Guide
+/2022/10/31/pre-patch-tuning-windwalker-nerfs/,/2022/10/31/pre-patch-tuning-windwalker-nerfs/,post,publish,21859,Pre-Patch Tuning: Windwalker Nerfs
+/2023/01/24/all-mw-interactions-updated-for-dragonflight/,/2023/01/24/all-mw-interactions-updated-for-dragonflight/,post,publish,22326,All MW Interactions Updated for Dragonflight
+/2023/01/28/zen-meditation-blackout-combo/,/2023/01/28/zen-meditation-blackout-combo/,post,publish,22343,Zen Meditation: Blackout Combo
+/2023/03/11/scientifically-methodizing-windwalkers-dps-struggles/,/2023/03/11/scientifically-methodizing-windwalkers-dps-struggles/,post,publish,22413,Scientifically Methodizing Windwalker's DPS Struggles
+/2023/03/18/windwalker-monk-10-0-7-survival-guide/,/2023/03/18/windwalker-monk-10-0-7-survival-guide/,post,publish,22442,Windwalker Monk 10.0.7 Survival Guide
+/2023/05/01/windwalker-monk-10-1-survival-guide/,/2023/05/01/windwalker-monk-10-1-survival-guide/,post,publish,22540,Windwalker Monk 10.1 Survival Guide
+/2023/07/10/windwalker-monk-10-1-5-survival-guide/,/2023/07/10/windwalker-monk-10-1-5-survival-guide/,post,publish,22754,Windwalker Monk 10.1.5 Survival Guide
+/2023/10/18/what-stats-should-i-use-a-zen-meditation/,/2023/10/18/what-stats-should-i-use-a-zen-meditation/,post,publish,23016,What Stats Should I Use? (A Zen Meditation)
+/2023/11/06/windwalker-monk-10-2-survival-guide/,/2023/11/06/windwalker-monk-10-2-survival-guide/,post,publish,23152,Windwalker Monk 10.2 Survival Guide
+/2023/12/15/windwalker-buffs-take-2/,/2023/12/15/windwalker-buffs-take-2/,post,publish,23232,Windwalker Buffs! Take: 2
+/2024/03/15/the-war-within-first-look-at-windwalker-hero-talents/,/2024/03/15/the-war-within-first-look-at-windwalker-hero-talents/,post,publish,23360,The War Within: First Look at Windwalker Hero Talents
+/2024/04/01/windwalker-monk-tww-hero-and-spec-talent-changes/,/2024/04/01/windwalker-monk-tww-hero-and-spec-talent-changes/,post,publish,23368,Windwalker Monk TWW Hero and Spec Talent Changes
+/2024/04/17/tww-alpha-windwalker-talent-rework/,/2024/04/17/tww-alpha-windwalker-talent-rework/,post,publish,23382,TWW Alpha - Windwalker Talent Rework
+/2024/04/22/windwalker-monk-dragonflight-season-4-survival-guide/,/2024/04/22/windwalker-monk-dragonflight-season-4-survival-guide/,post,publish,23404,Windwalker Monk Dragonflight Season 4 Survival Guide
+/2024/10/21/windwalker-monk-patch-11-0-5-survival-guide/,/2024/10/21/windwalker-monk-patch-11-0-5-survival-guide/,post,publish,23684,Windwalker Monk Patch 11.0.5 Survival Guide
+/2024/11/25/nov-26-hotfix-windwalker-buffs/,/2024/11/25/nov-26-hotfix-windwalker-buffs/,post,publish,23723,Nov 26 Hotfix: Windwalker Buffs
+/2025/02/23/how-capped-am-i/,/2025/02/23/how-capped-am-i/,post,publish,23758,How Capped Am I?
+/2025/02/24/windwalker-monk-11-1-survival-guide/,/2025/02/24/windwalker-monk-11-1-survival-guide/,post,publish,23826,Windwalker Monk 11.1 Survival Guide
+/2025/06/18/windwalker-11-2-tier-set-first-impressions/,/2025/06/18/windwalker-11-2-tier-set-first-impressions/,post,publish,24081,Windwalker 11.2 Tier Set First Impressions
+/2025/08/04/windwalker-monk-11-2-survival-guide/,/2025/08/04/windwalker-monk-11-2-survival-guide/,post,publish,24141,Windwalker Monk 11.2 Survival Guide
+/2025/10/04/midnight-alpha-talents-windwalker-vet-first-impressions/,/2025/10/04/midnight-alpha-talents-windwalker-vet-first-impressions/,post,publish,24329,Midnight Alpha Talents - First Impressions
+/2026/04/19/windwalker-monk-patch-12-0-5-survival-guide/,/2026/04/19/windwalker-monk-patch-12-0-5-survival-guide/,post,publish,24521,Windwalker Monk Patch 12.0.5 Survival Guide
+/2026/06/15/windwalker-monk-patch-12-0-7-survival-guide/,/2026/06/15/windwalker-monk-patch-12-0-7-survival-guide/,post,publish,24566,Windwalker Monk Patch 12.0.7 Survival Guide
+/2026/06/20/windwalker-monk-in-12-1-what-we-wanted-and-what-we-got/,/2026/06/20/windwalker-monk-in-12-1-what-we-wanted-and-what-we-got/,post,publish,24572,Windwalker Monk in 12.1: What We Wanted and What We Got
+/2026/08/10/windwalker-monk-12-1-survival-guide/,/2026/08/10/windwalker-monk-12-1-survival-guide/,post,publish,24597,Windwalker Monk 12.1 Survival Guide
+/finding-a-guild/,/finding-a-guild/,page,publish,4531,Finding a Guild
+/login/,/login/,page,publish,4999,Login
+/mop/,/mop/,page,publish,24087,Mists Classic Home Page
+/mop/windwalker/,/mop/windwalker/,page,publish,24105,Mists Classic Windwalker
+/mop/windwalker/pve-guide/,/mop/windwalker/pve-guide/,page,publish,24090,Windwalker Mists Classic PvE Guide
+/podcast/10-1-interview-bonanza-peak-of-serenity-podcast-ep-156/,,podcast,publish,22550,10.1 Interview Bonanza - Peak of Serenity Podcast Ep. 156
+/podcast/9-1-ptr-interdimensional-gerrymandering-peak-of-serenity-podcast-ep-64/,,podcast,publish,19776,9.1 PTR: Interdimensional Gerrymandering - Peak of Serenity Podcast Ep. 64
+/podcast/9-1-speculation-mistweaver-will-never-get-healing-spheres-peak-of-serenity-podcast-ep-63/,,podcast,publish,19770,9.1 Speculation: Mistweaver Will NEVER Get Healing Spheres | Peak of Serenity Podcast Ep. 63
+/podcast/a-cataclysm-of-frogs-peak-of-serenity-podcast-ep-199/,,podcast,publish,23438,A Cataclysm of Frogs - Peak of Serenity Podcast Ep. 199
+/podcast/a-flurry-of-hero-talents-peak-of-serenity-podcast-ep-194/,,podcast,publish,23365,A Flurry of Hero Talents - Peak of Serenity Podcast Ep. 194
+/podcast/aberrus-is-clear-but-not-by-us-peak-of-serenity-podcast-ep-159/,,podcast,publish,22646,Aberrus is Clear! (but not by us) - Peak of Serenity Podcast Ep. 159
+/podcast/aberrus-raid-testing-and-more-10-0-7-news-peak-of-serenity-podcast-ep-150/,,podcast,publish,22450,Aberrus Raid Testing! (and more 10.0.7 news!) - Peak of Serenity Podcast Ep. 150
+/podcast/afflicted-with-zskarn-peak-of-serenity-podcast-ep-161/,,podcast,publish,22704,Afflicted with Zskarn - Peak of Serenity Podcast Ep. 161
+/podcast/all-about-creation-catalyst-peak-of-serenity-podcast-ep-107/,,podcast,publish,21407,All About Creation Catalyst - Peak of Serenity Podcast Ep. 107
+/podcast/are-we-a-classic-podcast-now-also-mana-tea-peak-of-serenity-podcast-ep-171/,,podcast,publish,22999,Are We a Classic Podcast Now? (also: Mana Tea) - Peak of Serenity Podcast Ep. 171
+/podcast/asmons-tweet-morgan-day-interview-recap-peak-of-serenity-podcast-ep-68/,,podcast,publish,19801,Asmon's Tweet & Morgan Day Interview Recap - Peak of Serenity Podcast Ep. 68
+/podcast/aug-is-bah-roken-peak-of-serenity-podcast-ep-165/,,podcast,publish,22787,Aug is Bah-ROKEN - Peak of Serenity Podcast Ep. 165
+/podcast/back-in-aberrus-and-new-brew-talents-peak-of-serenity-podcast-ep-162/,,podcast,publish,22746,Back in Aberrus (and New Brew Talents!) - Peak of Serenity Podcast Ep. 162
+/podcast/blizzcon-worldsoul-discovery-peak-of-serenity-podcast-ep-179/,,podcast,publish,23210,BlizzCon! Worldsoul! Discovery! - Peak of Serenity Podcast Ep. 179
+/podcast/boes-pre-patch-peak-of-serenity-podcast-ep-132/,,podcast,publish,21790,BoEs & Pre-Patch - Peak of Serenity Podcast Ep. 132
+/podcast/brewmaster-buffs-mistweaver-buffs-windwalker-exists-peak-of-serenity-podcast-ep-142/,,podcast,publish,22300,Brewmaster Buffs! Mistweaver Buffs! Windwalker Exists! - Peak of Serenity Podcast Ep. 142
+/podcast/brewmaster-talent-trees-peak-of-serenity-podcast-ep-126/,,podcast,publish,21759,Brewmaster Talent Trees - Peak of Serenity Podcast Ep. 126
+/podcast/classic-seasons-venthyr-updates-peak-of-serenity-podcast-ep-86/,,podcast,publish,20793,Classic Seasons & Venthyr Updates - Peak of Serenity Podcast Ep. 86
+/podcast/dev-interview-recap-upgrade-system-contextual-pings-and-augmentation-evoker-peak-of-serenity-podcast-ep-164/,,podcast,publish,22773,"Dev Interview Recap: Upgrade System, Contextual Pings, and Augmentation Evoker - Peak of Serenity Podcast Ep. 164"
+/podcast/does-mythic-raiding-need-to-change-peak-of-serenity-podcast-ep-192/,,podcast,publish,23356,Does Mythic Raiding Need to Change? - Peak of Serenity Podcast Ep. 192
+/podcast/dragonflight-alpha-is-here-peak-of-serenity-podcast-ep-119/,,podcast,publish,21665,Dragonflight Alpha is Here! - Peak of Serenity Podcast Ep. 119
+/podcast/dragonflight-chill-peak-of-serenity-podcast-ep-139/,,podcast,publish,22232,Dragonflight & Chill - Peak of Serenity Podcast Ep. 139
+/podcast/dragonflight-design-freeze-peak-of-serenity-podcast-ep-129/,,podcast,publish,21777,Dragonflight Design Freeze - Peak of Serenity Podcast Ep. 129
+/podcast/dragonflight-dungeons-uldaman-neltharus-and-professions-peak-of-serenity-podcast-ep-120/,,podcast,publish,21696,"Dragonflight Dungeons (Uldaman, Neltharus) and Professions - Peak of Serenity Podcast Ep. 120"
+/podcast/dragonflight-evoker-professions-peak-of-serenity-podcast-ep-110/,,podcast,publish,21517,Dragonflight: Evoker & Professions | Peak of Serenity Podcast Ep. 110
+/podcast/dragonflight-loot-raid-testing-mythic-testing-peak-of-serenity-podcast-ep-131/,,podcast,publish,21787,"Dragonflight Loot, Raid Testing, & Mythic+ Testing - Peak of Serenity Podcast Ep. 131"
+/podcast/dragonflight-professions-and-alpha-soon-peak-of-serenity-podcast-ep-118/,,podcast,publish,21651,Dragonflight Professions (and Alpha Soon?!) - Peak of Serenity Podcast Ep. 118
+/podcast/dragonflight-talent-revamp-dragon-riding-peak-of-serenity-podcast-ep-109/,,podcast,publish,21510,Dragonflight: Talent Revamp & Dragon Riding - Peak of Serenity Podcast Ep. 109
+/podcast/ep-10-history-of-ww/,,podcast,publish,3992,Ep 10 - History of WW
+/podcast/ep-11-dhc-and-serenity/,,podcast,publish,3990,Ep 11 - DHC and Serenity
+/podcast/ep-12-7-2-ptr-and-big-news/,,podcast,publish,4794,Ep 12 - 7.2 PTR and BIG NEWS
+/podcast/ep-13-7-2-faqs/,,podcast,publish,6150,Ep 13 - 7.2 FAQs
+/podcast/ep-14-babylonius-for-windwalker-liason/,,podcast,publish,6573,Ep 14 - Babylonius for Windwalker Liason
+/podcast/ep-15-babs-on-tomb-and-current-state-of-windwalker/,,podcast,publish,7417,Ep 15 - Babs on Tomb and Current State of Windwalker
+/podcast/ep-2-cooldowns-timings-serenity-haste-and-ee/,,podcast,publish,2857,Ep 2: Cooldown Timing
+/podcast/ep-3-legendaries/,,podcast,publish,2906,Ep 3: Legendaries
+/podcast/ep-4-ptr-and-communication/,,podcast,publish,2966,Ep 4 - PTR and Communication
+/podcast/ep-5-stat-weights-and-complicated-things/,,podcast,publish,3020,Ep 5 - Stat Weights and Complicated Things
+/podcast/ep-6-haste-hate-and-semantics/,,podcast,publish,3059,Ep 6 - Haste Hate and Semantics
+/podcast/ep-7-legion-windwalker-feat-panda-mega-and-ruhye/,,podcast,publish,3162,"Ep 7 - Legion Windwalker, feat; Panda, Mega, and Ruhye"
+/podcast/ep-7-trinket-changes-and-best-in-slots/,,podcast,publish,3500,Ep 8 - Trinket Changes and Best in Slots
+/podcast/ep-9-legendary-tierlist-and-qa/,,podcast,publish,3517,Ep 9 - Legendary Tierlist and Q&A
+/podcast/ep1-introduction-and-bad-habits/,,podcast,publish,2849,Ep1: Introduction and Bad Habits
+/podcast/every-realm-is-a-public-test-realm-peak-of-serenity-podcast-ep-75/,,podcast,publish,20355,Every Realm is a Public Test Realm - Peak of Serenity Podcast Ep. 75
+/podcast/experiencing-dragonflight-peak-of-serenity-podcast-ep-138/,,podcast,publish,22187,Experiencing Dragonflight - Peak of Serenity Podcast Ep. 138
+/podcast/fated-sanctum-datamined-monk-talents-peak-of-serenity-podcast-ep-123/,,podcast,publish,21736,Fated Sanctum & Datamined Monk Talents - Peak of Serenity Podcast Ep. 123
+/podcast/fyrakk-dies-tonight-peak-of-serenity-podcast-ep-181/,,podcast,publish,23227,Fyrakk Dies Tonight - Peak of Serenity Podcast Ep. 181
+/podcast/glorbo-is-ready-peak-of-serenity-podcast-ep-166/,,podcast,publish,22800,Glorbo is READY! - Peak of Serenity Podcast Ep. 166
+/podcast/happy-new-year-peak-of-serenity-podcast-ep-94/,,podcast,publish,20952,Happy New Year! - Peak of Serenity Podcast Ep. 94
+/podcast/holiday-raiding-peak-of-serenity-podcast-ep-183/,,podcast,publish,23239,Holiday Raiding - Peak of Serenity Podcast Ep. 183
+/podcast/in-review-sanctum-of-domination-peak-of-serenity-podcast-ep-95/,,podcast,publish,20956,In Review: Sanctum of Domination - Peak of Serenity Podcast Ep. 95
+/podcast/in-which-tindral-gets-bent-peak-of-serenity-podcast-ep-186/,,podcast,publish,23332,In Which Tindral Gets Bent - Peak of Serenity Podcast Ep. 186
+/podcast/ion-interview-9-2-news-and-community-council-peak-of-serenity-podcast-ep-90/,,podcast,publish,20856,"Ion Interview, 9.2 News, and...Community Council? - Peak of Serenity Podcast Ep. 90"
+/podcast/ion-interview-recap-peak-of-serenity-podcast-ep-66/,,podcast,publish,19785,Ion Interview Recap - Peak of Serenity Podcast Ep. 66
+/podcast/its-a-new-year-catching-up-on-vault-of-the-incarnates-peak-of-serenity-podcast-ep-141/,,podcast,publish,22291,It's a New Year! Catching Up on Vault of the Incarnates - Peak of Serenity Podcast Ep. 141
+/podcast/ive-seen-the-future-and-its-titanforging-pi-peak-of-serenity-podcast-ep-189/,,podcast,publish,23343,I've Seen the Future and It's Titanforging PI - Peak of Serenity Podcast Ep. 189
+/podcast/kurog-dathea-rwf-ulduar-and-more-10-0-5-tuning-peak-of-serenity-podcast-ep-144/,,podcast,publish,22324,"Kurog & Dathea, RWF: Ulduar, and More 10.0.5 Tuning - Peak of Serenity Podcast Ep. 144"
+/podcast/kurog-hotfixes-and-10-0-5-peak-of-serenity-podcast-ep-143/,,podcast,publish,22322,"Kurog, Hotfixes, and 10.0.5 - Peak of Serenity Podcast Ep. 143"
+/podcast/large-sanctum-nerfs-cooldown-planning-peak-of-serenity-podcast-ep-85/,,podcast,publish,20784,LARGE Sanctum Nerfs & Cooldown Planning | Peak of Serenity Podcast Ep. 85
+/podcast/look-what-they-did-to-poor-mistweaver-peak-of-serenity-podcast-ep-155/,,podcast,publish,22511,Look What They Did to Poor Mistweaver - Peak of Serenity Podcast Ep. 155
+/podcast/looking-back-sanctum-korthia-and-pulling-the-ripcord-peak-of-serenity-podcast-ep-136/,,podcast,publish,21888,"Looking Back: Sanctum, Korthia, and Pulling the Ripcord - Peak of Serenity Podcast Ep. 136"
+/podcast/looking-back-shadowlands-release-peak-of-serenity-podcast-ep-135/,,podcast,publish,21884,Looking Back: Shadowlands Release - Peak of Serenity Podcast Ep. 135
+/podcast/lore-corner-catchup-sylvanas-anduin-peak-of-serenity-podcast-ep-80/,,podcast,publish,20673,Lore Corner Catchup: Sylvanas & Anduin | Peak of Serenity Podcast Ep. 80
+/podcast/mage-tower-legion-m-with-councillor-brewstep-peak-of-serenity-podcast-ep-93/,,podcast,publish,20931,Mage Tower & Legion M+ with Councillor Brewstep - Peak of Serenity Podcast Ep. 93
+/podcast/mergers-more-peak-of-serenity-podcast-ep-97/,,podcast,publish,20967,Mergers & More - Peak of Serenity Podcast Ep. 97
+/podcast/microsoft-lays-off-1900-people-peak-of-serenity-podcast-ep-187/,,podcast,publish,23335,"Microsoft Lays Off 1,900 People - Peak of Serenity Podcast Ep. 187"
+/podcast/mistweaver-nerfs-alliance-scum-peak-of-serenity-podcast-ep-99/,,podcast,publish,21077,Mistweaver Nerfs & Alliance Scum - Peak of Serenity Podcast Ep. 99
+/podcast/mistweaver-talent-trees-peak-of-serenity-podcast-ep-125/,,podcast,publish,21753,Mistweaver Talent Trees | Peak of Serenity Podcast Ep. 125
+/podcast/mistweaver-talent-updates-dragonflight-endgame-peak-of-serenity-podcast-ep-128/,,podcast,publish,21768,Mistweaver Talent Updates & Dragonflight Endgame - Peak of Serenity Podcast Ep. 128
+/podcast/monk-covenant-legendaries-and-mistweaver-buffs-peak-of-serenity-podcast-ep-69/,,podcast,publish,19837,Monk Covenant Legendaries! (and Mistweaver Buffs) - Peak of Serenity Podcast Ep. 69
+/podcast/more-9-1-5-news-peak-of-serenity-podcast/,,podcast,publish,20738,More 9.1.5 News - Peak of Serenity Podcast
+/podcast/more-9-1-ptr-peak-of-serenity-podcast-ep-65/,,podcast,publish,19779,More 9.1 PTR - Peak of Serenity Podcast Ep. 65
+/podcast/more-fyrakk-prog-no-heal-mdi/,,podcast,publish,23350,"More Fyrakk Prog, No-Heal MDI - Peak of Serenity Podcast Ep. 190"
+/podcast/more-mistweaver-buffs-and-raszageth-prog-peak-of-serenity-podcast-ep-146/,,podcast,publish,22365,More Mistweaver Buffs?! (and Raszageth Prog) - Peak of Serenity Podcast Ep. 146
+/podcast/more-mistweaver-updates-and-more-raid-testing-peak-of-serenity-podcast-ep-174/,,podcast,publish,23010,More Mistweaver Updates! (and More Raid Testing) - Peak of Serenity Podcast Ep. 174
+/podcast/more-raszageth-nerfs-patch-10-1-release-announced-peak-of-serenity-podcast-ep-153/,,podcast,publish,22497,More Raszageth Nerfs & Patch 10.1 Release Announced - Peak of Serenity Podcast Ep. 153
+/podcast/mr-zskarns-wild-ride-peak-of-serenity-podcast-ep-160/,,podcast,publish,22687,Mr Zskarn's Wild Ride - Peak of Serenity Podcast Ep. 160
+/podcast/mythic-nerfs-fervent-strikes-removed-peak-of-serenity-podcast-ep-115/,,podcast,publish,21622,Mythic+ Nerfs! Fervent Strikes Removed - Peak of Serenity Podcast Ep. 115
+/podcast/nerf-culture-peak-of-serenity-podcast-ep-116/,,podcast,publish,21636,Nerf Culture - Peak of Serenity Podcast Ep. 116
+/podcast/nerf-windwalkers-peak-of-serenity-podcast-ep-163/,,podcast,publish,22750,Nerf Windwalkers - Peak of Serenity Podcast Ep. 163
+/podcast/nerfing-keys-so-we-can-nerf-the-god-comp-peak-of-serenity-podcast-ep-169/,,podcast,publish,22992,Nerfing Keys So We Can Nerf the God Comp - Peak of Serenity Podcast Ep. 169
+/podcast/new-mana-tea-aberrus-review-peak-of-serenity-podcast-ep-167/,,podcast,publish,22936,New Mana Tea! (& Aberrus Review) - Peak of Serenity Podcast Ep. 167
+/podcast/new-mythic-affix-mythic-sire-denathrius-nerfs-peak-of-serenity-podcast-ep-71/,,podcast,publish,19858,New Mythic+ Affix & Mythic Sire Denathrius Nerfs - Peak of Serenity Podcast Ep. 71
+/podcast/new-old-content-peak-of-serenity-podcast-ep-83/,,podcast,publish,20745,New Old Content?! - Peak of Serenity Podcast Ep. 83
+/podcast/new-spec-trees-peak-of-serenity-podcast-ep-198/,,podcast,publish,23435,New Spec Trees?! - Peak of Serenity Podcast Ep. 198
+/podcast/new-year-new-wow-peak-of-serenity-podcast-ep-184/,,podcast,publish,23297,"New Year, New WoW - Peak of Serenity Podcast Ep. 184"
+/podcast/painsmith-nerfs-the-max-rogerbrown-sanctum-recap-peak-of-serenity-podcast-ep-79/,,podcast,publish,20606,Painsmith Nerfs & the Max / Rogerbrown Sanctum Recap | Peak of Serenity Podcast Ep. 79
+/podcast/patch-10-0-7-and-diurna-progression-peak-of-serenity-podcast-ep-145/,,podcast,publish,22363,Patch 10.0.7?! (and Diurna Progression) - Peak of Serenity Podcast Ep. 145
+/podcast/patch-10-1-announced-peak-of-serenity-podcast-ep-149/,,podcast,publish,22440,Patch 10.1 Announced! - Peak of Serenity Podcast Ep. 149
+/podcast/patch-10-2-5-bigger-on-the-inside-peak-of-serenity-podcast-ep-185/,,podcast,publish,23304,Patch 10.2.5: Bigger on the Inside - Peak of Serenity Podcast Ep. 185
+/podcast/patch-10-2-in-2-weeks-amirdrassil-in-3-peak-of-serenity-podcast-ep-177/,,podcast,publish,23142,"Patch 10.2 in 2 Weeks, Amirdrassil in 3! - Peak of Serenity Podcast Ep. 177"
+/podcast/patch-10-2-mistweaver-updates-tier-sets-item-upgrades-peak-of-serenity-podcast-ep-172/,,podcast,publish,23002,"Patch 10.2: Mistweaver Updates, Tier Sets, Item Upgrades - Peak of Serenity Podcast Ep. 172"
+/podcast/patch-10-2-more-raid-m-tuning-peak-of-serenity-podcast-ep-176/,,podcast,publish,23129,Patch 10.2: More Raid & M+ Tuning - Peak of Serenity Podcast Ep. 176
+/podcast/patch-10-2-mythic-amirdrassil-raid-testing-peak-of-serenity-podcast-ep-173/,,podcast,publish,23004,Patch 10.2: Mythic+ & Amirdrassil Raid Testing - Peak of Serenity Podcast Ep. 173
+/podcast/patch-9-1-5-peak-of-serenity-podcast-ep-81/,,podcast,publish,20722,Patch 9.1.5?!? - Peak of Serenity Podcast Ep. 81
+/podcast/patch-9-1-5-recap-peak-of-serenity-podcast-ep-88/,,podcast,publish,20829,Patch 9.1.5 Recap - Peak of Serenity Podcast Ep. 88
+/podcast/patch-9-2-cometh-peak-of-serenity-podcast-ep-100/,,podcast,publish,21084,Patch 9.2 Cometh - Peak of Serenity Podcast Ep. 100
+/podcast/patch-9-2-infodump-peak-of-serenity-podcast-ep-92/,,podcast,publish,20891,Patch 9.2 Infodump - Peak of Serenity Podcast Ep. 91
+/podcast/peak-of-serenity-podcast-ep-28-shadowlands-beta-overview/,,podcast,publish,15918,Peak of Serenity Podcast Ep. 28 - Shadowlands Beta Overview
+/podcast/peak-of-serenity-podcast-ep-29-covenant-aesthetics-abilities/,,podcast,publish,15950,Peak of Serenity Podcast Ep. 29 – Covenant Aesthetics & Abilities
+/podcast/peak-of-serenity-podcast-ep-30-covenant-soulbinds-conduits/,,podcast,publish,15954,Peak of Serenity Podcast Ep. 30 - Covenant Soulbinds & Conduits
+/podcast/peak-of-serenity-podcast-ep-31-shadowlands-legendaries/,,podcast,publish,15963,Peak of Serenity Podcast Ep. 31 - Shadowlands Legendaries
+/podcast/peak-of-serenity-podcast-ep-32-castle-nathria-part-1/,,podcast,publish,16019,Peak of Serenity Podcast Ep. 32 – Castle Nathria Part 1
+/podcast/peak-of-serenity-podcast-ep-33-castle-nathria-part-2/,,podcast,publish,16087,Peak of Serenity Podcast Ep. 33 - Castle Nathria Part 2
+/podcast/peak-of-serenity-podcast-ep-34-battle-for-azeroth-recap-launch-and-patch-8-1/,,podcast,publish,16113,Peak of Serenity Podcast Ep. 34 - Battle for Azeroth Recap: Launch and Patch 8.1
+/podcast/peak-of-serenity-podcast-ep-35-battle-for-azeroth-recap-patches-8-2-and-8-3/,,podcast,publish,16145,Peak of Serenity Podcast Ep. 35 – Battle for Azeroth Recap: Patches 8.2 and 8.3
+/podcast/peak-of-serenity-podcast-ep-36-shadowlands-prepatch/,,podcast,publish,16148,Peak of Serenity Podcast Ep. 36 - Shadowlands Prepatch
+/podcast/peak-of-serenity-podcast-ep-37-expansion-prep/,,podcast,publish,16199,Peak of Serenity Podcast Ep. 37 - Expansion Prep
+/podcast/peak-of-serenity-podcast-ep-38-wowanalyzer/,,podcast,publish,16439,Peak of Serenity Podcast Ep. 38 - WoWAnalyzer
+/podcast/peak-of-serenity-podcast-ep-39-buff-nerf-discourse-prepatch-launch/,,podcast,publish,16495,"Peak of Serenity Podcast Ep. 39 - ""Buff/Nerf Discourse"" & Prepatch Launch"
+/podcast/peak-of-serenity-podcast-ep-40-shadowlands-mythic/,,podcast,publish,16541,Peak of Serenity Podcast Ep. 40 - Shadowlands Mythic+
+/podcast/peak-of-serenity-podcast-ep-41-raider-io/,,podcast,publish,16657,Peak of Serenity Podcast Ep. 41 - Raider.io
+/podcast/peak-of-serenity-podcast-ep-42-mailbag-i/,,podcast,publish,16909,Peak of Serenity Podcast Ep. 42 - Mailbag I
+/podcast/peak-of-serenity-podcast-ep-43-the-state-of-monk/,,podcast,publish,17542,Peak of Serenity Podcast Ep. 43 - The State of Monk
+/podcast/peak-of-serenity-podcast-ep-44-shadowlands-hype/,,podcast,publish,18554,Peak of Serenity Podcast Ep. 44 - Shadowlands HYPE!
+/podcast/peak-of-serenity-podcast-ep-45-shadowlands-launch/,,podcast,publish,18670,Peak of Serenity Podcast Ep. 45 - Shadowlands Launch
+/podcast/peak-of-serenity-podcast-ep-46-send-callous-hides/,,podcast,publish,18857,Peak of Serenity Podcast Ep. 46 - Send Callous Hides
+/podcast/peak-of-serenity-podcast-ep-47-heroic-castle-nathria-non-english-wow-resources/,,podcast,publish,18952,Peak of Serenity Podcast Ep. 47 - Heroic Castle Nathria & Non-English WoW Resources
+/podcast/peak-of-serenity-podcast-ep-48-race-to-world-first-castle-nathria/,,podcast,publish,19138,Peak of Serenity Podcast Ep. 48 - Race to World First: Castle Nathria
+/podcast/peak-of-serenity-podcast-ep-49-the-exciting-conclusion-of-world-first-castle-nathria/,,podcast,publish,19152,Peak of Serenity Podcast Ep. 49 - The Exciting Conclusion of World First: Castle Nathria
+/podcast/peak-of-serenity-podcast-ep-50-mythic-raid-prep-our-prog-thus-far/,,podcast,publish,19315,Peak of Serenity Podcast Ep. 50 - Mythic Raid Prep & Our Prog Thus Far
+/podcast/peak-of-serenity-podcast-ep-51-gearing-in-9-0/,,podcast,publish,19334,Peak of Serenity Podcast Ep. 51 - Gearing in 9.0
+/podcast/peak-of-serenity-podcast-ep-52-how-are-covenants-working-out/,,podcast,publish,19353,Peak of Serenity Podcast Ep. 52 - How Are Covenants Working Out?
+/podcast/peak-of-serenity-podcast-ep-53-many-topics-handle-them/,,podcast,publish,19394,"Peak of Serenity Podcast Ep. 53 - Many Topics, HANDLE THEM!"
+/podcast/peak-of-serenity-podcast-ep-54-covenant-lore-with-anomoly/,,podcast,publish,19433,Peak of Serenity Podcast Ep. 54 - Covenant Lore with Anomoly
+/podcast/peak-of-serenity-podcast-ep-55-blizzcon-speculation/,,podcast,publish,19468,Peak of Serenity Podcast Ep. 55 - Blizzcon Speculation
+/podcast/peak-of-serenity-podcast-ep-56-valor-points-covenant-wishlist/,,podcast,publish,19488,Peak of Serenity Podcast Ep. 56 - Valor Points & Covenant Wishlist
+/podcast/peak-of-serenity-podcast-ep-57-blizzcon/,,podcast,publish,19505,Peak of Serenity Podcast Ep. 57 - Blizzcon!
+/podcast/peak-of-serenity-podcast-ep-58-9-0-5-looms/,,podcast,publish,19589,Peak of Serenity Podcast Ep. 58 - 9.0.5 Looms
+/podcast/peak-of-serenity-podcast-ep-59-stone-legion-generals/,,podcast,publish,19704,Peak of Serenity Podcast Ep. 59 - Stone Legion Generals
+/podcast/peak-of-serenity-podcast-ep-60-bugs-sundry/,,podcast,publish,19758,Peak of Serenity Podcast Ep. 60 - Bugs & Sundry
+/podcast/peak-of-serenity-podcast-ep-61-getting-benched/,,podcast,publish,19765,Peak of Serenity Podcast Ep. 61 - Getting Benched
+/podcast/peak-of-serenity-podcast-ep-62-sire-denathrius/,,podcast,publish,19767,Peak of Serenity Podcast Ep. 62 - Sire Denathrius
+/podcast/peakcraft-ep-10-monks-in-uldir/,,podcast,publish,13087,PeakCraft Ep 10: Monks in Uldir
+/podcast/peakcraft-ep-11-zandalar-dungeons/,,podcast,publish,13201,PeakCraft Ep 11: Zandalar Dungeons
+/podcast/peakcraft-ep-12-kul-tiras-dungeons/,,podcast,publish,13248,PeakCraft Ep 12: Kul Tiras Dungeons
+/podcast/peakcraft-ep-13-back-with-bis-and-brew/,,podcast,publish,13340,PeakCraft Ep 13: Back with BiS and Brew
+/podcast/peakcraft-ep-14-battle-of-dazaralor/,,podcast,publish,13577,PeakCraft Ep 14: Battle of Dazaralor
+/podcast/peakcraft-ep-15-no-quotey-you-cant/,,podcast,publish,13953,"PeakCraft Ep. 15: No Quotey, You Can't"
+/podcast/peakcraft-ep-16-mythic-affixes/,,podcast,publish,14084,PeakCraft Ep. 16: Mythic+ Affixes
+/podcast/peakcraft-ep-17-threat/,,podcast,publish,14097,PeakCraft Ep. 17: Threat
+/podcast/peakcraft-ep-18-nazjatar-mechagon/,,podcast,publish,14511,PeakCraft Ep. 18: Nazjatar & Mechagon
+/podcast/peakcraft-ep-19-eternal-palace/,,podcast,publish,14764,PeakCraft Ep. 19: The Eternal Palace
+/podcast/peakcraft-ep-2-mistweavers/,,podcast,publish,12584,PeakCraft Ep 2: Mistweavers
+/podcast/peakcraft-ep-20-mistweaver-essences/,,podcast,publish,14869,PeakCraft Ep. 20: Mistweaver Essences
+/podcast/peakcraft-ep-21-brewmaster-essences/,,podcast,publish,14893,PeakCraft Ep. 21: Brewmaster Essences
+/podcast/peakcraft-ep-22-offtopic-audio-test/,,podcast,publish,14910,PeakCraft Ep. 22: Offtopic Audio Test
+/podcast/peakcraft-ep-23-windwalker-essences/,,podcast,publish,15061,PeakCraft Ep. 23 - Windwalker Essences
+/podcast/peakcraft-ep-24-8-3-essences/,,podcast,publish,15211,PeakCraft Ep. 24 – 8.3 Essences
+/podcast/peakcraft-ep-25-tank-essences-are-bad/,,podcast,publish,15344,PeakCraft Ep. 25 - Tank Essences Are Bad
+/podcast/peakcraft-ep-26-mistweaver-rising/,,podcast,publish,15469,PeakCraft Ep. 26 - Mistweaver Rising!
+/podcast/peakcraft-ep-27-shadowlands-early-alpha-changes/,,podcast,publish,15722,PeakCraft Ep. 27 - Shadowlands: Early Alpha Changes
+/podcast/peakcraft-ep-4-brewmasters/,,podcast,publish,12853,PeakCraft Ep 4: Brewmasters
+/podcast/peakcraft-ep-5-megathread-recap/,,podcast,publish,12891,PeakCraft Ep 5: Megathread Recap
+/podcast/peakcraft-ep-6-blizzcon/,,podcast,publish,12925,PeakCraft Ep 6: Blizzcon
+/podcast/peakcraft-ep-7-mistweavers-ii/,,podcast,publish,12966,PeakCraft Ep 7: Mistweavers II
+/podcast/peakcraft-ep-8-windwalkers-ii/,,podcast,publish,12977,PeakCraft Ep 8: Windwalkers II
+/podcast/peakcraft-ep-9-brewmasters-ii-tropical-brews/,,podcast,publish,13012,"PeakCraft Ep 9: Brewmasters II ""Tropical Brews"""
+/podcast/peakcraft-episode-1-monk-in-battle-for-azeroth/,,podcast,publish,12512,PeakCraft Episode 1: Monk in Battle for Azeroth
+/podcast/peakcraft-podcast-ep-3-windwalkers/,,podcast,publish,12629,PeakCraft Podcast EP 3: Windwalkers
+/podcast/pre-patch-is-here-peak-of-serenity-podcast-ep-133/,,podcast,publish,21854,Pre-Patch is Here! - Peak of Serenity Podcast Ep. 133
+/podcast/qa-1-january-1st/,,podcast,publish,3061,Q&A 1 - January 1st
+/podcast/race-to-world-first-sanctum-of-domination-peak-of-serenity-podcast-ep-76/,,podcast,publish,20378,Race to World First: Sanctum of Domination - Peak of Serenity Podcast Ep. 76
+/podcast/raid-nerfs-season-4-mythic-affix-shrouded-peak-of-serenity-podcast-ep-112/,,podcast,publish,21568,Raid Nerfs & Season 4 Mythic+ Affix: Shrouded - Peak of Serenity Podcast Ep. 112
+/podcast/revenge-of-the-sparks-peak-of-serenity-podcast-ep-197/,,podcast,publish,23432,Revenge of the Sparks - Peak of Serenity Podcast Ep. 197
+/podcast/sanctum-of-domination-gems-gearing-peak-of-serenity-podcast-ep-73/,,podcast,publish,20178,Sanctum of Domination Gems & Gearing - Peak of Serenity Podcast Ep. 73
+/podcast/sanctum-of-domination-raid-testing-ptr-updates-peak-of-serenity-podcast-ep-67/,,podcast,publish,19793,Sanctum of Domination Raid Testing & PTR Updates - Peak of Serenity Podcast Ep. 67
+/podcast/sanctum-tuning-tazavesh-the-veiled-market/,,podcast,publish,20563,"Sanctum Tuning & Tazavesh, the Veiled Market"
+/podcast/saving-the-alliance-with-patch-9-2-5-peak-of-serenity-podcast-ep-113/,,podcast,publish,21572,Saving the Alliance with Patch 9.2.5 - Peak of Serenity Podcast Ep. 113
+/podcast/sck-is-uncapped-mage-tower-hype-peak-of-serenity-podcast-ep-84/,,podcast,publish,20775,SCK is UNCAPPED & Mage Tower HYPE | Peak of Serenity Podcast Ep. 84
+/podcast/season-4-arrives-tomorrow-peak-of-serenity-podcast-ep-121/,,podcast,publish,21708,Season 4 Arrives Tomorrow! - Peak of Serenity Podcast Ep. 121
+/podcast/season-4-cometh-peak-of-serenity-podcast-ep-117/,,podcast,publish,21647,Season 4 Cometh - Peak of Serenity Podcast Ep. 117
+/podcast/season-of-pandas-peak-of-serenity-podcast-ep-195/,,podcast,publish,23380,Season of Pandaria - Peak of Serenity Podcast Ep. 195
+/podcast/season-of-tuning-peak-of-serenity-podcast-ep-182/,,podcast,publish,23230,Season of Tuning - Peak of Serenity Podcast Ep. 182
+/podcast/sepulcher-season-4-and-onward-to-dragonflight-peak-of-serenity-podcast-ep-137/,,podcast,publish,22114,"Sepulcher, Season 4, and Onward to Dragonflight - Peak of Serenity Podcast Ep. 137"
+/podcast/somehow-even-more-mistweaver-changes-blizzcon-predictions-peak-of-serenity-podast-ep-178/,,podcast,publish,23146,(Somehow!) Even More Mistweaver Changes + BlizzCon Predictions - Peak of Serenity Podast Ep. 178
+/podcast/stop-and-smell-the-proto-roses-peak-of-serenity-podcast-ep-102/,,podcast,publish,21214,Stop and Smell the Proto-Roses - Peak of Serenity Podcast Ep. 102
+/podcast/sylvanas-is-dead-peak-of-serenity-podcast-ep-87/,,podcast,publish,20800,Sylvanas is Dead! - Peak of Serenity Podcast Ep. 87
+/podcast/t-minus-0-weeks-peak-of-serenity-podcast-ep-101/,,podcast,publish,21190,T Minus 0 Weeks - Peak of Serenity Podcast Ep. 101
+/podcast/talking-windwalker-and-deterministic-loot-with-babylonius-peak-of-serenity-podcast-ep-111/,,podcast,publish,21550,Talking Windwalker (and Deterministic Loot?!) with Babylonius - Peak of Serenity Podcast Ep. 111
+/podcast/the-arrival-of-9-1-peak-of-serenity-podcast-ep-74/,,podcast,publish,20321,The Arrival of 9.1 - Peak of Serenity Podcast Ep. 74
+/podcast/the-calm-before-the-dragonstorm-peak-of-serenity-podcast-ep-134/,,podcast,publish,21881,The Calm Before the Dragonstorm - Peak of Serenity Podcast Ep. 134
+/podcast/the-elephant-in-the-room-peak-of-serenity-podcast-ep-77/,,podcast,publish,20477,The Elephant in the Room - Peak of Serenity Podcast Ep. 77
+/podcast/the-final-hero-tree-peak-of-serenity-podcast-ep-196/,,podcast,publish,23429,The Final Hero Tree - Peak of Serenity Podcast Ep. 196
+/podcast/the-gang-speculates-wildly-peak-of-serenity-podcast-ep-108/,,podcast,publish,21416,The Gang Speculates Wildly - Peak of Serenity Podcast Ep. 108
+/podcast/the-god-comp-is-still-the-god-comp-also-outside-auras-peak-of-serenity-podcast-ep-168/,,podcast,publish,22989,The God Comp is STILL the God Comp (also Outside Auras?!) - Peak of Serenity Podcast Ep. 168
+/podcast/the-last-season-2-affix-episode-peak-of-serenity-podcast-ep-154/,,podcast,publish,22509,The Last (?) Season 2 Affix Episode - Peak of Serenity Podcast Ep. 154
+/podcast/the-race-goes-on-peak-of-serenity-podcast-ep-105/,,podcast,publish,21345,The Race Goes On - Peak of Serenity Podcast Ep. 105
+/podcast/the-race-is-over-peak-of-serenity-podcast-ep-106/,,podcast,publish,21363,The Race is Over - Peak of Serenity Podcast Ep. 106
+/podcast/the-season-2-mythic-affixes-are-not-good-peak-of-serenity-podcast-ep-152/,,podcast,publish,22486,The Season 2 Mythic+ Affixes Are...Not Good - Peak of Serenity Podcast Ep. 152
+/podcast/the-season-4-fiesta-peak-of-serenity-podcast-ep-122/,,podcast,publish,21725,The Season 4 Fiesta - Peak of Serenity Podcast Ep. 122
+/podcast/the-state-of-mistweaver-in-9-1-5-peak-of-serenity-podcast-ep-89/,,podcast,publish,20852,The State of Mistweaver in 9.1.5 | Peak of Serenity Podcast Ep. 89
+/podcast/thinking-with-portals-peak-of-serenity-podcast-ep-191/,,podcast,publish,23353,Thinking With Portals - Peak of Serenity Podcast Ep. 191
+/podcast/tier-acquisition-aberrus-testing-peak-of-serenity-podcast-ep-151/,,podcast,publish,22479,Tier Acquisition & Aberrus Testing - Peak of Serenity Podcast Ep. 151
+/podcast/tier-set-changes-unique-weapons-peak-of-serenity-podcast-ep-98/,,podcast,publish,21066,Tier Set Changes & Unique Weapons - Peak of Serenity Podcast Ep. 98
+/podcast/tier-sets-double-legendaries-peak-of-serenity-podcast-ep-96/,,podcast,publish,20960,Tier Sets & Double Legendaries - Peak of Serenity Podcast Ep. 96
+/podcast/tier-sets-zereth-mortis-and-the-morgan-day-interview-peak-of-serenity-podcast-ep-92/,,podcast,publish,20924,"Tier Sets, Zereth Mortis, and the Morgan Day Interview - Peak of Serenity Podcast Ep. 92"
+/podcast/trading-post-primordial-stones-and-raszageth-progression-peak-of-serenity-podcast-ep-147/,,podcast,publish,22392,"Trading Post, Primordial Stones and Raszageth Progression - Peak of Serenity Podcast Ep. 147"
+/podcast/tree-raid-rwf-hype-peak-of-serenity-podcast-ep-180/,,podcast,publish,23219,Tree Raid RWF HYPE - Peak of Serenity Podcast Ep. 180
+/podcast/un-private-auras-peak-of-serenity-podcast-ep-188/,,podcast,publish,23337,Un-Private Auras - Peak of Serenity Podcast Ep. 188
+/podcast/vault-of-the-incarnates-release-peak-of-serenity-podcast-ep-140/,,podcast,publish,22248,Vault of the Incarnates Release! - Peak of Serenity Podcast Ep. 140
+/podcast/we-have-a-dragonflight-release-date-peak-of-serenity-podcast-ep-130/,,podcast,publish,21781,We Have a Dragonflight Release Date! - Peak of Serenity Podcast Ep. 130
+/podcast/we-have-druid-death-knight-talents-peak-of-serenity-podcast-ep-114/,,podcast,publish,21596,We Have (Druid & Death Knight) Talents! - Peak of Serenity Podcast Ep. 114
+/podcast/we-have-monk-talents-peak-of-serenity-podcast-ep-124/,,podcast,publish,21748,We Have Monk Talents! - Peak of Serenity Podcast Ep. 124
+/podcast/we-love-raid-buffs-s-peak-of-serenity-podcast-ep-175/,,podcast,publish,23014,We Love Raid Buffs (/s) - Peak of Serenity Podcast Ep. 175
+/podcast/we-stan-the-plagueborer-peak-of-serenity-podcast-ep-70/,,podcast,publish,19852,We Stan the Plagueborer - Peak of Serenity Podcast Ep. 70
+/podcast/welcome-loamme-peak-of-serenity-podcast-ep-157/,,podcast,publish,22616,Welcome Loamme - Peak of Serenity Podcast Ep. 157
+/podcast/welcome-to-aberrus-peak-of-serenity-podcast-ep-158/,,podcast,publish,22623,Welcome to Aberrus! - Peak of Serenity Podcast Ep. 158
+/podcast/welcome-to-sepulcher-peak-of-serenity-podcast-ep-103/,,podcast,publish,21218,Welcome to Sepulcher! - Peak of Serenity Podcast Ep. 103
+/podcast/were-heroic-raiders-now-and-the-mythic-race-is-on-peak-of-serenity-podcast-ep-104/,,podcast,publish,21253,We're Heroic Raiders Now (and the Mythic Race is on!) | Peak of Serenity Podcast Ep. 104
+/podcast/what-even-is-healing-actually-peak-of-serenity-podcast-ep-170/,,podcast,publish,22997,"What Even Is Healing, Actually? - Peak of Serenity Podcast Ep. 170"
+/podcast/windwalker-talent-trees-peak-of-serenity-podcast-ep-127/,,podcast,publish,21764,Windwalker Talent Trees - Peak of Serenity Podcast Ep. 127
+/podcast/world-of-not-warcraft-peak-of-serenity-podcast-ep-72/,,podcast,publish,19868,World of Not-Warcraft - Peak of Serenity Podcast Ep. 72
+/podcast/yet-more-mw-buffs-new-tools-more-raszageth-prog-peak-of-serenity-podcast-ep-148/,,podcast,publish,22397,"Yet More MW Buffs, New Tools & More Raszageth Prog - Peak of Serenity Podcast Ep. 148"
+/podcast/you-might-call-it-cataclysmic-peak-of-serenity-podcast-ep-193/,,podcast,publish,23358,You Might Call it Cataclysmic - Peak of Serenity Podcast Ep. 193
+/pve-guide/,/pve-guide/,page,publish,16955,Brewmaster PvE Quick Guide
+/tww/,/tww/,page,publish,21897,The War Within Home Page
+/tww/brewmaster/,/tww/brewmaster/,page,publish,21916,The War Within Brewmaster
+/tww/brewmaster/acronyms/,/tww/brewmaster/acronyms/,page,publish,10153,Brewmaster Acronyms
+/tww/brewmaster/pve-guide/,/tww/brewmaster/pve-guide/,page,publish,21941,Brewmaster Monk Tank Guide - Midnight Season 2 (12.1.0)
+/tww/mistweaver/,/tww/mistweaver/,page,publish,21899,The War Within Mistweaver
+/tww/mistweaver/acronyms/,/tww/mistweaver/acronyms/,page,publish,4975,Mistweaver Acronyms
+/tww/mistweaver/pve-guide-shadowlands/,/tww/mistweaver/pve-guide-shadowlands/,page,publish,21938,Mistweaver PvE Guide
+/tww/mistweaver/pve-guide/,/tww/mistweaver/pve-guide/,page,publish,16973,Mistweaver PvE Quick Guide
+/tww/mistweaver/pve-guide/advanced-renewing-mist/,/tww/mistweaver/pve-guide/advanced-renewing-mist/,page,publish,17878,Mistweaver Ability Spotlight – Renewing Mist
+/tww/mistweaver/pve-guide/advanced-rising-mist/,/tww/mistweaver/pve-guide/advanced-rising-mist/,page,publish,17814,Mistweaver Ability Spotlight – Rising Mist
+/tww/mistweaver/pve-guide/advanced-soothing-mist/,/tww/mistweaver/pve-guide/advanced-soothing-mist/,page,publish,17867,Mistweaver Ability Spotlight – Soothing Mist
+/tww/mistweaver/pve-guide/advanced-thunder-focus-tea/,/tww/mistweaver/pve-guide/advanced-thunder-focus-tea/,page,publish,17872,Mistweaver Ability Spotlight – Thunder Focus Tea
+/tww/windwalker/,/tww/windwalker/,page,publish,21918,The War Within Windwalker
+/tww/windwalker/acronyms/,/tww/windwalker/acronyms/,page,publish,4117,Windwalker Acronyms
+/tww/windwalker/pve-guide/,/tww/windwalker/pve-guide/,page,publish,21927,Windwalker Monk PvE Guide
+/tww/windwalker/pve-guide/advanced-tricks/,/tww/windwalker/pve-guide/advanced-tricks/,page,publish,13932,Windwalker Advanced Guide
+/tww/windwalker/pve-guide/class-tree-in-depth/,/tww/windwalker/pve-guide/class-tree-in-depth/,page,publish,24151,Class Tree In-Depth
+/tww/windwalker/pve-guide/leveling/,/tww/windwalker/pve-guide/leveling/,page,publish,22057,Windwalker Leveling Guide
+/tww/windwalker/pve-guide/log-analysis/,/tww/windwalker/pve-guide/log-analysis/,page,publish,22824,Windwalker Log Analysis
+/tww/windwalker/pve-guide/log-analysis/mythicplus/,/tww/windwalker/pve-guide/log-analysis/mythicplus/,page,publish,22843,Windwalker Logs Analysis: Mythic Plus
+/tww/windwalker/pve-guide/log-analysis/raid/,/tww/windwalker/pve-guide/log-analysis/raid/,page,publish,22840,Windwalker Log Analysis: Raid Logs
+/tww/windwalker/pve-guide/log-analysis/tools/,/tww/windwalker/pve-guide/log-analysis/tools/,page,publish,22835,Windwalker Log Analysis: Tools
+/tww/windwalker/pve-guide/references/,/tww/windwalker/pve-guide/references/,page,publish,21975,Windwalker PvE References
+/tww/windwalker/pve-guide/sim101/,/tww/windwalker/pve-guide/sim101/,page,publish,22409,Simulationcraft-101

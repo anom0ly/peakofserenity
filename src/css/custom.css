@@ -1,0 +1,91 @@
+/* Peak of Serenity colours, taken from the live Divi theme. The site is dark-only. */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root,
+html[data-theme='dark'] {
+  --pos-bg: #00242c;
+  --pos-bg-raised: #003540;
+  --pos-heading: #00b268;
+  --pos-link: #00ff96;
+  --pos-link-active: #09f7bb;
+  --pos-button: #1da586;
+  --pos-tab-border: #1da586;
+
+  --ifm-font-family-base: 'Open Sans', Arial, sans-serif;
+  --ifm-heading-font-family: 'Open Sans', Arial, sans-serif;
+  --ifm-background-color: var(--pos-bg);
+  --ifm-background-surface-color: var(--pos-bg);
+  --ifm-navbar-background-color: var(--pos-bg);
+  --ifm-footer-background-color: var(--pos-bg);
+  --ifm-font-color-base: #ffffff;
+  --ifm-heading-color: var(--pos-heading);
+  --ifm-link-color: var(--pos-link);
+  --ifm-link-hover-color: var(--pos-link-active);
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: var(--pos-link-active);
+  --ifm-dropdown-background-color: var(--pos-bg);
+  --ifm-color-primary: #00b268;
+  --ifm-color-primary-dark: #00a05e;
+  --ifm-color-primary-darker: #009759;
+  --ifm-color-primary-darkest: #007c49;
+  --ifm-color-primary-light: #00c472;
+  --ifm-color-primary-lighter: #00cd77;
+  --ifm-color-primary-lightest: #00ff96;
+  --ifm-tabs-color-active: var(--pos-link);
+  --ifm-tabs-color-active-border: var(--pos-link);
+  --ifm-table-stripe-background: var(--pos-bg-raised);
+  --ifm-code-background: var(--pos-bg-raised);
+  --ifm-navbar-shadow: none;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--pos-bg);
+  border-top: 1px solid var(--pos-tab-border);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--pos-tab-border);
+}
+
+.navbar__link {
+  letter-spacing: 1px;
+}
+
+.dropdown__menu {
+  border: 1px solid var(--pos-link);
+}
+
+/* Per-spec accents from the old .ww-page / .bm-page / .mw-page styles */
+.spec-windwalker {
+  --ifm-heading-color: #b0cef4;
+  --ifm-link-color: #b0cef4;
+}
+.spec-brewmaster {
+  --ifm-heading-color: #c5b990;
+  --ifm-link-color: #c5a15a;
+}
+.spec-mistweaver {
+  --ifm-heading-color: #ff8153;
+  --ifm-link-color: #ffaf7d;
+}
+
+/* Talent import strings are long unbroken codes: let them wrap anywhere rather than overflow. */
+.markdown a[href*='talent-calc'] {
+  word-break: break-all;
+}
+
+.markdown img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button--pos {
+  background: var(--pos-button);
+  color: #fff;
+  border-radius: 5px;
+}
+.button--pos:hover {
+  color: #fff;
+  border-radius: 25px;
+  letter-spacing: 2px;
+}
