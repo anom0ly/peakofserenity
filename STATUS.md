@@ -8,6 +8,8 @@ _Last updated 2026-10-17._ Current phase: **1. Pilot**.
   fields, all 9 talent strings verified verbatim) and 5 news posts chosen to cover Divi posts, classic-editor posts,
   captions, embeds, interactive widgets and co-authors.
 - Every converted body and field compiles as MDX.
+- Downloaded the pilot's images and the site banners/tiles from the live site into `static/img/uploads/`
+  (33 files, 37 MB; one, `2018/07/MW-Header.png`, is a 404 on the live site too).
 - Review list of what didn't convert cleanly: [migration/review-list.md](migration/review-list.md).
 
 ## In progress
@@ -17,11 +19,10 @@ _Last updated 2026-10-17._ Current phase: **1. Pilot**.
 - Docusaurus scaffold with branding, homepage spec tiles, top dropdown navbar (from the "TWW Main Menu"), Wowhead tooltip script.
 - Guide layout component that renders the tab fields (see [migration/GUIDE-FORMAT.md](migration/GUIDE-FORMAT.md)).
 - `.pages.yml` for News Posts, Guides, Authors and `static/img`.
-- Download images into `static/img/uploads/` with `tools/fetch_images.py` (pilot needs 25: [migration/images-needed.txt](migration/images-needed.txt)).
 
 ## Waiting on
-- Network access to www.peakofserenity.com so `tools/fetch_images.py` can download images from the live site
-  (the uploads folder won't be provided). Any image that fails to download goes on the review list.
+- Nothing. Images come straight from the live site with `tools/fetch_images.py` (the uploads folder won't be
+  provided); failures go on the review list.
 
 ## Decisions (2026-10-17)
 - Podcasts: convert all 215 episodes, plus one archive page listing them.

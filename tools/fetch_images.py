@@ -2,7 +2,7 @@
 """Download the images the converted content references straight from the live site.
 
 Usage: python3 -I fetch_images.py [REPO_ROOT]
-Reads migration/images-needed.txt (paths under wp-content/uploads/, written by wp2mdx.py),
+Reads migration/images-needed.txt (written by wp2mdx.py) and migration/images-site.txt (banners, tiles),
 saves each to static/img/uploads/<same path>, skips files already present, and appends any
 that fail to a "Images that failed to download" section of migration/review-list.md.
 """
@@ -27,7 +27,11 @@ def fetch(url, ctx):
 def main():
     root = sys.argv[1] if len(sys.argv) > 1 else "."
     ctx = ssl.create_default_context(cafile=CA) if os.path.exists(CA) else ssl.create_default_context()
-    needed = [l.strip() for l in open(os.path.join(root, "migration", "images-needed.txt")) if l.strip()]
+    needed = []
+    for name in ("images-needed.txt", "images-site.txt"):  # content images, then site banners/tiles
+        path = os.path.join(root, "migration", name)
+        if os.path.exists(path):
+            needed += [l.strip() for l in open(path) if l.strip() and l.strip() not in needed]
     failed, got = [], 0
     for rel in needed:
         dest = os.path.join(root, "static", "img", "uploads", rel)
