@@ -1,0 +1,502 @@
+---
+title: What Stats Should I Use? (A Zen Meditation)
+slug: /2023/10/18/what-stats-should-i-use-a-zen-meditation
+date: '2023-10-18T17:05:02'
+authors:
+- emallson
+categories:
+- Brewmaster
+- General
+patches:
+- 10.1.5
+- '10.2'
+tags: []
+description: For a very long time, Crit/Vers has been the de facto stat combination for Brewmasters in virtually all content. Mastery has always been a staple for…
+wp_id: 23016
+original_url: https://www.peakofserenity.com/2023/10/18/what-stats-should-i-use-a-zen-meditation/
+image: /img/uploads/2018/10/Brew-Musing_narrow.jpg
+---
+
+For a *very* long time, Crit/Vers has been the *de facto* stat combination for Brewmasters in virtually all content. Mastery has always been a staple for defensive use in Mythic+, but has never overtaken Crit/Vers for damage.
+
+Until now. Sort of. In some cases. *Ugh.*
+
+The reality is that things are complicated. Sometimes Crit/Vers is still best! Sometimes Mastery will overtake Vers and Crit/Mastery will be best. With the tuning changes from Patch 10.1.5 now settled and some quirks of itemization next tier, now seems like a good time to explain *why* this shift can occur (and why it may have already occurred for you!)
+
+## A Detailed Breakdown of Brewmaster Stats
+
+To kick things off, let’s review what different stats *actually do* for Brewmaster. It might seem obvious, but there are a lot of quirks that play a major role in explaining *why* we get these results.
+
+Broadly, there are two different things that you might care about as a Brewmaster: the **offensive** value provided by a stat, and the **defensive** value. These are fundamentally incomparable---there is no magic formula that will tell you the perfect balance of the two. It depends on what content you’re doing, how comfortable you are on the spec, and how good you are as a player.
+
+But, the magic of WoW is that *the choice is yours*. You can work things out yourself, experiment, and decide for yourself whether to take our recommendations or do something else entirely. Your choices might not be “optimal” according to the priorities that we have (and they also might not be optimal for your priorities---optimality is hard!) but experimentation is an essential part of growing as a player.
+
+### Offensive Stat Reference
+
+As a reminder, this reference *only* covers the offensive benefits. See [below](#Offensive Stat Reference) for defensive benefits.
+
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical Strike</td>
+<td>
+<ul>
+<li>Good Scaling (94% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+<li>Applies to Monk damage sources</li>
+<li>Applies to gear &amp; item damage sources</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Random, which is sometimes very problematic (see: <a href="https://www.wowhead.com/item=203963/beacon-to-the-beyond">Beacon</a> Crit RNG)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Mastery</td>
+<td>
+<ul>
+<li>Good Scaling (94% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+<li>Applies to Monk ability damage sources, and gear &amp; item sources that copy Monk ability damage via <a href="https://www.wowhead.com/spell=117906/mastery-elusive-brawler">Mastery: Elusive Brawler</a>'s Attack Power increase</li>
+<li>Constant benefit: all damage is increased, period. No RNG</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Does <strong>not</strong> apply to most gear &amp; item damage sources (damage replication effects are historically rare, though notably our tier set in Amirdrassil is such an effect!)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Versatility</td>
+<td>
+<ul>
+<li>Applies to Monk damage sources</li>
+<li>Applies to gear &amp; item damage sources</li>
+<li>Constant benefit: all damage is increased, period. No RNG</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>OK Scaling (83% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Haste</td>
+<td>
+<ul>
+<li>Best Scaling (100% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+<li>Applies to <i>almost</i> all damage-over-time effects</li>
+<li>Increases the proc rate of some gear &amp; item damage sources</li>
+<li>Reduces cooldowns of some relevant damage spells</li>
+<li>Increases Energy regeneration</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Does not increase the damage of many of our core spells</li>
+<li>Due to the number of spells available and our fixed GCD, we typically cannot use the CDR effect offensively</li>
+<li>Due to the number of free spells, we typically cannot use the extra Energy regen</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+There are two primary questions to answer when figuring out what stats are going to give the best damage for a situation:
+
+1. How much of your damage comes from gear & item sources?
+2. Which Monk spells make up the majority of your damage?
+
+**Question #1** helps define the value of Crit & Vers relative to Mastery. If you have a large percentage of damage coming from gear & item sources, then Versatility can overcome its worse scaling to become one of your best stats.
+
+Historically, a very large percentage of our damage has come from external sources, with [over 40%](https://www.warcraftlogs.com/reports/vLbQhXVmTMK9AwdW#fight=5&type=damage-done&source=37) coming from gear & items in patch 10.0 (and [nearly 60%](https://www.warcraftlogs.com/reports/mZApMcG4Ygqr29z6#fight=1&type=damage-done&source=14) ([screenshot](/img/uploads/2023/10/Capture.png)) in the bad old days of BfA). Patch 10.1.5 saw [dramatic changes](https://worldofwarcraft.blizzard.com/en-us/news/23968772/updated-july-11-dragonflight-fractures-in-time-content-update-notes-now-live#item10) that nerfed damage from gear & items (especially the [Onyx Annulet](https://www.wowhead.com/item=203460/onyx-annulet)) and significantly buffed damage from Monk sources. While this prevented a return to BfA ratios between sources, we still have [around 30%](https://www.warcraftlogs.com/reports/wQ3F74RqbrVJB9TC#fight=1&type=damage-done&source=6) from gear & items with our best-in-slot damage setup.
+
+Most of that power comes from trinkets and weapons: if you remove the 2 trinkets and swap the weapon for crafted items, only around 9% of damage comes from gear & items. We’ll talk in more detail about this in a moment---but you probably have some ideas about what that means for our stat priority.
+
+**Question #2** is primarily about *haste*: do the spells you’re using scale with haste or not? Right now, the general answer is *no*. In single-target settings, you are primarily gated by the **unhasted** 4s cooldown of [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) (BoK). It is a damage loss to push [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) more often than 1 time per [BoK](https://www.wowhead.com/spell=100784/blackout-kick), and you are forced to ignore the cooldown reductions on [Keg Smash](https://www.wowhead.com/spell=121253/keg-smash) and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) in order to keep pressing [BoK](https://www.wowhead.com/spell=100784/blackout-kick).
+
+In AoE, things are slightly more complicated since you can *in theory* get limited by energy when using [Spinning Crane Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick) (SCK) in large pulls. However: if you are able to pull so large that [SCK](https://www.wowhead.com/spell=101546/spinning-crane-kick) becomes better than other spells like [BoK](https://www.wowhead.com/spell=100784/blackout-kick), [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick), and [Keg Smash](https://www.wowhead.com/spell=121253/keg-smash) then you are much more likely to get gated by *defensive power* allowing you to facetank the pull longer than you are by energy.
+
+Lastly, our damage-over-time sources are mostly anemic at this time---which means that the one damage source that haste *directly* scales accounts for a very low percentage of our overall breakdown in pretty much any setting.
+
+All of that said: it is a useful question to keep in mind for the possible future where Haste becomes a good stat for Brewmaster (but we’re likely to need pretty major spec changes for that to occur!)
+
+### Defensive Stat Reference
+
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical Strike</td>
+<td>
+<ul>
+<li>Functions as a “virtual damage reduction” by amplifying all incoming healing. (see <a href="#Queueing_Theory_“Virtual_Damage_Reduction”">here</a> for an explanation)</li>
+<li>Helpful against all types of damage</li>
+<li>Scales very well off of self-healing (capable of &gt;165% efficiency!—see <a href="#Defensive_Power_Efficiency_Reference">note</a>) and reasonably well off of external healing (75% efficiency) via <a href="https://www.wowhead.com/spell=216519/celestial-fortune">Celestial Fortune</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>“Virtual damage reduction” is not real damage reduction. It is possible to die before Crit helps you.</li>
+<li>Heavily tied to your incoming healing. Once healing can’t keep up, things get bad fast.</li>
+<li>Actual value can vary due to overhealing.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Mastery</td>
+<td>
+<ul>
+<li>Scales off of incoming <i>dodgeable</i> damage (&gt;94% efficiency in raid, &gt;47% efficiency in M+) via <a href="https://www.wowhead.com/spell=117906/mastery-elusive-brawler">Mastery: Elusive Brawler</a></li>
+<li>Increases <i>most</i> of our self-healing at a reasonable rate (94% efficiency on self heals)</li>
+<li>In a single-target setting, it is possible to get significantly more than the expected value from Mastery by intentionally stacking it before mechanics (known as “force-dodging” mechanics)</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>The main source of defensive scaling is dodgeable damage. Can’t dodge it? Bad times.</li>
+<li>While the stacking buff keeps Mastery from being too random, it is still vulnerable to RNG---more so than Crit.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Versatility</td>
+<td>
+<ul>
+<li>Actual damage reduction! The most reliable secondary defensively.</li>
+<li>Helpful against all types of damage</li>
+<li>OK scaling off of self healing (83% efficiency)</li>
+<li>Scales off of incoming damage, though at a poor rate (42% efficiency)</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>The conversion rate on the DR effect is low (42% efficiency).</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Haste</td>
+<td>
+<ul>
+<li>Decreases the cooldown of <a href="https://www.wowhead.com/spell=119582/purifying-brew">Purifying Brew</a></li>
+<li>(In theory) allows better brew generation by increased energy for <a href="https://www.wowhead.com/spell=100780/tiger-palm">Tiger Palm</a> &amp; <a href="https://www.wowhead.com/spell=121253/keg-smash">Keg Smash</a>.</li>
+<li>(In theory) allows better brew generation by reducing the cooldown of <a href="https://www.wowhead.com/spell=121253/keg-smash">Keg Smash</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Each <a href="https://www.wowhead.com/spell=119582/purifying-brew">Purify</a> within a short timeframe reduces the value of future Purifies. The first <a href="https://www.wowhead.com/spell=119582/purifying-brew">Purify</a> is amazing, the second is good, but the 3rd? 4th? 5th? Not so much.
+This hurts the value of the <a href="https://www.wowhead.com/spell=119582/purifying-brew">Purifying Brew</a> CDR.</li>
+<li>Does very little to increase brew gen via energy in practice.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+***Note:** [Gift of the Ox](https://www.wowhead.com/spell=124502/gift-of-the-ox) is not explicitly included anywhere above: it counts as "self healing", but technically adds damage-taken scaling (1 orb per 100% of HP lost pre-Stagger and post-DRs) to the self-healing scaling of Vers, Crit, and Mastery.*
+
+Defensive analysis is where things get more complicated, and *fast*. Now we have multiple different efficiency conversions per stat---and most conversion rates are only a small piece of a larger puzzle!
+
+This should also highlight how *situational* all of this valuation is. A heavily melee-centric dungeon like Freehold favors Mastery, while a raid encounter with very little dodgeable damage (like Forgotten Experiments) favors Crit and Vers.
+
+Of course: we also cannot lose sight of the realities of tanking in pursuit of optimally efficient stats. Your stats do not matter if you get one-shot. Your stats do not matter if the model you used to “optimize” them is out of sync with the actual fight you’re in.
+
+Overall, **your secondary stat distribution is not your first line of defense,** it is an *edge*—a slight advantage that supports good core gameplay and smart cooldown usage. World of Warcraft is not (presently) a game where it is possible to solve hard content with math and theory. While theory is useful for finding that edge, you *must not* neglect practice and self-improvement if you want to do hard content.
+
+### How Stats Scale (aka *What is “Conversion Rate?”)*
+
+Most other pieces of the math for this post have been consigned to the reference at the end, but this one is so important that it really needs to be discussed front-and-center. Let’s talk about Conversion Rates.
+
+At its core, the *Conversion Rate* for a stat is the the *rate* at which you convert the points on gear to the *actual percentage* that you receive. WoW uses several layers of math for this that are all individually simple, but together they can be a bit complex. It will be easiest to start with an example. Let’s convert the Versatility from a crafted belt into the damage and damage reduction values.
+
+**First:** we need to know the *amount of stats* that you have on the item. This is determined by the *slot* of the item (chest, shoulders, gloves, etc) and the *ilvl*. Importantly: stats scale **exponentially** off of your ilvl---this is a major part of why “ilvl > all” is such a common recommendation (compare a [ilvl 424 belt](https://www.wowhead.com/item=193407/life-bound-belt?ilvl=424) to a [ilvl 447 belt](https://www.wowhead.com/item=193407/life-bound-belt?ilvl=447)).
+
+**Second:** we need the *stat distribution*. Most items divide your secondaries into two different stats, ranging from 80/20 to 50/50 breakdowns. Crafted items are particularly easy: 50/50, every time. This gives us 332 Versatility rating.
+
+**Third:** we need the *exchange rate* for the stat. This determines how many points of rating are needed to get 1% of the stat. For Versatility at level 70, this is 205 rating per percent. 332 / 205 = 1.62% Versatility.
+
+**Fourth:** we need your *total rating* to apply the diminishing return penalties. The penalties are based on the total percentage gained *from rating*. For simplicity, we’re going to ignore this since you need over 30% *from rating* before the first (very minor) penalty kicks in. Since we're ignoring this phase, we are left with 1.62% Versatility from our crafted belt.
+
+Now, what happens if we replace Versatility with Haste, or Mastery? The current exchange rates for each stat are:
+
+- Versatility: 205 points / percent (belt: 1.62%)
+- Critical Strike: 180 points / percent (belt: 1.84%)
+- Mastery: 180 points / percent (belt: 1.84%)
+- Haste: 170 points / percent (belt: 1.95%)
+
+The *Conversion Rate* tells you how much actual stat percentage you gain from rating, relative to the *most efficient* option (which is currently Haste---these rates change every expansion!).
+
+This means that if one item gives you 332 Versatility and another gives you 332 Haste, they are *not* going to give you equal amounts of Versatility % and Haste %!
+
+Again: we have to keep in mind that our spec doesn’t make use of every stat equally well. You might gain the most Haste % from rating, but Brewmaster doesn’t gain nearly as much damage or defensive power from 1% of Haste as it currently does from 1% of Versatility or 1% of Mastery!
+
+However, this underlying difference in the exchange rates is important for understanding *why* a stat that buffs everything (Versatility) can be worse than a stat that buffs only some things (Mastery). You gain a smaller amount of Versatility % from gear than you gain Mastery %, which means that in order for Versatility to be better than Mastery you actually need to gain *more value* from each Versatility % than each Mastery %---if that doesn’t happen, then Versatility is worse.
+
+### A Wrench in the Works: Stats Buff Each Other
+
+We have one more detour before we go back to waxing poetic about the age-old war between Mastery and Versatility (Crit likes to stay out of it and Haste died long ago). Everything above is correct---but it is incomplete. You see: stats buff each other. Having more of a stat makes all your other stats better! To see why, let’s talk a little about modeling.
+
+*World of Warcraft* is complicated. Yes, this is word 1378 of an article on the math---but even this is a simplification of the game! No amount of math is going to be able to accurately represent every detail of the game---every moment spent kiting, every broken mouseover macro, every bad-luck DC, every good-luck boss-bugs-out freebie. *World of Warcraft* is far too complicated to model exactly.
+
+But models can still be useful! We can work within a simplified “small world” that represents the larger one and can help us learn important interactions---even if we have to take that knowledge with a grain of salt. We’re about to do exactly that.
+
+How much damage does [Keg Smash](https://www.wowhead.com/spell=121253/keg-smash) do? We have a formula:
+
+```
+Keg Smash Damage = 0.9 * (Agility + 6 * Weapon DPS)
+                       * (1 + Versatility %)
+                       * (1 + Mastery %)
+```
+
+But this is just a single hit! What if it crits? On average, it works out to another multiplicative modifier ([proof](#Proof_Critical_Strike_as_a_Damage_Multiplier)):
+
+```
+Keg Smash Damage = 0.9 * (Agility + 6 * Weapon DPS)
+                       * (1 + Versatility %)
+                       * (1 + Mastery %)
+                       * (1 + Crit %)
+```
+
+But this is still just a single hit! We have a whole fight! The total damage we get from [Keg Smash](https://www.wowhead.com/spell=121253/keg-smash) depends on *how many times* we cast it, right? Haste lets us cast it more by reducing the cooldown and increasing our energy. In our idealized “small world” model, this means that it is another multiplier:
+
+```
+Keg Smash Damage = 0.9 * (Agility + 6 * Weapon DPS)
+                       * (1 + Versatility %)
+                       * (1 + Mastery %)
+                       * (1 + Crit %)
+                       * (1 + Haste %)
+```
+
+Easy enough. Now, how do we maximize it? We know that Mastery is reasonably efficient, so let's put all of our points there. Let's say that we gain 70% Vers from our gear, have 10,000 Agility and 500 Weapon DPS. The text format is a bit of a pain, so let's switch to a block-based format. These numbers give us 11,700 damage as a baseline. After applying our modifiers, we get:
+
+11,700
+
+×
+
+70% Vers
+
+=
+
+19,890
+
+Great! What if we pick a more efficient stat? The conversion rate says that we’ll get about 80% Mastery, giving us:
+
+11,700
+
+×
+
+80% Mastery
+
+=
+
+21,060
+
+We get a bit more damage (shown in light blue), as expected from a more efficient stat.
+
+What happens if we split our available secondaries between the two, 50/50? That would give us 40% Mastery and 35% Vers (roughly).
+
+11,700
+
+×
+
+40% Mastery
+
+35% Vers
+
+=
+
+22,113
+
+It went up! We moved some rating from a more efficient stat to a less efficient stat—getting lower overall stat percentages in the process—and yet got *more damage!*
+
+What if we split up the Mastery with Crit without touching Vers? 20% Mastery, 20% Crit, and 35% Vers.
+
+11,700
+
+×
+
+20% Mastery
+
+20% Crit
+
+35% Vers
+
+=
+
+22,745
+
+It went up again! I’ll let you try it with a 4-way split on your own ;)
+
+Mastery
+
+Critical Strike
+
+Versatility
+
+Haste
+
+11,700
+
+×
+
+20% Mastery
+
+20% Crit
+
+35% Vers
+
+0% Haste
+
+=
+
+22,745
+
+While this model is extremely basic, it illustrates an incredibly important fact: **because stats multiply together, stacking a single stat is** ***almost never*** **worthwhile over a 2- or 3-way split.**
+
+In the case of Brewmaster: this is also a large part of why we recommend equipping ilvl *first* and only caring about secondaries *second*. If you equip a random selection of items, you will on average end up with a 3-way or 4-way split between the secondaries! On top of that, higher ilvl items have *more* of all stats---and ilvl scales your stats exponentially.
+
+While that gear is usually *actually* best-in-slot (in reality, the gap between stats---especially Haste---is a *wee bit* larger than in this “small world” model), this strategy works extremely well until you reach the point that your ilvl stops going up.
+
+### When the ilvl Stops: Deciding Between Secondaries at Gear Cap
+
+Once you’re at or close to the max ilvl, the loss of exponential gains from equipping highest ilvl makes it worthwhile to seriously think about the differences in secondary stats. To recap:
+
+- **Haste** has the best conversion rate, but *by far* the worst value in practice for either defensive or offensive power.
+- **Critical Strike** has a good conversion rate, works on every damage source, and on every defensive element---but its defensive power scales off of *incoming healing* instead of *incoming damage*.
+- **Mastery** has a good conversion rate, but only works on damage from abilities. It has a *great* conversion into defensive power that scales off of incoming damage, but again: that only applies to *some* incoming damage.
+- **Versatility** has the worst conversion rate, but works on every damage source and---importantly---scales off of all incoming damage (even if the rate is *pretty bad*).
+
+While you no longer have to think about ilvl gains, you *do* also need to keep in mind that a 2- or 3-way split is generally the most effective overall---even if it means using a stat that is “less efficient”. Due to the way that items in WoW work (almost every item has rating for 2 different secondary stats), it is extremely common to focus on 2-way splits. Based on everything we now know, let’s work out where we’d *expect* each 2-way split to be best:
+
+|  | Offensive | Defensive |
+| --- | --- | --- |
+| Crit / Mastery | This is the “vanilla” combo. If most of our damage is coming from our abilities, then this is probably our best combo for damage. The only “more efficient” combo would involve Haste, but in practice Haste is still not good for us. | The strongest situation would have high amounts of dodgeable damage, combined with plentiful incoming healing. Something like Echo of Neltharion, where auto attacks are a huge source of tank damage, and you also have access to [Beacon of Light](https://www.wowhead.com/spell=53563/beacon-of-light) to provide a lot of incoming healing. |
+| Crit / Vers | The old stand-by. If we have a lot of damage coming from items & gear, then Versatility can overcome its poor scaling to become a powerhouse stat. | The strongest situation would involve lots of undodgeable damage (maybe including possible one-shots that Mastery can’t prevent), along with a lot of external healing. |
+| Vers / Mastery | It is hard to justify this combo ever being better than Crit / Mastery, since *on average* Crit is just a more efficient version of Vers. However, Crit is still *random*---so if you value consistency *and* have an infrequent source of damage like [Beacon to the Beyond](https://www.wowhead.com/item=203963/beacon-to-the-beyond), Versatility can better suit your needs than Crit. | A mix of dodgeable and un-dodgeable damage, with limited incoming healing. If you expect your M+ healer to be mostly a 4th DPS (or *actually* a 4th DPS!), then this is probably the strongest combo. Some raid fights also send tanks into areas with no external healing, where this combo could shine. |
+| Haste / X | So little of our damage kit scales with Haste that it is hard to picture a situation that would favor any Haste combo. However, if Brew turns into a downtime spec with plentiful free GCDs, or if our damage profile becomes much more DoT-focused then this could rapidly change. | Again, the negative interaction of repeated purifies in a short window *really* undercut Haste’s value in virtually every defensive setting. However, if [Celestial Brew](https://www.wowhead.com/spell=322507/celestial-brew) were to get a hasted cooldown, or Haste became a factor in generating Mastery stacks then this could become a potentially valuable stat defensively. |
+
+The short version is that there are situations where you might expect any (non-Haste) combo to be the best. The question then is: which situation lines up best with the reality of the game you’re playing?
+
+### SimC and the Real World ™
+
+The final piece of the optimization puzzle that we haven’t talked about is the venerable SimulationCraft. (These days, you probably access SimC via [Raidbots](https://www.raidbots.com/simbot/topgear).) SimC gives us the biggest, best “small world” model that we could reasonably ask for---but only for damage. It is the easiest way to determine how to best balance stats as you make small changes to your gear over time---but even Raidbots has its limits.
+
+One of the main limitations of the Top Gear approach is that it can’t tell you what the *perfect* set of gear is---only what the best *change* you could make to your gear is *from your available options*. This keeps sims speedy and freely available, but isn’t perfect.
+
+This is why it is important to *also* build an understanding of WoW’s systems, how stats work, and learn for yourself how to identify situations where different combinations might be good.
+
+As we head into patch 10.2, there are two relatively common Brewmaster setups:
+
+1. A damage-oriented build optimized for raiding, with a heavy focus on items & gear that provide damage---especially trinkets like [Beacon to the Beyond](https://www.wowhead.com/item=203963/beacon-to-the-beyond) and [Dragonfire Bomb Dispenser](https://www.wowhead.com/item=202610/dragonfire-bomb-dispenser).
+2. A more defensive build, optimized for use in push keys. One that sacrifices the extra damage from those trinkets in favor of defensive power in items like [Treemouth’s Festering Splinter](https://www.wowhead.com/item=193652/treemouths-festering-splinter?bonus=1653).
+
+Setup #1 clearly favors the Crit / Vers stat distribution for damage, while Setup #2 drops some of the core items that make that stat setup desirable. Is that enough for Mastery to become better than Versatility for damage? Here, at the end of the road: what’s the verdict?
+
+It depends. You should probably [sim yourself.](https://www.raidbots.com/simbot/topgear) But maybe now you know enough to know when you should deviate from the sim, or maybe have some ideas for gear sets that are much different from what you have now (which you can sim with Gear Compare even if you don’t have the items!), or just have new things to experiment with in-game. Just be sure to have a [Purify](https://www.wowhead.com/spell=119582/purifying-brew) handy for when things go sideways :)
+
+---
+
+## Appendix: Math Reference
+
+*This section contains notes on some of the math used above. If you're interested, read on! But: it may not be very accessible.*
+
+### Defensive Power Efficiency Reference
+
+- Crit
+  - External Healing Efficiency:
+
+    ```
+    External Healing * 80% (CF Rate) * 94% (Conversion Rate) = 75% * Crit * External Healing
+    ```
+  - Self-Healing Efficiency (w/ [Celestial Fortune](https://www.wowhead.com/spell=216519/celestial-fortune)):
+
+    ```
+    Self Healing * Crit * 94% (Conversion Rate) * (100% + 80% (CF Rate) * 94% (Conversion Rate) * Crit) = 94% * Crit * Self Healing + 71% * Crit^2 * Self Healing >= 165% * Crit * Self Healing
+    ```
+
+    The 100% + X comes from the base value of the heal (which we always get, and which can crit). Note that this is quadratic scaling on Crit, hence >165%
+- Vers
+  - Self-Healing Efficiency:
+
+    ```
+    Self Healing * 83% (Conversion Rate) * Vers
+    ```
+  - Damage Reduction Efficiency:
+
+    ```
+    DR: Incoming Damage * 83% (Conversion Rate) * Vers * 50% (DR Conversion Penalty) = 42% * Incoming Damage * Vers
+    ```
+- Mastery
+  - Dodge Efficiency:
+
+    ```
+    Incoming Dodgeable Damage * 94% (Conversion Rate) * Mastery * Expected number of stacks when being hit
+    ```
+
+    The main question is how many stacks you will have. If it is at least 1 (on average), then 1% Mastery is at least as good as 1% dodge. Due to passive rotational gain, this is the case in raid (I average 1.25 to 1.7 depending on the encounter). M+ is much lower (I have 0.5-0.75 stacks per auto in various keys).
+
+    Note that the lowest the expected number of stacks could be is a bit less than 0.5 (you always gain a stack if you have 0 stacks and are hit, then dodge the next hit, resetting stacks; the exact lower bound depends on your passive dodge—which depends on your Agility based on a totally different formula that we're not getting into in this post 🙂).
+  - Self-Healing Efficiency:
+
+    ```
+    Self-Healing from Abilities * 94% (Conversion Rate) * Mastery
+    ```
+- Haste
+  - There are no closed forms for Haste’s efficiency.
+
+### Queueing Theory & “Virtual Damage Reduction”
+
+Queues are pretty useful, and this utility is reflected in their ubiquity: we queue at the grocery, at restaurants, at banks. Queues give us the ability to handle a burst of incoming traffic in a smooth & orderly fashion---without having to overcommit resources to (for example) a bunch of extra cashiers that would service no customers most of the time.
+
+You might not have thought about this before, but your health bar is a queue for damage! The gap between your current HP and maximum HP is the amount of damage queued. A large amount of HP allows you to handle a burst of incoming damage, which can then be dealt with by your self healing & external healing in a smooth & orderly (or, sometimes, hasty and panicked 🙃) fashion.
+
+However, queues have a very interesting and unintuitive property: over time, a queue will always become empty or full. Either you have enough incoming healing to cover all of the damage and the queue becomes empty, or you don’t and you eventually die when the queue fills (and overflows).
+
+Damage reduction effects have an interesting interaction with this: they act as multipliers on healing done. If you would take 1000 damage per second and receive 900 healing per second, then you obviously run out of HP and eventually die! But if you add a 20% DR? Now you take 800 damage per second and 900 healing per second and live. This is *mostly* equivalent to getting 1080 healing per second and taking 1000 damage per second---provided you’re not dying so quickly that incoming healing doesn’t matter.
+
+Said another way: **damage reduction effects are multipliers on incoming healing.**
+
+The other thing that a DR does is increase the effective size of your damage queue---your “effective HP”. This is sometimes a critical part of the effect, so you cannot treat DRs *only* as multipliers on healing.
+
+A “virtual damage reduction” is then a multiplier on healing that doesn’t provide a bonus to effective HP, such as [Celestial Fortune](https://www.wowhead.com/spell=216519/celestial-fortune).
+
+### Proof: Critical Strike as a Damage Multiplier
+
+Critical strike provides a 100% damage bonus X% of the time. This means that:
+
+```
+E[dps] = (1 + E[crit?]) * dps
+```
+
+where `E[.]` is the expected value and `E[crit?]` is the expected fraction of the time that you crit. We can rewrite this as:
+
+```
+E[dps] = (1 + Pr[crit?]) * dps
+```
+
+(where `Pr[.]` is the probability of critting, aka your crit %) by using the fact that that `crit?` is a Bernoulli random variable.
+
+This simplifies to:
+
+```
+E[dps] = (1 + crit%) * dps
+```
+
+using the definition of a Bernoulli random variable.
