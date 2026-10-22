@@ -1,0 +1,99 @@
+---
+title: 8.2 Preview -  Spec Dependent Essences
+slug: /2019/05/26/8-2-preview-spec-dependent-essences
+date: '2019-05-26T23:04:23'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.2'
+description: So with 8.2 eventually approaching, we've been getting more and more questions about the essences, which will be best and how they'll work. To that, the…
+wp_id: 14077
+original_url: https://www.peakofserenity.com/2019/05/26/8-2-preview-spec-dependent-essences/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+So with 8.2 eventually approaching, we've been getting more and more questions about the essences, which will be best and how they'll work. To that, the general answer is "just wait, there's plenty of time". However, since there's not much else to write about, I figured I'd get started on discussing a few of the essences and how they currently look for Windwalkers. Because many of them are just stat buffs, and will depend on tuning and the needs of your character, I thought it best to deal with the three that will be the most difficult to figure out. **Obviously all of this is subject to changes of many kinds. Any articles about this topic dated after this one will likely be more correct and overwrite anything here.** For information about all the essences we have available to us, check out [Wowhead's Essence Overview](https://www.wowhead.com/guides/heart-of-azeroth-essence-overview).
+
+### Vision of Perfection
+
+- **Major Power -** Your spells and abilities have a chance to activate [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) for 25/35/50% of its base duration.
+- **Minor Power -**  Reduces the cooldown of [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) by 15% and increases your Versatility by 85. When you activate [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire), immediately heal for 5% of maximum health.
+- **Drop Locations -** Mechagon and things related to that
+
+If you've been around Windwalkers for very long, then the second you saw that this revolves around [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire), you probably saw where this was going to go. On the surface, it seems like this would be super strong. Back in the days of Nighthold, [Convergence of Fates](https://www.wowhead.com/item=140806/convergence-of-fates&bonus=3514:1472) was all the rage, and was promptly nerfed to oblivion for Windwalker and many other specs. So, to see another major part of the spec center around [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) will be interesting. It is difficult to figure out how strong this will be because there's very little information on how often it will proc, what abilities will trigger it, and all the other information we need to gauge how strong it will be.
+
+It switches to [Serenity](https://www.wowhead.com/spell=152173), which will make it even harder to determine its strength and maybe rearrange the power dynamic of that talent tier. It's strength when talented into [Serenity](https://www.wowhead.com/spell=152173) can vary wildly. Because using [Serenity](https://www.wowhead.com/spell=152173) doesn't reduce the cost or cooldown of anything already on cooldown, if the essence procs when [Rising Sun Kic](http://bfa.wowhead.com/spell=107428) and [Fists of Fury](http://bfa.wowhead.com/spell=113656) are already on CD, you'll get one or two more [Blackout Kick](http://bfa.wowhead.com/spell=100784)s in, but that's about it. If it procs when they're coming off , or already off, cooldown then you'll get a nice chunk of damage and energy regen, but maybe overcap energy or need to [Tiger Palm](http://bfa.wowhead.com/spell=100780) just to stay below the cap. The randomness of this proc means that sometimes it will be very useful and other times almost completely useless.
+
+I'll do my best to guesstimate this essence's strength; at best I'll be slightly off, at worse, completely off, so take this with a grain of salt.
+
+If a [75th percentile Windwalker parse does roughly 24.5k](https://www.warcraftlogs.com/zone/statistics/21#aggregate=amount), on average in BoD, and the average BoD fight lasts 5 minutes, then they're getting roughly 25% uptime on [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire). This uptime is providing them with around 2.14k DPS. Thats a really rough estimate, but as close as I am willing to go. Just the minor power provides another cast, increasing the uptime to 29.4%, which adds another 400 DPS or so. If the base proc has 1 proc per minute and is for 25% of its duration, that's another 6%-ish uptime which is another 540 DPS, bringing the total of this essence to (a complete guess of) 940 DPS added. If the proc is 50% of the duration then this becomes 1480 DPS. If the PPM is closer to 2 (it probably won't be, 1 is more likely), then it would be around 2,100 DPS added from this essence. **But again, that is entirely generalized data and (likely poor) math.**
+
+**Now for the punchline you probably should have seen coming....**
+
+##### BUGS!! DPS DECREASES!!!
+
+Yup, like all things that interact with [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire), this comes complete with unintended interactions and things that can very easily result in you losing DPS rather than gaining it. As far as I know, first reported by [Acurai on the Feedback Forums](https://us.forums.blizzard.com/en/wow/t/essences-feedback-multiple-role-essences/181167/25), if the essence procs while you're channeling [Fists of Fury](http://bfa.wowhead.com/spell=113656) or [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546), or after the first hit of [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175), the spirits will not copy the cast, yet you'll still do 45% of the damage rather than 100%. SHOCK... OF... THE... CENTURY. So, when channeling or using our hardest hitting and most important abilities you can very easily lose 55% of its damage, cause... why not #justSEFthings.
+
+But its not all bad, you can take advantage of the end of the shorter [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) buff to get the extra damage on [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) that is outlined in [this article](/2018/09/20/advanced-cancelaura-macros-for-storm-earth-and-fire/). So, with its bad bugs, also come some good bugs. Silver linings?
+
+### Memory of a Lucid Dream
+
+- **Major Power** (Instant, 3 min cooldown) - Clear your mind and attune yourself with the Heart of Azeroth, increasing your **Energy** generation rate by 100% for 10/12 sec.
+- **Minor Power -** Your spells and abilities have a chance to refund 50% of the **Energy** spent on them and immediately heal you for X.
+- **Drop Location -** Vendor in Newhome
+
+From initial impressions, this one will be both underwhelming and overwhelming for Windwalker, going between being nigh unusable to incredibly strong at the right times. First, an additional energy regen for 12 seconds would mean, at the very least, you get 20 energy per second, more if you have any haste. This amount of energy regeneration is just not easily usable for Windwalkers. It equates to 1 [Tiger Palm](http://bfa.wowhead.com/spell=100780) every 2.5 seconds, which allows for little more than one cast between, which is not enough time to easily spend the Chi. Our best use of this is to either cast one [Blackout Kick](http://bfa.wowhead.com/spell=100784) between each [Tiger Palm](http://bfa.wowhead.com/spell=100780) and ignore capping Chi (Option 2 below), or cast two and ignore Mastery on the 2nd one and half a second of energy capping (Option 3). Another option is to cast [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) between in order to prevent any resource capping, but at the cost of damage elsewhere (Option 4). This seriously hampers this essences potential for us, we just don't have the ability to easily use all that it provides.
+
+To see how strong this is, we have to compare cast sequences, we'll assume that you start the sequence having just cast [Tiger Palm](http://bfa.wowhead.com/spell=100780) to get to 0 energy, which would be the most efficient want to minimize waste and now have 2 Chi from it. I am not pretending these are the "optimal" cast sequences or even one that we'll hit frequently, just an example.
+
+1. A normal 10 second cast sequence may look like this: [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) > Wait 3 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Blackout Kick](http://bfa.wowhead.com/spell=100784) > Wait 3 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780)
+2. With essence use and just using [Blackout Kick](http://bfa.wowhead.com/spell=100784): [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Blackout Kick](http://bfa.wowhead.com/spell=100784) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Blackout Kick](http://bfa.wowhead.com/spell=100784) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > Wait 0.5 seconds > [Rising Sun Kick](http://bfa.wowhead.com/spell=107428)
+3. With essence use and just using 2 [Blackout Kick](http://bfa.wowhead.com/spell=100784): [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Blackout Kick](http://bfa.wowhead.com/spell=100784) > [Blackout Kick](http://bfa.wowhead.com/spell=100784) > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Blackout Kick](http://bfa.wowhead.com/spell=100784) > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) > [Blackout Kick](http://bfa.wowhead.com/spell=100784) > Wait 0.5 seconds
+4. With essence use and using [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) instead of [Blackout Kick](http://bfa.wowhead.com/spell=100784): [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780) > [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) > Wait 0.5 seconds > [Tiger Palm](http://bfa.wowhead.com/spell=100780)
+
+So we'll assume damage values look like this: [Tiger Palm](http://bfa.wowhead.com/spell=100780) = 3,100 damage, Mastery'ed [Blackout Kick](http://bfa.wowhead.com/spell=100784) = 9,700 damage, Un-mastery'ed [Blackout Kick](http://bfa.wowhead.com/spell=100784) = 7,760 damage, [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) = 22,400 damage, and [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) with one target and one stack = 9,600 damage. That means that each option looks like this:
+
+1. A normal 10 second cast sequence: 1x [Rising Sun Kick](http://bfa.wowhead.com/spell=107428), 2x [Tiger Palm](http://bfa.wowhead.com/spell=100780), and 1x Mastery'ed [Blackout Kick](http://bfa.wowhead.com/spell=100784) = 38,300 damage
+2. With essence use and just using 1 [Blackout Kick](http://bfa.wowhead.com/spell=100784): 2x [Rising Sun Kick](http://bfa.wowhead.com/spell=107428), 3x [Tiger Palm](http://bfa.wowhead.com/spell=100780), and 2x Mastery'ed [Blackout Kick](http://bfa.wowhead.com/spell=100784) = 73,500 damage
+3. With essence use and just using 2 [Blackout Kick](http://bfa.wowhead.com/spell=100784): 2x [Rising Sun Kick](http://bfa.wowhead.com/spell=107428), 3x [Tiger Palm](http://bfa.wowhead.com/spell=100780), 3x Mastery'ed [Blackout Kick](http://bfa.wowhead.com/spell=100784), and 1x Un-mastery'd [Blackout Kick](http://bfa.wowhead.com/spell=100784) = 90,960 damage
+4. With essence use and using [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) instead of [Blackout Kick](http://bfa.wowhead.com/spell=100784): 1x [Rising Sun Kick](http://bfa.wowhead.com/spell=107428), 3x [Tiger Palm](http://bfa.wowhead.com/spell=100780), and 3x [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) = 60,500 damage
+
+So clearly we can see that Option 3 is the superior option, providing another 52,660 damage over the normal cast sequence, plus the fact that the 4 [Blackout Kick](http://bfa.wowhead.com/spell=100784) reduced the cooldown of [Fists of Fury](http://bfa.wowhead.com/spell=113656) by 4 seconds; which, on average, equates to roughly another 6,900 damage, for a total of 59.5k damage more than usual. On 3-minute cooldown this ends up being 330 DPS, or so, added that you wouldn't have done otherwise. This is if what I did above is correct, and that's a big **IF**.
+
+### Conflict and Strife
+
+- **Major Power -** Teaches you the following PvP Talent, and allows its use against all enemies of Azeroth: [Reverse Harm](https://ptr.wowhead.com/spell=287771/reverse-harm)
+- **Minor Power -** Your spells and abilities have a chance to increase your Versatility by X for 8 sec, stacking up to 5 times. Being the victim of a loss of control or movement impairing effect also grants a stack of Strife.
+- **Drop Location -** PvP War Chest at varying levels of content
+
+This is the other essence, coupled with Vision of Perfection, that has people up-in-arms, pulling their hair out, trying to figure out what to make of these and the affect they have on each spec.
+
+There are a few things that we need to do to gauge the strength of this essence, first of which is to compare it to [Tiger Palm](http://bfa.wowhead.com/spell=100780). We use this comparison because [Reverse Harm](https://ptr.wowhead.com/spell=287771/reverse-harm) costs 40 energy and gives you 2 Chi, whereas [Tiger Palm](http://bfa.wowhead.com/spell=100780) costs 50 energy and gives you 2 Chi. However, because [Tiger Palm](http://bfa.wowhead.com/spell=100780) deals damage based on Agility, Mastery, Crit, and Versatility and [Reverse Harm](https://ptr.wowhead.com/spell=287771/reverse-harm) is based on the health it recovers for the target, modified by Versatility, then damage is modified by Mastery. Because of this difference in how they do damage, I'm going to have to take some liberties using my own, reasonably geared, character.
+
+My character, [Babylonius](https://worldofwarcraft.com/en-us/character/us/turalyon/babylonius), has around 8,000 Agility raid buffed, 25% Crit, 15% Versatility, and 25% Mastery. This means that my [Tiger Palm](http://bfa.wowhead.com/spell=100780) will deal roughly 3,100 damage per use. So, for the 50 energy it costs, you get around 62 damage per energy. This is the metric we'll use to compare.
+
+**\*\*It was pointed out that I overreported my health, must have been in tank gear on accident, I have adjusted the numbers accordingly\*\***
+
+My raid buffed health is around 260k, so a few things you need to know about how things are calculated with [Reverse Harm](https://ptr.wowhead.com/spell=287771/reverse-harm);
+
+1. The healing you do to the target is modified by your Versatility.
+2. Only true healing gets converted to damage, overhealing does not.
+3. After the healing is converted to damage, that damage is modified by Mastery.
+4. We're \*\*reasonably\*\* sure that this damage is capped at 8% of *your* health modified by Mastery
+
+So, on myself, 8% of my 260k health is 20,800 modified by my Mastery is a total of 26,000 damage on a 10 second cooldown. That's 2.6k DPS just from using this ability instead of [Tiger Palm](http://bfa.wowhead.com/spell=100780), assuming you get the max of it every time... **it defies belief**. But that may be just the large power jump they're looking for in this system.
+
+### Overview
+
+So, to summarize (assuming all that's above is right):
+
+- Vision of Perfection has a chance to be reasonably strong, but has some essence-breaking bugs that everyone could have seen coming from a mile away.
+- Memory of a Lucid Dream will likely be a pain-in-the-ass to use, not super strong, but give all your spammy-spec-lovers something to get excited about.
+- Conflict and Strife seems to be the odds-on favorite from right out the gate. Combine this with how easy [Reverse Harm](https://ptr.wowhead.com/spell=287771/reverse-harm) will be to use with a macro on the active tank (@targetoftarget or whatever), and the seemingly enormous gap it has on the other two, plus the fact that the bulk of the power of this essence comes at all "rarities" makes this seem like the go-to essence that everyone will be clamoring to get.
+
+Hopefully that provides some information about the essences as we go into 8.2. There's a lot more essences that I didn't talk about, but these three were the most interesting. I took a lot of liberties with the math and assumptions I made up top, so **don't consider this anywhere near close to final theorycrafting**.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity), [PayPal](http://paypal.me/peakofserenity), buying [Peak Merchandise](https://teespring.com/stores/peakofserenity), or donating to my [Blizzcon GoFundMe](https://www.gofundme.com/bring-babs-to-blizzcon). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).

@@ -1,0 +1,144 @@
+---
+title: Windwalker Scaling
+slug: /2017/07/09/windwalker-scaling
+date: '2017-07-09T19:38:08'
+authors:
+- babylonius
+tags:
+- Windwalker
+- 7.2.5
+- Class Changes
+- Opinions
+- Personal
+- Raiding
+- Sims
+- Spreadsheets
+- Theorycrafting
+description: The past two weeks or so, following the AMA, I decided to devote some time to figuring out the reasoning for why Windwalkers have historically not gained as…
+wp_id: 7515
+original_url: https://www.peakofserenity.com/2017/07/09/windwalker-scaling/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+The past two weeks or so, following the AMA, I decided to devote some time to figuring out the reasoning for why Windwalkers have historically not gained as much damage relative to other specs as a tier continues. If you missed the happenings of the AMA, you can refresh your knowledge here; [http://www.peakofserenity.com/2017/06/24/post-ama-discussion-round-2/](/2017/06/24/post-ama-discussion-round-2/)
+
+Basically, the theory is that this is largely due to two things, (1) Windwalker's relatively low stat scaling and (2) Because of Windwalker's reliance on AOE damage to be competitive (our "niche"), as a tier continues and moves into and through farm, periods of AOE become less frequent and shorter, so a Windwalker has less chance to do what its best at.
+
+**This article is the culmination of many many hours of simulations, troubleshooting, data analysis, and discussion, much of it streamed on Twitch, including a ~5 hour stream of just writing this article. Because of this, similar to the "Sim Extravaganza" of the 7.1.5, I am putting links for supporting myself and the site at the top.**
+
+**Please take a second to support us with what you can so that I, and we, can keep doing the crazy stuff like this, and keep my wonderful wife watching our daughter so I can sit at my PC and do all this.**
+
+**[Patreon](https://www.patreon.com/peakofserenity)     |     [PayPal](http://paypal.me/peakofserenity)     |     [Bab's Stream](https://www.twitch.tv/babylonius)**
+
+#### Gear Scaling
+
+To get started, I wanted to look at how Windwalkers gained damage as item level and various stats increased and compare it to other specs. To do this, as is my tradition, I made a rather large spreadsheet: [https://docs.google.com/spreadsheets/d/1Ye2om37SsEf5E9xpgte-uhO_c4Rk60ELFbc9V0Ud828/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Ye2om37SsEf5E9xpgte-uhO_c4Rk60ELFbc9V0Ud828/edit?usp=sharing) I'll be including images for each section that it pertains to, but since they're not interactive, looking at the spreadsheet itself is always the best choice.
+
+**All data was done through SimCraft. Simulations were run through 1000 iterations at 300s fight length and 50% fight length variance.**
+
+##### Item Level
+
+The first thing I looked at was just looking at how the specs gained or lost DPS as their item level increased or decreased. I used the item levels that are available in Tomb, between 885 and 955. I took the Mythic t20 profiles and scaled all of the items in them, including trinkets and relics, to the desired item level at 5 item level intervals.I plotted the increases for all the specs, as well as ranked them against one another at each item level interval to show how they gained DPS as their item levels increased.
+
+**Disclaimer**: The profiles aren't optimized for every single item level interval, so some profiles may not be perfectly optimal at all intervals. It was done this way largely for speed, but also to eliminate changes in stat distribution and other variables, and just look at gains over item levels.
+
+[DPS per Item Level](https://i1.wp.com/www.peakofserenity.com/wp-content/uploads/2017/07/DPS-per-ILevel-1.png)     |     [Rankings per Item Level](https://i0.wp.com/www.peakofserenity.com/wp-content/uploads/2017/07/Ranking-by-ILevel-1.png)     |     [DPS Gain per Item Level](https://i1.wp.com/www.peakofserenity.com/wp-content/uploads/2017/07/Ilvl-Chart.png)
+
+Based on the second and third charts, its clear to see that as item level increases, Windwalkers don't gain as much from the item level increase as many other specs, and as such, as item level increases, we lose "rankings" to other specs that gain more damage per item level. As the most extreme example, Windwalkers averaged 4.27% damage increase per 5 item levels, compare this to Shadow Priests at 5.22%, and you'll start to see a problem. If both specs start at 100,000 DPS at 885, at 890, Shadow is doing 105,220 DPS and Windwalker is doing 104,270. At 895 Shadow will be doing 110,720 to Windwalker's 108,720. At 955 Shadow will be doing 203,880 and Windwalkers will be doing 179,569 DPS, or 88% of Shadow's DPS. This is the most extreme example, and by the data I got, Frost DKs, and Outlaw/Sub Rogues have it worse than Windwalkers.
+
+##### Individual Stats
+
+**Disclaimer:** Any breakpoints, diminishing returns, or buffs specific to individual specs will result in messing with the averages, which is largely what I'll use to discuss the data.
+
+Taking it one step further, I decided to look at how each spec gained DPS simply due to the increase in one stat. I included Primary Stats because "in theory" specs that scale poorly from secondary stats should scale better from Primary stats to offset this. I also included Weapon DPS because "in theory" specs that scale poorly from Primary stats AND secondary stats, should have strong WDPS scaling to offset this. As you'll see, that's not always the case.
+
+- [Primary Stats](/img/uploads/2017/07/Primary-1.png)
+- [Weapon DPS](/img/uploads/2017/07/WDPS3.png)
+- [Versatility](/img/uploads/2017/07/Vers-1.png)
+- [Mastery](/img/uploads/2017/07/Mastery-1.png)
+- [Haste](/img/uploads/2017/07/Haste-1.png)
+- [Critical Strike](/img/uploads/2017/07/Crit-1.png)
+
+It can be somewhat difficult to find all the different specs in the jumble, so I compiled all the data into two charts.
+
+[% DPS Gained per 475 Stats](/img/uploads/2017/07/DPS475.png)     |     [DPS Gained per Stat](/img/uploads/2017/07/DPS-per-Stat2.png)
+
+The first set of charts looks at what % each spec gained per 475 points in each stat. 475 was chosen because it was the amount that all specs get 1% from Versatility, and Sigma said in the AMA that they like to look at how things compare to Versatility. The second set of charts show the average "weight" of each stat, or the DPS gain per single stat point. Because of the stated preference for comparing stats to Versatility, I included a chart on each set that norms the data to Versatility. It is common for stat weights to be normed toward Primary stats, but since Blizzard looks at Versatility, because its "perfectly equal between all specs", I wanted to show what that would look like.
+
+**Versatility**
+
+Except... as you can see, its not perfectly equal. Only Windwalker Monks and Demonology Warlocks do not scale 1:1 with Versatility (I'm rounding any spec thats at .99 or .98 up to 1 since there is some variance due to the number of iterations). Based on what we've been told from Blizzard, they like to look at how a spec's scaling is around Versatility and compare other stats to Vers. This puts Windwalker and Demonology Warlocks at a distinct disadvantage.
+
+Windwalkers gained 0.95% damage per 1% Versatility gain, this is because Windwalkers have [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](http://legion.wowhead.com/spell=122470) which both do not benefit from Versatility, which generally amounts to 5-8% of our total damage. Demonology Warlocks have [Thal'kiel's Consumption](https://www.wowhead.com/spell=211714/thalkiels-consumption), which amounts to around 7-8% of their DPS, so they gain around 0.93% damage per 1% Versatility. Demonology has the fortunate situation of scaling VERY well with Haste (1.94% gain per 475 Haste), compare that to Windwalker's 0.42% gain per 475 Haste.
+
+On average, Windwalkers gained 23 damage per 1 Versatility rating, tying us for the bottom of that metric with Assassination. Marskmanship and Arms were the highest DPS per Vers at 30 DPS per 1 rating.
+
+**Because of this below average Versatility scaling, Windwalkers appear to have better scaling than they do when normed to Versatility. Because Vers is 95% as effective as other specs, all of our stats are 95% as effective as they appear when normed to Vers.**
+
+**Mastery**
+
+Mastery is generally considered Windwalker's strongest secondary stat by a decent margin. However, as you can see in the charts, Windwalker doesn't gain as much from points in Mastery as some other specs. On average, Windwalker gained 1.06% damage for every 475 Mastery rating, putting us just below the middle of the pack, 15th of 24 specs. Frost Mages were the lowest at 0.53% and Marskmanship was the highest at 1.74% DPS gained per 475 Mastery rating. It doesn't seem great that our strongest secondary stat is only of average strength compared to other specs.
+
+Looking at DPS per Mastery rating, Windwalker was again 15th of 24, at 24 DPS per 1 Mastery rating. Marksmanship gained 37 DPS per rating at the top, and Outlaw at 13 DPS per rating at the bottom.
+
+**Critical Strike**
+
+Crit is another of Windwalker's stronger secondary stats, and is one that features prominently in our t20 tier bonuses. However, as you'll see is a trend, Windwalker doesn't benefit as much from it as other specs. On average, Windwalker gained 0.84% damage per 475 Crit, compared to the top spec, Marksmanship at 1.64% and bottom spec of Outlaw at 0.76% damage increase per 475 Crit. Overall, Windwalker was 21st out of 24 specs for damage increase per 475 Crit. Windwalkers see a similar portion of their damage effected by Critical Strike as we do Versatility in that [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](http://legion.wowhead.com/spell=122470) both do not benefit from Crit.
+
+Windwalker was tied with Outlaw for the last spot in DPS per Crit rating, averaging 19 DPS per rating. Marksmanship was yet again the top with 38 DPS per rating. This may partly be because the t20 4pc bonus providing 65% crit to [Rising Sun Kick](http://legion.wowhead.com/spell=107428) for Windwalkers results in a soft cap at 35%, and Outlaw has [Roll the Bones](https://www.wowhead.com/spell=193316/roll-the-bones), which has a chance to provide them with a large chunk of Crit % to their overall %, which should result in a similar soft cap.
+
+**Haste**
+
+Haste is one of the more difficult stats to determine since it does different things for different stats, some get GCD reduction, other cooldown reduction, and others get neither. Windwalker is second to last for % increase per 475 stats, at 0.42% gained per 475 stats. only Subtlety was lower at 0.26%. Demonology was the top with 1.94% damage increase per 475 stats. Windwalkers see cooldown reduction and resource generation increase, but not all abilities have their cooldowns reduced, resulting in a big portion of Windwalker's damage that isn't effected by Haste.
+
+Demonology was, of course, tops for DPS per Haste rating at 40 dps per rating. Windwalker was second to last with 10, and Subtlety was last with 7.
+
+**Primary Stats**
+
+In theory, this is where Windwalkers are going to catch up, as Agility is our strongest stat and typically worth focusing on more than the worrying about secondary stats. ~~Windwalkers were 13th of 24 specs in % Damage increase per 475 primary stats, with 1.15% damage increase per 475 Agility. Affliction was on top with 1.35% damage increase per 475 Intellect, and Arms Warriors were last with 0.75% increase per 475 Strength.~~
+
+~~When looking at DPS gained per Primary stat rating, Windwalker is 6th out of 24, with 24 DPS per Agility. Retribution Pallys are tied with Affliction for the bottom spot at 19 DPS per Primary stat rating, with Subtlety at the top with 27 DPS per Primary rating.~~
+
+After it was suggested to me that Windwalkers scale from Stamina as well, I added Stamina scaling to the Primary data at a rate of 1.5 Stam per 1 Agi, as thats the general conversion. Windwalkers are the only spec that gains damage from Stamina due to [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](http://legion.wowhead.com/spell=122470). This moved Windwalker's up from 1.15% damage increase to 1.26% damage increase per 475 Agi (and 712.5) Stamina. This moves Windwalkers from 13th to 4th in Primary stat scaling by this metric.
+
+The addition of Stamina scaling to Windwalker's Primary Stats scaling moved Windwalker from 24 DPS per 1 Agility to 26 DPS per 1 Agi and 1.5 Stamina. This moves Windwalkers into a tie for 2nd place with Outlaw and Feral, behind Subtlety.
+
+**Weapon DPS**
+
+As I stated above, Weapon Damage and DPS is meant to help offset any other scaling issues that weapon based specs may have. And, as you may guess, based on this data, it doesn't quite do that. ~~Of the 15 specs that scale off of Weapon DPS, Windwalker is 12th with 0.75% damage increase per 475 Weapon DPS. Unholy DKs were last with 0.39% increase per 475 WDPS and Enhancement Shaman were top with 7.92% increase per 475 WDPS. I was also personally surprised that the Windwalker number is as high as it is since only [Strike of the Windlord](http://legion.wowhead.com/spell=205320), Auto Attacks, and Xuen benefit from Weapon Damage/DPS.~~
+
+~~Looking at DPS gained per 1 WDPS, Enhancement is on top with 190 DPS per 1 WDPS, Unholy is bottom with 10, and Windwalker is 12th with 19 DPS per 1 WDPS.~~
+
+**There was an issue with the Enhance and Havoc sims, a bug apparently existing in SimC, so I had to run them again.**
+
+After rerunning the problem children, the numbers look much more realistic. On top was Arms with 3.93% per 475 WDPS, and bottom was Unholy at 0.39% per WDP. Windwalker was 4th from the bottom at 0.75% per 475 WDPS.
+
+Looking at DPS gained per 1 WDPS, Arms Warriors are on top with 77 DPS per 1 WDPS, and Unholy at the bottom with 10, Windwalker again fell 4th from the bottom at 19.
+
+**Averages**
+
+Finally, I looked at all of the averages in order to get a sense of whether or not there was balance between specs overall, where a spec that struggled with scaling off of one stat made up for it with strong scaling from another stat. And the answer to that is... kinda....
+
+**Disclaimer:** I didn't include Weapon DPS in the averages as there was no easy way to do so and be fair to all specs. If you come up with a way that works, let me know.
+
+The top average spec for % increase from 475 stats was Affliction with 1.34% damage increase from 475 of stats on average. Outlaw was last with 0.85% increase, and Windwalker was 3rd from the bottom averaging 0.91% increased damage per 475 stats. Marksmanship was on top of the DPS per stat with an average of 31.9 DPS per stat rating and Outlaw was last with 20.1 DPS per stat rating. Windwalker is 2nd from the bottom at 20.6 DPS per stat, on average. Before including Stamina scaling to Primary Stats, Windwalker was still in the same place compared to other specs, but had 0.88% increased damage per 475 stats and 20.2 DPS per stat, on average.
+
+This is clearly problematic. Even if all things were equal, similar to the problem above with the item level increases, if we gain 10,000 stats from the start to the end of Tomb of Sargeras (totally made up number). Windwalkers will, in theory, gain 202,000 DPS, where a Marksmanship hunter will gain 319,000 DPS. This assumes an equal starting place, which we all know is not the case. Windwalker is starting behind in many metrics of DPS, and as it stands today is [generally below average on Heroic and low-average on Normal logs](https://docs.google.com/spreadsheets/d/1rIJgmAOELrfXBJrqRQtMi2yKdxrNvQdOPHQgjvQ6d-M/edit?usp=sharing). Windwalker is [starting strong so far in Mythic](https://docs.google.com/spreadsheets/d/1rIJgmAOELrfXBJrqRQtMi2yKdxrNvQdOPHQgjvQ6d-M/edit?usp=sharing), but based on this data, as the tier goes on and people gain gear, Windwalker won't gain as much from that gear as other specs, so will fall down the rankings compared to other specs.
+
+A large part of why Windwalker doesn't "scale" as well as other specs is because we don't have any class mechanics that compound on one another. Some specs have mechanics like ones based on Crit that give them more chance to Crit, and thus more chances to gain things; if more crits = more casts = more crits, it causes a spec to scale non-linearly. Windwalker doesn't really have any of that, so the spec struggles to gain strong benefit from stats. We are getting some of that with our t20 tier bonuses in that more [Rising Sun Kick](http://legion.wowhead.com/spell=107428) crits give you more [Fists of Fury](http://legion.wowhead.com/spell=113656) casts which give you more [Rising Sun Kick](http://legion.wowhead.com/spell=107428) crits, but this is temporary and generally capped because of the crit soft cap it creates.
+
+#### Fight "Scaling"
+
+In addition to all the stat scaling, I wanted to look at whether or not Windwalkers lost ground to other specs as a fight got shorter, or adds were up for less time due to increases in gear and fight speed. While its largely believed that this has been a large part of why Windwalkers have struggled to keep up in previous tiers, because of this tier's focus on single target, that problem shouldn't be as prevalent. Windwalker also scales very well with [Bloodlust](https://www.wowhead.com/spell=2825/bloodlust) and the tier bonuses, so as fights get shorter and [Bloodlust](https://www.wowhead.com/spell=2825/bloodlust) becomes a larger percentage of the overall fight, we should be able to keep up better.
+
+The data that I got for this can be found here: [https://docs.google.com/spreadsheets/d/1GMuZoYMatuS7mfx6veSLIaJJHDzScXIPFQWe8laOGKo/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1GMuZoYMatuS7mfx6veSLIaJJHDzScXIPFQWe8laOGKo/edit?usp=sharing)
+
+I am not writing up anything for this data because its almost entirely a comparison of what specs have put the most effort into multi-target APLs. Some specs require very little changes to how their Sim profile functions to maximize their multi-target DPS, others require quite a lot. Some of those specs have done all that work, others have not. **So this data isn't a good snapshot of what I had hoped to show. Some trends exist, but in general nothing worth putting much effort into analyzing, so read into this data at your own risk.**
+
+In the future I hope to explore this more through historical analysis, and maybe some sims, since historically this has been a large part of why Windwalker hasn't kept up with other specs.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius).

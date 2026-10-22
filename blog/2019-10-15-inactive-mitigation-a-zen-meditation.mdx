@@ -1,0 +1,105 @@
+---
+title: Inactive Mitigation, a Zen Meditation
+slug: /2019/10/15/inactive-mitigation-a-zen-meditation
+date: '2019-10-15T12:45:08'
+authors:
+- emallson
+tags:
+- Brewmaster
+- '8.2'
+- Battle for Azeroth
+- Opinions
+description: 'Recently, the Brewmaster staff were surprised to learn of an unorthodox play pattern: forgo Purifying entirely. We weren''t prepared for them to be right.'
+wp_id: 14979
+original_url: https://www.peakofserenity.com/2019/10/15/inactive-mitigation-a-zen-meditation/
+image: /img/uploads/2018/10/Brew-Musing_narrow.jpg
+---
+
+Recently, the *Peak* staff were surprised to learn of a rather *unorthodox* play pattern for Brewmasters: forgo [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) entirely. Don’t even bother casting it; wear HPS trinkets instead. While we have long held that [Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew) is the more important part of our mitigation toolkit, we would never have recommended something so extreme.
+
+We were even more surprised when we dug into the logs and found out they were right.
+
+## What “Tankiness” Means
+
+Before delving too deep into this heresy, let’s review some basics. As a general rule, being “tanky” in World of Warcraft is about much more than how much damage you take over the course of a fight. In truth, minimizing total damage taken is almost universally secondary to minimizing the risk of dying to a *spike* of damage---HPS is irrelevant if you die before anyone can cast on you. *Almost* universally. Brewmasters are currently the exception.
+
+As discussed in my post on [damage profiles](/2019/07/20/elusive-brawling-a-zen-meditation/), almost all damage dealt to tanks currently falls into one of three categories: 1) Melee damage, 2) Magic DoT effects, or 3) Raid-wide Magic damage. While most tanks have a real risk of getting spiked down by Melees during a gap in Active Mitigation (and some even during AM---sorry Paladins), Brewmasters simply don’t. [Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew) is always up and always ensuring that we take a slow and steady stream of damage.
+
+[Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew) is only half of our AM, however. That leaves the question: in a world without burst damage, what role does [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) fill? Simple: it reduces healing required. For Brewmasters in Battle for Azeroth, total external healing required (or *EHRPS*) is often the only relevant metric---which is why its a problem that wearing [Edicts of the Faithless](https://www.wowhead.com/item=169315/edicts-of-the-faithless) and [Bloodthirsty Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin) is better than pressing [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) on most fights.
+
+## Setting the Stage: Damage in the Eternal Palace
+
+Let’s kick things off by taking a look at how damage has shaken out in the Eternal Palace. The table below shows my damage taken on every fight this tier up through Za’qul, along with the amount that I purified and the amount of healing done by the 445+ [Edicts](https://www.wowhead.com/item=169315/edicts-of-the-faithless) and [Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin). I won’t claim to have purified perfectly---especially on early bosses---but this is a reasonable estimate of how powerful the ability is in practice.
+
+**Table:** Damage taken and healing done in EP. Damage taken / purified taken from [Pumps](https://raider.io/characters/us/frostmourne/Pumpsw)' logs and my own. Trinket healing taken from logs with dual defensive trinkets. Purified damage is calculated with WoWAnalyzer. Values in pink are better than both tanks, while values in yellow are better than either. Azshara not shown.
+
+|  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  | **Purified Damage (HPS)** | | **Trinket Healing (HPS)** | | |
+| **Boss** | **emallson** | **Pumps** | **Edicts** | **Urchin** | **Total** |
+| Sivara | 5.1k | 5.0k | 3.8k | 5.0k | 8.7k |
+| Radiance | 0.5k | 2.5k | 2.6k | 3.1k | 5.7k |
+| Behemoth | 3.4k | 4.9k | 3.6k | 4.7k | 8.3k |
+| Ashvane | 5.8k | 4.8k | 3.4k | 5.1k | 8.5k |
+| Orgozoa | 5.5k | 8.9k | 3.1k | 3.9k | 7.0k |
+| Queen's Court | 4.6k | 8.2k | 3.9k | 4.0k | 7.9k |
+| Za'qul | 13.0k | 20.0k | 4.4k | 5.5k | 9.9k |
+
+Something that should immediately stand out is that the amount of damage purified is less than the healing done by the combination of [Edicts](https://www.wowhead.com/item=169315/edicts-of-the-faithless) and [Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin). Frequently, the healing done by just [Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin) is near or above total mitigation from [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew). This problem has been exacerbated by the enormous amounts of nigh-unmitigatable magic damage in the Eternal Palace. For example, look at this log of Mythic Radiance. Despite taking a similar amount of damage as on Sivara, I only purified 1/9th the amount of damage. This is due to a shift in damage away from physical sources and into magical ones.
+
+![Staggered damage on Mythic Radiance](/img/uploads/2019/10/stagger_radiance-1024x332.png)**Figure:** Stagger on M Radiance. Sometimes there just isn’t anything to purify.
+
+Maybe [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) isn’t the problem. Maybe I’m *just bad.* Balancing [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) with [Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew) is supposed to be the hard part of playing Brewmaster, right? Let’s try to eliminate that factor. The table also shows the amount that was purified by Honestly’s Brewmaster, [Pumps](https://www.warcraftlogs.com/character/us/frostmourne/pumpsw). While consistently higher than mine (suppose I need to purify more), they are still massively outstripped by these trinkets on 4 of 8 fights. On two of the remaining fights, the trinkets provide near the value of purifies used by Pumps.
+
+The immediate take-away from this is very simple: it is more effective to wear double throughput trinkets than use your AM effectively as a Brewmaster in the Eternal Palace. Or is it? We love to harp on how reducing “tankiness” to throughput is disingenuous, so why am I doing so here? Well, it’s time to take a look at the impetus for this post.
+
+## The Court Log
+
+A user contacted my fellow moderator and theorycrafter Paoanii recently with some questions about Queen’s Court. They’d just killed it---which is an unusual point at which to ask questions---but had gotten into an argument with their cotank over whether purifying was worthwhile on the fight. They linked a log. Their cotank ***never*** purified on Mythic Queen’s Court.
+
+**Table:** Damage taken / healing required on The Court Log.
+
+|  |  |  |
+| --- | --- | --- |
+|  | **Never Purified** | **Purified** |
+| **DTPS** | 60.6k | 54.9k |
+| **EHRPS** | 30.2k | 37.7k |
+| **# of Heals Received** | 107 | 103 |
+
+As can be seen from the table above, replacing purification with tank trinkets seems to have been quite effective at reducing EHRPS! But again, this is just on the aggregate. What happens when we look deeper than mere HPS? One of the key ways we analyze tanks in the BFA era is by checking how much *healer attention* they needed, which is quantified by number of casts received. Beyond this, we can check what kinds of heals they received: did one receive more substantial burst heals ([Flash Heal](https://www.wowhead.com/spell=2061/flash-heal), [Flash of Light](https://www.wowhead.com/spell=19750/flash-of-light)) while the other had more HoTs ([Rejuvenation](https://www.wowhead.com/spell=774/rejuvenation), [Lifebloom](https://www.wowhead.com/spell=33763/lifebloom), [Riptide](https://www.wowhead.com/spell=61295/riptide))?
+
+The picture isn’t pretty. The next two figures show the heals cast on each target. The total number of heals received is very close, despite the gap in healing required. We can also see that the one that never purified received 10 [Holy Shock](https://www.wowhead.com/spell=20473/holy-shock) casts, while the purifying player received only 1. [Holy Shock](https://www.wowhead.com/spell=20473/holy-shock) is a substantial heal, but this gap is much more likely to be due to a difference in *who has the [Beacon](https://www.wowhead.com/spell=53563/beacon-of-light)*. The player that purified had [Beacon of Light](https://www.wowhead.com/spell=53563/beacon-of-light) active, which produced 15k HPS---or 40% of all external healing they received and 25% of all healing received.
+
+![Casts on the Brewmaster that used Purifying Brew](/img/uploads/2019/10/qc_blue.png)**Figure:** Casts on the BrM that used Purifying Brew.
+
+![Casts on the Brewmaster that never used Purifying Brew](/img/uploads/2019/10/qc_red.png)
+
+**Figure:** Casts on the BrM that **never** cast Purifying Brew.
+
+Aside from [Holy Shock](https://www.wowhead.com/spell=20473/holy-shock), the most noticeable increase is in [Vivifie](https://www.wowhead.com/spell=116670/vivify)s. This is likely for a similar reason (10 [holy shock](https://www.wowhead.com/spell=20473/holy-shock)s do not do 15k HPS, no matter how much `#mist-lounge` complains), but worth noting.
+
+My Professional Opinion™ is that there is *not* a substantial difference in the amount of healer attention required between these two players. That is to say: *it is better defensively to wear* *[Edicts](https://www.wowhead.com/item=169315/edicts-of-the-faithless) +**[Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin) and ignore your class abilities than to play your class reasonably well and use DPS trinkets.* Of course, *it is best to do both!* Wearing tank trinkets doesn’t prevent casting [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew). ***Don’t stop Purifying!***
+
+## This (Still) Sucks
+
+I first wrote on this subject almost exactly one year ago, when I covered [The Fetid Log](/2018/10/09/the-fetid-log/) in a similar post. Despite all the changes that have been made, things seem to have somehow gotten worse. Where last year we could see a difference in healer attention required, this year we don’t have a noticeable difference. It is obvious to me, based on this, that dropping [Ironskin](https://www.wowhead.com/spell=115308/ironskin-brew) is a much greater crime than using [Purifying](https://www.wowhead.com/spell=119582/purifying-brew) poorly---but I would never have expected it to be better than not purifying at all. The end result is still the same, however: it doesn’t matter how well you play. You can not push buttons and be totally fine.
+
+It is also worth noting that while [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) is not the highest-throughput mitigation ability available to tanks, it remains quite good---especially paired with the incredible power of [Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew). This is not just a “Brewmasters are designed to require more healing” issue. It is a fundamental issue with the power level of tanks in BFA.
+
+Recall for a moment the amount of healing that [Beacon of Light](https://www.wowhead.com/spell=53563/beacon-of-light) did: 15k HPS. For comparison, how much healing do 445 [Edicts](https://www.wowhead.com/item=169315/edicts-of-the-faithless) + [Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin) do? Usually less than 10k HPS. These trinkets are, to be blunt, *pathetic.* These are *weak*. A 430 [Edict](https://www.wowhead.com/item=169315/edicts-of-the-faithless) is worse than a 415 [Diamond](https://www.wowhead.com/item=165573/diamond-laced-refracting-prism) on most encounters. These trinkets only appear strong because of how gutted tank trinkets have been for the entire expansion. Wearing both of these trinkets together is less impactful than putting on a reasonable ilvl [Writhing Heart of Darkness](https://www.wowhead.com/item=137315/writhing-heart-of-darkness&bonus=1826:1476)---and WHoD isn’t even the best tank trinket from Legion.
+
+And yet, despite how weak these trinkets are, we are weaker.
+
+Putting on tank trinkets is more valuable than playing the game well. Even better: just get a [Beacon](https://www.wowhead.com/spell=53563/beacon-of-light). You don’t even have to get lucky for that.
+
+The game is broken.
+
+[https://twitter.com/watch_jdotb/status/1176945078109184002](https://twitter.com/watch_jdotb/status/1176945078109184002)
+
+I wanted to end this by being all mopey and depressing, but Paoanii is making me add this important Public Service Announcement: *don’t stop Purifying!* While the impact of [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) is currently fairly low, it is still better to cast it than not (in the same way that 0.2, while not large, is greater than 0).
+
+## Addendum
+
+I want to emphasize that this is not purely about the power level of tanks---Brewmasters get insane amounts of free power from passives like [Mastery](https://www.wowhead.com/spell=117906/mastery-elusive-brawler), [Celestial Fortune](https://www.wowhead.com/spell=216519/celestial-fortune), and [Gift of the Ox](https://www.wowhead.com/spell=124502/gift-of-the-ox). Rather, it is about the power level of our *active* *abilities*. [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) is weak. [Mastery](https://www.wowhead.com/spell=117906/mastery-elusive-brawler) is not. [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) is active. [Mastery](https://www.wowhead.com/spell=117906/mastery-elusive-brawler) is not.
+
+At this point, I don’t care whether Active Mitigation abilities live or die to be completely honest. I've been enjoying tanking in some other games that don’t have AM in the WoW style. I just want the abilities we have to matter. If we’re going to be healing dummies, just remove AM abilities and give us proper DPS rotations. If AM is going to matter, make it *good* and make using it correctly *important*.

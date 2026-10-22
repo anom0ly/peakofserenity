@@ -1,0 +1,206 @@
+---
+title: Simulationcraft-101
+slug: /tww/windwalker/pve-guide/sim101
+authors:
+- hurstilol
+last_update:
+  date: '2026-03-02'
+description: ''
+wp_id: 22409
+original_url: https://www.peakofserenity.com/tww/windwalker/pve-guide/sim101/
+---
+
+![Jari WW](/img/uploads/2020/08/Jari-WW.png)
+
+This guide is meant to help players to learn about properly using and understanding Simulationcraft and the webversion on Raidbots.com
+
+## How it Works
+
+[Raidbots](https://www.raidbots.com/) is a website that runs the program [Simulationcraft](https://www.simulationcraft.org/) for you. Simulationcraft has a big database of spells, effects, gear, etc. and knows how they all interact. Using this it will make a simulation of a character doing its rotation and tracks damage, buff uptime and much, much more. To make it more accurate, it will do this many times (called iterations) and give you the average results. The character it will use is whatever you put in, this will usually be your own character with maybe a few changes to see how they compare. The rotation it follows comes from the Action Priority List, or APL. These lists are maintained by theorycrafters from the respective specs. If you want, you can also make your own APL or adjust the existing one.
+
+## How to Sim Yourself
+
+Get the [SimulationCraft add-on](https://wow.curseforge.com/projects/simulationcraft), type /simc in game and copy the text, go to [Raidbots](https://www.raidbots.com/) and click whatever type of sim you want (Top Gear, Droptimizer, Quick Sim), paste the output in the ‘Load from SimC Addon’ box and select items, traits, talents, whatever else you want to compare, then select the settings you want to sim with. If you want to use a custom APL just put that in the ‘Custom APL’ box at the bottom. Now that you know how it works, here are some Windwalker specifics when it comes to simming.
+
+## TL;DR
+
+To sum up what option from raidbots is best used for any use case you might have and to find the correct fight style quickly, we have this small TL;DR. For anything more advanced or more information, continue to read this page.
+
+### Usecases
+
+- Identify Upgrades in your Bag or from your Vault - [**Top Gear**](https://www.raidbots.com/simbot/topgear)
+- Identify possible Upgrades from Dungeons, Raid, PvP or Professions - [**Droptimizer**](https://www.raidbots.com/simbot/droptimizer)
+- Get a rough overview about your possible damage - **[Quick Sim](https://www.raidbots.com/simbot/quick)**
+- Get deeper into SimC and use more advanced functions - [**Advanced**](https://www.raidbots.com/simbot/advanced)
+
+### Fightstyles
+
+- Singletarget - Patchwerk 5 Minutes 1 Target
+- Static Multiple Targets (e.g. any Council like fight) - Patchwerk 5 Minutes (pick target count based on situation)
+- Mythic+ (low effort) or Raidbosses with an equal fight style - Dungeon Slice
+- Mythic+ (high effort, more precise) - Dungeon Route
+
+## Fight Styles in Detail
+
+### Patchwerk
+
+Patchwerk is mostly used to simulate static fights. Examples would be councillike fights or even pure single target fights that don't include a lot of mechanics or have any add spawns. Due to the very frequent usage of such bosses in raids, this is the default chosen by most people to optimize their chars for raid content. This can also be used to simulate shorter combats with a lot of targets. Due to the way our cooldown management is made in the APL this is not a recommended use case and shouldn't be used to optimize for dungeon content.
+
+### Dungeon Slice
+
+Dungeon Slice and Dungeon Route are two different fight styles, even tho both have the same goal. Simulating a full dungeon. [Dungeon Slice](https://medium.com/raidbots/mythic-simming-with-dungeon-slice-68a834880975) was made years ago with the goal to generalize whole dungeons into a shorter fight style to make gearing decisions for dungeons easier. If you followed the link and read through the article written by Seriallos you may already have noticed the issue with it. Dungeons nowadays are much different, with a lot of bigger pulls that are not properly mirrored by such a fight style. Dungeon Slice can have some issues with a few trinkets that require a higher target count, but even for those it's still "fine". What you use to simulate dungeons is up to you. Dungeon Slice is also a good tool to make gearing decisions for raid fights that involve add spawns due to the way it values single target and low target cleave.
+
+### Dungeon Route
+
+Dungeon Slice and Dungeon Route are two different fight styles, even tho both have the same goal. Simulating a full dungeon. If you want a much more detailed sim that represents a dungeon of your choice, with the route of your choice, you have to use Dungeon Route. You probably already noticed that this is not a default fight style on raidbots. That's because of the nature of Dungeon Route itself. The goal here is to make it as flexible as possible. The steps are fairly simple. Get [Method Dungeon Tools (MDT)](https://www.curseforge.com/wow/addons/mythic-dungeon-tools) and this [Weakaura](https://wago.io/Yya4XBbl-). In MDT you can build your own routes of the dungeons with the key level you decide. The weakaura makes it possible to extract those routes as a fight style for your sim. In the top right corner of your MDT window, you will find two things. A setting to decide the % of the health you will deal to the enemies (default is 27%, based on your group you can adjust that) and right next to it, you have a button that is called "SimC Export". When you press this button, a pop-up opens with the current route as a bunch of lines that are raid events. Those raid events will be your trash packs and bosses in the sim. Now just copy the content of the popup like you did with your /simc popup. When you now open raidbots and insert your normal /simc export or decide to use the "Load from Armory" option, you can scroll down to the end of the page. There you can find a part that is named "Custom APL and SimC Options". Extend this and enable the expert mode with the checkbox. You will have 4 input boxes now that are named "Header", "Pre-Actor", "Post-Actor" and "Footer". Paste your route into the Footer. This will overwrite all settings about the fight style that you have in the Simulation Options above. Dungeon Route requires a lot more effort but will be the most accurate simulation of a dungeon at this point. What you use to simulate dungeons is up to you.
+
+### Movement Sims
+
+There are 3 different fighstyles that are selectable on raidbots right now that include movement. Hectic Add Cleave, Light Movement and Heavy Movement. While the idea to simulate fights with a lot of movement sounds great, we still have a lot of issues with those sims. The APL has to support those. For now that's not the case (at least for Monks) which is why we recommend to never use any of those. If you still use those the results you get can be very different since movement in combats is always a thing a player can plan for while the APL does not do that right now. It's the same issue you would have when you would stop to play proactively and start to play reactively. A good example is the usage of cooldowns. The APL has no conditions for incoming movement, so it can happen that it uses all your damage cooldowns just to run around like a chicken for the next ten seconds.
+
+### Target Dummy
+
+Target Dummy is a fight style that automatically disables all raid buffs, consumables and the usage of Touch of Karma and Touch of Death. This fight style can be used to get a rough idea about the dps your character is capable of on a target dummy. Due to the difference between human and APL and the difference in iterations, you might not match your simulated dps, but you may come close to it.
+
+## Known Issues
+
+**Cooldown timing** – The APL won't always line cooldowns up as perfectly as you can if you know how long your fight will be. This can especially be true for things like uncommon trinkets that were not added in the APL and are just being used off cooldown. This rarely results in burst cooldowns being undervalued. You should take a look at the sample sequences that will be available from a Quick Sim if you are curious how the cooldown is being used.
+
+**Catered towards a general set-up**  – APLs are made in mind with what is currently the general set-up at high-ish levels of gear. For example, [Jadefire Stomp](https://www.wowhead.com/spell=388193/jadefire-stomp?spellModifier=137025) right now isn't used in high-end PvE because other tier 3 talents are just better, because of this it won't have the same time put into the APL to optimize it. If you are running an off-meta set-up, it could be undervalued in the sims if it would require complicated APL logic.
+
+**Stat Weights** – They change too often and breakpoints can be scary. Please just use [Top Gear](https://www.raidbots.com/simbot/topgear), [Gear Compare](https://www.raidbots.com/simbot/gear), and [Droptimizer](https://www.raidbots.com/simbot/droptimizer) to look for upgrades or compare items you already got. More info on the problems with stat weights [here](/2018/12/29/stat-weights-and-you-round-3/) and [here](https://medium.com/raidbots/beware-of-stat-weights-240769a5323e).
+
+**Bugs** – Bugs aren't always implemented into sims. This counts for beneficial bugs as well.
+
+## Useful Inputs
+
+**Expansion options** In every expansion, there are several minor and major options that can be used to change the behaviour of items or the whole character in the sim. Those are known as [Expansion Options](https://github.com/simulationcraft/simc/wiki/ExpansionOptions) and can be put into the Custom APL section below the Simulation Options.
+
+**Compare Consumables/Racials** To use this just open any Quicksim, post your /simc export or use the "Load from Armory" option. Enable the expert mode in the "Custom APL and SimC Options" section and paste what you want to use into the "Footer". This will create other profiles in the Quicksim with the things you want to compare. If you want to compare any consumables, it's recommended to change the consumable for the default profile to "None". This can be found in the simulation options. Combination sims (like comparing different Potions and Phial options at the same time) are not possible with that, since you would need to create those combinations. Small note for the racial sims. While you can still do such sims and decide based on the very very very marginal differences, we don't recommend on doing so. Utility and even looks are reasons to pick races, not the very marginal dps differences.
+
+### Food - Feast/Feast-Equivalent
+
+copy="Food: (445 mainstat) Feast"
+food=feast_of_the_midnight_masquerade
+copy="Food: (469 highest secondary) Sushi Special"
+food=the_sushi_special
+copy="Food: (469 highest secondary) Beledar's Bounty"
+food=beledars_bounty
+copy="Food: (469 lowest secondary) Everything Stew"
+food=everything_stew
+
+### Food - Specific Secondaries
+
+copy="Food: (328 Crit) Fiery Fish Sticks"
+food=fiery_fish_sticks
+copy="Food: (328 Vers) Ginger Glazed Fillet"
+food=gingerglazed_fillet
+copy="Food: (328 Mastery) Salty Dog"
+food=salty_dog
+copy="Food: (328 Haste) Zesty Nibblers"
+food=zesty_nibblers
+
+### Food - Split Secondaries
+
+copy="Food: (235 Mastery/Haste) Chippy Tea"
+food=chippy_tea
+copy="Food: (235 Haste/Crit) Deepfin Patty"
+food=deepfin_patty
+copy="Food: (235 Crit/Vers) Fish and Chips"
+food=fish_and_chips
+copy="Food: (235 Mastery/Vers) Marinated Tenderloins"
+food=marinated_tenderloins
+copy="Food: (235 Mastery/Crit) Salt Baked Seafood"
+food=salt_baked_seafood
+copy="Food: (235 Haste/Vers) Sweet and Spicy Soup"
+food=sweet_and_spicy_soup
+
+### Flasks
+
+copy="Flask: Flask of Alchemical Chaos"
+flask=flask_of_alchemical_chaos_3
+copy="Flask: Flask of Tempered Swiftness"
+flask=flask_of_tempered_swiftness_3
+copy="Flask: Flask of Tempered Mastery"
+flask=flask_of_tempered_mastery_3
+copy="Flask: Flask of Tempered Versatility"
+flask=flask_of_tempered_versatility_3
+copy="Flask: Flask of Tempered Aggression"
+flask=flask_of_tempered_aggression_3
+
+### Weapon Enhancements - DW
+
+copy="Ironclaw Whetstone DW"
+temporary_enchant=main_hand:ironclaw_whetstone_3/off_hand:ironclaw_whetstone_3
+copy="Oils of the Deep Toxins DW"
+temporary_enchant=main_hand:oil_of_deep_toxins_3/off_hand:oil_of_deep_toxins_3
+copy="Algari Mana Oil DW"
+temporary_enchant=main_hand:algari_mana_oil_3/off_hand:algari_mana_oil_3
+copy="Ironclaw Whetstone/Oil of Deep Toxins DW"
+temporary_enchant=main_hand:ironclaw_whetstone_3/off_hand:oil_of_deep_toxins_3
+copy="Ironclaw Whetstone/Algari Mana Oil DW"
+temporary_enchant=main_hand:ironclaw_whetstone_3/off_hand:algari_mana_oil_3
+copy="Oil of the Deep Toxins/Algari Mana Oil DW"
+temporary_enchant=main_hand:oil_of_deep_toxins_3/off_hand:algari_mana_oil_3
+
+### Weapon Enhancements - 2h
+
+copy="Ironclaw Whetstone"
+temporary_enchant=main_hand:ironclaw_whetstone_3
+copy="Oils of the Deep Toxins"
+temporary_enchant=main_hand:oil_of_deep_toxins_3
+copy="Algari Mana Oil"
+temporary_enchant=main_hand:algari_mana_oil_3
+
+### Races - Horde
+
+profileset."Pandaren"+="race=pandaren"
+profileset."Blood Elf"+="race=blood_elf"
+profileset."Orc"+="race=orc"
+profileset."Tauren"+="race=tauren"
+profileset."Troll"+="race=troll"
+profileset."Undead"+="race=undead"
+profileset."Goblin"+="race=goblin"
+profileset."Highmountain Tauren"+="race=highmountain_tauren"
+profileset."Nightborne"+="race=nightborne" profileset."Mag'har Orc"+="race=maghar_orc"
+profileset."Zandalari Troll (Akunda)"+="race=zandalari_troll"
+profileset."Zandalari Troll (Akunda)"+="zandalari_loa=akunda"
+profileset."Zandalari Troll (Bwonsamdi)"+="race=zandalari_troll"
+profileset."Zandalari Troll (Bwonsamdi)"+="zandalari_loa=bwonsamdi"
+profileset."Zandalari Troll (Gonk)"+="race=zandalari_troll"
+profileset."Zandalari Troll (Gonk)"+="zandalari_loa=gonk"
+profileset."Zandalari Troll (Kimbul)"+="race=zandalari_troll"
+profileset."Zandalari Troll (Kimbul)"+="zandalari_loa=kimbul"
+profileset."Zandalari Troll (Kragwa)"+="race=zandalari_troll"
+profileset."Zandalari Troll (Kragwa)"+="zandalari_loa=kragwa"
+profileset."Zandalari Troll (Pa'ku)"+="race=zandalari_troll"
+profileset."Zandalari Troll (Pa'ku)"+="zandalari_loa=paku"
+profileset."Vulpera"+="race=vulpera"
+
+### Races - Alliance
+
+profileset."Pandaren"+="race=pandaren"
+profileset."Draenei"+="race=draenei"
+profileset."Dwarf"+="race=dwarf"
+profileset."Gnome"+="race=gnome"
+profileset."Human"+="race=human"
+profileset."Night Elf (Night)"+="race=night_elf"
+profileset."Night Elf (Night)"+="timeofday=night"
+profileset."Night Elf (Day)"+="race=night_elf"
+profileset."Night Elf (Day)"+="timeofday=day"
+profileset."Worgen"+="race=worgen"
+profileset."Void Elf"+="race=void_elf"
+profileset."Lightforged Draenei"+="race=lightforged_draenei"
+profileset."Dark Iron Dwarf"+="race=dark_iron_dwarf"
+profileset."Kul Tiran"+="race=kul_tiran"
+profileset."Mechagnome"+="race=mechagnome"
+
+## Useful links
+
+- [**Simc github**](https://github.com/simulationcraft/simc) Here you can find the coding behind simc and the wiki to help you make advanced adjustments yourself, such as editing the APL.
+- [**Simc discord**](https://discord.gg/tFR2uvK) If you have any questions for the programmers behind simulationcraft themselves.
+- **[Raidbots discord](https://discord.gg/86EF64Q)** If you have any questions or problems with Raidbots.
+
+## Videoguide
+
+A fellow Veteran from the discord made a very good video guide going through this topic as well. You can check it out below.

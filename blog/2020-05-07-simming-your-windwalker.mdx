@@ -1,0 +1,95 @@
+---
+title: Simming Your Windwalker
+slug: /2020/05/07/simming-your-windwalker
+date: '2020-05-07T15:01:59'
+authors:
+- scurch
+tags:
+- Windwalker
+- '9.0'
+description: Let’s talk sims for windwalker I’m sure you are already familiar with a thing called Raidbots but maybe not as much with the inner workings. In this article…
+wp_id: 15773
+original_url: https://www.peakofserenity.com/2020/05/07/simming-your-windwalker/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+### Let’s talk sims for windwalker
+
+I’m sure you are already familiar with a thing called [Raidbots](https://www.raidbots.com/), but maybe not as much with the inner workings. In this article I will go over the basics and explain how to best use it as a windwalker.
+
+### How it Works
+
+[Raidbots](https://www.raidbots.com/) is a website that runs the program [Simulationcraft](https://www.simulationcraft.org/) for you. Simulationcraft has a big database of spells, effects, gear, etc and knows how they all interact. Using this it will make a simulation of a character doing it’s rotation and tracks damage, buff uptime and much much more. To make it more accurate, it will do this many many times (called iterations) and give you the average results. The character it will use is whatever you put in, this will usually be your own character with maybe a few changes to see how they compare. The rotation it follows comes from the Action Priority List, or APL. These lists are maintained by theorycrafters from the respective specs. If you want you can also make your own APL or adjust the existing one.
+
+### How to Sim Yourself
+
+Get the [SimulationCraft add-on](https://wow.curseforge.com/projects/simulationcraft), type /simc in game and copy the text, go to [Raidbots](https://www.raidbots.com/) and click whatever type of sim you want (Top Gear, Gear Compare, Quick Sim), paste the output in the ‘Load from SimC Addon’ box and select items, traits, talents, whatever else you want to compare, then select the settings you want to sim with. If you want to use a custom APL just put that in the ‘Custom APL’ box at the bottom.
+
+Now that you know how it works here are some Windwalker specifics when it comes to simming.
+
+### Look out for these
+
+**Best case scenario**
+
+Simc will usually assume the best case scenario unless you tell it otherwise. A good example for this is the [inscrutable quantum device trinket](https://www.wowhead.com/item=179350/inscrutable-quantum-device?bonus=6805:1472), it can do [many many things](https://github.com/simulationcraft/simc/blob/d5e926f94825b9290f1352c2094ca69e69816863/engine/player/unique_gear_shadowlands.cpp#L1200) including but not limited to free people from crowd control, give your healers mana or heal a party/raid member. The thing you want it to do is to give you secondary stats, but getting it to do that isn't always easy because it's on a lower priority than the other possibilities. Sims will assume you always get the secondary stat and therefore sim very good. In reality getting it to do this exactly when you want to is a lot harder. Keep this in mind if what you are trying to sim is difficult to use optimally. Exceptions to this are items that require party members to also have it, like the [stone legion heradly](https://www.wowhead.com/item=184027/stone-legion-heraldry?bonus=6805) trinket. Simc wil sometime implement options for these items that can be found [here](https://github.com/simulationcraft/simc/wiki/ExpansionOptions#other-90-options). You can add these options under "Custom APL and simc options" in Raidbots.
+
+**Stat Weights**
+
+They change too often and breakpoints can be scary. Please just use [Top Gear](https://www.raidbots.com/simbot/topgear), [Gear Compare](https://www.raidbots.com/simbot/gear), and [Droptimizer](https://www.raidbots.com/simbot/droptimizer) to look for upgrades or compare items you already got. More info on the problems with stat weights [here](/2018/12/29/stat-weights-and-you-round-3/) and [here](https://medium.com/raidbots/beware-of-stat-weights-240769a5323e).
+
+### Known APL Issues
+
+Things that either are not implemented or not implemented correctly. This is usually because it is either a lot of work that we don’t deem worth it, or it is very new. If you see problems that are not listed here, please contact me (scurch#0088) on discord and I will look into it.
+
+**Cooldown timing**
+
+The APL won't always line cooldowns up as perfectly as you can if you know how long your fight will be. This can especially be true for things like uncommon trinkets that I didn't add in the APL and are just being used off cooldown. This can result in burst cooldowns being undervalued. You should take a look at the sample sequences that will be available from a Quick Sim if you are curious how the cooldown is being used.
+
+**Catered towards a general set-up**
+
+APLs are made in mind with what is currently the general set-up at high-ish levels of gear. For example, [Serenity](https://www.wowhead.com/spell=152173/serenity) right now isn't used in high-end pve because [Whirling Dragon Punch](https://www.wowhead.com/spell=152175/whirling-dragon-punch) is just better, because of this it won't have the same time put into the APL to optimize it. If you are running an off-meta set-up it could be undervalued in the sims if it would require complicated APL logic.
+
+### Not Working Correctly in Simc
+
+The following things are not working correctly in the Simulationcraft program:
+
+**Bugs**
+
+Bugs are typically not implemented in Simc. This will include beneficial bugs like having more [Mark of the Crane](https://www.wowhead.com/spell=228287/mark-of-the-crane) stacks than you should, or your [Storm, Earth and Fire](https://www.wowhead.com/spell=137639/storm-earth-and-fire) clones continuing to channel [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) if you cancel your channel.
+
+### Fight styles
+
+A bit about the most popular fightstyles and how well they go with the Windwalker APL. What exactly every fight style does you can find out [here](https://github.com/simulationcraft/simc/wiki/RaidEvents).
+
+**Patchwerk**
+
+Very straightforward burn with however many targets you have selected present at all times. This is the best supported fight style in our APL.
+
+**Dungeon Slice**
+
+Dungeon Slice is a mixture of single target and short aoe fights. The creator of Raidbots wrote an easy to understand article about it [here](https://medium.com/raidbots/mythic-simming-with-dungeon-slice-68a834880975). You can use this fight style if you want to emulate a dungeon, but you have to know a few things.
+
+1. Don’t look at the dps number it spits out, this fight style is to help you make decisions on gear and talent choices, it is not made to give you an idea of what dps you should be doing.
+2. Dungeon Slice is and will never be an exact match of **your** dungeon runs. Don’t purely rely on sims and ask for advice when you’re unsure, or if you just want a second opinion.
+
+**Light/Heavy Movement**
+
+This is Patchwerk with movement added in. Movement means you are forced to move a certain distance or time and are unable to cast and often will be out of range for certain abilities. While you will have movement in real fights, I generally don’t recommend using sims involving movement. The APL does not take upcoming movement into consideration and won't plan accordingly. This can make sims less accurate, since in fights you usually are able to plan ahead and won’t make the same mistake.
+
+**HecticAddCleave**
+
+A boss present at all times with 5 adds spawning in frequently and some movement. You can use this fight style to simulate raid bosses that have adds joining the fight, but I tend to stay clear of this one myself. You have the problems of add timings favouring certain cooldowns, movement that I already discussed above and on top of that it is very aoe focused, 5 adds up roughly 44% of the time is a lot. I recommend doing both a single target and multi target Patchwerk sims and making a decision based on those 2. If you mostly only care about single target damage with cleave as a nice bonus you can do a 2 target Patchwerk sim or use the Cleave Add fight style.
+
+### Useful links
+
+[**Simc github**](https://github.com/simulationcraft/simc)
+
+Here you can find the coding behind simc and the wiki to help you make advanced adjustments yourself such as a editing the APL.
+
+[**Simc discord**](https://discord.gg/tFR2uvK)
+
+If you have any questions for the programmers behind simulationcraft themselves.
+
+**[Raidbots discord](https://discord.gg/86EF64Q)**
+
+If you have any questions or problems with Raidbots.

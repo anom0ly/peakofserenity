@@ -1,0 +1,53 @@
+---
+title: 'Simulations: What Are They?'
+slug: /2016/10/15/simulations-what-are-they
+date: '2016-10-15T19:44:13'
+authors:
+- babylonius
+tags:
+- General
+- Legion
+- Sims
+- Theorycrafting
+description: In the pre-Legion days, SimulationCraft, stat weights, theorycrafting, and the like, were reserved for a select few individuals who knew how to use the…
+wp_id: 2470
+original_url: https://www.peakofserenity.com/2016/10/15/simulations-what-are-they/
+---
+
+In the pre-Legion days, SimulationCraft, stat weights, theorycrafting, and the like, were reserved for a select few individuals who knew how to use the tools. The information gleaned from these tools was the disseminated to the public, taken as gospel, and rarely questioned except by the most knowledgeable of players. But the times, they are a-changing.
+
+With the enormous combinations of ilvl, sockets, and tertiary stats, there are dozens, if not hundreds, of permutations for any single item. This brings unprecedented variability to the game, rendering BiS lists, stat weights, and trinket rankings equally variable. Resulting from this, is the greater need for people to be familiar with using simulation software in order to learn to make the best possible decisions for themselves. So in this series of articles, I'll try to explain what sims are, how to use them, and what kind of information you can get out of them.
+
+#### What are simulations?
+
+Simulations are exactly what you'd imagine, they're computer run simulations, the same type that you've seen in any movie or TV show that talked about them. The computer, script, software, or whatever you want to call it, runs the parameters that you set for as many iterations (repetitions) that you want it to. If you want to see how much DPS your character can do in a purely single target fight that lasts 5 minutes, you can test that anywhere from 1 to (with SimCraft) 250k iterations. Obviously the more repetitions, the less factors like RNG come into play. If you want to change that to a 6 minute fight, or a fight with adds, or two bosses, or really anything your heart desires, you can. If you want to see if a change in gear or talents will improve things, you can do that too.
+
+##### Pros of simulations:
+
+- **Repetition** - In the time it may take you to run a 5 minute target dummy parse, a simulating tool can run 10,000. You'll often hear people say, "I tried X and did more DPS" or "I have Y trinket and its really really strong", and they may very well be right, but chances are, their sample sizes are comparatively small. Someone once told me, "The plural of anecdote isn't data." This means that just because a few people said something is so, doesn't mean that it is. A simulation allows us to test more repetitions than any human could do themselves.
+- **Customizability and Hypothetical-ability** - Simulation programs allow us to look at "what if"s. Want to know what would happen if you prioritized one ability over another? You can sim that. Want to know how two talents or two pieces of gear compare? You can sim that without even having the gear in question. Want to know what races provide the most DPS? No $25 fee required.
+
+##### Cons of simulations:
+
+- **You have to know what you're looking for and looking at** - Running a simulation doesn't mean anything if you don't know how to interpret the results, check for issues in the parameters you set, or try to infer too much from what you're seeing. One popular example of this is stat weights. When a program gives you stat weights, its giving you the amount of damage you'd gain by adding further points in that stat. Most people think that if Mastery is 7.0 and Vers is 6.5, that means they should drop all their Vers for Mastery, which is not always true as stats intertwine in nearly every spec. Knowing how to interpret what you're seeing is important, and not always intuitive.
+- **You need to now how to use it** - If you don't know what buttons to press, what boxes to check, what syntax to use, you could make a small mistake in what you want to test that results in your results having nothing to do with what you want to test. You also need to know how to recognize issues that are because of what you did, and not actual results.
+- **Simulation programs are made by people** - Humans are fallible, even the top theorycrafters, statisticians, math-wizzes, and others that actively work on the simulation tools, can miss things or make mistakes. Sometimes a "-" is put in where it shouldn't be, and you tell the world that they need to get to 10% Vers immediately, then once you find the error, you realize that 10% was completely incorrect, but people perpetuate it for months afterward.
+- **Computers aren't flexible** - A simulation can't say "I know Rot is coming up in a few seconds, I should delay my abilities until it goes out so I don't get screwed." Well, technically it can, but ain't nobody got time to code that.
+
+It may seem like the list of Cons is longer than the list of Pros, because it is, you can count... right? 4 is more than 2. However, the positives drastically outweigh the negatives. Simulations may not be perfect, but they're the best tool we have.
+
+#### What tools can we use?
+
+Right now there are two main tools for running simulations: [SimulationCraft](http://www.simulationcraft.org/), and [AskMrRobot](http://www.askmrrobot.com/wow/simulator/run). Both look to do the same things, allow you to run custom tests to determine and compare a variety of factors.
+
+SimulationCraft has been around for a long time, and has been the main tool for simulations for as long as I can remember. It is run and maintained by several people with individuals managing and attempting to optimize individual classes and specs. The syntax for testing is somewhat technical and imposing at first, but it does allow you to run multiple parameters at once in a batch, to get a stacked ranking of how each change panned out. If you've seen stacked rankings of classes and specs, they came from SimCraft. The biggest thing that SimCraft has going for it is its long standing track record and larger community of people working on it. It is Open-Source, so anyone can go in and make the changes they want to test what they want. If you've been keeping track of the theorycrafting we do on this site, SimC is the primary tool we've been using for the past few weeks.
+
+AskMrRobot is relatively new to the simulating game, but the authors have been hard at work on it for weeks. AMR started as a tool to help you compare gear and other things but have broadened to attempt to automate more things so that it can be a one-stop tool for all that you need. The pool of people working on it is smaller, but no less hard working and capable. It is not as Open-Source as SimC, but some changes to spell data and other things can be done. There are limited options for running batches, but they've continued to improve their functions and add other tools. There has been limited time to fully test out AMR, as it does not have the long standing track record of SimC, but the authors are ambitious and working hard to try and make it as great a tool as they can. A huge positive of AMR is its integration of their simulations with their Best-in-Slot and Best-in-Bags features, which are the only automated tools of their kind that I'm aware of. I primarily used AMR before the expansion as it was prepared for Legion before SimC was.
+
+There is no consensus on what is better. Each tool has its pros and its cons and should function well enough for the vast majority of players. As long as you understand and don't expect them to match up identically, you can use whatever tool you're most comfortable with.
+
+I think this is enough information for the first part of a series on Simulations. Stay tuned for further articles coming Soon™.
+
+---
+
+Hopefully, this answers more questions than it creates. As always you can find us on [Discord](https://discord.gg/0dkfBMAxzTkmAVwq) to answer questions, and if you liked what you read don’t hesitate to scroll down or to the top and subscribe and [support](http://www.walkingthewind.com/donate/) WtW.

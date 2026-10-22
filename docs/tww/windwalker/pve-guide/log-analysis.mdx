@@ -1,0 +1,129 @@
+---
+title: Windwalker Log Analysis
+slug: /tww/windwalker/pve-guide/log-analysis
+authors:
+- babylonius
+last_update:
+  date: '2023-07-28'
+description: ''
+wp_id: 22824
+original_url: https://www.peakofserenity.com/tww/windwalker/pve-guide/log-analysis/
+---
+
+![Jari WW](/img/uploads/2020/08/Jari-WW.png)
+
+[**Starting**](/tww/windwalker/pve-guide/log-analysis/)
+
+[**Tools**](/tww/windwalker/pve-guide/log-analysis/tools/)
+
+[**Raid**](/tww/windwalker/pve-guide/log-analysis/raid/)
+
+[**Mythic+**](/tww/windwalker/pve-guide/log-analysis/mythicplus/)
+
+## Getting Started
+
+This page includes the basic usage of [Warcraftlogs](https://www.warcraftlogs.com/) and how to read some of that information. If you are already familiar with [Warcraftlogs](https://www.warcraftlogs.com/) you can skip this page. If you feel like you don't know what I'm talking about in the following pages, come back here.
+
+After opening your log, the first thing you see is this. What are the things to look at, where do you find it and what are they doing? I'm ignoring the unmarked things because they are mostly used for fight specific analysis or very in depth reviews. We want to improve our DPS here in a "simple way" so we focus on that. Feel free to skip subgroups if you already know about them.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213153.png)
+
+## 1. Boss Selection
+
+Not much to tell here, just select the boss you want to look at. By clicking the Dropdown you can simply select any Kill or wipe you want.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213248.png)
+
+## 2. Phase Selection
+
+Not much to tell here either, just select the phase you want to look at. More or less only relevant for a "Raidwide" analysis and not a "player dps" analysis. Looks like this:
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213310.png)
+
+## 3. Fight Time
+
+First thing that can be somewhat important. Depending on the fight time and the nature of Windwalkers different cooldowns for something like [Storm, Earth, and Fire](https://www.wowhead.com/spell=137639/storm-earth-and-fire)/[Serenity](https://www.wowhead.com/spell=152173/serenity)/[Invoke Xuen, the White Tiger](https://www.wowhead.com/spell=123904/invoke-xuen-the-white-tiger) you want to keep the fight time in mind to plan your cooldowns ahead of the fight and not on the fly. For more information you can look at the [Cooldown](/2021/07/31/windwalker-approaching-cooldowns-and-desyncs/) article written by Talby.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213248.png)
+
+## 4. Player/Enemy Selection
+
+Here you can toggle between the boss/adds or any raid member/pet that was part of the fight. To analyze yourself you will be using the "friendlies" toggle and select yourself from the dropdown 9/10 times. This will also work as a filter for any of the following subcategories (summary/damage done/damage taken...) For example:
+
+You select Friendlies--> Dropdown menu, select the player you want and click it:
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213357.png)
+
+Or Enemies
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213420.png)
+
+## 5. Summary
+
+In this section you can look at talents, gear, stats, enchants and some more for your whole raid or a specific player.
+
+## 6. Damage Done
+
+Here you can find a list of different things and a graph:
+
+**Unfiltered**: Graph on top shows the distribution of your whole raid DPS, the chart below is a DPS breakdown of your raid per player.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213440.png)
+
+**Filtered**: Graph on top shows your own DPS distribution. Chart below breaks down damage dealt in spells/sources and in addition to that crits/hits and much more
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213503.png)
+
+## 7. Buffs
+
+A list of all buffs, simple as that. Again, you can select any player you want. In addition you can also select the source of the buff you want to look at (for example you get PI from 2 different priests and want to know who used it when).
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213516.png)
+
+## 8. Debuffs
+
+Ok so now things get a little spicy. You have any DoT or debuff on the boss (for example [Faeline Exposure](https://www.wowhead.com/spell=356774/fae-exposure) from [Faeline Stomp](https://www.wowhead.com/beta/spell=388193/faeline-stomp)). You can now select Enemies and the target you want to look at (point 4) and select the debuff you want to know more about. For example [Fae Exposure](https://www.wowhead.com/spell=356774/fae-exposure) uptime filtered on the boss:
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213534.png)
+
+The result shown is such graph, where you can easily identify times where you played good/worse or for example had downtime.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213548.png)
+
+## 9. Resources
+
+Here you can select what you want to look at. Either Hit Points, Chi, Energy, Mana, Combo Points or whatever you can find. If you select Chi for example, you can see what ability/talent generated chi and if it overcapped chi at any point. Here you can see I filtered for myself and chi. The graph shows where I overcapped, the chart tells me with what spell and how much I overcapped.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213603.png)
+
+## 10. Casts
+
+This may be the most important and helpful category for you to look at. Here you see how many of what spells you used and when you used them. By clicking any spell in the top (where I selected [Serenity](https://www.wowhead.com/spell=152173/serenity)) you can see when it was used. You can select multiple as well.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213619.png)
+
+## 11. Tables
+
+Default to look at any selected category as a nice sorted table.
+
+## 12. Timelines
+
+Most important feature to look at your cast sequences (Select you as a player --> Casts tab --> Timelines). When selected you can see anything you did and when you did it in a slideable chart.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-28-213636.png)
+
+## 13. Analyze
+
+Default to look at all the things we just talked about.
+
+## 14. Compare
+
+My own favorite feature. This is 100% the best tool to compare your own log to someone else's without having to look left and right between your monitors. This will be featured in the tools section because it's a little more complicated.
+
+[**Starting**](/tww/windwalker/pve-guide/log-analysis/)
+
+[**Tools**](/tww/windwalker/pve-guide/log-analysis/tools/)
+
+[**Raid**](/tww/windwalker/pve-guide/log-analysis/raid/)
+
+[**Mythic+**](/tww/windwalker/pve-guide/log-analysis/mythicplus/)

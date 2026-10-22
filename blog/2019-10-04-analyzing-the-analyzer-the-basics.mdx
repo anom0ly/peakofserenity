@@ -1,0 +1,147 @@
+---
+title: 'Analyzing the Analyzer: The Basics'
+slug: /2019/10/04/analyzing-the-analyzer-the-basics
+date: '2019-10-04T10:36:16'
+authors:
+- abelito75
+tags:
+- Mistweaver
+description: Concept WowAnalyzer is a powerful log review tool that is both fast and accurate but it can be quite confusing with all the information that it spits out at…
+wp_id: 14917
+original_url: https://www.peakofserenity.com/2019/10/04/analyzing-the-analyzer-the-basics/
+image: /img/uploads/2019/10/anameme.jpg
+---
+
+## Concept
+
+[WowAnalyzer](https://wowanalyzer.com) is a powerful log review tool that is both fast and accurate but it can be quite confusing with all the information that it spits out at you. Most if not all of the information it delivers it useful but how does one interpret this information? Well that is the aim of this guide. We will be going over each tab and some of the data in it to determine if the data is useful 100% of the time.
+
+If you’d like to follow along, you can use your personal log or use the one [this article](https://wowanalyzer.com/report/QxJVfnWC7YmARTNF/11-Mythic+Abyssal+Commander+Sivara+-+Kill+(4:24)/Magnapinna/overview) was based off of.
+
+## Overview
+
+This tab is broken down into two parts, the Checklist and the Suggestions. The Checklist is a quick overview on how you performed on maximizing your class while the Suggestions are reasons why and how to do something better in more detail. As a rough rule there should always be a suggestion for each check on the Checklist.
+
+### Checklist
+
+The Checklist is broken down into many subheaders that have check marks and progress bars to determine how good you did in each area. If you click on a subheader it will open up to say what it is based off of and how well you did on each one of those.
+
+![checkList.png](/img/uploads/2019/10/checkList.png)
+
+If we look here we can quickly see that on this fight the player did many things correct such as "Using core abilities as much as possible", "Use cooldowns effectively" and a few more while they also did certain things poorly such as "Picking the right tools for the fight", "Using your procs and short CDs" and anything else without a check. You can also see the progress bars next to them seeing how well they did in a non-binary sense. So if we see they did decently well for “Pick the right tools for the fight” but not enough to make it successful. We can also see 1 expanded subheader which it shows the player used Renewing mist very efficiently. But now if we expand a subheader that was done poorly we can see what they need to improve on.
+
+![checkList detail.png](/img/uploads/2019/10/checkList-detail.png)
+
+If we look at “Pick the right tools for the fight” we can tell the player did decently well with controlling the overhealing from mana tea but poorly at using mana during it. This poor use of burning mana during mana tea is the biggest thing holding them back from using all tools correctly.
+
+### Suggestions
+
+This is the “how to” part of this tab. This is the area where the things the player did poorly will show up again but with reasons why and how to improve. It is decently straight forward but has 3 levels of improvement: Major, Average, Minor. As you can imagine each tier is how poor they did with doing the worst would be major while slight mess up would be minor. By default minor suggestions are not displayed as it could be quite cumbersome but there is a switch to enable it.![checkYesNo.png](/img/uploads/2019/10/checkYesNo.png)
+
+If we look back at the example from "Pick the Right Tools For the Fight" we can see that there is a suggestion for it. ![suggestion.png](/img/uploads/2019/10/suggestion.png)
+
+As we can see it suggests to cast more Vivifies and end with an Essence Font to hit your target. We can also see that they on average saved 8,100 mana when the recommended is around 13,000 mana. This suggestion also says major which means the player did a very poor job at using this talent to its fullest.
+
+We can also look other suggestions such as the one for "Essence Font HOTS Used per Cast" to see how to improve on that.
+
+![suggestionsEFHot.png](/img/uploads/2019/10/suggestionsEFHot.png)
+
+This check is looking for the usage of Essence Fonts hot’s effect as much as possible. Essence Fonts hot make it so if you proc mastery on someone with it then you will get another free mastery proc on that person which is a large amount of free healing. This check is seeing if you are using the hot effect effectively and depending on how damage is healed might be able to be ignored to a degree. Since if you essence font and by the end of the channel the raid is full hp then using the hot is unneeded thus impacting the suggestion.
+
+## Statistics
+
+This is a bit of a collections of useful and informational bits of information that can range from stat values all the way to ability usage. These are broken down into subheaders again. This will be a rough overview of how to analyze the data in this tab as it is a bit more advanced and will be covered in a future article.
+
+### Statistics
+
+First we have dps/hps/DTPS rankings and graphs. Not much to look here.
+
+![image14.png](/img/uploads/2019/10/image14.png)
+
+Next we have Active Time which is something you can use to see how much you were actually playing the game vs not being helpful in raid. This does include afk time as dealing with certain mechanics where you might not be able to heal/dps.
+
+![image10.png](/img/uploads/2019/10/image10.png)
+
+Then we have Stat Values which for mws is one of the best ways to get your stat weights for raid. This also includes a QElive button which will automatically import your stat weights into qelive for easy up to date stat weights! When you look here you can see that there are 2 different haste and versatility stat values 99.99% of the time you will use Haste (HPM) and Versatility without Dr. Haste (HPM) is a more accurate of a real raid situation as you normally want to be more mana efficient. (HPM = Healing per mana spent) Versatility without Dr describes the added throughput you gain from versatility which is a direct show of healing.
+
+![image11.png](/img/uploads/2019/10/image11-1.png)
+
+Lastly we have a ton of mw specific stuff. Thunder Focus Tea usage allows you see what you exactly used tft on without having to dig through logs, gust of mist break down allows you to see what spell that procs mastery you used the most, Average rems per cast shows how many renewing mists you had up when you casted vivify to know roughly how many people were hit each cast. Healing Contributed shows how much the healing bonus from Enveloping mist healed for. Enveloping Mist to Vivify Casts shows the ratio between the two. Mastery buffs utilized shows how many total times you casted a mastery procing spell into someone with essence font hot.
+
+![image2.png](/img/uploads/2019/10/image2.png)
+
+### Talents
+
+This is a general break down on talent information and will change depending on which talents you have.
+
+![image18.png](/img/uploads/2019/10/image18.png)
+
+If you notice in the top right of the "Average mana saved" box there is a little "i"; this indicates that there is a tool-tip for this box. These tool-tips provides more information about whats in the box which can be seen when you hoover over the "i" with your mouse.
+
+![image13.png](/img/uploads/2019/10/image13-1.png)
+
+This is the tool-tip "Average mana saved" and it shows what spells you casted during your mana teas which can be helpful when attempting to deduce why you didn't hit your targets. As seeing Chi-Torpedo means you wasted a gcd in mana tea.
+
+### Items
+
+This is the breakdown on items, essences, and azerite traits; most of these will have tooltips that displays more in-depth information. ![image9.png](/img/uploads/2019/10/image9.png)
+
+As we can see the use for this log didn't have any items that have statistics but they had a lot of essences and azerite pieces that can be track. We will go into how to analyze how to exactly use these in a future article but as of right now you can see what each trait did over the fight!
+
+### Details
+
+This is a breakdown on mana statistics which can be helpful to determine if you were being greedy with mana when someone died or burned a lot of mana doing little hps.
+
+![image1.png](/img/uploads/2019/10/image1.png)
+
+If you look at the Mana Pool graph you can see the users mana roughly follows the bosses health until about 3:15 and then they make very poor choices and start to burn mana till they oom at about 3:30. So for roughly 1 minute of the fight they were battling in a very low mana state meaning they are not able to heal effectively and we can see people died because of it.
+
+### Mana Efficiency
+
+This is a breakdown where you can see how much mana you spent on each spell, the amount of healing you got per mana spent on a spell and how much healing you got vs how long you spent casting/channeling that spell.
+
+![image12.png](/img/uploads/2019/10/image12.png)
+
+As we can see in this infographic there are certain spells that are highly mana efficient while being very poor for how long you have to cast/channel them. One example is Soothing Mist which while not terrible in terms of "Healing Per mana spent" it is extremely bad for Time spent using the spell while Essence Font does a lot of "healing per mana spent" with amazing "Healing per second spent casting".
+
+### Abilities
+
+This is a breakdown on all possible casts of any given spell has, The time the spell spent on cooldown through the fight. This is extremely useful to determine if you casted a spell for at all.
+
+![image20.png](/img/uploads/2019/10/image20.png)
+
+This section includes all spells so you can easily see check if you casted Crackling Jade Lightning or tiger palm or any spell. The "Time on Cooldown" bar is useful to see how much of the time large spells such as revival were on cooldown vs up and able to use.
+
+## Timeline
+
+This is a simple timeline to show that you did throughout the fight with cooldown tracking, and buff highlighting! This can be used to see what a player did at certain times. This is also super simple to use so you can scroll through it quickly to see if they made any questionable choices.
+
+![image3.png](/img/uploads/2019/10/image3.png)
+
+## Cooldowns
+
+This tab shows what you did during each cooldown. This is insanely helpful to determine what spells you did during mana tea and how mana tea’s mana usage breakdown is working. It also shows Healing, Overhealing %, and Mana Used. This also shows the time frame at which the cooldown was active. ![image7.png](/img/uploads/2019/10/image7.png)
+
+As we can see here the 3rd mana tea was used either at the end of the fight or the player died on the same second they used it meaning it is factored into the "mana saved per mana tea" statistic in a negative aspect. This means that that statistic is 33% off since a 0 was feed into it. We can manually correct this to get a more accurate result for that suggestion by dividing the number they gave us (8100) by valid teas / # of teas which would would be 8100 / (2/3) which equals 12,150. This is much closer to the 13,000 that is suggested.
+
+## Triage
+
+This is an insanely useful tab as it allows you to check if you were healing low health people and if you were healing for a significant portion of their health. There are two sliders, Max health of target and Min effective healing (percentage of target’s health). The first one lets you set the max health of what to check off of while the second one is what % of hp did you actually do to the person. These two sliders allow for you to determine what is valuable to you.
+
+![image4.png](/img/uploads/2019/10/image4.png)
+
+As we can see here we are looking at people that only had less than 35% of their max hp and we only did at least 10% of their health in 1 healing event. We can also see that at 2:15 we healed Magnapinna twice 1 being vivify and the other being mastery which is bundled with vivify so we can mentally combine these two.
+
+## Raid Health
+
+This tab allows you to see the overall health of the raid throughout the fight as well as the players themselves. You can use this during progression to see where the pressure points of the fight are to plan cooldowns. You can also click on specific players to remove them from the list.
+
+![image21.png](/img/uploads/2019/10/image21.png)
+
+## Character
+
+This is a decently straight forward tab that shows the player character at the time of the log including things such as stats, race, armory, other parses from that character that have been ran through Wow Analyzer, azerite, essences, and talents. It also contains more interesting things such as most used azerite, trinkets, talents, essences as well as similar kills.
+
+![image6.png](/img/uploads/2019/10/image6.png)
+
+![image19.png](/img/uploads/2019/10/image19.png)

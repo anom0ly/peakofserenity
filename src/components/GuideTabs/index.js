@@ -35,6 +35,7 @@ export default function GuideTabs({frontMatter}) {
                 ))}
               </Tabs>
             )}
+            <Field value={data.outro} />
           </section>
         );
       })}

@@ -1,0 +1,95 @@
+---
+title: 'Can''t spell IT''S OP without OPS: A PSA about the latest hotfix!'
+slug: /2018/09/27/cant-spell-its-op-without-ops-a-psa-about-the-latest-hotfix
+date: '2018-09-27T16:35:53'
+authors:
+- talby
+tags:
+- Windwalker
+- '8.0'
+description: Written by Fjin and Talby. Thanks to Hina and eMZed for the math support! Shakugan and Reqy for helping with testing and Tandy for bongo! As you might have…
+wp_id: 12571
+original_url: https://www.peakofserenity.com/2018/09/27/cant-spell-its-op-without-ops-a-psa-about-the-latest-hotfix/
+---
+
+Written by Fjin and Talby. Thanks to Hina and eMZed for the math support! Shakugan and Reqy for helping with testing (and Tandy for bongo)!
+
+As you might have seen, Open Palm Strikes was buffed by 60% in the patch of 25 September. We’ve received many questions about this trait - how it works, whether it’s good, and in which situations. This PSA will try to answer those questions.
+
+**Note**: Due to a very recent fix in SimulationCraft related to SEF clones not getting full value from Azerite traits, it was until now underrepresented in the sims. We may see a hotfix come out for Open Palm Strikes soon to bring it in line a tad. This article will be updated to reflect these possible changes.
+
+## How it works
+
+So let’s start at the tooltip.
+
+*When Fists of Fury deals damage, it has a 5% chance to refund 1 Chi, and it deals X additional damage.*
+
+Let’s try to clear that up a bit.
+
+*Each time Fists of Fury deals damage to the initial target, it has a 5% chance to refund 1 Chi. Each tick of Fist of Fury deals X additional damage. This damage is halved for secondary targets.*
+
+A few things are important here.
+
+First, the “initial target” is your target at the moment of pressing Fists of Fury. **Only** ticks of Fists of Fury that connect to that target have a chance of refunding 1 Chi. If this target gets out of range or dies, your other Fists of Fury ticks will not proc the Chi refund, even if you change targets. Mind that Fists of Fury damage is halved to all targets except the initial target, so some thinking is required when selecting your target (e.g. don’t pick a mob that frequently charges away or that will die within your Fists of Fury cast, unless you need it dead **now**).
+
+Note that stacking Open Palm Strikes traits means the damage increases. The Chi refund part does **not** change.
+
+Second, the tooltip damage value for Open Palm Strikes is confusing. The TL;DR is “At average gear levels, your full Fists of Fury cast’s damage is increased by about twice the total Open Palm Strikes tooltip value”. If you’re not interested in the specifics, skip the next section.
+
+The damage of Fists of Fury is calculated with the following formula:
+
+((5\*120.75%) \* (Agility + MHWDPS \* 6) + Open Palm Strikes) \* Windwalker Effect #1 \* (1 + Versatility) ...
+
+Assuming you have Mystic Touch applied, didn’t use Fists of Fury right before and thus benefit from Mastery, and are hitting a lvl 120-123 target (including bosses), we add the following:
+
+… \* (1 + Mastery) \* 1.05 \* Damage Reduction of Target = total Fists of Fury damage (divide by 5 to know the value per tick).
+
+The values used:
+
+- Open Palm Strikes is the full value the trait will give you during a Fists of Fury cast. To calculate this, sum up all tooltip values from your gear, then multiply by 5.
+- Windwalker Effect #1 is an aura that reduces damage from Fists of Fury by 27%
+- The damage reduction is determined by the K value. In the large majority of cases, you’ll be hitting a lvl 120-123 target (boss, mob or player), which results in a 30% damage reduction (or *3336/(3336+7765)* to be specific).
+
+  If you want to check how much value Open Palm Strikes will give you, there’s a spreadsheet available here:
+
+[Click here for the Open Palm Strikes calculator!](https://docs.google.com/spreadsheets/d/1VC8TKbIyoZrwHQAxxYv-xj-kHwbHEnYpzgAYiZEVFkU/edit#gid=0)
+
+Make a copy and fill in your own values in the green areas.
+
+The Chi refund works as follows. Each time your Fists of Fury ticks on the initial target, you have 5% chance of getting 1 Chi back. You can even have this effect happen during Serenity. Assuming no “Bad Luck Protection”, the proc then follows a binomial distribution with p=0.05. The results following tell us that you should expect to get 0.25 Chi back per cast of Fists of Fury. This implies this effect is very minor, and thus barely needs to be taken into account when judging the power of Open Palm Strikes. Leading us to the next part of the article.
+
+![](/img/uploads/2018/09/OPS.jpg)
+
+## Is it good? And when?
+
+Whether an Azerite trait is good depends on two things; the type of fight/content you’re going into, and the alternatives available to you. We’ll look at four situations; Uldir ST/priority damage, Uldir Cleave/AoE, M+, and PvP.
+
+### *Uldir ST*
+
+For most if not all fights in Uldir, consensus is to take one Archive of the Titans and one Meridian Strikes - the former to enable Re-origination Array, the latter because there’s decent odds you’ll get an additional Touch of Death out on an average fight, which is a big DPS increase. This means there’s one other trait you can bring to the fight. On pure ST, Open Palm Strikes looks to be the top damaging trait. If you know the fight length and can see you won’t get another cast of ToD in, you should take 2 Open Palm Strikes instead, foregoing the MS.
+
+### *Uldir AoE*
+
+IF is the top trait in AoE sims, because the extra crit is more valuable than the flat damage from Open Palm Strikes. However, Iron Fists only procs from hitting 3+ targets with Fists of Fury. Therefore, Open Palm Strikes is likely the best trait to take for fights where you won’t hit 3+ targets on the majority of your Fists of Fury casts, or where you can’t utilize the extra crit to its full extent.
+
+### *Mythic+*
+
+With the removal of gear swapping, one needs to account for both ST/priority situations and AoE situations when choosing gear for Mythic+ runs. This is where the versatile aspect of Open Palm Strikes shines. By providing strong results on both ST and AoE and working independent on amount of targets, Open Palm Strikes is one of the, if not the best option for M+.
+
+### *PvP*
+
+“(Windwalker) Open Palm Strikes: damage increased by 60% (unchanged in PvP)”.
+
+Azerite traits are something that Blizzard has struggled to balance within PvP for various reasons, so it comes as no surprise to see it get reduced. Even if the buff went through Open Palm Strikes wouldn't have fixed the issues with Windwalker in PvP but I believe that it would have went a long way towards giving it some sort of identity in the current meta. Since the removal of Heavy-Handed Strikes, Fists of Fury has been a relatively weak spell with many drawbacks, and it’s unfortunate Blizzard refrains from giving a spec that is already struggling a buff on one of it’s most iconic spells. It's disappointing but the state of Azerite Traits for Windwalker PvP will remain unchanged as we will not be gaining anything from this hotfix.
+
+From testing, we found you gain 33% less from Open Palm Strikes in PvP than you do in PvE, much like the reduction to Meridian Strikes (-60%) when engaged with an enemy player.
+
+Note: You can check the difference in damage by changing the "PvP" option from 0 to 1 in the calculator.
+
+## Does it alter my rotation?
+
+When using Open Palm Strikes traits, you should prioritize casting Fists of Fury over Rising Sun Kick, assuming you won’t cap resources. This is a minor change from the normal priority; Rising Sun Kick and Fists of Fury simply swap places. Mind that picking your traits towards Open Palm Strikes increases the value of Fists of Fury, and thus makes it more valuable to think about your use of it. If the fight has adds that regularly spawn, it’s worth thinking about holding Fists of Fury - a Fists of Fury hitting 2 targets does 50% more total damage. Most boss mods give you timers for new spawns, such as Gestate on Vectis. Use this to your advantage.
+
+## Summarizing
+
+The buff to Open Palm Strikes has made it one of the most potent traits to pick in any PvE situation. Open Palm Strikes increases the overall usefulness of Windwalkers in M+ and fights with varied amounts of targets. We hope the article has cleared up some of the vagueness surrounding this trait. If anything changes related to Open Palm Strikes, or anything new comes up surrounding our rotation when using Open Palm Strikes, we’ll update this article accordingly.

@@ -1,0 +1,146 @@
+---
+title: Playing Windwalker the "Right" Way
+slug: /2018/07/21/playing-windwalker-the-right-way
+date: '2018-07-21T23:35:48'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.0'
+description: Introduction So the topic that is top of all the discussions right now is how awful the "optimal" playstyle plays right now. Rather than recite the…
+wp_id: 10997
+original_url: https://www.peakofserenity.com/2018/07/21/playing-windwalker-the-right-way/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+### Introduction
+
+So the topic that is top of all the discussions right now is how awful the "optimal" playstyle plays right now. Rather than recite the playstyle, or why it feels terrible, again, make sure to check out the [PvE Guide](/tww/windwalker/) or Wednesday's article; [Legion WW Gets its Ass (Blackout) KICKED!](/2018/07/18/legion-ww-gets-its-ass-blackout-kicked/) This drastic change in playstyle is sweeping through the Windwalker community and few are happy about it. Actually, few are anything but confused and disgusted. I know I personally made it less than an hour in raid on Wednesday before I switched back to the old way and just accepted a DPS loss.
+
+Whenever there is a playstyle or game decision that people don't enjoy, which is just about always for someone, they frequently want to know how much they'd lose by playing the way they'd prefer. This drastic paradigm shift was no exception. Many people are willing to take a theoretical 1%, 5%, or even 10% loss in DPS to play a way that they find more enjoyable, others aren't willing to take any theoretical hit, neither way is inherently wrong. So, since I was falling into the former camp for now, as I did since I stopped progressing on Argus when I stopped using [The Emperor's Capacitor](https://bfa.wowhead.com/item=144239), I decided I just HAD to figure out roughly how much I was losing by playing the way that I felt the spec was meant to be played, rather than the way that is numerically "optimal". Thankfully I had lots of help in trying to figure it out, so a huge thank you to those that helped me theorycraft and troubleshoot this. I can't promise that what follows is exactly 100% flawlessly correct, but it should be close enough for a rough estimate at least during the pre-expansion patch, or until Blizzard decides to do something about it.
+
+##### Baselines
+
+Its important to establish a baseline for all the abilities, so that its easy to reference;
+
+- [Windwalker Monk](http://bfa.wowhead.com/spell=137025/windwalker-monk) (http://bfa.wowhead.com/spell=137025/windwalker-monk) – Modifies nearly all abilities by -27% (Effect #1 and #2); plus extra modifiers to specific abilities relevant to these discussions; +26% to [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick), [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick), [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) (Effect #5); and +50% to [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) (Effect #9).
+- [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) – 77% base AP \* +50% (Effect #9) \* +26% (Effect #5) \* -27% (Effect #1) \* -30.01% (Armor) \* +5% ([Mystic Touch](https://bfa.wowhead.com/spell=113746/mystic-touch)) = **78.1% AP**
+- [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) – 115% base AP \* +26% (Effect #5) \* +70% ([Rising Sun Kick](https://bfa.wowhead.com/spell=262840/rising-sun-kick)) \* -27% (Effect #1) \* -30.01% (Armor) \* +5% ([Mystic Touch](https://bfa.wowhead.com/spell=113746/mystic-touch)) = **132.1% AP**
+- [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) – 5 hits of 120.75% base AP \* -27% (Effect #2) \* -30.01% (Armor) \* +5% ([Mystic Touch](https://bfa.wowhead.com/spell=113746/mystic-touch)) = **323.5% AP**
+
+### Math
+
+So right now the choice that we're making, the one that has people annoyed (to say the least) with the current way that Windwalker is played optimally, involves prioritizing two [Blackout Kick](http://bfa.wowhead.com/spell=100784)'s over one [Rising Sun Kick](http://bfa.wowhead.com/spell=107428), even with only one [Blackout Kick](http://bfa.wowhead.com/spell=100784) benefiting from Mastery. This is due to both the damage per chi that [Blackout Kick](http://bfa.wowhead.com/spell=100784) does, and the cooldown reduction it provides to [Fists of Fury](http://bfa.wowhead.com/spell=113656), and only really matters outside of burst windows, since Chi is the limiting factor in our damage. So in order to see how much damage each option does, and how much you lose by choosing one over the other, we need to find a few bits of information.
+
+##### [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) vs [Blackout Kick](http://bfa.wowhead.com/spell=100784)
+
+First, we obviously need to find how much Mastery it takes before the [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) does more than two [Blackout Kick](http://bfa.wowhead.com/spell=100784) since one doesn't benefit from Mastery. So the more Mastery you have, the more damage [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) does, but only one of the two [Blackout Kick](http://bfa.wowhead.com/spell=100784) benefit from Mastery, so that option scales more slowly with Mastery. This is easily done:
+
+- [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) \* (1 + Mastery%) = [Blackout Kick](http://bfa.wowhead.com/spell=100784) + [Blackout Kick](http://bfa.wowhead.com/spell=100784) \* (1 + Mastery%)
+- 132.1% \* (1 + Mastery%) = 78.1% + 78.1% \* (1 + Mastery%)
+- 54% \* (1 + Mastery%) = 78.1%
+- 1 + Mastery% = 1.446
+- Mastery% = 44.6%
+
+Well, 44.6% Mastery doesn't seem too bad, does it? Not at all. So, why then is there a problem when most people who have Antorus gear can reach that easily? Because that's not the end of the story. [Blackout Kick](http://bfa.wowhead.com/spell=100784) providing cooldown reduction to [Fists of Fury](http://bfa.wowhead.com/spell=113656) means that each use is worth more than just the damage that [Blackout Kick](http://bfa.wowhead.com/spell=100784) provides. Calculating this is quite a bit more complicated.
+
+##### Adding in [Fists of Fury](http://bfa.wowhead.com/spell=113656)
+
+First we need to consider that if we gain a cast of [Fists of Fury](http://bfa.wowhead.com/spell=113656) in the fight, we lose the Chi to cast 3 [Blackout Kick](http://bfa.wowhead.com/spell=100784) in the future, so you have to find the damage difference between using [Blackout Kick](http://bfa.wowhead.com/spell=100784) 3 times and 1 [Fists of Fury](http://bfa.wowhead.com/spell=113656), which, for the record, is 89.2% AP. Next we need to find out how big the cooldown reduction on [Fists of Fury](http://bfa.wowhead.com/spell=113656) is. For that look at how big of a % of the cooldown 1 second is. But, this will depend on Haste, so now you need to know the haste amount as well for this calculations. Finally you need to add the damage done by one [Blackout Kick](http://bfa.wowhead.com/spell=100784) modified by Mastery, one [Blackout Kick](http://bfa.wowhead.com/spell=100784) without Mastery, and the damage gained by 2 seconds off of your [Fists of Fury](http://bfa.wowhead.com/spell=113656) cooldown, take all that and subtract the damage done by [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) modified by Mastery, and finally divide it all by 2 since you're looking at the per Chi gain, and you're talking about what to do with 2 Chi. If you put that all together, it looks like this:
+
+- (([Blackout Kick](http://bfa.wowhead.com/spell=100784) \* (1 + Mastery) + [Blackout Kick](http://bfa.wowhead.com/spell=100784) + 2 \* ((([Fists of Fury](http://bfa.wowhead.com/spell=113656) - [Blackout Kick](http://bfa.wowhead.com/spell=100784) \* 3) \* (1 + Mastery)) \* (1 / (24 / (1 + Haste))))) - [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) \* (1 + Mastery)) / 2
+- ((78.1% \* (1 + Mastery) + 78.1% + 2 \* (((323.5% - 78.1% \* 3) \* (1 + Mastery)) \* (1 / (24 / (1 + Haste))))) - 132.1% \* (1 + Mastery)) / 2
+- (78.1% \* (1 + Mastery) + 78.1% + 2 \* (89.2 \* (1 + Mastery) \* (1 / (24 / (1 + Haste)))) - 132.1% \* (1 + Mastery)) / 2
+- (78.1% + 178.4% \* (1 + Mastery) \* (1 / (24 / (1 + Haste))) - 54% \* (1 + Mastery)) / 2
+
+That's really as far as I can go with just typing things out, and without any variables filled in. So, to make it doable, I'll include the Haste from my character, 12%,  just so you can see an example number.
+
+- (78.1% + 178.4% \* (1 + Mastery) \* (1 / (24 / (1 + Haste))) - 54% \* (1 + Mastery)) / 2
+- (78.1% + 178.4% \* (1 + Mastery) \* (1 / (24 / (1 + 12%))) - 54% \* (1 + Mastery)) / 2
+- (78.1% + 178.4% \* (1 + Mastery) \* (1 / 21.43 )) - 54% \* (1 + Mastery)) / 2
+- (78.1% + 178.4% \* (1 + Mastery) \* 0.047) - 54% \* (1 + Mastery)) / 2
+- (78.1% + 8.38 \* (1 + Mastery) - 54% \* (1 + Mastery)) / 2
+- (78.1% - 45.62% \* (1 + Mastery)) / 2
+- 39.05% - 22.81% \* (1 + Mastery)
+- 39.05% = 22.81% \* (1 + Mastery)
+- 1.712 = (1 + Mastery)
+- Mastery = 71.2%
+
+So, as you can see, at my 12% Haste, I'd need 71.2% Mastery to break even, an amount that I did not have. With less Haste, you need less Mastery to break even. At the lower extreme of 0% Haste, you need around 67.5% Mastery to break even, and at the higher extreme of 100% Haste, you need around 99.5% mastery to break even. If you have more Mastery than you need, then going to the "old" way is a theoretical DPS gain, if you have less, then its a theoretical DPS loss.
+
+##### % Lost to the Switch
+
+Next we want to look at how much I gain or lose by switching in [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) rather than two [Blackout Kick](http://bfa.wowhead.com/spell=100784). This is easy once we have the information above based on my Haste, since we just have to look at the difference between 71.2% Mastery and the 46% that I had, and we can skip some steps in the calculations above:
+
+- (22.81 %\* (1 + Mastery1) - 39.05%) - (22.81% \* (1 + Mastery2) - 39.05%)
+- (22.81 %\* (1 + 71.2%)) - (22.81% \* (1 + 46%))
+- 39.05% - 33.3%
+- 5.75% AP
+
+So, for every time I cast [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) rather than two [Blackout Kick](http://bfa.wowhead.com/spell=100784), I give equivalent to 5.75% AP.
+
+But, the question I was looking to answer is how much DPS I lost by switching to the "old" way of playing at the 46% Mastery that I had at the time. This required additional information, specifically my Agility and the DPS of my Main Hand Weapon, since those would go into knowing exactly how much damage I lost. Grabbing a quick log from the week, during a boss fight I had 1,569 Agility and my MH DPS was 53.8. The formula for converting AP% to damage looks like this
+
+- Damage = AP% \* (Agility + (MH DPS \* 6))
+- Damage = 5.75% \* 1569 + 53.8 \* 6
+- Damage = 5.75% \* 1569 + 322.8
+- Damage = 5.75% \* 1891.8
+- Damage = 108.78
+
+So every time I make the decision to use [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) rather than two [Blackout Kick](http://bfa.wowhead.com/spell=100784), I am giving up 108.78 damage.
+
+##### Conclusion
+
+The final step is to determine how many times I do that. Just to take a random fight length of 300 (not actually important in the long run), I have to look at how often I'd cast [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) with the purpose of casting [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175), and how many times do I have to decide between that and [Blackout Kick](http://bfa.wowhead.com/spell=100784). With the 12% Haste I mentioned above, [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) would have a 8.93 second cooldown, and [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) would have a 21.43 cooldown. This means that, on average, in the 300 seconds of the fight, I could cast [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) 13.99 times and [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) 33.59 times. Since 13.99 of those times would happen regardless, to enable the casting of [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175), that means that there are an average of 19.6 times that I would cast [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) or two [Blackout Kick](http://bfa.wowhead.com/spell=100784). So that's 19.6 times that I would give up 108.78 damage, 2,132 damage over the course of the 300 second fight, or 7.1 DPS.
+
+### TL:DR
+
+Yes you read that right, by choosing to play the "old" way, **I, theoretically, lose a WHOPPING 7.1 DPS.**
+
+As I said above, everyone has their personal threshold for where they're willing to lose DPS to enjoy playing more, for some people no change is worth the loss of optimal DPS, and for others no amount of DPS gain is worth playing what is less fun. I don't know where my line of demarcation lies, but I know its a HELL of a lot higher than 7.1 DPS.
+
+##### Spreadsheet (You're Welcome)
+
+Rather than make you all go through all those steps, I made a spreadsheet, and I made it so that you could make a copy for yourself and use it, and it will keep updated with any buffs or nerfs of the three abilities we care about in these equations:
+
+- [https://docs.google.com/spreadsheets/d/1C2K-S1htp31zSIJ6mDrcF0lwDlv9LQhZgX4wBfsR5As/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1C2K-S1htp31zSIJ6mDrcF0lwDlv9LQhZgX4wBfsR5As/edit?usp=sharing)
+
+Once you put in your character's buffed stats, it will tell you how much DPS you gain/lose by switching from the currently "optimal" way to the "old" way.
+
+##### Concessions
+
+So obviously with all the work above, there are some things that make this not quite 100% accurate, some make it underestimate, others make it overestimate:
+
+- First and foremost: I'm a speech therapist, not a mathematician
+- You could, quite easily, weave other abilities and plan so that you have something to use between any two [Blackout Kick](http://bfa.wowhead.com/spell=100784)
+- If there is a second target, [Fists of Fury](http://bfa.wowhead.com/spell=113656) does 50% more damage, so the CDR it receives from [Blackout Kick](http://bfa.wowhead.com/spell=100784) would be 50% higher. This would make the theoretical damage loss higher.
+- [Bloodlust](https://www.wowhead.com/spell=2825/bloodlust) or similar buffs will reduce the cooldowns of all abilities, meaning that you'd be casting [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) more often and the CDR on [Fists of Fury](http://bfa.wowhead.com/spell=113656) would mean more during those buffs. This would make the theoretical damage loss higher.
+- This doesn't consider at any burst windows where you'd want to cast [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) anyway. This would make the theoretical damage loss lower.
+- This doesn't consider any time you'd need to cast [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) and [Blackout Kick](http://bfa.wowhead.com/spell=100784) in order to get rid of 3 Chi or 2 Chi and a [Blackout Kick](http://bfa.wowhead.com/spell=100784) proc. This would make the theoretical damage loss lower.
+- Theoretically, more [Blackout Kick](http://bfa.wowhead.com/spell=100784) casts means that the cooldown on [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) gets reduced so more [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) can be cast. This would make the theoretical damage loss... I have no idea.
+
+### Playing the "Old Way"
+
+So now, if you've gotten this far, then you may be wondering exactly how you play the current Windwalker, but following the old way of doing things, where [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) is actually important. The answer is that its super easy, you just follow this priority, which is really just the old one with [SotW](https://bfa.wowhead.com/spell=205320/strike-of-the-windlord) gone and [Chi Burst](http://bfa.wowhead.com/spell=123986) a little bit higher:
+
+1. [Touch of Death](https://bfa.wowhead.com/spell=115080/touch-of-death)
+2. [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947/fist-of-the-white-tiger) (if &lt;3 Chi **AND** about to cap energy)
+3. [Tiger Palm](http://legion.wowhead.com/spell=100780/tiger-palm) (if &lt;4 Chi **AND** about to cap energy)
+4. [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) (if talented)
+5. [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury)
+6. [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick)
+7. [Chi Burst](https://bfa.wowhead.com/spell=123986/chi-burst) (if less than max Chi)
+8. [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947/fist-of-the-white-tiger) (if talented and &lt;3 Chi)
+9. [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick)
+10. [Chi Wave](https://bfa.wowhead.com/spell=115098/chi-wave) (if talented)
+11. [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm)
+
+Its really that simple, just like the old way, use whats off cooldown, and make sure you have enough resources for what will be off cooldown soon. This is the only playstyle I played on Beta and one that I was a HUGE fan of, considering it just about my favorite Windwalker playstyle ever. I refused to believe that the current "optimal" way of playing Windwalker would make it to Live, and I still refuse to believe that it will make it to Battle for Azeroth.
+
+I strongly encourage everyone to check out this playstyle, decide how you feel about it and whether or not its worth the theoretical DPS loss. And, of course, keep howling Blizzard about making it so that this playstyle is the optimal one, since its how Windwalker played for just about all of Legion, and its what made most people fall in love with the spec. I continue to suggest they just delete [Windwalker Monk](http://bfa.wowhead.com/spell=137025/windwalker-monk) Effect #9.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius), where I stream all my raids as well as article writing and more.

@@ -1,0 +1,132 @@
+---
+title: 'Catching up on Alpha: Builds 26095 and 26231'
+slug: /2018/03/18/catching-up-on-alpha-builds-26095-and-26231
+date: '2018-03-18T13:26:11'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.0'
+- Abilities
+- Alpha
+- Battle for Azeroth
+- Beta
+- Class Changes
+- Expansion
+- PTR
+- Spreadsheets
+- Theorycrafting
+description: Its been a few weeks since the last time I felt the need to write an article about whats been going on on the Alpha. That's largely because there just…
+wp_id: 9505
+original_url: https://www.peakofserenity.com/2018/03/18/catching-up-on-alpha-builds-26095-and-26231/
+---
+
+Its been a few weeks since the last time I felt the need to write an article about whats been going on on the Alpha. That's largely because there just hasn't been very much going on, really just small changes spread out between a few builds. Now that its been a few builds with these small changes, I think its a good time to catch up on those small changes.
+
+Wowhead is keeping a [list of the cumulative changes](https://www.wowhead.com/class-changes-in-battle-for-azeroth) that I recommend checking out if you feel like you've missed anything. You can also check out our previous articles on what has changed so far through our [8.0 post category](/tag/8-0/).
+
+#### Build 26095
+
+This build popped up on the 23rd of February, and I added a comment in the #wind-announce channel on the Discord, since it was relatively minor changes.
+
+##### Spec Changes
+
+**Specialization (2)**
+
+- **[Fists of Fury](https://bfa.wowhead.com/spell=113656)**   Pummels all targets in front of you, dealing [5 \* (94.185% of Attack power)] damage over 4 sec to your primary target and [5 \* (94.185% of Attack power) \* 50 / 100] damage over 4 sec to other targets. Can be channeled while moving.
+- **[Flying Serpent Kick](https://bfa.wowhead.com/spell=101545)**   Soar forward through the air at high speed for 2 sec. If used again while active, you will land, dealing (~~8.78918%~~8.7892% of Attack power) damage to all enemies within 8 yards and reducing movement speed by 70% for 4 sec.
+
+**Talents (3)**
+
+- **[Fist of the White Tiger](https://bfa.wowhead.com/spell=261947)**   Strike your target with the technique of the White Tiger, dealing [(~~112.5%~~87.75% of Attack power) + (~~112.5%~~87.75% of Attack power)%] Physical damage to your target while generating 3 Chi.
+- **[Invoke Xuen, the White Tiger](https://bfa.wowhead.com/spell=123904)**   Summons an effigy of Xuen, the White Tiger for 20 sec. Xuen attacks your primary target, and strikes 3 enemies within 10 yards every 1 sec with Tiger Lightning for (~~4.095%~~35% of Attack power) Nature damage.
+- **[Wind Strikes](https://bfa.wowhead.com/spell=262112)**   When you use Fists of Fury, you next 3 Tiger Palm attacks release a gust of wind that deals (~~67.5%~~52.65% of Attack power)% Physical damage to all enemies 8 yards in front of you.
+
+The first two changes to [Fists of Fury](https://bfa.wowhead.com/spell=113656) and [Flying Serpent Kick](https://bfa.wowhead.com/spell=101545) aren't really changes, just mostly rounding adjustments. The latter 3 are just tuning changes to those three abilities that had previously been changed away from being based on Weapon Damage to Attack Power, so further adjustment after that change is understandable.
+
+##### Formula Change
+
+- **[Blackout Kick](https://bfa.wowhead.com/spell=100784)**   Kick with a blast of Chi energy, dealing (~~76.9369% of Attack power) Physical damage. Reduces the cooldown of Rising Sun Kick and Fists of Fury by 1.0 sec when used.~~7700 / 10000 \*) Physical damage. Reduces the cooldown of Rising Sun Kick and Fists of Fury by 1.0 sec when used.
+
+This change took a while to wrap my head around. Its no major change to [Blackout Kick](https://bfa.wowhead.com/spell=100784)'s damage on the Alpha, just an adjustment to how they set up the formula. This is aimed at at testing out this new way of doing the formulas so that they can better take the Weapon damage from the off-hand weapon into consideration.
+
+For the majority of people who were likely unaware, there was a previous change to how the formulas for abilities were calculated. Where previously an abilities base damage was calculated by taking your Attack Power (same as Agility) and multiplying it by a coefficient for each spell (the % things you've seen in all the Wowhead tooltips).
+
+- Example: [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) - Kick upwards, dealing (**106.86% of Attack power**) damage. Therefore, if you have 10,000 Agility, and thus 10,000 Attack Power, your base Rising Sun Kick would do 10,000 x 106.86% or 10,686 damage before Armor reduction and any of the assorted buffs are taken into consideration.
+
+Currently, in Battle for Azeroth, abilities formulas were changed to be the coefficient for the spell, multiplied by your Attack Power PLUS ( Main Hand Weapon DPS x 6 ).
+
+- Example: [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) - Kick upwards, dealing (**106.86% of Attack power**) damage. If, again, you have 10,000 Agility, and assume that your Main Hand Weapon has 100 DPS, then the formula is "106.86% x (10,000 + (100 x 6))"
+- 106.86% x (10,000 + 600) =
+- 106.86% x (10,600) =
+- **11,434.02 damage** before Armor reduction and other buffs
+
+This serves the purpose of making Weapon Damage and DPS involved in all sources of damage, as opposed to just a few of them like we have in Legion. The problem with this 2nd method is that it only uses the damage from the Main Hand weapon, and leaves the Off Hand weapon less important. Blizzard appears to be seeking to address this with the 3rd version of including both weapons in the formula.
+
+- Example: [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) - Kick with a blast of Chi energy, dealing **[7700 / 10000 \* (Attack power + ((2 \* ((Mainhand weapon min base damage + Mainhand weapon max base damage) / (2 \* Mainhand weapon base speed)) + ((Offhand weapon min base damage + Offhand weapon max base damage) / (2 \* Offhand weapon base speed))) / 3) \* 6)]**
+
+This is, obviously, a much more complicated formula. It works out to taking the Weapon DPS of the MH weapon, multiplying it by 2, adding it to the OH WDPS, and dividing it by 3, essentially taking the "average" of your weapons, then multiplying that by 6, and adding it to the Attack Power. So, with the same assumption that you have 10,000 Agility, and, for differentiation's sake, your MH has a DPS of 101, and your OH has a DPS of 99:
+
+- 7700/10000 x (10,000 + (((2 x 101 + 99) / 3) x 6)) =
+- 77% x (10,000 + (((202 + 99) / 3) x 6)) =
+- 77% x (10,000 + ((301 / 3) x 6)) =
+- 77% x (10,000 + (100.33 x 6)) =
+- 77% x (10,000 + 602) =
+- 77% x 10,602 =
+- **8,163.54 damage** before Armor reduction and other buffs
+
+Thankfully we don't have to do this math all the time and the game will do it for us. It was a pain to put into my spreadsheets, but its done. The theory behind it is that now your OH DPS is taken into consideration at 50% the amount that your MH is, which is consistent with most OH weapon mechanics in the game.
+
+#### Build 26231
+
+This build popped up on March 15th, and featured another set of small changes, as well as the first glimpse of an Azerite Trait.
+
+##### Aura Change
+
+- **[Windwalker Monk](https://bfa.wowhead.com/spell=137025)**
+- Effect #1 Apply Aura: Modifies Damage/Healing Done
+  Value: ~~5~~-5%
+
+Yes, this is the Windwalker Aura that we've seen used to tune our damage for awhile now. Yes, it is currently a negative number on Alpha. No, it doesn't make a ton of sense, but its Alpha, so things don't always make sense. Becuase its going to +5% to -5%, but doesn't affect 100% of our damage, it amounts to roughly around an 8.7% damage loss overall.
+
+This isn't really worth getting in a tizzy about, as its just another of many many steps in the process.
+
+##### New "Utility"?
+
+- **[Expose Armor](https://bfa.wowhead.com/spell=8647)**   Your damage ~~exposes weaknesses in the target's armor~~ weakens the target, increasing Physical damage taken by ~~5% for 1 min.~~5%.(Duration reduced to 1 min against players)
+- Name changed from Expose Armor to Mystic Touch. Now requires Level 26
+
+This is a nice change, in some ways, as it means that Monks (of any spec) now provide the 5% physical damage increasing debuff that was previously given to just Rogues. This is applied with just about any damaging ability for any of the three specs, meaning it will have nearly 100% uptime and requires no additional thought.
+
+The only problem arises if, for some reason, this debuff is/was connected to the change in our Aura. If we lost 8.7% damage because we now provide 5% more physical damage to the raid, then that is **reeeeeeeeaaaaallllyyyyy bad**. Since any Mistweaver or Brewmaster could bring the same debuff without it being a penalty to their performance of their role.
+
+I pray that isn't the case, but it wouldn't be the first time we've seen something like that happen. I hope that they were just two changes that are not connected, but happen to occur at the same time. I'd like to think that the people working on things couldn't be that shortsighted, but unfortunately, I can't say for sure.
+
+The functional problem I see with this, regardless of whether its connected to the aura change or not is how it may be applied and what it means for our role in a raid. While in single target, it would be applied to the target with our first [Tiger Palm](http://legion.wowhead.com/spell=100780/tiger-palm), in an AOE situation, IF its not applied until we hit each target with something, then it brings up a dilemma for us:
+
+- Do we use a very suboptimal [Spinning Crane Kick](http://legion.wowhead.com/spell=101546/spinning-crane-kick), with little to no stacks, delaying our other abilities, so that all the targets can get the 5% debuff on them for the other raid members to do more damage to them?
+- If new adds spawn, is it our responsibility to get over there and make sure they're tagged with the debuff?
+- Does it become our priority to get that debuff on all targets at the cost of our own personal DPS?
+
+The same dilemma would apply to Mistweaver and Brewmasters. If your only Monk in the raid is a Mistweaver, does it become their priority to tag all targets with the 5% increased damage debuff at the cost of their ability to heal? Its less of an issue for Brewmasters, as their priority is often to hit all the targets anyway in order to get and maintain agro.
+
+Only time will tell how this affects us, and if its changed to make it less disruptive to a Monk's performance.
+
+##### Azerite Trait
+
+- **[[PH] Blackout Kick](https://bfa.wowhead.com/spell=269435)**
+  Blackout Kick has an additional 5% chance to critically strike, and deals an additional ~~231 damage.~~125 damage.
+  Monk
+  Name changed from [PH] Blackout Kick to Swift Roundhouse
+
+This was something that had been hidden in some of the "Uncategorized Spells" a few weeks ago, but now is given a name and a purpose. It is the first glimpse we've gotten at the Azerite Traits and while it appears innocuous, its somewhat interesting in that [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) is already doing more Damage per Chi than [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick). [[PH]](https://bfa.wowhead.com/spell=269435) [Blackout Kick](https://bfa.wowhead.com/spell=269435) would further the gap between these abilities.
+
+This currently brings up the odd predicament of it being marginally better to not use [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) in single target and really only use [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) as a proactive method to prevent capping Chi. Its almost certainly not the intended behavior of the spec, and just one of those goofy things that happen in Alpha/Beta phases as they tweak around with different things.
+
+That's all for the changes of the past month. Windwalker isn't a spec that is requiring drastic changes, so I'm not surprised at the limited changes so far. As usual, when there's changes, I will write about them. As soon as I get access to Alpha/Beta, I will stream when I am on there testing things out.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius), where I stream all my raids as well as article writing and more.

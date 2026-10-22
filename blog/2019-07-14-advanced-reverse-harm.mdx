@@ -1,0 +1,118 @@
+---
+title: 'Advanced: Reverse Harm'
+slug: /2019/07/14/advanced-reverse-harm
+date: '2019-07-14T00:23:28'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.2'
+description: Now that 8.2 has had some time to settle in, and people will start to get their Conflict and Strife essences in a few days, its time to take a look at…
+wp_id: 14696
+original_url: https://www.peakofserenity.com/2019/07/14/advanced-reverse-harm/
+---
+
+Now that 8.2 has had some time to settle in, and people will start to get their Conflict and Strife essences in a few days, its time to take a look at [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm). In this article I'll cover how you get it, what it does, how it works, and how/when we should use it.
+
+##### How to get it
+
+[Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) is normally a PvP talent. However, with the essence Conflict and Strife we are able to get a PvP talent, which for Windwalker is [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm). Here's how you get this essence power:
+
+1. [Finger-Bone Trophy of Battle](https://ptr.wowhead.com/item=169902/finger-bone-trophy-of-battle) - Gain 500 Conquest, loot in the following week's PvP Chest
+2. [Etched Bone Trophy of the Vanquished](https://ptr.wowhead.com/item=169901/etched-bone-trophy-of-the-vanquished) - Reach a Rated PvP rating (Arenas or RBGs) of 1000, loot in the following week's PvP Chest
+3. [Rib-Bone Choker of Dominance](https://ptr.wowhead.com/item=169900/rib-bone-choker-of-dominance) - Loot 15 [Burgeoning Battlefield Furor](https://ptr.wowhead.com/item=169590/burgeoning-battlefield-furor) from the weekly PvP Chest
+4. [Polished Skull Trophy](https://ptr.wowhead.com/item=169899/polished-skull-trophy) - Reach a Rated PvP rating (Arenas or RBGs) of 2400, loot in the following week's PvP Chest
+
+You can get Rank 2 without getting Rank 1, but you cannot get rank 3 or 4 without the previous rank.
+
+##### What it does
+
+There are some facts that you need to know:
+
+- [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) costs 40 energy.
+- It generates 2 Chi.
+- It has a 10 second cooldown that isn't reduced by Haste.
+- It heals your target for 8% of their health and deals that amount, in damage, to the closest target within 5 yards from the healed target.
+- The damage that it does is based on the healing that it does in the first place, so if it doesn't heal anything, then it doesn't do damage.
+- The healing that it does benefits from ONLY our Versatility, the damage that it does benefits ONLY from our Mastery.
+- It counts toward our [Hit Combo](http://bfa.wowhead.com/spell=196740) and Mastery even if it doesn't actually deal damage.
+
+##### How we use it
+
+- As close to on cooldown as possible. **The CD is too short to hold onto for more than a second or two.** And just about any damage from it will make it worth using over [Tiger Palm](http://bfa.wowhead.com/spell=100780).
+- On the friendly target or self that is within 10 yards of you and 5 yards of an enemy who has the **most health amount missing**.
+  - **\*\*NOTE\*\*** I**t's not the target with the lowest health %, but the most amount missing**. A tank missing 10% of his health is gonna be more healing potential than a DPS missing 12-15%.
+- Don't use if it will cap your Chi.
+- You'll want to use [Ascension](https://www.wowhead.com/spell=115396) when using [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) instead of [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) to help deal with the extra resources you'll have to deal with.
+- [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) does damage only to one target, so you won't use the essence when you have multiple targets
+- You'll 100% have to use a macro, or several, for it, so macros will get their own section:
+
+##### Macros
+
+There's a lot of ways you can make macros for this ability. You want to use some combination of [@focus], [@targettarget], [@mouseover], [@player], and modifiers to get the heal to the target you want as quickly as you can. For example, this macro will make sure that no matter your target, you use it on yourself:
+
+```
+#showtooltip
+/cast [@player] Reverse Harm
+```
+
+If you want to set a tank as a focus target, then you want to use a macro like this:
+
+```
+#showtooltip
+/cast [@focus] Reverse Harm
+```
+
+If you want to cast it on your target's current target, which is hopefully a tank with health missing, then you want to use a macro like this:
+
+```
+#showtooltip
+/cast [@targettarget] Reverse Harm
+```
+
+If you're used to a healer and tracking your unit frames, then this macro will be helpful. Specially if you use **[THIS WEAKAURA](https://wago.io/9bP7Y0Yp2)** created by Tapz; that, when you get the "LibGetFrame" addon, glows the unit frame of the friendly target that you should use [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) on.
+
+```
+#showtooltip
+/cast [@mouseover] Reverse Harm
+```
+
+This macro is a little bit more complicated, but allows you to use the same keybinding for [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) as you do for [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) or [Energizing Elixir](http://bfa.wowhead.com/spell=115288), since you really won't ever have both abilities. It then will automatically use RH on your target's target if its a friendly unit, and will use it on you if its not. It also has the usual /stopmacro and /stopcasting modifiers that you should have on most of your abilities so they don't interrupt FoF and do interrupt [Crackling Jade Lightning](http://bfa.wowhead.com/spell=117952).
+
+```
+#showtooltip
+/stopmacro [channeling:Fists of Fury]
+/stopcasting [channeling:Crackling Jade Lightning]
+/cast [talent:3/2] Fist of the White Tiger; [talent:3/3] Energizing Elixir; [@targettarget,exists,noharm] Reverse Harm; [@player] Reverse Harm
+```
+
+You can use modifiers to cast on different targets. This macro ***should*** cast [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) on  your focus target if you're pressing ALT, on your mouseover target if you're pressing CTRL, on your target's target if you're pressing SHIFT, and on yourself if none of the above.
+
+```
+#showtooltip
+/cast [modifier:alt, @focus] Reverse Harm; [modifier:ctrl, @mouseover] Reverse Harm; [modifier:shift, @targettarget] Reverse Harm; [nomodifier, @player] Reverse Harm
+```
+
+I'll personally be going with the first and 4th options on two different buttons since I already have keybindings for [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) and another for when I'm Brewmaster and want to use [Expel Harm](https://www.wowhead.com/spell=115072/expel-harm).
+
+##### C&S vs Other Essences
+
+This is where things get a bit complicated, and it comes down to the fight, your raid, your healers, your ability, your tank's, and more.
+
+As you can see from **[THESE SIMS](https://www.raidbots.com/simbot/report/wFHRXrtnyjirPQPeUHwNHb)**, Conflict and Strife is ahead at Rank 2, but behind at Rank 3, compared to the other essences. These sims assume that you're getting [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm)'s full 8% heal every 11.64 seconds (because I couldn't get it lower), but only on yourself. So, the 2668 DPS that [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) provides can easily be 3735 DPS if you're always getting it for the full value on a tank, and up to 4348 DPS if you can get full value on a tank with 40% more health every 10 seconds.. Its not too hard to use [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) every 10 seconds, so it comes down to how much of the healing you'll get out of it. Theoretically the harder the content, the "worse" your healers are at reacting quickly to heals, the better your luck is for the timing when tanks take the damage and your [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) comes off of cooldown, the higher your DPS will be with [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm).
+
+As you can figure, this leads to a large amount of variability in the worth of this essence. Based on those sims, if it gets absolutely no healing/damage from [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm), the sim does 34712 DPS, putting it 2862 DPS behind [Crucible of Flames](https://www.wowhead.com/item=168613/tempered-scale-of-the-scarlet-broodmother) and 3672 DPS behind [Condensed Life Force](https://ptr.wowhead.com/item=168856/resonating-elemental-heart) at Rank 3, without any use of [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm). If it can provide 4348 DPS at the highest end, then as long as you get 65% of the maximum, its worth using [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) over [Crucible of Flames](https://www.wowhead.com/item=168613/tempered-scale-of-the-scarlet-broodmother), and 84.5% of its maximum to beat out [Condesed Life Force](https://ptr.wowhead.com/item=168856/resonating-elemental-heart). How easy this will be depends on all the factors above.
+
+**Using** **[Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm)** **will increase your maximum, but its much easier to get the maximum use out of an essence like Condensed****[Life Force](https://ptr.wowhead.com/item=168856/resonating-elemental-heart)****, so it will be up to you to decide; higher maximum, but harder to use, or easier to use but lower max.**
+
+[Condensed Life Force](https://ptr.wowhead.com/item=168856/resonating-elemental-heart) is one button press every 3 minutes to get the full value; [Crucible of Flames](https://www.wowhead.com/item=168613/tempered-scale-of-the-scarlet-broodmother) needs to be used every 30 seconds; compared to needing to micromanage [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) every 10 seconds. Over 3 minutes that's a huge difference in casts; Once for [Condensed Life Force](https://ptr.wowhead.com/item=168856/resonating-elemental-heart), 7 times for [Crucible of Flames](https://www.wowhead.com/item=168613/tempered-scale-of-the-scarlet-broodmother), and 18 times for [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm). The more casts that are required, the higher the chance of not using it optimally. Realistically it will be almost impossible to get enough value out of [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) consistently to beat [Condensed Life Force](https://ptr.wowhead.com/item=168856/resonating-elemental-heart) once you can get Rank 3. So...
+
+##### TL:DR
+
+Follow the steps above to get and use [Reverse Harm](https://www.wowhead.com/spell=287771/reverse-harm) till you can get Rank 3 [Condensed Life Force](https://ptr.wowhead.com/item=168856/resonating-elemental-heart).
+
+![](/img/uploads/2019/07/WW-Essence-Flowchart.png)
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity), [PayPal](http://paypal.me/peakofserenity), buying [Peak Merchandise](https://teespring.com/stores/peakofserenity), or donating to my [Blizzcon GoFundMe](https://www.gofundme.com/bring-babs-to-blizzcon). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).

@@ -1,0 +1,211 @@
+---
+title: How Capped Am I?
+slug: /2025/02/23/how-capped-am-i
+date: '2025-02-23T15:25:33'
+authors:
+- seiryoku
+tags:
+- Windwalker
+- '11.1'
+description: For a long time now, but especially in times where Windwalker is performing poorly in Mythic+ or AoE situations, the subject of target caps has been brought…
+wp_id: 23758
+original_url: https://www.peakofserenity.com/2025/02/23/how-capped-am-i/
+image: /img/uploads/2025/02/Target-cap-Image.png
+---
+
+For a long time now, but especially in times where Windwalker is performing poorly in Mythic+ or AoE situations, the subject of target caps has been brought up as the main reason why we might be lacking in performance. This idea has become a staple complaint in recent times, with Season 1 of The War Within being an example of a season where Windwalkers' performance was falling behind. "Why don't they just uncap all our spells, easy fix." "How can I compete with Enhancement Shaman or Retribution Paladin in pulls with 15 mobs."
+
+If you have a solid grasp on how target caps work, you probably already know why these complaints aren't very constructive. For those who don't, I decided to take the time to properly explain how target scaling works in World of Warcraft, and by extension, why these arguments and proposed solutions don't really work.
+
+## Definitions
+
+Before we get started, let's define some terms. This will make it easier to explain the more mathematical examples that I'll be using.
+
+- baseDamage: the damage on the tooltip on the spell in question, usually the amount of damage the spell will deal to a single target.
+- totalDamage: the amount of damage your spell will do to all targets it strikes, combined.
+- targetCount: the total amount of targets that the ability is hitting in the given example.
+- offTargetCount: the amount of targets other than your selected target.
+- sqrtThreshold: the targetCount at which square root scaling kicks in, if applicable.
+- targetCap: the targetCount at which the totalDamage stops increasing.
+- offTargetCap: the maximum amount of secondary targets that increase totalDamage.
+- damageBonus: the percentage of increased baseDamage per additional target.
+
+##
+
+## Target scaling types
+
+Let's go through every type of target scaling the game employs. I'll try to put them in order of power, that is, from highest scaling factor by targets to lowest. I will be giving examples, and please note that if an example ability is high in the list, it doesn't necessarily mean it is very strong, or vice versa. It just means that they scale better with targets.
+
+#### "Uncapped"
+
+These are the abilities with the simplest target scaling formula:
+
+```
+totalDamage = baseDamage * min(targetCount, 20)
+```
+
+If you have 1 target, deal 100% of base damage. On 2 targets, deal 200%. 5 targets, 500%, 20 targets, 2000%. Easy.
+The min() part just means "whichever of the 2 values is lower". To clarify, the game is kind of lying to you. When a tooltip on a multi-target ability says "Deal x amount of damage to all enemies", it actually means "up to 20". This is a hard cap for which there are very few exceptions, and to my knowledge none in terms of direct damage (see below). If you have a pack with, for example, 21 enemies, an uncapped spell will deal 2000% (or 20x) of base damage, split across 21 targets. That means each target takes 95.24% of base damage each. On 40 targets, each target takes 50% of base damage each.
+
+It should be noted that *very* few uncapped abilities make up a significant portion of their specialization's overall aoe damage breakdown. It does happen, but only in a handful of specs. That is to say, being an "uncapped" damage spec does not have a strong correlation with being a "meta" spec.
+
+Examples:
+
+- The Shadow effect of [Wisdom of the Wall](https://www.wowhead.com/spell=450994/wisdom-of-the-wall)
+- [High Impact](https://www.wowhead.com/spell=450982/high-impact)
+- [Rain of Fire](https://www.wowhead.com/spell=5740/rain-of-fire)
+- [Cataclysm](https://www.wowhead.com/spell=152108/cataclysm)
+- [Implosion](https://www.wowhead.com/spell=196277/implosion)
+- [Earthquake](https://www.wowhead.com/spell=61882/earthquake)
+- [Wake of Ashes](https://www.wowhead.com/spell=255937/wake-of-ashes)
+- [Secret Technique](https://www.wowhead.com/ptr-2/spell=280719/secret-technique) (secondary target damage)
+- [Touch of the Magi](https://www.wowhead.com/spell=321507/touch-of-the-magi) (secondary target damage)
+- [Demonsurge](https://www.wowhead.com/spell=452402/demonsurge)
+- [Pyre](https://www.wowhead.com/spell=357211/pyre)
+- [Upheaval](https://www.wowhead.com/spell=396286/upheaval)
+
+![](/img/uploads/2025/02/TotalDamage-scaling-with-TargetCount2-e1740287472569.png)
+
+One more additional note: I do acknowledge that some abilities are able to get around the hard cap of 20 by triggering an effect on targets struck by it, rather than directly dealing damage. Think of [Cataclysm](https://www.wowhead.com/spell=152108/cataclysm)'s [Immolate](https://www.wowhead.com/spell=348/immolate)/[Wither](https://www.wowhead.com/spell=445465/wither) application, or the additional fire damage events from [Exploding Keg](https://www.wowhead.com/spell=325153/exploding-keg) and [Flametongue Weapon](https://www.wowhead.com/spell=318038/flametongue-weapon).
+
+#### Square root capped
+
+Whenever a tooltip says "Deals x damage to all enemies, reduced damage beyond y targets", it usually means this. The full formula looks like this:
+
+```
+totalDamage = baseDamage * targetCount * sqrt(sqrtThreshold/max(sqrtThreshold, targetCount))
+```
+
+This is actually slightly simplified, the "real" full formula is this:
+
+```
+totalDamage = baseDamage * min(targetCount, 20) * sqrt(sqrtThreshold/max(sqrtThreshold, min(targetCount, 20)))
+```
+
+Unfortunately, the same hard cap of 20 applies, but let's just ignore that and look at the first formula. BaseDamage is multiplied by targetCount, then the total is multiplied by the square root of the threshold amount divided by targetCount. The max() part is why the square root is only applied when targetCount exceeds the threshold amount (since otherwise, you'd have sqrt(5/5) which equals 1). Since the targetCount will be higher than the threshold, the square root will be a particular fraction of 1 and grow smaller as targetCount goes up, thereby dampening the increase to totalDamage.
+
+Let's fill in some numbers, and let's take a sqrt cap of 5 as the example since it is the most common threshold.
+
+At 3 targets, the formula is baseDamage \* 3 \* sqrt(5 / max(5, 3)).
+Max(5, 3) returns 5. Sqrt(5/5) equals 1. The final calculation is therefore baseDamage \* 3 \* 1, because at 3 targets, square root scaling isn't active yet.
+
+At 6 targets, you get baseDamage \* 6 \* sqrt(5 / max(5, 6)).
+Max(5, 6) returns 6. Sqrt(5/6) equals approx 0.91. The final calculation is now baseDamage \* 6 \* 0.91, which is a totalDamage value of 548%. This is where the dampening on the totalDamage starts.
+
+At 20 targets (remember, our hard cap), we get baseDamage \* 20 \* sqrt(5 / max(5, 20)).
+5 / 20 equals 0.25, and the sqrt of 0.25 equals 0.5. So, the totalDamage equals baseDamage \* 20 \* 0.5, or 1000%, or half of what an "Uncapped" ability would do.
+
+At this time, *most* aoe abilities are sqrt capped with varying thresholds.
+
+Examples:
+
+- [Spinning Crane Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick)
+- [Slicing Winds](https://www.wowhead.com/ptr-2/spell=1217413/slicing-winds)
+- [Tempest](https://www.wowhead.com/ptr-2/spell=454009/tempest)
+- [Divine Storm](https://www.wowhead.com/spell=53385/divine-storm)
+- [Odyn's Fury](https://www.wowhead.com/spell=385059/odyns-fury)
+- [Thunderous Roar](https://www.wowhead.com/spell=384318/thunderous-roar)
+- [Bladestorm](https://www.wowhead.com/spell=227847/bladestorm)
+- [Multi-Shot](https://www.wowhead.com/spell=2643/multi-shot)
+- [Explosive Shot](https://www.wowhead.com/spell=212431/explosive-shot)
+- [Beast Cleave](https://www.wowhead.com/spell=115939/beast-cleave)
+- [Arcane Surge](https://www.wowhead.com/spell=365350/arcane-surge)
+- [Caustic Spatter](https://www.wowhead.com/spell=421975/caustic-spatter)
+- [Eye Beam](https://www.wowhead.com/ptr-2/spell=198013/eye-beam)
+- [Blade Dance](https://www.wowhead.com/spell=188499/blade-dance)
+
+Let's add it to the graph:
+
+![](/img/uploads/2025/02/TotalDamage-scaling-with-TargetCount1-e1740287502240.png)
+
+#### Hard capped
+
+After the spaghetti of square root scaling, this one is nice and simple. Tooltips with these abilities are usually phrased as "Deals x damage to up to y enemies", and the formula looks like this:
+
+```
+totalDamage = baseDamage * min(targetCount, targetCap)
+```
+
+You'll notice that it's the same formula as the "Uncapped" spells, just with a variable for the targetCap. With a targetCap of 5, the damage will simply not increase beyond 5 times the baseDamage. Of course, there is no ability with a hard cap greater than 20.
+
+With a targetCap of 5:
+At 3 targets, totalDamage is equal to 3 \* baseDamage, or 300%.
+At 5 targets, totalDamage is equal to 5 \* baseDamage, or 500%.
+At 15 targets, totalDamage is equal to 5 \* baseDamage, or 500%.
+
+Nice and straightforward.
+
+Examples:
+
+- [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) with [Shadowboxing Treads](https://www.wowhead.com/spell=387638/shadowboxing-treads) talented
+- [Crackling Jade Lightning](https://www.wowhead.com/spell=117952/crackling-jade-lightning) with [Power of the Thunder King](https://www.wowhead.com/spell=459809/power-of-the-thunder-king) talented, or [Jade Empowerment](https://www.wowhead.com/spell=467316/jade-empowerment) active
+- [Jadefire Stomp](https://www.wowhead.com/spell=388193/jadefire-stomp)
+- [Arcane Barrage](https://www.wowhead.com/spell=44425/arcane-barrage) with [Arcing Cleave](https://www.wowhead.com/spell=231564/arcing-cleave) talented
+- [Vile Taint](https://www.wowhead.com/spell=278350/vile-taint)
+- [Chain Lightning](https://www.wowhead.com/spell=188443/chain-lightning)
+- Outlaw abilities during [Blade Flurry](https://www.wowhead.com/spell=13877/blade-flurry)
+- [Azure Strike](https://www.wowhead.com/spell=362969/azure-strike)
+- [Disintegrate](https://www.wowhead.com/spell=356995/disintegrate) while buffed by [Mass Disintegrate](https://www.wowhead.com/spell=436335/mass-disintegrate)
+- [Eternity Surge](https://www.wowhead.com/spell=359073/eternity-surge) (empowered)
+- [Judgment](https://www.wowhead.com/spell=20271/judgment) with [Blessed Champion](https://www.wowhead.com/spell=403010/blessed-champion) talented
+
+![](/img/uploads/2025/02/TotalDamage-scaling-with-TargetCount3-e1740287592802.png)
+
+#### "SotWL" Capped
+
+Although the tooltip for Strike of the Windlord simply says "strike all enemies", it actually uses a unique (and terrible) scaling formula:
+
+```
+totalDamage = baseDamage + offTargetCount * (baseDamage / targetCount)
+```
+
+The + in this formula indicates that Strike of the Windlord always deals its full baseDamage against your main target, while each secondary target (if present) takes (baseDamage / total targetCount) each.
+
+At 1 target, offTargetCount equals 0. So, totalDamage is just baseDamage + 0.
+At 2 targets, offTargetCount equals 1, so the calculation is baseDamage + 1 \* (baseDamage / 2), or 100% + 50%, for a total amount of 150%. 100% on the main target, 50% on "each" secondary target.
+At 5 targets, offTargetCount equals 4, so baseDamage + 4 \* (baseDamage / 5), or 100% + 4 \* 20%, for a total amount of 180%. The main target takes 100%, each of the 4 secondary targets takes 20%.
+At 20 targets, offTargetCount equals 19, so baseDamage + 19 \* (baseDamage / 20), or 100% + 19 \* 5%, for a total of 195%.
+
+It should be immediately obvious that this is very bad target scaling, since even at 20 targets, the totalDamage doesn't even pass 2x baseDamage.
+
+Examples:
+
+- Uhm, [Strike of the Windlord](https://www.wowhead.com/spell=392983/strike-of-the-windlord)
+
+![](/img/uploads/2025/02/chart.png)
+
+#### Split with damage bonus
+
+At the bottom of the "additional damage per target" scale, this one is basically a hard cap, but instead of adding 100% per target until the cap, it adds a variable amount (below 100%, naturally).
+
+```
+totalDamage = baseDamage * (1 + (damageBonus * min(offTargetCount, offTargetCap)))
+```
+
+This is the standard method for trinkets that describe their effect as "Damage increased per target struck, up to x" (usually x is 5). This is slightly incorrect, it should actually say "per *additional* target". Let's use the standard values for trinket scaling, namely 15% per additional target, in the examples:
+
+On 1 target, you get baseDamage \*  (1 + (0.15 \* 0)), or just baseDamage.
+On 3 targets, you get baseDamage \*  (1 + (0.15 \* 2), or 130%
+On 5 targets and beyond, baseDamage \*  (1 + (0.15 \* 4), you get 160%, which is the hard cap for this example.
+
+As a special mention, [Celestial Conduit](https://www.wowhead.com/spell=443028/celestial-conduit) follows a very similar scaling method. It deals 6% per additional target, up to 30%. The exact formula appears to be something like this:
+
+```
+totalDamage = baseDamage * (1 + min(offTargetCount * damageBonus, 0.3))
+```
+
+You'll notice that this is between two and three times worse target scaling than "split damage" trinkets.
+
+![](/img/uploads/2025/02/chart1.png)
+
+## Conclusion
+
+As we can see in the final graph, while uncapped abilities have a clear advantage in huge pulls, square root capped abilities still scale *significantly* better with targets than hardcapped abilities. Like I said in the uncapped section, the amount of specs that deal a significant amount of their overall damage with uncapped spells is really low. I'm genuinely not sure if there are any more than Destruction Warlock and Elemental Shaman, and Earthquake has a very small area, making the "significant" qualifier a bit questionable. Balance Druid might be a contender, not sure how much [Starfall](https://www.wowhead.com/spell=191034/starfall) contributes to overall.
+
+While these specs are quite strong in aoe situations fairly regularly, it can't be said that having a lot of uncapped damage correlates strongly with m+ viability. Therefore we can conclude that having a majority of spells square root capped is also *not* the reason for any lack of performance. To further support this conclusion, we can look at Shadowlands Seasons 1 and 2, where Windwalker was exceptionally strong while having exactly the same target caps as now. Additionally, the big meta monster of TWW Season 1, Enhancement Shaman, gets more than 70% of its overall damage from hardcapped and sqrt capped abilities as well.
+
+A very large majority of aoe abilities is square root capped, with the lion's share having its threshold at 5 or 8. While it would naturally be an overall increase to increase the scaling threshold, it's likely not as huge a difference as you might think. Putting some numbers with that example: at 15 targets, the difference between sqrt(5) and sqrt(8) is about 26%, while increasing an ability hardcapped at 5 to hardcapped at 8 would be a *60*% difference.
+
+The major outliers in our kit in terms of target scaling are [Strike of the Windlord](https://www.wowhead.com/spell=392983/strike-of-the-windlord)  and [Celestial Conduit](https://www.wowhead.com/spell=443028/celestial-conduit). Changing those to have more respectable target scaling would *actually* be worthwhile.
+
+But with all said and done, the biggest contributors to aoe performance are *tuning* and *cooldown* *design**,* not just target scaling.

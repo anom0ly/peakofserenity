@@ -1,12 +1,15 @@
 abelito75:
   name: abelito75
-  page: false
+  page:
+    permalink: /abelito75
 anomoly:
   name: Anomoly
-  page: true
+  page:
+    permalink: /anomoly
 babylonius:
   name: Babylonius
-  page: true
+  page:
+    permalink: /babylonius
 brewingscribe:
   name: brewingscribe
   page: false
@@ -21,16 +24,20 @@ chavian:
   page: false
 drezington:
   name: drezington
-  page: false
+  page:
+    permalink: /drezington
 eliro:
   name: Eliro
-  page: false
+  page:
+    permalink: /eliro
 emallson:
   name: Emallson
-  page: true
+  page:
+    permalink: /emallson
 garg:
   name: Garg
-  page: false
+  page:
+    permalink: /garg
 griff:
   name: Griff
   page: false
@@ -39,37 +46,46 @@ home:
   page: false
 hurstilol:
   name: hurstilol
-  page: false
+  page:
+    permalink: /hurstilol
 j-funk:
   name: J-Funk
-  page: false
+  page:
+    permalink: /j-funk
 jove:
   name: Jove
   page: false
 juko:
   name: Juko
-  page: false
+  page:
+    permalink: /juko
 kamp:
   name: Kamp
-  page: false
+  page:
+    permalink: /kamp
 kiov:
   name: Kiov
   page: false
 labyrinth:
   name: Labyrinth
-  page: false
+  page:
+    permalink: /labyrinth
 mickey:
   name: Mickey
-  page: true
+  page:
+    permalink: /mickey
 mymiro:
   name: Mymiro
-  page: false
+  page:
+    permalink: /mymiro
 pandanaconda:
   name: pandanaconda
-  page: false
+  page:
+    permalink: /pandanaconda
 paoanii:
   name: Paoanii
-  page: false
+  page:
+    permalink: /paoanii
 rivers:
   name: Rivers
   page: false
@@ -78,25 +94,31 @@ ruhye:
   page: false
 scurch:
   name: Scurch
-  page: true
+  page:
+    permalink: /scurch
 seiryoku:
   name: Seiryoku
-  page: false
+  page:
+    permalink: /seiryoku
 shrike:
   name: Shrike
   page: false
 sinzhu:
   name: Sinzhu
-  page: true
+  page:
+    permalink: /sinzhu
 syrupsss:
   name: syrupsss
-  page: false
+  page:
+    permalink: /syrupsss
 talby:
   name: Talby
-  page: false
+  page:
+    permalink: /talby
 total:
   name: Total
-  page: false
+  page:
+    permalink: /total
 xes:
   name: Xes
   page: false

@@ -1,0 +1,75 @@
+---
+title: 'Stat Weights and You: Round 3'
+slug: /2018/12/29/stat-weights-and-you-round-3
+date: '2018-12-29T23:45:38'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.1'
+description: Foreword/Raidbots Ad These are not required reading, but certainly show how we got here... Round 1/2016/09/14/stat-weights-and-you/ Round…
+wp_id: 13260
+original_url: https://www.peakofserenity.com/2018/12/29/stat-weights-and-you-round-3/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+### Foreword/Raidbots Ad
+
+These are not required reading, but certainly show how we got here...     [Round 1](/2016/09/14/stat-weights-and-you/)     |     [Round 2](/2017/10/16/stat-weights-and-you-round-2/)
+
+Although this article will focus on what stat weights are, how to get them, and how to use them, pretty much all of this is made entirely moot by the extraordinary tool that we have in Raidbots. This tool has just about everything you can ask for to figure out how best to gear your character. It pretty much erases the need for knowing your stat weights, using Pawn, or any other tool as its significantly more accurate, and barely slower. Want to know what gear from your bags is best, what enchants to use, what azerite traits to take, what gems to pop in? [Top Gear](https://www.raidbots.com/simbot/topgear). Want to know what gear is best using pieces that aren't in your bag? [Gear Compare](https://www.raidbots.com/simbot/gear). Want to see how talents stack up to each other? [Talent Compare](https://www.raidbots.com/simbot/talents). Just want to know what your DPS could be if you were a robot? [Quick Sim](https://www.raidbots.com/simbot/quick). After reading all this, still possessed by the insane urge to know your stat weights? [It does that too](https://www.raidbots.com/simbot/stats). Want to do some crazy testing and theorycrafting? [Advanced](https://www.raidbots.com/simbot/advanced).
+
+I've been playing this game for over a decade, and seen tools come and go. SimCraft has long been the standard for accuracy, and Raidbots took that accurate tool and made it usable by everyone easily and quickly. I strongly recommend everyone reading this to give up on Pawn and similar tools and embrace Raidbots. If its too slow for you, then subscribe for a few $$ a month to skip the lines and support what is possibly one of the four most important tools for World of Warcraft; WeakAuras, DBM/BigWigs, WarcraftLogs, and Raidbots.
+
+### What's a Stat Weight?
+
+Stats weights are numbers associated with primary/secondary stats meant to give relative « weights » of importance. If one stat weight is twice as big as another, it means gaining some of that stat will increase the dps twice as much as the other one does. Stats weights are, in essence, local. They are calculated (usually via Simulation tools like [SimulationCraft](https://simulationcraft.org/), [Raidbots](https://www.raidbots.com/simbot), [AskMrRobo](https://www.askmrrobot.com/)t, or a spreadsheet) at **one specific gearset, for one specific type of fight (oftentimes single target), duration, etc**.
+
+To calculate stats weights, these tools basically calculates the gains in dps that would result from a very small increase in each stat, then divides those gains by the amount of stats gained. It is very similar, in that regard, to calculus and the computation of a derivative (https://en.wikipedia.org/wiki/Derivative):
+
+We assume that damage per second is a continuous function of your stats and derive stats weights out of the gains the same why we’d do it for a function of several variables (here, we consider dps as a continuous function of primary stats, versatility, haste, critical chance, mastery ratings.) If you’re into that, look further into partial derivation of a multiple variable function at set values for all variables except one. Here, our multiple variables are all your different stats and we’re doing partial derivation on one stat.
+
+One other thing worth noting: for gear gain, it is often risky to look at very small gains and take the results as definitive. Some amount of haste gain could push it to some amount that allows one extra cast during each [Serenity](http://www.wowhead.com/spell=152173), or each [Momentum](https://www.wowhead.com/spell=206476/momentum) window, or each [Combustion](https://www.wowhead.com/spell=190319/combustion) or whatnot. Pushing these very small breakpoints will result in huge stats weights which do not reflect the reality of things or are only true for a very small gain.
+
+For instance, if you’re calculating your stat weight at a point where haste is reaching such a breakpoint, SimCraft will go crazy and tell you haste is 12 times better than any other stat. Of course, if you’d watched a bit further, you’d have seen than in fact it wasn’t, and as soon as you had one extra haste gem SimCraft went back to telling you that haste was not your best stat. Furthermore, just because SimCraft saw such a breakpoint doesn’t mean it really exists. It could be due to action priority lists being rigid and not reacting the way humans do to some things lining up or not.
+
+To avoid this happening to you, there is a tool in [SimulationCraft](https://simulationcraft.org/) called plotting that allows you to see how your dps evolves with your stats by small increments (you can control all these aspects) and see how smoothly they evolve.
+
+**TL;DR: Stats weights tell you how much of a dps increase each secondary stat is compared to your primary stat. They are tied to your current gear set and change as you change it. Usually, the more you stack one stat, the worse it gets, meaning you will likely have to sim regularly.**
+
+### Why Do Weights Change?
+
+A long time ago you may have heard words like “Cap” and “Diminishing Returns”. These terms are largely obsolete compared to how often they were thrown around in the past. Sure, there are “Caps”, or points where you don’t gain anything from going over X stat %, but those aren’t as prevalent as they used to be in the days of Hit and Expertise. While we do still have “Diminishing Returns”, they are resulting from how statistics work more than how the stats themselves work.
+
+What I mean by that is the more you get of one stat, the less overall benefit you gain from adding more of that stat. To use an exaggerated example, if you do 100% damage, and Mastery increases your damage by a %, adding 5% Mastery increases your damage from 100% to 105% or a 5% damage gain. However, if, as a result of your stats, you’re doing 150% of your original damage, adding that 5% Mastery increases your damage from 150% to 155% for only a 3.33% overall damage gain. This is what I mean by “statistically diminishing returns”, or DR, and typically why someone may see a stat’s weight decrease as they get more of that stat.
+
+On top of DR, getting more of one stat increases the weight of the other stats relative to one another due to how our stats interact with one another. Our stats are applied multiplicatively, so if you have 10% mastery, your damage is increased by 10%, if you have 10% Vers, the post mastery damage is increased by another 10% for a total of 21% more damage. Add another 10% crit, and on average you’ll gain 10% more damage on top of the post mastery/vers number, or 33.1% more damage than with no stats. If you have 50% mastery and no other stats, adding 10% more Mastery will increase your damage from 150% to 160%, for a gain of 6.6% over the previous total. However, if you add 10% Vers instead of Mastery, you multiply rather than add, so your damage goes from 150% to 165%, for a 15% gain. This is why you can see your stat weights move one stat ahead of others at certain points.
+
+Next, not all our stats Affect all of our damage equally. Versatility now affects all our damage, one of the few things I’ll ever take direct credit for. Critical Strike affects nearly all our damage except [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma), which cannot crit. Because [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma) account for roughly 10% of our damage, this means that 1% Crit will increase our overall damage by 0.90%, whereas 1% Vers will increase our overall damage by 1%. These numbers can fluctuate quite a bit (statistically speaking) just by changing a trinket, as trinkets that do damage are affected by Crit and Vers and often Haste, but not Mastery. So having a damage trinket will decrease the relative weight of Mastery, and increase the relative weight of Crit, Haste and Vers.
+
+Lastly, each secondary stat has a different conversion rate from rating to percentage. It takes 57.6 Mastery to gain 1% Mastery, but 72 Crit to gain 1% Crit, 68 Haste for 1% Haste, and 85 Versatility for 1% Vers. Because secondary stat budgets on items are static and dependent on their item levels, you cannot simply switch 1% Mastery for 1% Crit due to needing more secondary stats. This means that even if an item has 500 stat rating to give, that would be 8.68% Mastery, 7.35% Haste, 6.94% Crit, or 5.88% Versatility.
+
+**TL;DR: If you take all four of these factors; statistically diminishing returns, multiplicative stat interaction, varying stat contribution, and differing conversion rates, you can see why there isn’t one stat string to rule them all and why the stat recommendations on the [Stat guide](/tww/windwalker/) page can be both outdated and updated at the same time.**
+
+### What Changed in 8.1?
+
+The changes that came with 8.1, mainly the reduction in the amount of damage tied to [Touch of Death](http://bfa.wowhead.com/spell=115080) and [Touch of Karma](http://bfa.wowhead.com/spell=122470) and much of its redistribution into other abilities, changed how our stat weights look now. [Touch of Karma](http://bfa.wowhead.com/spell=122470) was only affected by Stamina and Versatility; it could not Crit, its cooldown isn't reduced by Haste, and it never benefited from our Mastery. [Touch of Death](http://bfa.wowhead.com/spell=115080) was only affected by Stamina, Vers, and Mastery; it could not Crit and its cooldown isn't reduced by Haste. Those abilities had accounted for 20-25% of our damage at times, boosting the efficacy of Stam and Vers, and keeping Haste and, to a lesser extent, Mastery and Crit, behind. Now that those abilities account for 10% or so of our damage, the stats that don't affect them, affect more of our damage, so the relative value of Vers, Stam and, to a lesser extent, Crit and Mastery has decreased in favor of the relative value of Haste.
+
+Currently, Vers affects 100%, or nearly 100% of our damage. Crit affects the next highest amount of our damage, affecting everything except [Touch of Death](http://bfa.wowhead.com/spell=115080) and [Touch of Karma](http://bfa.wowhead.com/spell=122470), which means that it previously affected 75-80% of our damage, but now is up to 90%, so its value relative to Vers went up. Haste has now moved up into the 3rd spot, affecting roughly 75-80% of our damage, being that it doesn't affect [Touch of Karma](http://bfa.wowhead.com/spell=122470), [Chi Burst](http://bfa.wowhead.com/spell=123986), [Chi Wave](http://bfa.wowhead.com/spell=115098), [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947), and potion damage. Mastery now affects the least amount of our damage, roughly 70-75%, mainly due to not affecting trinkets, potions, [Touch of Karma](http://bfa.wowhead.com/spell=122470), [Invoke Xuen, the White Tiger](https://bfa.wowhead.com/spell=123904/invoke-xuen-the-white-tiger), and auto-attacks, which is a much bigger part of our damage than it was in Legion.
+
+This change in how much damage is affected by each stat is why people are starting to see Haste as a recommendation for enchants, gems, and gear with Raidbot's Top Gear tool. Basically, if you order our stats by how much damage they affect it goes: Versatility > Crit > Haste > Mastery. Yet if you order them by how much % you gain per rating, its Mastery > Haste > Crit > Versatility. Because this is the first time, in my memory, that we've ever seen a situation like this, where the two different ordering of stats are opposite of each other, this is the first time that all our stats have a chance to be the strongest and the weakest depending on how much of each you have.
+
+As a completely meaningless way to normalize this, if you consider a mix of the conversions from above where if an item has 500 stat rating to give, that would be 8.68% Mastery, 7.35% Haste, 6.94% Crit, or 5.88% Versatility, and combine that with how much our damage is affected by each stat:
+
+- 8.68% Mastery affecting 75% of our damage is worth 6.51% damage
+- 7.35% Haste affecting 80% of our damage is worth 5.88% damage
+- 6.94% Crit affecting 90% of our damage is worth 6.246% damage
+- 5.88% Versatility affecting 100% of our damage is worth 5.88% damage
+
+There are complicating factors that make this not always the way to go. Versatility's scarcity on gear and low conversion rate means that it is affected by the statistical diminishing returns, explained above, at a much slower rate than the other stats, because it affects all our damage, it also gains power from the other stats more than the other stats. (That makes sense, I promise) Once you start changing the damage distribution by adding targets, or downtime, then things shake up even more. This is why generally its recommended to get Versatility wherever you can, then focus on Mastery and Crit, then Haste last. However, this is closer than Haste has been to the other stats in a long time, so its reasonable to expect that given high Mastery/Crit and low Haste, Raidbots may tell you to switch in some Haste. Since that's the way many people have been trying to set their gear up so far this expansion, it explains why some people are seeing things that we, previously, had thought impossible.
+
+**TL;DR: Haste affects more damage than it has before, so its very reasonable to see Raidbots' Top Gear recommend you grab a little bit more Haste. Stat weights for Haste can still be wonky, but you shouldn't be using stat weights anyway, just use Raidbots. In general, its still the least useful stat, but its in the range of depending on your other stats rather than always being worst.**
+
+Hopefully this helps clear up what people have been seeing in their Top Gear sims, and convinces others to stop using stat weights.
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).

@@ -1,0 +1,64 @@
+---
+title: Brewmaster Mitigation in Shadowlands
+slug: /2020/04/10/brewmaster-mitigation-in-shadowlands
+date: '2020-04-10T02:06:34'
+authors:
+- emallson
+tags:
+- Brewmaster
+- '9.0'
+- Mitigation
+- Preview
+- Shadowlands
+description: Brewmaster's toolkit is changing in Shadowlands. With the launch of Alpha, we're here with a first look at what's changing. It's...a bit of a mess.
+wp_id: 15587
+original_url: https://www.peakofserenity.com/2020/04/10/brewmaster-mitigation-in-shadowlands/
+image: /img/uploads/2020/04/Banner.png
+---
+
+Brewmaster's mitigation toolkit is changing going into *Shadowlands*. We covered the high-level changes we knew about in our [previous post](/2020/04/08/shadowlands-alpha-preview-brewmaster-impressions/), but now we have numbers and details from Alpha to know how it works in much greater detail. At a high level, our new mitigation toolkit breaks down into three main pieces.
+
+## Mitigation Buttons
+
+Two key pieces of our existing kit remain in *Shadowlands:* [Stagger](https://shadowlands.wowhead.com/spell=115069/stagger) and [Purifying Brew](https://shadowlands.wowhead.com/spell=119582/purifying-brew). Functionally, these remain very similar to their *Battle for Azeroth* incarntions---with two major exceptions. First, we no longer have [Ironskin Brew](https://shadowlands.wowhead.com/spell=115308/ironskin-brew). It is replaced by the return of [Shuffle](https://shadowlands.wowhead.com/spell=322120/shuffle), which is granted by casting [Keg Smash](https://shadowlands.wowhead.com/spell=121253/keg-smash), [Blackout Kick](https://shadowlands.wowhead.com/spell=205523/blackout-kick), and [SCK](https://shadowlands.wowhead.com/spell=322700/spinning-crane-kick). Importantly: the amount of Shuffle granted by these abilities is high enough to have 100% uptime on the buff with our current rotation.
+
+Second, Stagger now **only** affects Physical damage, leaving Magic damage totally un-Staggered. Thankfully, we have a new toy to deal with this limitation.
+
+### Celestial Brew
+
+[Celestial Brew](https://shadowlands.wowhead.com/spell=322507/celestial-brew) grants a large absorb for 8 seconds on a 30 second cooldown (reduced by talents). Note that as of this writing, CB does *not* benefit from the cooldown reduction tied to abilities like [Keg Smash](https://shadowlands.wowhead.com/spell=121253/keg-smash). However, given the name change from **Guard**, this may be a bug.
+
+Unlike Ironskin Brew, [Celestial Brew](https://shadowlands.wowhead.com/spell=322507/celestial-brew) does not share charges with [Purifying Brew](https://shadowlands.wowhead.com/spell=119582/purifying-brew). If it ultimately does benefit from Brew cooldown reduction, we will get 2 Purifies per Celestial. Otherwise, we are looking at 3-4 per Celestial. This is particularly relevant because Purifying Brew casts now grant [Purified Chi](https://shadowlands.wowhead.com/spell=325092/purified-chi), a 40% increase to the next [Celestial Brew](https://shadowlands.wowhead.com/spell=322507/celestial-brew) cast that stacks up to 10 times. Purifying at [Light](https://www.wowhead.com/spell=124275/light-stagger) grants 1 stack, while [Moderate](https://www.wowhead.com/spell=124274/moderate-stagger) and [Heavy Stagger](https://www.wowhead.com/spell=124273/heavy-stagger) grant 2 and 3 stacks, respectively. At this time, the buff is bugged and is not consumed by Celestial Brew, giving a permanent 400% increase at 10 stacks. A full 10 stack cast is *very* potent---so we are reasonably confident that this is a bug.
+
+## Putting it Together
+
+Taken as a whole, we can get a fairly complete picture of the mitigation playstyle Brewmasters can expect on the current Alpha build. On a single-target fight, you'll maintain [Shuffle](https://shadowlands.wowhead.com/spell=322120/shuffle) by performing your rotation. [Keg Smash](https://shadowlands.wowhead.com/spell=121253/keg-smash) grants 5 seconds per cast and [Blackout Kick](https://shadowlands.wowhead.com/spell=205523/blackout-kick) grants 3 seconds, which results in 11 seconds of Shuffle for every 8 seconds of your rotation. This is basically our current situation, minus the extra button presses for [Ironskin Brew](https://shadowlands.wowhead.com/spell=115308/ironskin-brew).
+
+As a byproduct of maintaining Shuffle, we'll reduce the cooldown of our brews by about 40%. This gives about one [Purifying Brew](https://shadowlands.wowhead.com/spell=119582/purifying-brew) every 9 seconds in combat without any talents or haste bonuses. For context: we currently Purify roughly once every 20-25 seconds---less than half of the current Alpha rate.
+
+If [Celestial Brew](https://shadowlands.wowhead.com/spell=322507/celestial-brew) has its cooldown reduced as well, we will be able to cast it roughly every 18 seconds---once every 2 Purifies, giving it an 80% increased absorb on most casts. If it does not, then we will have it once every 3-4 Purifies and 120-160% increased effectiveness per cast.
+
+The *intention* seems to be for us to play around [Purified Chi](https://shadowlands.wowhead.com/spell=325092/purified-chi), stacking it up to get HUGE shields from Celestial Brew. However, that isn't how the kit really fits together right now. Ultimately, we expect our gameplay loop will look something like this:
+
+1. On pull, [Keg Smash](https://shadowlands.wowhead.com/spell=121253/keg-smash) the boss to activate [Shuffle](https://shadowlands.wowhead.com/spell=322120/shuffle) before you are hit.
+2. Use [Celestial Brew](https://shadowlands.wowhead.com/spell=322507/celestial-brew) on cooldown, unless there is a large magic nuke coming within the next 30 seconds.
+3. Use [Purifying Brew](https://shadowlands.wowhead.com/spell=119582/purifying-brew) more-or-less on cooldown.
+4. Repeat *ad nauseam.*
+
+## Thoughts & Feedback
+
+This is obviously not ideal. We are looking at a mitigation model that---despite our positive first impressions---is actually *simpler* than what we have right now. To quote #brew-lounge regular Tokaine:
+
+> So there's not even a skill floor? There's a skill *basement,* with an elevator down into it?
+
+Yes, Tokaine. Yes.
+
+The root cause of the problem seems two-fold. **First**---and most important---the cooldown on [Purifying Brew](https://shadowlands.wowhead.com/spell=119582/purifying-brew) is simply too low. Our cooldown at 0% haste (with brew cooldown reduction) is about 9 seconds. Add in haste and talents like [Light Brewing](https://shadowlands.wowhead.com/spell=325093/light-brewing), and we rapidly reach the point that trying to Purify well becomes irrelevant---sitting on a charge will simply waste it. *Then* you add the unfortunate detail that each Purify makes every other Purify worse for about 10 seconds, and we've arrived at a point where picking and choosing when to cast Purifying Brew largely irrelevant. Further, at this point adding additional casts via Haste, talents, and the like becomes heavily devalued. With minimal Haste and reasonable [Mastery](https://shadowlands.wowhead.com/spell=117906/mastery-elusive-brawler), the cooldown will be so low and melee attacks so infrequent that we will be able to Purify *every other melee hit---*making talents that reduce its cooldown functionally worthless.
+
+**Second**, the design of [Celestial Brew](https://shadowlands.wowhead.com/spell=322507/celestial-brew) is pulling in multiple competing directions. Brew cooldown reduction asks you to cast Brews as often as possible to maximize the reduced cooldown. In contrast, [Purified Chi](https://shadowlands.wowhead.com/spell=325092/purified-chi) asks you to play in a style mimicking [Upwelling](https://shadowlands.wowhead.com/spell=274963/upwelling): sit on your hands with Celestial off cooldown while you stack up the bonus effect. A playstyle that is among the most unappealing in *World of Warcraft*'s history, I might add. This is compounded by [Purifying Brew](https://shadowlands.wowhead.com/spell=119582/purifying-brew)'s sharp diminishing returns: getting more brews won't get you many more stacks of Purified Chi.
+
+Further, in the absence of threatening Magic nukes [Celestial Brew](https://shadowlands.wowhead.com/spell=322507/celestial-brew) is most efficient when cast on cooldown---a fact that asks us to ignore Purified Chi entirely. Of course, this playstyle is made possible by Stagger, which simultaneously makes it challenging to fully consume a stacked Celestial Brew and allows us to largely ignore non-throughput problems. The latter has serious ramifications for gameplay, as it allows us to turn all (Physical) problems into throughput questions and take the most efficient solution. On the other hand, in the presence of heavy Magic damage---where Celestial Brew is our only hope---it is *also* much harder to stack up [Purified Chi](https://shadowlands.wowhead.com/spell=325092/purified-chi) to mitigate the damage. It's a mess.
+
+## Wrapping Up
+
+On the whole, the new mitigation kit is *functional* in the sense that it will work. From a raw numbers perspective, it will probably be pretty good. However, it has a number of gameplay problems that result in a simplistic, repetitive gameplay loop. If we could make a single change at this point in the Alpha, it would be to increase the cooldown of [Purifying Brew](https://shadowlands.wowhead.com/spell=119582/purifying-brew)---though further changes will likely be necessary to arrive at a compelling mitigation model.

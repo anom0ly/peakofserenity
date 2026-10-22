@@ -1,0 +1,120 @@
+---
+title: 'Windwalker Improvements 1A: Level 15 Talent Balance'
+slug: /2019/02/02/windwalker-improvements-1a-level-15-talent-balance
+date: '2019-02-02T11:58:09'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.1'
+description: Introduction Last week I started a thread on Reddit asking the community for suggestions on how to improve the spec. You can still contribute to that…
+wp_id: 13548
+original_url: https://www.peakofserenity.com/2019/02/02/windwalker-improvements-1a-level-15-talent-balance/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+### Introduction
+
+Last week I started a [thread on Reddit](https://www.reddit.com/r/wow/comments/alrt9x/windwalker_monk_spec_design_suggestions/) asking the community for suggestions on how to improve the spec. **You can still contribute to that thread, and vote on suggestions. I'll take some of the more popular suggestions and go in-depth into them like I will below.**
+
+Many people enjoy playing Windwalker, and there's a lot of great things about the spec, but there's always things that can be improved. Although, in the thread, I specified that I wasn't looking to just advocate for more damage, there is certainly some things that can be done to improve the spec that can be purely numerical.
+
+One area this is possible is balancing our talents. It's no secret that Windwalkers have little to no variation in our talents. And why this helps us save money in [Tomes](https://www.wowhead.com/item=141446/tome-of-the-tranquil-mind), it does seem counter to the design of talents, and it feels weird to have 2/3 of our talents not be used in just about any situation. So, in this article I'll look at our DPS talents and how they can be balanced closer so that they may be more widely used.
+
+I won't touch our utility talents since their use comes down to fight design and situation more than the design of the talents themselves. I will also generally look at bringing the lesser performing talents up to the level of the higher performing one, mostly because it's easiest to use as a baseline, but partly because I don't need people yelling about me asking for nerfs. (It's happened before, sometimes justifiably)
+
+All numbers will be looked at based on %Attack Power or %AP, since that's how just about all our abilities are set up. Attack Power is actually a combination of your Agility and Weapon Damage, but for the purposes of this article, all are the same, so I'll just use %AP. **I'll also be including damage bonuses like our [Windwalker Aura](https://www.wowhead.com/spell=137025/windwalker-monk)s as well as damage decreases like Armor reduction (30.01%) into all the calculations, so don't be surprised if the numbers I use don't exactly match the tooltips. For the sake of consistency, I'll be assuming that the character has 10% Vers, 10% Haste, 20% Crit, and 20% Mastery. These are very reasonable numbers for a character, so a good baseline.** Some change in stats can change some of these results slightly, but shouldn't change them drastically.
+
+I will mainly be looking at things from a single target perspective, but will delve into multi-target situations for a few talents. This will be part one in a multi-part series looking at what works and what can be improved for the spec.
+
+Remember, I'm not a mathematician, so don't be shocked if some of the math is slightly, or completely, wrong. I'm doing my best.
+
+### Tier 1 (Level 15)
+
+This tier went from being mostly balanced previously to entirely swung in the direction of [Chi Burst](http://bfa.wowhead.com/spell=123986) with the addition of it providing one Chi per target hit. So there are some options when it comes down to balancing all the talents in this row. They can be balanced strictly numerically, with their current function, or they can be normalized a bit so that all of them provide a little more resources like [Chi Burst](http://bfa.wowhead.com/spell=123986) does. I'll look at both of those possibilities.
+
+#### Just Damage
+
+In order to compare all these abilities with just damage, we have to look at how much damage each does; which, because [Chi Burst](http://bfa.wowhead.com/spell=123986) provides Chi, isn't as simple as I wish it was. The easiest way to give a DPS number to Chi is to look at it as a [Blackout Kick](http://bfa.wowhead.com/spell=100784). This is because we generate enough Chi, passively, to meet all the resource needs of our abilities with cooldowns like [Fists of Fury](http://bfa.wowhead.com/spell=113656) and [Rising Sun Kick](http://bfa.wowhead.com/spell=107428).
+
+- [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) - 35.84% AP over 8 seconds =
+  - **4.48% AP per second**
+- [Chi Wave](http://bfa.wowhead.com/spell=115098) - 21.68% AP per bounce, up to 4 bounces =
+  - 86.72% AP per 15 seconds =
+  - **5.78% AP per second**
+- [Chi Burst](http://bfa.wowhead.com/spell=123986) - 80.59% AP and 1 Chi per target per 30 seconds
+  - 1 Chi = 1 [Blackout Kick](http://bfa.wowhead.com/spell=100784)
+  - 1 [Blackout Kick](http://bfa.wowhead.com/spell=100784) = 98.14% AP and 1 second off of the cooldowns of [Fists of Fury](http://bfa.wowhead.com/spell=113656) and [Rising Sun Kick](http://bfa.wowhead.com/spell=107428)
+    - 1 [Fists of Fury](http://bfa.wowhead.com/spell=113656) = 555.22% AP per 21.82 seconds =
+      - 1 second less on the cooldown = 25.45% AP
+    - 1 [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) = 226.53% AP per 9.09 seconds =
+      - 1 second less on the cooldown = 24.92% AP
+  - 80.59% + 98.14% + 25.45% + 24.92% = 229.10% AP per 30 seconds =
+  - **7.64% AP per second**
+
+So, you can see why [Chi Burst](http://bfa.wowhead.com/spell=123986) is so far ahead and the best choice in just about every possible situation. If you were to take out the 2.69% AP per second that [Chi Burst](http://bfa.wowhead.com/spell=123986) provides per target for itself and just have it provide Chi, that's still 4.95% AP per second, only slightly behind [Chi Wave](http://bfa.wowhead.com/spell=115098).
+
+So, to balance these talents, purely by tweaking the damage that each ability does, we'd want to bring the damage of [Chi Wave](http://bfa.wowhead.com/spell=115098) and [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) up to the same 7.64% AP per second. This would only be for single target. Once you add a second target, its nearly impossible for the others to match [Chi Burst](http://bfa.wowhead.com/spell=123986) as it goes up to 15.7% AP per second, which is WAY too much for them to catch with their current mechanics.
+
+After the above math was done, its easy from here.
+
+- For [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) to do 7.64% AP per second, it would need to do a final damage of 61.12% AP over 8 seconds. Once you take all the auras out, **the underlying formula would have to be roughly 45.7% AP over 8 seconds**, which is much higher than the 28.17% it is now.
+- For [Chi Wave](http://bfa.wowhead.com/spell=115098) to do 7.64% AP per second, it would need to do a final damage of 28.65% AP per bounce. After removing the aura buffs again, [Chi Wave](http://bfa.wowhead.com/spell=115098)'s formula **would have to be roughly 22.88% AP per bounce**, again, much higher than its current 14.2015% AP per bounce.
+- **[Chi Burst](http://bfa.wowhead.com/spell=123986) would obviously stay the same.**
+
+#### Adding Resources
+
+The next way to look at this is to just let [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) and [Chi Wave](http://bfa.wowhead.com/spell=115098) provide resources as well. In order to do that, due to the nature of those spells, it would probably be better to have [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) provide energy per second, or per tick (2 seconds), and [Chi Wave](http://bfa.wowhead.com/spell=115098) provide energy per bounce, or Chi when cast. This is an easier thing to do than balancing them through damage.
+
+The easiest way to do this is to take the 1 Chi provided by [Chi Burst](http://bfa.wowhead.com/spell=123986) and translate that into 25 Energy, since 50 Energy generates 2 Chi through [Tiger Palm](http://bfa.wowhead.com/spell=100780). If you consider that [Chi Burst](http://bfa.wowhead.com/spell=123986) generates 25 energy every 30 seconds, that works out to be 0.83 Energy per second. Again, we have two choices; [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) and [Chi Wave](http://bfa.wowhead.com/spell=115098) can provide resources equal to [Chi Burst](http://bfa.wowhead.com/spell=123986) and then have their damage tuned to match, OR they can keep their current damage and have the resource generation tuned to match. Again, I'll explore both options:
+
+**Adding equal resources and damage tuned to match:**
+
+- If [Chi Wave](http://bfa.wowhead.com/spell=115098) were to provide energy per bounce, it would need to generate roughly 1.7851 Energy for each of its 7 maximum bounces. This would actually make it the best talent in single target, since [Chi Wave](http://bfa.wowhead.com/spell=115098) does 5.78% AP per second by itself right now. When looking at this, we'd also have to consider that each 50 energy equals 1 cast of [Tiger Palm](http://bfa.wowhead.com/spell=100780), which adds another 0.522% AP per second. **This brings the total for [Chi Wave](http://bfa.wowhead.com/spell=115098) to 6.302% AP per second as it is now, simply adding 1.7851 energy per bounce**.
+  - This make this the talent that we'd want to tune around, if you added resource generation to match that of [Chi Burst](http://bfa.wowhead.com/spell=123986). So now, [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) and [Chi Burst](http://bfa.wowhead.com/spell=123986) need to match its 5.78% AP per second after their
+- If [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) were to generate the 0.83 Energy per second needed, it would also have to match the 6.302% AP per second that [Chi Wave](http://bfa.wowhead.com/spell=115098) now does. Since it generates a [Tiger Palm](http://bfa.wowhead.com/spell=100780) just like [Chi Wave](http://bfa.wowhead.com/spell=115098), we can take out the 0.522% AP per second from [Tiger Palm](http://bfa.wowhead.com/spell=100780). This means that it would have to do 5.78% AP per second, or 46.24% AP every 8 seconds. Once the auras are removed, the **underlying formula would have to be roughly 34.58% AP every 8 seconds**.
+- For [Chi Burst](http://bfa.wowhead.com/spell=123986) to match the 6.302% AP per second, since it doesn't provide one [Tiger Palm](http://bfa.wowhead.com/spell=100780), it would have to do all the damage itself. This means it would have to do 189.06% AP per cast after buffs, or the **underlying formula would have to be 107.91% AP per cast**.
+
+**Damage kept the same, resources tuned to match:**
+
+- [Chi Burst](http://bfa.wowhead.com/spell=123986) generating 1 Chi per 30 seconds deals a total of 7.64% AP per second, this would stay the same.
+- [Eye of the Tiger](http://bfa.wowhead.com/spell=196607), from above, generated 3.16% AP per second less than [Chi Burst](http://bfa.wowhead.com/spell=123986) did total. So, to make up that gap, it would have to generate enough resources to do that 3.16% AP per second.
+  - The 1 Chi above, when figuring out the damage that [Chi Burst](http://bfa.wowhead.com/spell=123986) would do, provides 4.95% AP.
+  - Since [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) would be generating energy, not Chi, you also have to subtract the 0.522% AP per second from [Tiger Palm](http://bfa.wowhead.com/spell=100780).
+  - This leaves us with a gap of 2.638% AP per second.
+  - Since the 1 Chi per 30 seconds would equal 0.83 Energy and 4.95% AP per second then 2.638% AP per second would equal 0.44 Energy per Second
+  - **This means that [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) can deal its current damage and add roughly 0.88 Energy per tick, to be balanced, on single target with [Chi Burst](http://bfa.wowhead.com/spell=123986)**.
+- [Chi Wave](http://bfa.wowhead.com/spell=115098), from above, generated 1.86% AP per second less than [Chi Burst](http://bfa.wowhead.com/spell=123986) did total. So, to make up that gap, it would have to generate enough resources to do that 1.86% AP per second.
+  - First we take out the 0.522% AP per second that you get from [Tiger Palm](http://bfa.wowhead.com/spell=100780), leaving 1.34% AP per second
+  - 1.34% AP per second equates to 0.224 Energy per second or 0.48 Energy per bounce
+  - **This means that [Chi Wave](http://bfa.wowhead.com/spell=115098) can do its current damage and generate roughly 0.48 Energy per bounce to be balanced, on single target with [Chi Burst](http://bfa.wowhead.com/spell=123986).**
+
+### Other Considerations
+
+If all of these talents were numerically balanced, they would all have uses in different situations.
+
+- [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) would be used in single target situations where you are staying on one target all the time
+- [Chi Wave](http://bfa.wowhead.com/spell=115098) would be used in single target situations where you may swap targets or be out of range from the target at any point
+- [Chi Burst](http://bfa.wowhead.com/spell=123986) would be used in any situation where there's more than one target.
+
+However, there are other things that need to be considered, such as the fact that [Chi Burst](http://bfa.wowhead.com/spell=123986) does a non-negligible amount of group healing, especially if you're stacked up. [Chi Burst](http://bfa.wowhead.com/spell=123986) also requires you to be standing still for the cast time. [Chi Burst](http://bfa.wowhead.com/spell=123986) and [Chi Wave](http://bfa.wowhead.com/spell=115098) give you other abilities to use in order to help keep your Mastery and Combo going, with [Chi Wave](http://bfa.wowhead.com/spell=115098) being the most helpful for that. [Chi Burst](http://bfa.wowhead.com/spell=123986) and [Chi Wave](http://bfa.wowhead.com/spell=115098) would be useful in WQ where you need to tag targets from ranged although [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) would provide the (slightly) highest amount of self-healing, since the others can hit others.
+
+There could be some other minor tweaks to make things a little bit easier, such as rounding up the Energy contributions and balancing the damage to compensate. This could be something like [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) adds 1 energy per tick, rather than the 0.88 Energy that would make it perfectly balanced, you'd then have to either decrease its damage or increase the damage of the others to match. This can be done with the Energy contributions of the other abilities to whole numbers, since its not uncommon for the damage formulas to include decimals to the hundredths.
+
+Blizzard does tend to stick with the philosophy of passive abilities being slightly behind active abilities, so it would make sense for [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) to be behind, although its currently a little bit too far behind to be considered to replace one button press every 15 or 30 seconds.
+
+However, with all being said, the easiest thing would just be to remove the 1 Chi generated from [Chi Burst](http://bfa.wowhead.com/spell=123986). If that were the case, although it would slow down Windwalkers a little bit, and technically be a small damage nerf, it would mean that we'd use [Chi Wave](http://bfa.wowhead.com/spell=115098)  on 1 target, [Chi Wave](http://bfa.wowhead.com/spell=115098)  and [Chi Burst](http://bfa.wowhead.com/spell=123986) would be roughly equal on 2 targets, and [Chi Burst](http://bfa.wowhead.com/spell=123986) would be the way to go on 3 targets or more. [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) could be buffed by 15-25% so that its closer but still slightly inferior. This is MUCH simpler and creates a nice balance for all the talents to be used in a variety of situations.
+
+One other change I've always been in favor of, is to replace [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) with the old [Chi Orbit](https://www.wowhead.com/spell=196743/chi-orbit). This would keep with the idea of a Windwalker's Chi being used, externally, to damage and heal. It would have a healing component added and would deal damage and healing in a small AOE when they explode. It also allows for some burst damage when you get to 4 orbs outside of combat. Its damage would, obviously, be tuned to match.
+
+### Conclusion
+
+This was a lot of work, and no promise that its all exactly correct. Hopefully this shows how difficult it is to balance these things, and this was just inside of one tier of talents for one spec, and speaks nothing toward total class balance. As we continue this series, I hope people understand that this, alone, took me several hours, and I was focused on just three talents for one spec, not having to worry about all the talents for three specs or all the classes. Class balance is hard, don't think that its easy.
+
+This is one tier of talents that is **relatively** "easy" to balance, as not everyone is a fan of using [Chi Burst](http://bfa.wowhead.com/spell=123986) for everything, and not being able to move while using it does feel somewhat disruptive to the flow of Windwalker's rotation.
+
+So, to summarize, if you want to balance the talents by allowing them all to keep their current damage and generate resources: [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) can generate 0.88 Energy per tick, [Chi Wave](http://bfa.wowhead.com/spell=115098) can generate 0.48 Energy per bounce, and [Chi Burst](http://bfa.wowhead.com/spell=123986) can still provide 1 Chi per target hit. To balance them by making sure that they all provide the same amount of resources: [Chi Burst](http://bfa.wowhead.com/spell=123986) can still generate 1 Chi, but needs to be buffed from 46% AP per cast to 107.91% AP per cast, [Chi Wave](http://bfa.wowhead.com/spell=115098) would need to provide roughly 1.7851 Energy per bounce, and [Eye of the Tiger](http://bfa.wowhead.com/spell=196607) would generate 6.64 Energy and deal 34.58% AP every 8 seconds.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
