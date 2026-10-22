@@ -7,7 +7,7 @@ export default function Hub() {
       title="The War Within Mistweaver"
       spec="mistweaver"
       banner="/img/uploads/2020/08/Jari-MW.png"
-      links={[{label: 'PvE Guide', to: '/tww/mistweaver/pve-guide/'}, {label: 'Recent Articles', to: '/category/mistweaver/'}]}
+      links={[{label: 'PvE Guide', to: '/tww/mistweaver/pve-guide/'}, {label: 'Recent Articles', to: '/tag/mistweaver/'}]}
     />
   );
 }
