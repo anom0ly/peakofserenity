@@ -113,6 +113,8 @@ content:
   label: Guides
   type: collection
   path: docs
+  # Tells Pages CMS to list .mdx files; without it, only .md files show up.
+  filename: '{primary}.mdx'
   subfolders: true
   format: yaml-frontmatter
   view:

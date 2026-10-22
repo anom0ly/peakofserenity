@@ -25,7 +25,10 @@ const config = {
     },
   ],
   scripts: [{src: 'https://wow.zamimg.com/js/tooltips.js', async: true}],
-  clientModules: [require.resolve('./src/clientModules/wowhead.js')],
+  clientModules: [
+    require.resolve('./src/clientModules/wowhead.js'),
+    require.resolve('./src/clientModules/imageZoom.js'),
+  ],
 
   presets: [
     [
