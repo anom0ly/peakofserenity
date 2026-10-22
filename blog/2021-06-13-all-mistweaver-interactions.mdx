@@ -1,0 +1,413 @@
+---
+title: All Mistweaver Interactions
+slug: /2021/06/13/all-mistweaver-interactions
+date: '2021-06-13T17:30:39'
+authors:
+- abelito75
+tags:
+- Mistweaver
+- '9.1'
+description: All Mistweaver Interactions This is a list of all known Mistweaver interactions. This isn’t intended to be a detailed guide, but rather just a simple list…
+wp_id: 19861
+original_url: https://www.peakofserenity.com/2021/06/13/all-mistweaver-interactions/
+---
+
+All Mistweaver Interactions
+
+This is a list of all known Mistweaver interactions. This isn’t intended to be a detailed guide, but rather just a simple list you can use to look stuff up to see how it works.
+**This is up to date for the current build: 39335 (9.1)**
+
+## Core spells
+
+- Blackout Kick
+  - Does not interact with weapon DPS
+  - Scales from Intellect
+  - Has a 15% chance to reset the cd of Rising Sun Kick through Teachings of the Monastery
+  - Will also consume all Teachings of the Monastery stacks and fire off additional blackout kicks for each stack consumed, which each have the chance to reset Rising Sun Kick cooldown
+  - Applies Mystic Touch
+  - Physical damage
+  - Cooldown is hasted
+- Crackling Jade Lightning
+  - Can only knockback once per channel
+  - Will only knockback if the target is in melee range
+  - Applies Mystic Touch
+  - Nature damage
+  - Does not interact with weapon DPS
+  - Scales from Intellect
+- Detox
+  - Dispels all magic, poison, and disease effects from the target
+  - If there is nothing to dispel, it will not go on cooldown
+- Expel Harm
+  - Heals yourself with a direct heal and mastery proc
+  - Mastery will be duplicated if you have EF HoT or BDB
+  - If you’re channeling Soothing Mist, it will heal both you and your target with both the direct heal and mastery proc
+  - Does 10% of its healing as damage
+  - The Expel Harm healing on a target does not have a damage aspect
+  - If the heal from Expel Harm completely fills your health, it will do 1 damage instead of 10% of its healing
+- Fortifying Brew
+  - Increases your max hp by 15%, but the current % hp you are at stays the same (i.e. if you are at 50% before you hit Fort Brew, you will still be at 50% hp afterwards)
+  - Also provides 15% DR
+- Leg Sweep
+  - Stuns all stunnable mobs within range for 3 seconds
+- Paralysis
+  - Attempts to incapacitate a mob for 1 minute
+  - If you attempt to incapacitate a second mob, the first one will become free ( but if it fails your first mob will not be freed)
+  - Does not prevent aggro nor reduce aggro radius
+- Provoke
+  - Forces a target to attack you
+  - Increases their movement speed by 50% while the debuff is on them
+- Resuscitate
+  - Revive a friendly target while out of combat
+- Roll
+  - Moves you a short distance quickly
+  - If you disconnect during your roll it keeps going
+- Spinning Crane Kick
+  - Channeled spell
+  - Does some damage to up to 6 targets within range
+  - Applies Mystic Touch
+  - Physical damage
+  - Does not interact with weapon DPS
+  - Scales from Intellect
+- Tiger Palm
+  - Does damage to your target
+  - Generates a stack of Teachings of the Monastery
+  - Applies Mystic Touch
+  - Physical damage
+  - Does not interact with weapon DPS
+  - Scales from Intellect
+- Touch of Death
+  - Target has to be either below your max hp or sub 15% hp to be eligible
+  - If target has less hp than you, it will instantly kill it
+  - If target has more hp than you but below 15% total hp, it will deal 35% of your max health as damage to it
+  - Increases your physical damage by 15% for 10 seconds
+  - Physical damage
+  - Scales off hp, so damage is increased by Fort Brew and other temporary health increases
+  - Ignores armor
+- Transcendence
+  - Places a spirit on the ground that Transcendence: Transfer will take you to
+- Transcendence: Transfer
+  - Swaps you with the spirit you placed with Transcendence
+- Vivify
+  - Heals your main target for 141% sp and mastery proc
+  - Heals all allies with the Renewing Mist HoT for 104% sp
+  - If your main target has Renewing Mist, they will get healed for both the main 141% sp heal and the 104% Renewing Mist cleave, as well as the mastery proc
+  - Cleave heals do not trigger a mastery proc on those targets
+- Zen Flight
+  - Lets you fly at running speed
+  - Usable while moving
+  - Usable while falling (but only if you have unlocked flying in that area)
+- Zen Pilgrimage
+  - Takes you to the great turtle
+  - Reactivate to return to where you were before
+- Mystic Touch
+  - Increases all physical damage a target takes by 5%
+- Enveloping Mist
+  - Heals a target 6 times for 60% sp (360% in total)
+  - Procs mastery
+  - Increases all other healing from core spells/talents/covenants/legendaries/conduits on target by 30%
+  - If you have Mist Wrap talented, it heals 7 times instead and the healing increase is upped to 40%
+  - Is not buffed by its own healing increase
+- Essence Font
+  - Shoots a wave of 6 bolts, once per second for 3 seconds (so 18 bolts)
+  - Each bolt in a wave hits a different target
+  - When a bolt hits a target it instantly heals them for 47.2% sp and leaves a HoT
+  - The HoT heals a target 4 times each for 4.2% sp (once every 2 seconds)
+  - If you activate mastery on someone with an Essence Font HoT, it will proc twice; meaning you get 2 Gust of Mists hits instead of just 1
+  - You can cast Thunder Focus Tea without interrupting the channel
+- Invoke Yu’lon the Jade Serpent
+  - Summons Yu’lon the Jade Serpent to channel Soothing Breath on 3 targets
+  - Soothing Breath will heal each affected ally every 1.5 seconds for 35% sp
+  - While Yu’lon is out, whenever you cast Enveloping Mist it will attempt to place 6 more Enveloping Breaths on people within a 10 yards radius of the original Enveloping Mist target
+- Life Cocoon
+  - Places a shield for 60% of your hp on a target
+  - Increases ALL HoT healing from any source on the target by 50%, for 12 seconds or until the shield breaks
+- Reawaken
+  - Revives all friendly targets within 100 yards while all group members are out of combat
+- Renewing Mist
+  - Place a HoT on a target that will heal for 22.5% sp every 2 seconds, 10 times (i.e. 225% over 20 seconds)
+  - If the HoT overheals, it will attempt to jump to an injured ally within 20 yards
+  - If you attempt to cast this on a target that already has the HoT, the HoT already on the target will attempt to jump to another injured target within 20 yards. If no injured target exists within 20 yards, it will instead pandemic the HoT duration
+  - Procs mastery on cast
+  - Does not proc mastery from the aforementioned ‘jumping’ effect
+- Revival
+  - Heals all targets within 40 yards for 285% sp
+  - Dispels all targets within 40 yards of all magical, poison, and disease effects
+  - Blizzard blacklists certain spells to not be dispelled if they would cause Revival to be too risky to cast
+  - Procs mastery on everyone within 40 yards
+- Rising Sun Kick
+  - Applies Mystic Touch
+  - Physical damage
+  - Cooldown is hasted
+  - Does not interact with weapon DPS
+  - Scales from Intellect
+  - 15% chance to have its cooldown reset when Blackout Kick does damage ( including extra casts from Teachings of the Monastery)
+- Soothing Mist
+  - Duration hasted
+  - Will proc mastery once every 8 ticks (this can happen over multiple channels)
+  - It works like a deck of cards; You have 8 cards, 1 says proc mastery, 7 say don’t proc mastery, you will have to go through all 8 until you can reshuffle them
+  - Can cast Vivify/Enveloping Mist during the channel instantly, but it doesn’t remove the gcd
+- Thunder Focus Tea
+  - Empowers all Vivify/Enveloping Mist/Rising Sun Kick/Renewing Mist casts until the buff fades
+  - Buff fades after one of said spells are cast
+  - If another spell is cast in the same nanosecond the buff fades, it will also be buffed (i.e. vivify -> spell-queued Rising Sun Kick  will make both spells be buffed
+  - Makes Vivify cost no mana
+  - Makes Enveloping Mist heal instantly for 280% sp, this isn’t affected by Enveloping Mist’s healing boost
+  - Makes  Renewing Mist last 30 seconds instead of 20
+  - Reduces the cd of Rising Sun Kick to 2 gcds instead of 8
+- Enveloping Breath
+  - Heals a target for 30% sp every second for 6 seconds
+  - Also increases all healing done to them by 10%
+  - Is extended to 7 seconds with Mist Wrap talent
+  - Healing increase remains at 10% even with Mist Wrap
+  - Is not buffed by itself
+- Mastery: Gust of Mists
+  - Heals a target for your mastery % in terms of sp (ie 33.6% mastery = 33.6% sp)
+  - Base mastery is 33.6%
+  - You gain 1% mastery for every 8.3 mastery rating
+  - The first mastery diminishing returns begin at 1050 mastery rating or 159.6%
+- Teachings of the Monastery
+  - Whenever Tiger Palm is cast gain a stack of this buff (up to 3 stacks)
+  - If you are at 3 stacks and you cast Tiger Palm, refreshes its duration
+  - Lasts 20 seconds
+  - When you cast Blackout Kick, consumes all stacks and fires off an additional Blackout Kick for each stack
+  - Makes it so each Blackout Kick has a 15% chance (independent) to reset Rising Sun Kick’s cooldown
+
+## Talents
+
+- Mist Wrap
+  - Increases the duration of Enveloping Mist and Enveloping Breath by 1 second
+  - Increases the healing boost of Enveloping Mist to 40%
+- Chi Wave
+  - Shoots a bolt of chi at an enemy or friendly target
+  - If it hits a friendly, it will heal them
+  - If it hits an enemy, it will hurt them
+  - It can bounce 7 times after the initial cast
+  - This is 8 hits total (initial cast + 7 bounces)
+  - It has to bounce from an enemy to a friendly, or from a friendly to an enemy
+  - It can’t bounce solely on enemies for all hits, nor solely on allies
+  - Applies Mystic Touch
+  - Nature damage
+- Chi Burst
+  - Applies Mystic Touch
+  - Nature damage
+  - Heals targets in a line
+  - Damages targets in a line
+  - Healing is reduced the more targets there are in the line
+  - Can do extra healing when hitting multiple “clusters” of people separately (i.e. one ranged and one melee camp)
+- Celerity
+  - Reduces the cd of Roll by 5 seconds
+  - Increases total Roll charges by 1
+  - Can’t swap from this talent unless you have all 3 stacks of Roll off cd
+- Chi Torpedo
+  - Replaces Roll
+  - Gives you 30% movespeed at the end of the torpedo for 10 seconds
+  - Can stack up to 2 times
+  - Can’t swap unless you have both stacks of Chi Torpedo off cd
+- Tiger’s Lust
+  - Increase a friendly target’s movement speed by 70% for a few seconds
+  - Dispels all roots on the target when cast
+  - But will not dispel roots they gain while they have the buff
+- Lifecycles
+  - After you cast Enveloping Mist, reduces the cost of your next Vivify by 25%
+  - After you cast Vivify, reduces the cost of your next Enveloping Mist by 25%
+- Spirit of the Crane
+  - For each Teaching of the Monastery stack you consume, refunds 0.65% of your max mana
+  - Scales off max mana and not base mana
+- Mana Tea
+  - Reduces the cost of all spells by 50% while active
+  - Doesn’t interrupt any channels (Soothing, EF etc.)
+- Tiger Tail Sweep
+  - Increases range of Leg Sweep by 2 yards
+  - Reduces its cd by 10 seconds
+- Song of Chi-ji
+  - Shoots a cloud of sleepy dust out from you
+  - If anything gets hit by said sleepy dust, it will go to sleep if possible
+  - Anything hit by sleepy dust will also aggro to you
+- Ring of Peace
+  - Does not grant aggro
+  - Knocks enemies away if they are inside or trying to enter the marked circle
+  - Not all mobs can be knocked back
+  - Will disappear after 5 seconds or after 100 mobs are knocked back
+- Healing Elixir
+  - Heals you for 15% of your hp when drank
+  - 2 charges
+- Diffuse Magic
+  - Reduces all magic damage taken by 60% for 6 seconds
+  - Dispels any MAGIC effect already on you
+  - Attempts to put said magic effect back on the original caster if possible
+- Dampen Harm
+  - Reduce all damage taken by 20-50% for 10 seconds
+  - The reduction % you get is based on the % of your hp you’d lose from the damage
+  - If you’d take a hit that does 100% of your health then you get 50% dr (.2 + % hp of hit \* .3 = final dr)
+- Summon Jade Serpent Statue
+  - Channels Soothing Mist on whomever you channel Soothing Mist on for 8 seconds (hasted)
+  - Will channel on the target even if you stop
+  - Does not proc mastery
+- Refreshing Jade Wind
+  - Heals 6 injured people within 10 yards of yourself for 11.6% sp
+  - Will happen 13 times each cast
+  - CD and duration is hasted
+- Invoke Chi-Ji, the Red Crane
+  - Each time you deal damage with Rising Sun Kick or Blackout Kick, procs mastery on 2 injured targets
+  - If you cast Spinning Crane Kick and it does damage, it will proc mastery on 2 injured targets (but only once per SCK cast)
+  - This isn’t actually the standard mastery proc, but does heal for the exact same amount your normal mastery proc would
+- Focused Thunder
+  - Makes it so that when you cast Thunder Focus Tea, you gain 2 stacks of the Thunder Focus Tea buff
+  - You don’t get 2 charges of the spell  but 2 charges of the buff, meaning it doesn’t interact with Yu’lon’s Whisper
+- Upwelling
+  - For every second Essence Font is OFF cooldown, increases the amount of bolts in your next Essence Font by 1
+  - Caps at 18 extra bolts
+  - Increases Essence Font HoT duration by 4 seconds
+- Rising Mist
+  - Every time you press Rising Sun Kick, heal everyone with Renewing Mist, Essence Font HoT, or Enveloping Mist for 28% sp
+  - If they have multiple HoTs on them it will only heal them once
+  - Extends all active Renewing Mists, Essence Font HoTs, or Enveloping Mists by 4 seconds
+  - This has a cap of 100% of the original duration, meaning Essence Font HoT has a max duration of 16 seconds on a target
+  - Once you have extended a HoT to its max duration, it will stop extending but will keep receiving the Rising Mist healing if you press Rising Sun Kick again
+  - If someone has multiple HoTs on them, it will extend all of them
+  - Has a 1 second internal cooldown between activations
+
+## Covenants
+
+- Kyrian
+  - Weapons of Order
+    - Increases mastery by 42%
+    - At the start and end of every Essence Font channel while you have the Weapons of Order buff, pulses healing to 6 nearby targets for 40% sp
+- Necrolord
+  - Bonedust Brew
+    - All healing and damage has a 50% chance to duplicate for 35% of base value
+    - Any duplicated healing/damage is converted to a new spell, so for instance if Rising Sun Kick is converted you don’t get double Rising Mist hits
+    - Whenever you proc mastery on a target from a spell, it will proc again but at the power of your mastery + 43.68% (i.e. if you have 100% mastery your BDB Gust of Mists will heal for 143.68% sp)
+    - This version of Gust of Mists is considered shadow
+    - This does not interact with Essence Font, but doesn't prevent it from proccing the regular mastery value
+    - This means if you have Essence Font and Bonedust Brew on a target and Vivify them, they get 3 mastery heals
+    - This extra BDB mastery doesn’t work with Resplendent Mist or Jade Bond
+    - This extra mastery cannnot crit
+- Nightfae
+  - Faeline Stomp
+    - Slam the ground and heal 5 targets in front of you for 91% sp
+    - Shoots out 1 Essence Font bolt per friendly target hit
+    - Every spell cast event has a 6% chance to reset the spell’s cooldown
+    - Nature damage
+    - Applies Mystic Touch
+    - This Essence Font bolt has a different spell ID to normal Essence Font, meaning you can have it on the target twice (but it will not give you an extra Gust of Mists proc)
+    - For instance if a target has 2 Essence Font HoTs on them and you cast Vivify, it will only heal them for Vivify and just 2 mastery procs (one being from the Vivify)
+- Vampire
+  - Fallen Order
+    - Summons x clones every 3 seconds for 24 seconds
+    - Clones go in the order of; your spec, not your spec, repeated until the end
+    - MW clones channel a Soothing Mist that can’t proc mastery
+    - MW clones also cast 1 Enveloping Mist that doesn’t proc mastery but is buffed by itself
+    - MW clones’ Enveloping Mist is also buffed by Mist Wrap in both duration and power
+    - You don’t get the healing bonus from your clones’ Enveloping Mists
+
+## Conduits
+
+- Fortifying Ingredients
+  - Grants a shield for x% of your pre-Fort Brew-boosted hp
+- Grounding Breath
+  - Increases any Vivify healing on yourself by x%
+  - 30% chance to refund ANY Vivify cast, even if it doesn’t heal you
+  - 1 minute internal cooldown between refunds
+- Harm Denial
+  - Boosts the Expel Harm component cast on yourself by x%
+  - Does not boost Expel Harm component cast on an ally
+- Dizzying Tumble
+  - x% damage done reduction, starts after Leg Sweep fades on them
+- Lingering Numbness
+  - Slows a target when Paralysis ends, even if you break it by force
+  - Once Paralysis ends or breaks it will make the mob aggro to you
+- Swift Transference
+  - Extra movement speed after you cast Transcendence: Transfer
+- Tumbling Technique
+  - x% chance to reset Roll cooldown on Blackout Kick damage
+  - Works with Teaching of the Monastery Blackout Kicks
+- Strike with Clarity
+  - Boosts your mastery by x% and extends Weapons of Order by 5 seconds
+- Resplendent Mist
+  - 30% chance to increase Gust of Mists healing by x%
+  - Does not work with Bonedust Brew Gust of Mists
+  - Works with Chi-Ji Gust of Mists
+  - Works with Essence Font Gust of Mists
+  - Works with regular Gust of Mists
+- Rising Sun Revival
+  - Heals for the % the conduit reads / 5 \* revival healing every 2 seconds for 10 seconds
+  - Does not work with the mastery Revival procs
+- Jade Bond
+  - Increases celestial-specific healing (so Chi-Ji Gust of Mists and Soothing Breath) by x%
+  - Makes core Gusts, EF, or Chi-Ji Gust of Mists reduce your celestial cd by .3 seconds
+  - If 1 spell causes multiple Gust of Mists to happen then each Gust grant its own .3 second reduction
+  - Does not work with Bonedust Brew Gust of Mists
+- Nourishing Chi
+  - Increases HoT healing effect bonus of Life Cocoon by x%
+  - When Life Cocoon ends that x% lasts for 6 more seconds
+- Bone Marrow Hops
+  - Increases all shadow damage or healing by x% multiplicatively
+  - This means it is not 35% + x%, but rather 1.35 \* x%
+  - Every time Bonedust Brew multistrike happens, reduces Bonedust Brew’s cooldown by .5 seconds up to a max reduction of 2.5 seconds
+  - i.e. only 5 procs will reduce the cd, then it will stop
+- Way of the Fae
+  - Just increases damage
+- Imbued reflection
+  - Just a flat dps/hps increase from the clones
+
+## Legendaries
+
+- Ancient Teachings of the Monastery
+  - In logs shows up as two different spells, one that is 100% crit, and one that is 0% crit
+  - If your dps spell crits, it procs the 100% crit one
+  - If it doesn’t crit, then the 0% crit one is procced
+  - Works off of base damage + Mystic Touch
+  - Things that amp damage on a target like Sludgefist pillars don’t work with this
+  - Mystic Touch’s damage amp does work
+  - Touch of Death’s damage amp doesn’t work
+- Yu’lon’s Whisper
+  - Breathes out a wave of healing 3 times
+  - Each wave of healing heals 6 injured people in front of you for 60% sp
+  - Not the most injured targets; just anyone injured
+- Clouded Focus
+  - When channeling Soothing Mist each Vivify/Enveloping Mist cast will grant you a Clouded Focus buff stack
+  - This buff can stack to 3
+  - Each stack increases the healing of Vivify/Enveloping Mist/Enveloping Breath by 20% dynamically
+  - Each stack reduces the mana cost of Vivify/Enveloping mist by 20%
+  - On cast the new stack affects the healing but not the mana cost
+  - i.e. if you have 0 stacks and cast SooM -> Vivify, the Vivify will cost full mana but will do 20% more healing
+  - All stacks are lost when Soothing Mist ends
+  - The Vivify healing increase does work on Renewing Mist cleave
+- Tear of Morning
+  - Casting Vivify/Enveloping Mist on someone with Renewing Mist has a 10% chance to duplicate it
+  - It will duplicate it at its current duration
+  - It will also reset the max extension from Rising Mist
+  - Anyone with Renewing Mist gets 20% more Vivify CLEAVE healing
+  - Anyone with Renewing Mist gets healed by 20% of a normal Enveloping Mist on cast
+  - This means that when the Enveloping Mist cast finishes it heals everyone (it is not per tick)
+  - This healing is based on aA normal Enveloping Mist of 6 seconds
+  - This doesn’t change if you spec into Mist Wrap or extend an Enveloping Mist with Rising Mist
+- Escape from Reality
+  - It’s only Vivify healing on yourself
+  - If you Vivify yourself, it’s boosted by 70% and refunds 50% of the cost, but all Vivify healing on other targets from targeting them or cleave isn’t boosted
+  - Reactivating Transfer removes the healing increase buff
+- Invoker’s Delight
+  - Increases your haste by 33% haste on celestial cast
+- Swiftsure Wraps
+  - Only prevents roots WHILE ROLLING
+- Fatal Touch
+  - Reduce the cd of Touch of Death by 120 seconds
+- Call To Arms
+  - Summon a version of Chi-Ji or Yu’lon when you press Weapons of Order for 12 seconds
+  - The hot duration of enveloping breath is reduced to 3 seconds :)
+- Bountiful Brew
+  - 1.25 procs per minute
+  - Works with HoT healing
+  - Works on damage
+  - Throws a Bonedust Brew off the person that triggers it
+  - Will proc Soulbinds etc.
+- Faeline Harmony
+  - Increase Faeline Stomp’s reset chance by 100% (so if it’s 6% base, it’s now 12%)
+  - Increase healing/damage to the people hit by the STOMP by 8% for 10 seconds
+- Sinister Teachings
+  - .75 second ICD
+  - Whenever you crit while a clone is up, reduces the cd of Fallen order by 3 seconds
+  - Roughly max cdr is ~2 minutes (it’s technically a little longer)
+  - Summons 1 extra clone on summon of mirror
+  - It’s always your spec’s clone

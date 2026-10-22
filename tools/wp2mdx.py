@@ -2,11 +2,17 @@
 """Convert the Peak of Serenity WordPress (WXR) export into Docusaurus MDX.
 
 Usage:
-  python3 -I wp2mdx.py EXPORT.xml OUTDIR --posts ID [ID ...] --guides ID [ID ...]
+  python3 -I wp2mdx.py EXPORT.xml OUTDIR --all [--skip-existing]
+  python3 -I wp2mdx.py EXPORT.xml OUTDIR --posts ID [ID ...] --guides ID [ID ...] --podcasts ID [ID ...]
+
+--all converts every published post, podcast episode and guide page (minus RETIRED and the hub pages, which
+are rebuilt as React pages). --skip-existing leaves files that are already there alone, so pages authors
+have edited in Pages CMS are never overwritten (their review-list entries are still written).
 
 Writes:
   OUTDIR/blog/YYYY-MM-DD-slug.mdx      news posts (plain Markdown body)
-  OUTDIR/docs/<guide path>.mdx         guides (tab groups as front-matter fields)
+  OUTDIR/podcast/YYYY-MM-DD-slug.mdx   podcast episodes (audio link in front matter)
+  OUTDIR/docs/<guide path>.mdx         guides (tabbed guides keep tab groups as front-matter fields)
   OUTDIR/blog/authors.yml              authors used by the converted posts/guides
   OUTDIR/migration/review-list.md                anything that did not convert cleanly
   OUTDIR/migration/url-map.csv                   old URL -> new URL for converted items
@@ -17,6 +23,7 @@ Requires: beautifulsoup4, markdownify, pyyaml.
 import argparse
 import csv
 import html
+import json
 import os
 import re
 import sys
@@ -38,28 +45,23 @@ UPLOADS_RE = re.compile(r"^(?:https?://(?:www\.)?peakofserenity\.com)?/wp-conten
 IMG_BASE = "/img/uploads/"
 TALENT_RE = re.compile(r"\b[A-Za-z0-9+/]{60,}\b")  # talent import strings
 
-# Windwalker PvE guide: Divi tab group (admin_label) -> front-matter key, with
-# each tab title -> field key.  The "intro" field holds the text module that
-# sits above the tabs (minus its heading, which the layout renders).
-GUIDE_TAB_MAPS = {
-    "windwalker-pve": {
-        "Talent Tabs": ("builds", "Talents Title", {
-            "Class Tree": "classtree", "Raid": "raid", "Mythic+": "mythicplus",
-            "Delves": "delves", "Flowchart": "flowchart", "Omnium Folio": "omniumfolio"}),
-        "Cooldown Tabs": ("cooldowns", "Ability/Cooldown Text", {
-            "Celestial Conduit": "celestialconduit", "Fortifying Brew": "fortifyingbrew",
-            "Invoke Xuen": "invokexuen", "Touch of Death": "touchofdeath",
-            "Touch of Karma": "touchofkarma", "Zenith": "zenith"}),
-        "ST Priority Tabs": ("priority.singletarget", "ST/Ability Priority Text", {
-            "Default SP": "default_shadopan", "Default Conduit": "default_conduit",
-            "Advanced Shado-Pan": "advanced_shadopan", "Advanced Conduit": "advanced_conduit"}),
-        "AOE Priority Tabs": ("priority.aoe", "AOE Priority Text", {
-            "Shado-Pan": "shadopan", "Conduit of the Celestials": "conduit"}),
-        "Opener Tabs": ("openers", "Openers Title", {
-            "Shado-Pan": "shadopan", "Conduit of the Celestials": "conduit"}),
-    },
-}
-GUIDE_TYPES = {"21927": "windwalker-pve"}
+# Tabbed guides: src/guideTypes.json lists each guide type's tab groups (front-matter key, the Divi text module
+# above the tabs, the Divi tabs module, optional text module below them) and its tabs.  The site and
+# tools/pages_config.py read the same file.
+GUIDE_TYPES_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src", "guideTypes.json")
+with open(GUIDE_TYPES_JSON) as _f:
+    GUIDE_TYPE_DEFS = json.load(_f)
+GUIDE_TYPES = {d["wp_id"]: name for name, d in GUIDE_TYPE_DEFS.items()}
+
+# Pages that are not converted: hub pages (rebuilt in src/pages), the login page, and the retired
+# Mistweaver guides (301 redirects in static/_redirects).
+HUB_PAGES = {"10409", "21897", "21916", "21899", "21918", "24087", "24105"}
+RETIRED = {"21938", "17878", "17814", "17867", "17872"}
+SKIPPED = {"4999"}  # /login/ (Divi login module): redirects to the homepage
+# Guide files whose name would clash with the tabbed guides' file name in the Pages CMS exclude list
+GUIDE_FILE_OVERRIDES = {"/pve-guide": "brewmaster-pve-quick-guide.mdx"}
+# Path prefixes that resolve through generated pages or redirects
+ROUTED_PREFIXES = ("/category/", "/tag/", "/author/", "/podcast/", "/feed/", "/news/")
 
 
 class Review:
@@ -76,10 +78,16 @@ IMAGES = set()
 KNOWN_PATHS = set()   # published page/post paths, filled in main()
 ATTACHMENTS = {}      # attachment page path -> file URL
 ATTACHMENT_IDS = {}   # attachment post id -> file URL
+CATEGORY_TAG = {}     # WordPress category nicename -> tag page path, filled in main()
+OLD_LINKS = {}        # old-expansion path linked from content -> new path (written to static/_redirects)
+RETIRED_PATHS = set()  # retired guides' paths, filled in main()
+RETIRED_TARGET = "/tww/mistweaver/pve-guide/"
 # In-game macro conditionals look like shortcodes; never flag these
 MACRO_WORDS = {"pet", "nopet", "combat", "nocombat", "mod", "nomod", "harm", "help", "exists",
                "dead", "nodead", "channeling", "nochanneling", "known", "flying", "mounted",
-               "stealth", "group", "raid", "party", "spec", "form", "stance", "x"}
+               "stealth", "group", "raid", "party", "spec", "form", "stance", "x",
+               # bracketed words in quoted tooltip text
+               "heal", "attack", "assault", "or"}
 
 
 # ---------------------------------------------------------------- WXR parsing
@@ -109,6 +117,7 @@ def load_items(path):
 def author_keys(item, authors):
     """PublishPress Authors (ppma_authors_name) lists co-authors; fall back to dc:creator."""
     names = [n.strip() for n in item["meta"].get("ppma_authors_name", "").split(",") if n.strip()]
+    names = [authors.get(n, n) for n in names]  # some list the login (seiryoku1) instead of the display name
     if not names:
         names = [authors.get(item["creator"], item["creator"])]
     return names
@@ -160,9 +169,29 @@ def expand_shortcodes(text, where):
         return '<p><a href="%s">%s</a></p>' % (url, url)
     text = re.sub(r"\[embed[^\]]*\](.*?)\[/embed\]", embed, text, flags=re.S)
 
+    def video(m):
+        url = attr(m.group(0), "mp4") or attr(m.group(0), "src") or attr(m.group(0), "webm")
+        REVIEW.add(where, "Video converted to a plain link: %s" % url)
+        return '<p><a href="%s">%s</a></p>' % (url, "Video: " + url.rsplit("/", 1)[-1]) if url else ""
+    text = re.sub(r"\[(?:video|iframe)\b[^\]]*\](?:\[/(?:video|iframe)\])?", video, text)
+
+    # Old theme "learn more" toggles and [tabs]: titles become headings, content always visible
+    if "[learn_more" in text or "[tabcontainer]" in text:
+        REVIEW.add(where, "Old theme toggles/tabs became headings with their content always visible")
+    text = re.sub(r'\[learn_more\b[^\]]*caption="([^"]*)"[^\]]*\]', r"<h4>\1</h4>", text)
+    text = re.sub(r"\[/learn_more\]", "", text)
+    for tabs in re.findall(r"\[tabs\b.*?\[/tabs\]", text, flags=re.S):
+        titles = re.findall(r"\[tabtext\](.*?)\[/tabtext\]", tabs, flags=re.S)
+        new = re.sub(r"\[tabcontainer\].*?\[/tabcontainer\]", "", tabs, flags=re.S)
+        new = re.sub(r"\[tab\]", lambda m: "<h3>%s</h3>" % (titles.pop(0) if titles else ""), new)
+        new = re.sub(r"\[/?(?:tabs|tab|tabcontent)\b[^\]]*\]", "", new)
+        text = text.replace(tabs, new)
+
     # Divi modules that carry content in attributes
     def image(m):
         src = attr(m.group(0), "src")
+        if not src:
+            return ""
         url = attr(m.group(0), "url")
         alt = attr(m.group(0), "alt") or attr(m.group(0), "title_text")
         tag = '<img src="%s" alt="%s" />' % (src, html.escape(alt))
@@ -177,7 +206,7 @@ def expand_shortcodes(text, where):
     # Things that are rebuilt site-wide or not needed
     text = re.sub(r"\[et_pb_(?:fullwidth_post_title|post_title|sidebar|divider|login)\b[^\]]*\](?:\[/et_pb_\w+\])?", "", text)
     text = re.sub(r"<p[^>]*>[^<]*\[lmt-[^\]]*\][^<]*</p>", "", text)  # "Last Updated on [...]" line
-    text = re.sub(r"\[(?:ez-toc|lmt-[a-z-]+|et_pb_line_break_holder)[^\]]*\](?:\[/[^\]]*\])?", "", text)
+    text = re.sub(r"\[(?:ez-toc|lmt-[a-z-]+|et_pb_line_break_holder|pac_divi_table_of_contents)[^\]]*\](?:\[/[^\]]*\])?", "", text)
 
     # Divi code modules hold raw HTML/JS: keep content out, flag for review
     def code(m):
@@ -222,11 +251,44 @@ def rewrite_url(url, where):
         norm = bare if bare.endswith("/") else bare + "/"
         if norm in ATTACHMENTS:
             return rewrite_url(ATTACHMENTS[norm], where)
-        if bare and not bare.startswith("/wp-") and norm not in KNOWN_PATHS and \
+        if norm in RETIRED_PATHS:
+            return RETIRED_TARGET
+        m = re.match(r"^/category/([^/]+)/", norm)
+        if m and m.group(1) in CATEGORY_TAG:
+            return CATEGORY_TAG[m.group(1)]
+        if norm.startswith("/feed/podcast/"):
+            return "/podcast/"
+        if "#" in path and norm in KNOWN_PATHS:
+            # WordPress heading anchors (#Priority_Lists) -> Docusaurus heading ids (#priority-lists)
+            frag = re.sub(r"[^a-z0-9]+", "-", path.split("#", 1)[1].lower()).strip("-")
+            return bare + "#" + frag
+        if norm not in KNOWN_PATHS and not bare.startswith(ROUTED_PREFIXES):
+            target, exact = resolve_old(norm)
+            if target:
+                OLD_LINKS[norm] = target
+                if not exact:
+                    REVIEW.add(where, "Link to %s (no longer exists) now goes to %s" % (bare, target))
+                return target + (path[len(bare):] if exact else "")
+        if bare and not bare.startswith(("/wp-",) + ROUTED_PREFIXES) and norm not in KNOWN_PATHS and \
                 not re.search(r"\.\w{2,4}$", bare):
             REVIEW.add(where, "Internal link to a path with no published page (needs a redirect or a fix): %s" % path)
         return path
     return url
+
+
+def resolve_old(norm):
+    """Old expansion paths (/df/, /sl/, /bfa/ or none) -> the /tww/ page, or its nearest existing parent."""
+    m = re.match(r"^/(?:(?:df|sl|bfa|legion)/)?((?:windwalker|brewmaster|mistweaver)/.*)$", norm)
+    if not m:
+        return None, False
+    parts = ("/tww/" + m.group(1)).rstrip("/").split("/")
+    for n in range(len(parts), 2, -1):
+        cand = "/".join(parts[:n]) + "/"
+        if cand in RETIRED_PATHS:
+            return RETIRED_TARGET, False
+        if cand in KNOWN_PATHS:
+            return cand, n == len(parts)
+    return None, False
 
 
 def clean_html(raw, where, keep_colors=False):
@@ -422,34 +484,41 @@ def divi_modules(content):
 
 def convert_guide(item, gtype, authors):
     where = "guide %s %s" % (item["id"], item["link"])
-    tabmap = GUIDE_TAB_MAPS[gtype]
-    intro_labels = {v[1]: k for k, v in tabmap.items()}
+    groups = GUIDE_TYPE_DEFS[gtype]["groups"]
+    by_tabs = {g["wp_tabs"]: g for g in groups}
+    by_text = {g["wp_text"]: g for g in groups}
+    by_outro = {g["wp_outro"]: g for g in groups if g.get("wp_outro")}
     mods = divi_modules(item["content"])
     fm_groups, body, intro = {}, [], None
     current_group = None
     for kind, label, title, inner, _ in mods:
         if kind == "et_pb_tabs":
-            if label not in tabmap:
+            if label not in by_tabs:
                 REVIEW.add(where, "Tab group '%s' has no field mapping; flattened into body" % label)
                 current_group = None
                 continue
-            current_group = tabmap[label]
+            current_group = by_tabs[label]
         elif kind == "et_pb_tab":
             if current_group is None:
                 body.append("## " + title + "\n\n" + to_markdown(inner, where))
                 continue
-            key, _, tabs = current_group
+            tabs = dict((lab, name) for name, lab in current_group["tabs"])
             if title not in tabs:
-                REVIEW.add(where, "Tab '%s' in group '%s' has no field mapping" % (title, key))
+                REVIEW.add(where, "Tab '%s' in group '%s' has no field mapping" % (title, current_group["key"]))
                 continue
-            set_path(fm_groups, key + "." + tabs[title], to_markdown(inner, where, keep_colors=True, shift_h1=False))
-        elif kind == "et_pb_text" and label in intro_labels:
-            key = tabmap[intro_labels[label]][0]
+            set_path(fm_groups, current_group["key"] + "." + tabs[title],
+                     to_markdown(inner, where, keep_colors=True, shift_h1=False))
+        elif kind == "et_pb_text" and label in by_text:
+            key = by_text[label]["key"]
             md = to_markdown(inner, where, keep_colors=True, shift_h1=False)
             heading = re.match(r"^#{1,6}\s+(.+?)\n", md + "\n")
             md = re.sub(r"^#{1,6}\s+.+?(\n|$)", "", md, count=1).strip()
             set_path(fm_groups, key + ".heading", heading.group(1).strip("* ") if heading else "")
             set_path(fm_groups, key + ".intro", md)
+            current_group = None
+        elif kind == "et_pb_text" and label in by_outro:
+            set_path(fm_groups, by_outro[label]["key"] + ".outro",
+                     to_markdown(inner, where, keep_colors=True, shift_h1=False))
             current_group = None
         elif kind == "et_pb_text":
             current_group = None
@@ -463,22 +532,46 @@ def convert_guide(item, gtype, authors):
     if "[pac_divi_table_of_contents" in item["content"]:
         REVIEW.add(where, "Divi table-of-contents module dropped (Docusaurus builds its own TOC)")
 
+    rel, fm = guide_front_matter(item, authors, where)
+    fm["guide_type"] = gtype
+    fm["intro"] = intro or ""
+    fm.update(fm_groups)
+    return rel, fm, "\n\n".join(b for b in body if b)
+
+
+def guide_front_matter(item, authors, where):
     last = item["meta"].get("_wplmi_last_modified", item["modified"])[:10]
     path = SITE_RE.sub("", item["link"]).rstrip("/") or "/"
+    desc = seo_description(item)
+    if not desc:
+        REVIEW.add(where, "description is empty; WordPress had no excerpt/SEO description to copy")
     fm = {
         "title": item["title"],
         "slug": path,
         "authors": [author_key(a) for a in author_keys(item, authors)],
         "last_update": {"date": last},  # Docusaurus native "Last updated" stamp
-        "description": "",
+        "description": desc,
         "wp_id": int(item["id"]),
         "original_url": item["link"],
-        "guide_type": gtype,
-        "intro": intro or "",
     }
-    fm.update(fm_groups)
-    REVIEW.add(where, "description is empty; WordPress had no excerpt/SEO description to copy")
-    return path.lstrip("/") + ".mdx", fm, "\n\n".join(b for b in body if b)
+    return GUIDE_FILE_OVERRIDES.get(path, path.lstrip("/") + ".mdx"), fm
+
+
+def seo_description(item):
+    return (item["meta"].get("_yoast_wpseo_metadesc") or re.sub(r"<[^>]+>", "", item["excerpt"])).strip()
+
+
+def convert_page(item, authors):
+    """A guide page without tabs: the whole page becomes the Markdown body."""
+    where = "guide %s %s" % (item["id"], item["link"])
+    if "[pac_divi_table_of_contents" in item["content"]:
+        REVIEW.add(where, "Divi table-of-contents module dropped (Docusaurus builds its own TOC)")
+    md = to_markdown(item["content"], where)
+    first = re.match(r"^#{1,6}\s+(.+?)\n", md + "\n")
+    if first and first.group(1).strip("* ").lower() == item["title"].strip().lower():
+        md = md[first.end():].lstrip()
+    rel, fm = guide_front_matter(item, authors, where)
+    return rel, fm, md
 
 
 def set_path(d, dotted, value):
@@ -502,10 +595,7 @@ def convert_post(item, authors):
     tags = [c[1] for c in item["cats"] if c[0] == "post_tag"]
     patches = [c for c in cats if re.match(r"^\d+(\.\d+)+$", c)]
     specs = [c for c in cats if c not in patches]
-    desc = re.sub(r"<[^>]+>", "", item["excerpt"]).strip()
-    if not desc:
-        plain = re.sub(r"[#*_>\[\]()`]|https?://\S+", "", md)
-        desc = re.sub(r"\s+", " ", plain).strip()[:157].rsplit(" ", 1)[0] + "…"
+    desc = seo_description(item) or summary(md)
     fm = {
         "title": item["title"],
         "slug": "/%s/%s/%s/%s" % (y, m, d, item["slug"]),
@@ -521,6 +611,41 @@ def convert_post(item, authors):
     thumb = ATTACHMENT_IDS.get(item["meta"].get("_thumbnail_id", ""))
     if thumb:
         fm["image"] = rewrite_url(thumb, where)
+    return "%s-%s.mdx" % (date, item["slug"]), fm, md
+
+
+def summary(md):
+    plain = re.sub(r"!\[[^\]]*\]\([^)]*\)|[#*_>\[\]()`|\\\\]|https?://\S+|/img/\S+", "", md)
+    plain = re.sub(r"\s+", " ", plain).strip()
+    return plain if len(plain) <= 157 else plain[:157].rsplit(" ", 1)[0] + "…"
+
+
+def convert_podcast(item, authors):
+    where = "podcast %s %s" % (item["id"], item["link"])
+    md = to_markdown(item["content"], where)
+    date = item["date"][:10]
+    meta = item["meta"]
+    audio = meta.get("audio_file", "").strip()
+    fm = {
+        "title": item["title"],
+        "slug": item["slug"],  # relative to /podcast/
+        "date": item["date"].replace(" ", "T"),
+        "authors": [author_key(a) for a in author_keys(item, authors)],
+        "tags": dedupe([c[1] for c in item["cats"] if c[0] == "post_tag"]),
+        "series": dedupe([c[1] for c in item["cats"] if c[0] == "series"]),
+        "description": seo_description(item) or summary(md),
+        "audio": audio,
+        "duration": meta.get("duration", ""),
+        "wp_id": int(item["id"]),
+        "original_url": item["link"],
+    }
+    if not audio:
+        REVIEW.add(where, "No audio file")
+    elif not UPLOADS_RE.match(audio):
+        REVIEW.add(where, "Audio file is hosted elsewhere and may be gone: %s" % audio)
+    cover = meta.get("cover_image") or ATTACHMENT_IDS.get(meta.get("_thumbnail_id", ""))
+    if cover:
+        fm["image"] = rewrite_url(cover, where)
     return "%s-%s.mdx" % (date, item["slug"]), fm, md
 
 
@@ -555,11 +680,14 @@ def literalise(v):
     return v
 
 
-def write_mdx(path, fm, body):
+def write_mdx(path, fm, body, skip_existing=False):
+    if skip_existing and os.path.exists(path):
+        return False
     os.makedirs(os.path.dirname(path), exist_ok=True)
     head = yaml.dump(literalise(fm), sort_keys=False, allow_unicode=True, width=10**9)
     with open(path, "w") as f:
         f.write("---\n%s---\n\n%s\n" % (head, body))
+    return True
 
 
 def check_talent_strings(item, files_text, where):
@@ -574,65 +702,197 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("export")
     ap.add_argument("outdir")
+    ap.add_argument("--all", action="store_true")
+    ap.add_argument("--skip-existing", action="store_true")
     ap.add_argument("--posts", nargs="*", default=[])
     ap.add_argument("--guides", nargs="*", default=[])
+    ap.add_argument("--podcasts", nargs="*", default=[])
     a = ap.parse_args()
     authors, items = load_items(a.export)
+    published = lambda t: sorted((i["id"] for i in items.values() if i["type"] == t and i["status"] == "publish"),
+                                 key=lambda pid: items[pid]["date"])
+    if a.all:
+        a.posts = published("post")
+        a.podcasts = published("podcast")
+        a.guides = [pid for pid in published("page") if pid not in HUB_PAGES | RETIRED | SKIPPED]
+    # Paths that will exist on the new site: what we convert, plus the hub pages
+    converted = set(a.posts) | set(a.podcasts) | set(a.guides) | HUB_PAGES
     for it in items.values():
         path = SITE_RE.sub("", it["link"])
-        if it["type"] in ("page", "post", "podcast") and it["status"] in ("publish", "archive"):
+        if it["id"] in converted:
             KNOWN_PATHS.add(path if path.endswith("/") else path + "/")
         if it["type"] == "attachment":
             url = it["meta"].get("_wp_attached_file")
             if url:
                 ATTACHMENTS[path if path.endswith("/") else path + "/"] = "/wp-content/uploads/" + url
                 ATTACHMENT_IDS[it["id"]] = "/wp-content/uploads/" + url
-    used_authors, urlmap = set(), []
+    nicename, categories = tag_permalinks(items, set(a.posts) | set(a.podcasts))
+    for nice, name in categories.items():
+        CATEGORY_TAG[nice] = "/tag/%s/" % nicename[name.lower()][1]
+    for pid in RETIRED:  # links to them go straight to the redirect target
+        RETIRED_PATHS.add(SITE_RE.sub("", items[pid]["link"]))
+    used_authors, urlmap, kept = set(), [], []
     os.makedirs(os.path.join(a.outdir, "migration"), exist_ok=True)
+
+    def emit(kind, pid, folder, rel, fm, body, new_url):
+        it = items[pid]
+        out = os.path.join(a.outdir, folder, rel)
+        if not write_mdx(out, fm, body, a.skip_existing):
+            kept.append(out)
+        n, miss = check_talent_strings(it, open(out).read(), "%s %s %s" % (kind, pid, it["link"]))
+        if n:
+            print(kind, pid, "->", out, "| talent strings: %d found, %d missing" % (n, miss))
+        used_authors.update(author_keys(it, authors))
+        urlmap.append((SITE_RE.sub("", it["link"]), new_url, kind, pid))
 
     for pid in a.guides:
         it = items[pid]
-        rel, fm, body = convert_guide(it, GUIDE_TYPES[pid], authors)
-        out = os.path.join(a.outdir, "docs", rel)
-        write_mdx(out, fm, body)
-        n, miss = check_talent_strings(it, open(out).read(), "guide %s %s" % (pid, it["link"]))
-        print("guide", pid, "->", out, "| talent strings: %d found, %d missing" % (n, miss))
-        used_authors.update(author_keys(it, authors))
-        urlmap.append((SITE_RE.sub("", it["link"]), fm["slug"] + "/", "guide", pid))
+        if pid in GUIDE_TYPES:
+            rel, fm, body = convert_guide(it, GUIDE_TYPES[pid], authors)
+        else:
+            rel, fm, body = convert_page(it, authors)
+        emit("guide", pid, "docs", rel, fm, body, fm["slug"] + "/")
 
     for pid in a.posts:
-        it = items[pid]
-        name, fm, body = convert_post(it, authors)
-        out = os.path.join(a.outdir, "blog", name)
-        write_mdx(out, fm, body)
-        check_talent_strings(it, open(out).read(), "post %s %s" % (pid, it["link"]))
-        print("post", pid, "->", out)
-        used_authors.update(author_keys(it, authors))
-        urlmap.append((SITE_RE.sub("", it["link"]), fm["slug"] + "/", "post", pid))
+        name, fm, body = convert_post(items[pid], authors)
+        emit("post", pid, "blog", name, fm, body, fm["slug"] + "/")
+
+    for pid in a.podcasts:
+        name, fm, body = convert_podcast(items[pid], authors)
+        emit("podcast", pid, "podcast", name, fm, body, "/podcast/%s/" % fm["slug"])
 
     # Every author account in the export (display names only), so new posts can pick anyone
     everyone = set(authors.values()) | used_authors
-    authors_yml = {author_key(n): {"name": n, "page": n in used_authors} for n in sorted(everyone, key=str.lower)}
+    # An explicit permalink keeps author pages at /authors/<key>/ (Docusaurus would turn abelito75 into abelito-75)
+    authors_yml = {author_key(n): {"name": n, "page": {"permalink": "/" + author_key(n)} if n in used_authors else False}
+                   for n in sorted(everyone, key=str.lower)}
     with open(os.path.join(a.outdir, "blog", "authors.yml"), "w") as f:
         yaml.dump(authors_yml, f, sort_keys=False, allow_unicode=True)
 
     with open(os.path.join(a.outdir, "migration", "url-map.csv"), "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["old_url", "new_url", "type", "wp_id", "changed"])
-        for old, new, t, pid in urlmap:
+        for old, new, t, pid in sorted(urlmap):
             w.writerow([old, new, t, pid, "no" if old == new else "YES"])
 
     with open(os.path.join(a.outdir, "migration", "images-needed.txt"), "w") as f:
         f.write("\n".join(sorted(IMAGES)) + "\n")
 
+    if a.podcasts:
+        write_podcast_feed(a.outdir, items, a.podcasts)
+    if a.all:
+        write_tags_and_redirects(a.outdir, items, set(a.posts) | set(a.podcasts), authors)
     with open(os.path.join(a.outdir, "migration", "review-list.md"), "w") as f:
         f.write("# Conversion review list\n\nGenerated by tools/wp2mdx.py. Each item needs a human look; "
                 "nothing here was guessed.\n")
-        for where in sorted(REVIEW.items):
+        for where in sorted(REVIEW.items, key=review_order):
             f.write("\n## %s\n\n" % where)
             for msg in REVIEW.items[where]:
                 f.write("- %s\n" % msg)
-    print("images referenced:", len(IMAGES), "| review items:", sum(len(v) for v in REVIEW.items.values()))
+    for out in kept:
+        print("kept existing (not overwritten):", out)
+    print("guides %d, posts %d, podcasts %d | images referenced: %d | review items: %d"
+          % (len(a.guides), len(a.posts), len(a.podcasts), len(IMAGES), sum(len(v) for v in REVIEW.items.values())))
+
+
+REDIRECTS_MARK = "# ---- Everything below is generated by tools/wp2mdx.py --all; edit above this line ----\n"
+
+
+def tag_permalinks(items, converted):
+    """Tag label -> WordPress nicename (tags first, then categories), and category nicename -> label."""
+    nicename, categories = {}, {}
+    for pid in converted:
+        for dom, name, nice in items[pid]["cats"]:
+            if dom == "post_tag" or (dom == "category" and name.lower() not in nicename):
+                nicename.setdefault(name.lower(), (name, nice))
+            if dom == "category":
+                categories[nice] = name
+    return nicename, categories
+
+
+def write_tags_and_redirects(outdir, items, converted, authors):
+    """blog/tags.yml keeps WordPress's tag URLs (/tag/<nicename>/); static/_redirects gets the rest."""
+    nicename, categories = tag_permalinks(items, converted)
+    tags = {}
+    for low, (name, nice) in sorted(nicename.items()):
+        tags[name] = {"label": name, "permalink": "/" + nice}
+    with open(os.path.join(outdir, "blog", "tags.yml"), "w") as f:
+        f.write("# Generated by tools/wp2mdx.py: tag pages keep their WordPress addresses (/tag/<permalink>/).\n"
+                "# Tags not listed here still work; Docusaurus makes their address from the name.\n")
+        yaml.dump(tags, f, sort_keys=False, allow_unicode=True)
+
+    lines = ["", "# WordPress category archives -> tag pages"]
+    for nice in sorted(categories):
+        lines.append("/category/%s/* %s 301" % (nice, CATEGORY_TAG[nice]))
+    lines += ["", "# Author archives -> author pages"]
+    for login, name in sorted(authors.items()):
+        key = author_key(name)
+        if any(key in [author_key(n) for n in author_keys(items[p], authors)] for p in converted):
+            lines.append("/author/%s/* /authors/%s/ 301" % (re.sub(r"[^a-z0-9-]+", "-", login.lower()), key))
+    lines += ["", "# Links in old content to /df/, /sl/, /bfa/ and unprefixed guide paths"]
+    for old, new in sorted(OLD_LINKS.items()):
+        lines.append("%s %s 301" % (old, new))
+    lines += ["", "# Anything else under the old expansion prefixes -> the current guides",
+              "/df/* /tww/:splat 301", "/sl/* /tww/:splat 301", "/bfa/* /tww/:splat 301", ""]
+    path = os.path.join(outdir, "static", "_redirects")
+    head = open(path).read().split(REDIRECTS_MARK)[0].rstrip("\n") + "\n\n"
+    with open(path, "w") as f:
+        f.write(head + REDIRECTS_MARK + "\n".join(lines) + "\n")
+    print("tags.yml: %d tags | _redirects: %d generated rules" % (len(tags), sum(1 for l in lines if l and l[0] == "/")))
+
+
+def write_podcast_feed(outdir, items, pids):
+    """An iTunes-style RSS feed with audio enclosures at /podcast/feed.xml, so apps subscribed to the old
+    /feed/podcast/... address keep working (static/_redirects points the old address here)."""
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    from xml.sax.saxutils import escape
+    eps = []
+    for pid in sorted(pids, key=lambda p: items[p]["date"], reverse=True):
+        it, meta = items[pid], items[pid]["meta"]
+        enc = meta.get("enclosure", "").split("\n")
+        if not meta.get("audio_file"):
+            continue
+        when = datetime.strptime(it["date"], "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+        notes = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html.unescape(it["content"]))).strip()[:4000]
+        eps.append("""  <item>
+    <title>%s</title>
+    <link>https://www.peakofserenity.com/podcast/%s/</link>
+    <guid isPermaLink="false">%s</guid>
+    <pubDate>%s</pubDate>
+    <description>%s</description>
+    <enclosure url="%s" length="%s" type="%s"/>
+    <itunes:duration>%s</itunes:duration>
+  </item>""" % (escape(it["title"]), it["slug"], escape(html.unescape(meta.get("ssp_guid") or it["link"])),
+              format_datetime(when), escape(notes), escape(meta["audio_file"].strip()),
+              meta.get("filesize_raw") or (enc[1] if len(enc) > 1 else "0"),
+              enc[2].strip() if len(enc) > 2 and enc[2].strip() else "audio/mpeg", meta.get("duration", "")))
+    feed = """<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated by tools/wp2mdx.py from the WordPress export. -->
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<channel>
+  <title>PeakCraft Podcast</title>
+  <link>https://www.peakofserenity.com/podcast/</link>
+  <language>en</language>
+  <description>The Peak of Serenity podcast: Monk news, theorycrafting and World of Warcraft chat.</description>
+  <itunes:author>Peak of Serenity</itunes:author>
+  <itunes:image href="https://www.peakofserenity.com/img/uploads/2018/02/No_margin_transparent.png"/>
+  <itunes:category text="Games &amp; Hobbies"/>
+  <itunes:explicit>false</itunes:explicit>
+%s
+</channel>
+</rss>
+""" % "\n".join(eps)
+    os.makedirs(os.path.join(outdir, "static", "podcast"), exist_ok=True)
+    with open(os.path.join(outdir, "static", "podcast", "feed.xml"), "w") as f:
+        f.write(feed)
+    REVIEW.add("podcast feed /podcast/feed.xml", "The feed's title, description, artwork and category were not in "
+               "the export (they lived in the podcast plugin's settings); check them against the live feed")
+
+
+def review_order(where):
+    kind, pid, link = where.split(" ", 2)
+    return ({"guide": 0, "post": 1, "podcast": 2}.get(kind, 3), link, pid)
 
 
 if __name__ == "__main__":

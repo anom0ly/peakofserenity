@@ -1,0 +1,120 @@
+---
+title: Windwalker Guide to 8.1 Changes
+slug: /2018/11/21/windwalker-guide-to-8-1-changes
+date: '2018-11-21T18:18:02'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.1'
+description: Its been almost a month since my last article, because there really hasn't been much to talk about. There were some changes to WW on the PTR, but none…
+wp_id: 12968
+original_url: https://www.peakofserenity.com/2018/11/21/windwalker-guide-to-8-1-changes/
+---
+
+Its been almost a month since my last article, because there really hasn't been much to talk about. There were some changes to WW on the PTR, but none really worth talking about from a PvE perspective. So, with the patch less than a month away, I thought now would be a good time to put all the changes that we have so far into one article for discussion. Although this article will focus entirely on PvE, there have been changes to many PvP talents as well. In this article, I'll list the changes as and then break them down one by one. For any numerical comparison, I'll be using, as a baseline, the current SimCraft T22 Mythic Raid profile run through Raidbots, which can be found here: [https://www.raidbots.com/simbot/report/ed3PhZWAAE1pQcdue257k6/simc](https://www.raidbots.com/simbot/report/ed3PhZWAAE1pQcdue257k6/simc). However, its late and I've not been sleeping much the past few days (toddler), so don't expect my math to be perfect. As people, inevitably, correct my math, I'll update the article.
+
+For a compiled list of all the changes for all classes and more, see WoWHead's pages on them: [https://www.wowhead.com/class-changes-tides-of-vengeance-patch-81](https://www.wowhead.com/class-changes-tides-of-vengeance-patch-81)
+
+### Talents and Abilities
+
+##### List
+
+- **[Windwalker Monk](https://ptr.wowhead.com/spell=137025/windwalker-monk)**   Effect #1 Apply Aura: Modifies Damage/Healing Done:  **~~-27%~~** **-21%**
+  Effect #2 Apply Aura: Modifies Periodic Damage/Healing Done:  **~~-27%~~** **-21%**
+- **[Rushing Jade Wind](https://ptr.wowhead.com/spell=116847/rushing-jade-wind)** Summons a whirling tornado around you, causing [(9) \* (10% of Attack power)] damage over 6 sec to enemies within 8 yards.
+  Specializations changed from **Brewmaster** to **Brewmaster/Windwalker**
+- **[Touch of Death](https://ptr.wowhead.com/spell=115080/touch-of-death)** Inflict mortal damage on an enemy, causing the target to take damage equal to **~~50%~~** **35%** of your maximum health after 8 sec, reduced against players.
+  During the 8 sec duration, 10% of all other damage you deal to the target will be added to the final damage dealt.
+- **[Touch of Karma](https://ptr.wowhead.com/spell=122470/touch-of-karma)** **~~All damage you take is redirected~~** **Absorbs all damage taken for 10 sec, up to 50% of your maximum health, and redirects 70% of that amount to the enemy target as Nature damage over 6 sec.** **~~Damage cannot exceed 50% of your maximum health. Lasts 10 sec.~~**
+- **[Good Karma](https://ptr.wowhead.com/spell=280195/good-karma)** 100% of the damage redirected by Touch of Karma **~~can now redirect an additional 50% of your maximum health.~~****also heals you.**
+- **[Crackling Jade Lightning](https://ptr.wowhead.com/spell=117952/crackling-jade-lightning)** Channel Jade lightning, causing (**~~27.977%~~****22.4%** of Attack power) Nature damage over 4 sec to the target and sometimes knocking back melee attackers.
+
+##### Breakdown
+
+**[Windwalker Monk](https://ptr.wowhead.com/spell=137025/windwalker-monk)**   Effect #1 Apply Aura: Modifies Damage/Healing Done:  **~~-27%~~** **-21%** Effect #2 Apply Aura: Modifies Periodic Damage/Healing Done:  **~~-27%~~** **-21%**
+
+This change, although may be somewhat confusing, changes our "aura" from reducing our damage by 27% to reducing it by 21%, which is a buff. Going from 73% damage to 79% damage is roughly an 8.2% increase in damage. This aura affects nearly all our abilities except [Touch of Karma](http://bfa.wowhead.com/spell=122470), [Touch of Death](http://bfa.wowhead.com/spell=115080), and auto-attacks, and this buff is absolutely done to offset the damage. If you (I think) low-ball estimate that this is an 8.2% increase to 65% of our damage, that translates to roughly a 5% increase in our damage.
+
+**[Rushing Jade Wind](https://ptr.wowhead.com/spell=116847/rushing-jade-wind)** Summons a whirling tornado around you, causing [(9) \* (10% of Attack power)] damage over 6 sec to enemies within 8 yards. Specializations changed from **Brewmaster** to **Brewmaster/Windwalker**
+
+There's actually a LOT more going on with this change than it may initially seem as Windwalkers are having our [Rushing Jade Wind](https://www.wowhead.com/spell=261715/rushing-jade-wind) changed entirely. It will no longer be a "toggle" that drains energy per second, it will be back to costing 1 Chi and needing to be turned back on like any other short cooldown.
+
+**PRO:** Rather than being a "set it and forget it" ability, it will be more active. This gives us another button to press every 6 seconds, so for everyone who felt that the rotation slowed down too much with talent, here's another button to press.
+
+**CON:** This is a nerf to the ability's damage. Currently (in 8.0) it still does 90% AP over 6 seconds, but those 6 seconds cost 18 energy, plus 3 more for the initial press. This meant that it was 5% AP per energy. Now, it costs 1 Chi, which is equal to 25 energy, (half a [Tiger Palm](http://bfa.wowhead.com/spell=100780) which costs 50 energy) so that means that its 3.6% AP per energy.
+
+\*\* \*\* Technically, if that 1 Chi comes from [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) then its 1/3 of the 40 energy cost or 13.333 energy, which means that its then 6.75% AP per energy, so then its a buff. However, it should average out to a nerf since if you're chain casting, you can fit 5 [Rushing Jade Wind](https://ptr.wowhead.com/spell=116847/rushing-jade-wind) between every [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947). Further, if that 1 Chi comes from [Energizing Elixir](http://bfa.wowhead.com/spell=115288) then its just free damage, but not practical to think about that too hard since you get 10 [Rushing Jade Wind](https://ptr.wowhead.com/spell=116847/rushing-jade-wind) to every [Energizing Elixir](http://bfa.wowhead.com/spell=115288).
+
+Functionally this is unlikely to change how and when we use [Rushing Jade Wind](https://ptr.wowhead.com/spell=116847/rushing-jade-wind). You'll still want to use it with 2 or more targets and not with only 1.
+
+**[Touch of Death](https://ptr.wowhead.com/spell=115080/touch-of-death)** Inflict mortal damage on an enemy, causing the target to take damage equal to **~~50%~~** **35%** of your maximum health after 8 sec, reduced against players. During the 8 sec duration, 10% of all other damage you deal to the target will be added to the final damage dealt.
+
+This is pretty straightforward. Rather than [Touch of Death](https://ptr.wowhead.com/spell=115080/touch-of-death) starting off with 50% of your health, it starts off with 35% of your health. The damage transferred into [Touch of Death](https://ptr.wowhead.com/spell=115080/touch-of-death) will remain the same size, just the initial part will be smaller. Although this is another nerf, it is one that many people asked for, even if you don't realize it. The top complaint for Windwalkers so far this expansion was how much damage was done through the "Touch" abilities of [Touch of Death](http://bfa.wowhead.com/spell=115080) and [Touch of Karma](http://bfa.wowhead.com/spell=122470). This directly addresses that concern and complaint. Looking at the current SimCraft profile, this would take 27k damage from each [Touch of Death](http://bfa.wowhead.com/spell=115080) for a loss of roughly 300 DPS or -1.62% damage loss.
+
+**[Touch of Karma](https://ptr.wowhead.com/spell=122470/touch-of-karma)** **~~All damage you take is redirected~~** **Absorbs all damage taken for 10 sec, up to 50% of your maximum health, and redirects 70% of that amount to the enemy target as Nature damage over 6 sec.** **~~Damage cannot exceed 50% of your maximum health. Lasts 10 sec.~~**
+
+**[Good Karma](https://ptr.wowhead.com/spell=280195/good-karma)** 100% of the damage redirected by Touch of Karma **~~can now redirect an additional 50% of your maximum health.~~****also heals you.**
+
+Obviously, its easiest to address both these changes together as they are directly related. This is another nerf, and although its definitely bigger than the nerf to [Touch of Death](http://bfa.wowhead.com/spell=115080), its another that was practically SCREAMED for. [Touch of Karma](http://bfa.wowhead.com/spell=122470) was the biggest reason people complained about the "Touch" abilities, when it could do upwards of 15% of your damage during a fight and prompted a "degenerate" playstyle. The change to [Good Karma](https://ptr.wowhead.com/spell=280195/good-karma) was something that people clamored for since the current version was datamined. Windwalkers lack self-healing, and [Good Karma](https://ptr.wowhead.com/spell=280195/good-karma) will provide us with a nice chunk of it back that we had in Legion. Further nerfing [Touch of Karma](http://bfa.wowhead.com/spell=122470) just continues to shift damage away from the the "Touch" abilities.
+
+Overall [Touch of Karma](http://bfa.wowhead.com/spell=122470) + [Good Karma](https://ptr.wowhead.com/spell=280195/good-karma) will go from absorbing 100% of your health and redirecting it as damage to absorbing 50% of your health and dealing out a maximum of 35% of your health as damage. This is obviously a HUGE nerf to its damage, but also makes it SIGNIFICANTLY easier to make the most out of it without having to needlessly put yourself at risk. The "degenerate" playstyle is still there, its just MUCH less effective and the benefit is much smaller for the riskier playstyle. Looking at SimCraft, [Touch of Karma](http://bfa.wowhead.com/spell=122470) + [Good Karma](https://ptr.wowhead.com/spell=280195/good-karma) accounted for 13.1% single target damage or 2,405 DPS. These changes would make that number closer to 840 DPS. This would be a 8.5% DPS loss to the SimCraft profile. If this number angers you, not sure what you expected.
+
+**[Crackling Jade Lightning](https://ptr.wowhead.com/spell=117952/crackling-jade-lightning)** Channel Jade lightning, causing (**~~27.977%~~****22.4%** of Attack power) Nature damage over 4 sec to the target and sometimes knocking back melee attackers.
+
+OH NOES!! **\*\*UPDATE\*\*** This was apparently done because [Crackling Jade Lightning](https://ptr.wowhead.com/spell=117952/crackling-jade-lightning) now deals damage on initial cast, so it hits an extra time. That means that this nerf is not actually a nerf as it keeps the total damage the same.
+
+##### Summary
+
+The main point to these changes is basically giving the people what they asked for. The speed of [Rushing Jade Wind](https://ptr.wowhead.com/spell=116847/rushing-jade-wind) was "fixed" and damage has been moved out of the "Touch" spells and into our other abilities. Although we lost approximately 10% damage, and only gained back 5% or so, this was "technically" better for AOE, as the damage loss wasn't as big, and the damage gain would be bigger. Windwalker [isn't exactly lighting up the charts right now](https://www.warcraftlogs.com/zone/statistics/19#aggregate=amount), so the spec doesn't need to lose any more damage. However, this \*should\* balance our abilities a bit better so that 30% of our damage isn't tied up in the "Touches", meaning that if/when we need further aura buffs, it will be even more impactful.
+
+Other results of these changes are that Versatility will become slightly less strong compared to the other stats. It will still likely be the best stat for just about everyone, as it's still the only stat that affects all our damage, converts at a low rate, and is comparatively hard to find. The priority/rotation won't really change at all, you'll just prioritize using [Rushing Jade Wind](https://ptr.wowhead.com/spell=116847/rushing-jade-wind) ahead of [Rising Sun Kick](http://bfa.wowhead.com/spell=107428), [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546), and [Blackout Kick](http://bfa.wowhead.com/spell=100784) at 2 targets, ahead of [Fists of Fury](http://bfa.wowhead.com/spell=113656) until over 10 targets, and never ahead of [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175), with some wiggle room depending on traits. Although it may not immediately seem like it, that's the current priority for the most part.
+
+### Azerite Traits
+
+##### List
+
+- **REMOVED** **[Iron Fists](https://ptr.wowhead.com/spell=272804/iron-fists)** Fists of Fury grants you 547 Critical Strike for 10 sec when it hits at least 3 enemies.
+- **REMOVED** **[Meridian Strikes](https://ptr.wowhead.com/spell=278580/meridian-strikes)** When you Combo Strike, the cooldown of Touch of Death is reduced by 0.25 sec. Touch of Death deals an additional 11256 damage.
+- **REMOVED** **[Swift Roundhouse](https://ptr.wowhead.com/spell=277669/swift-roundhouse)** Blackout Kick increases the damage of your next Rising Sun Kick by 359, stacking up to 2 times.
+
+- **NEW** **[Dance of Chi-Ji](https://ptr.wowhead.com/spell=286585/dance-of-chi-ji)**   Spending Chi has a chance to make your next Spinning Crane Kick free and deal 1415 additional damage. **Replaces Meridian Strikes**
+- **NEW** **[Exit Strategy](https://ptr.wowhead.com/spell=289323/exit-strategy)**   Rolling grants you 73 Avoidance for 2 sec. Taking non-periodic damage in this time reduces the cooldown of Roll by 5 sec.
+- **NEW** **[Fury of Xuen](https://ptr.wowhead.com/spell=287055/fury-of-xuen)**   Your Combo Strikes grant you the Fury of Xuen, giving your next Fists of Fury a 3% chance to grant 130 Haste and invoke Xuen, The White Tiger for 8 sec. Stacks up to 33 times. **Replaces Iron Fist**
+- **NEW** **[Glory of the Dawn](https://ptr.wowhead.com/spell=288634/glory-of-the-dawn)**   Rising Sun Kick has a chance to trigger a second time, dealing 3816 Physical damage and restoring 1 Chi. **Replaces Swift Roundhouse**
+
+##### Breakdown
+
+**REMOVED** **[Iron Fists](https://ptr.wowhead.com/spell=272804/iron-fists)** Fists of Fury grants you 547 Critical Strike for 10 sec when it hits at least 3 enemies.
+**REMOVED** **[Meridian Strikes](https://ptr.wowhead.com/spell=278580/meridian-strikes)** When you Combo Strike, the cooldown of Touch of Death is reduced by 0.25 sec. Touch of Death deals an additional 11256 damage.
+**REMOVED** **[Swift Roundhouse](https://ptr.wowhead.com/spell=277669/swift-roundhouse)** Blackout Kick increases the damage of your next Rising Sun Kick by 359, stacking up to 2 times.
+
+Rather than simply adding other traits, Blizzard decided to get rid of a few and replace them with the new ones. [Iron Fists](https://ptr.wowhead.com/spell=272804/iron-fists) is currently one of our strongest traits for pure AOE, so losing it is a bummer, and doesn't make sense from a tuning standpoint. However, its being replaced with another trait that seems to revolve around [Fists of Fury](http://bfa.wowhead.com/spell=113656), providing Haste, which is slightly stronger in AOE, as well as gives us another copy of Xuen, who is strong in cleave. Although [Meridian Strikes](https://ptr.wowhead.com/spell=278580/meridian-strikes) is generally seen as a trait that you want to try and grab one of, in reality its not as strong as it should be. If it got you another cast of [Meridian Strikes](https://www.wowhead.com/spell=278580) it was super strong, if it didn't then it was super weak. This variability is probably why its getting the ax. [Swift Roundhouse](https://ptr.wowhead.com/spell=277669/swift-roundhouse) is the obvious choice to get eliminated as it was probably the most problematic Azerite trait in the game, and is currently just garbage.
+
+**NEW** **[Dance of Chi-Ji](https://ptr.wowhead.com/spell=286585/dance-of-chi-ji)**   Spending Chi has a chance to make your next Spinning Crane Kick free and deal 1415 additional damage. **Replaces Meridian Strikes**
+
+Well, if you wanted a little bit more variability and AOE damage, then this is the trait for you. Currently it has 2 procs per minute, modified by Haste, which is decent. Because the chance to proc won't stack with multiple traits, its likely a trait that you'll want to always have one of, especially with the added ring of traits, making it much easier to grab one of these traits. In AOE it will be a must-have, and since the damage is dealt to each target it hits, it may even be worth stacking them in AOE, although that will depend on tuning, so we won't know how stacking them compares for a few weeks still. In single target, its possible that you'll still want to have at least one trait, since free damage is still free damage. With the trait, [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) will do slightly more damage than [Blackout Kick](http://bfa.wowhead.com/spell=100784), so if its free, then its stronger than the Blackout Kick! proc, which gives it potential to be a non-useless trait, even in single target.
+
+**NEW** **[Exit Strategy](https://ptr.wowhead.com/spell=289323/exit-strategy)**   Rolling grants you 73 Avoidance for 2 sec. Taking non-periodic damage in this time reduces the cooldown of Roll by 5 sec.
+
+Just a smidge of extra survivability when you're trying to avoid damage. Probably not a trait you're going to go out of your way to get, but the CDR on [Roll](https://www.wowhead.com/spell=109132/roll) could be fun in the right situation.
+
+**NEW** **[Fury of Xuen](https://ptr.wowhead.com/spell=287055/fury-of-xuen)**   Your Combo Strikes grant you the Fury of Xuen, giving your next Fists of Fury a 3% chance to grant 130 Haste and invoke Xuen, The White Tiger for 8 sec. Stacks up to 33 times. **Replaces Iron Fist**
+
+This is probably the trait you've seen people talking about the most. Just to be clear, **only the Haste stacks with more traits and only the chance to summon Xuen stacks up to 33**. People have figured out that the stacking buff you get is not consumed simply by using [Fists of Fury](http://bfa.wowhead.com/spell=113656), its only consumed when you summon a Xuen. You can also \*theoretically\* get overlapping procs, so that you have additional copies of Xuen. As far as we know and have been able to test, the Xuen from [Fury of Xuen](https://ptr.wowhead.com/spell=287055/fury-of-xuen) works the same as Xuen from [Invoke Xuen, the White Tiger](https://bfa.wowhead.com/spell=123904/invoke-xuen-the-white-tiger). Probably the biggest bummer of this trait is that the Haste granted likely comes after the [Fists of Fury](http://bfa.wowhead.com/spell=113656) starts, meaning that its cooldown is not Hasted for the duration of the buff, nor is the channel speed hasted, so it would slightly change the amount of energy you regen while channeling [Fists of Fury](http://bfa.wowhead.com/spell=113656). This is another trait that you'll likely want to snag one of.
+
+**NEW** **[Glory of the Dawn](https://ptr.wowhead.com/spell=288634/glory-of-the-dawn)**   Rising Sun Kick has a 25% chance to trigger a second time, dealing 3816 Physical damage and restoring 1 Chi. **Replaces Swift Roundhouse**
+
+For everyone who missed the double backflip of [Tornado Kicks](https://www.wowhead.com/spell=196082/tornado-kicks), your prayers have been answered. Replacing [Swift Roundhouse](https://www.wowhead.com/spell=277669/swift-roundhouse), which also modified [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) is a great change, especially since this trait should be a smidge less volatile. With this proc rate and the damage added to [Rising Sun Kick](http://bfa.wowhead.com/spell=107428), its another trait that has a strong chance of being desirable.
+
+##### Summary
+
+The traits we lost aren't that big of a deal, but the ones we gained have the potential to be pretty strong. With the addition of an extra ring of traits in 8.1 and some traits getting replaced, its not a terrible idea to hold on to some strong pieces that have the traits that are getting replaced so that you can take advantage of the new traits, if they're strong, when 8.1 happens. Overall, from my opinion, these are positive changes to our Azerite Trait pool, and as they are traits that have most of their strength in the part that doesn't stack with more traits, they also help to mitigate the crazy stacking potential that we saw with the old [Swift Roundhouse](https://www.wowhead.com/spell=277669/swift-roundhouse) trait.
+
+There is still a few weeks of PTR before this patch goes live, so expect more changes to come, maybe even some class/spec balancing which will hopefully benefit Windwalkers.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius), where I stream all my raids as well as some article writing and more.

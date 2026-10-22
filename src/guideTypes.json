@@ -1,0 +1,297 @@
+{
+  "windwalker-pve": {
+    "title": "Windwalker PvE Guide",
+    "spec": "windwalker",
+    "banner": "/img/uploads/2020/08/Jari-WW.png",
+    "file": "docs/tww/windwalker/pve-guide.mdx",
+    "wp_id": "21927",
+    "groups": [
+      {
+        "key": "builds",
+        "heading": "Talent Builds",
+        "wp_text": "Talents Title",
+        "wp_tabs": "Talent Tabs",
+        "tabs": [
+          [
+            "classtree",
+            "Class Tree"
+          ],
+          [
+            "raid",
+            "Raid"
+          ],
+          [
+            "mythicplus",
+            "Mythic+"
+          ],
+          [
+            "delves",
+            "Delves"
+          ],
+          [
+            "flowchart",
+            "Flowchart"
+          ],
+          [
+            "omniumfolio",
+            "Omnium Folio"
+          ]
+        ]
+      },
+      {
+        "key": "cooldowns",
+        "heading": "Abilities",
+        "wp_text": "Ability/Cooldown Text",
+        "wp_tabs": "Cooldown Tabs",
+        "tabs": [
+          [
+            "celestialconduit",
+            "Celestial Conduit"
+          ],
+          [
+            "fortifyingbrew",
+            "Fortifying Brew"
+          ],
+          [
+            "invokexuen",
+            "Invoke Xuen"
+          ],
+          [
+            "touchofdeath",
+            "Touch of Death"
+          ],
+          [
+            "touchofkarma",
+            "Touch of Karma"
+          ],
+          [
+            "zenith",
+            "Zenith"
+          ]
+        ]
+      },
+      {
+        "key": "priority.singletarget",
+        "label": "Single-target priority",
+        "heading": "Priority Lists",
+        "wp_text": "ST/Ability Priority Text",
+        "wp_tabs": "ST Priority Tabs",
+        "tabs": [
+          [
+            "default_shadopan",
+            "Default SP"
+          ],
+          [
+            "default_conduit",
+            "Default Conduit"
+          ],
+          [
+            "advanced_shadopan",
+            "Advanced Shado-Pan"
+          ],
+          [
+            "advanced_conduit",
+            "Advanced Conduit"
+          ]
+        ]
+      },
+      {
+        "key": "priority.aoe",
+        "label": "AOE priority",
+        "heading": "AOE Priority",
+        "wp_text": "AOE Priority Text",
+        "wp_tabs": "AOE Priority Tabs",
+        "tabs": [
+          [
+            "shadopan",
+            "Shado-Pan"
+          ],
+          [
+            "conduit",
+            "Conduit of the Celestials"
+          ]
+        ]
+      },
+      {
+        "key": "openers",
+        "heading": "Openers",
+        "wp_text": "Openers Title",
+        "wp_tabs": "Opener Tabs",
+        "tabs": [
+          [
+            "shadopan",
+            "Shado-Pan"
+          ],
+          [
+            "conduit",
+            "Conduit of the Celestials"
+          ]
+        ]
+      }
+    ],
+    "body": "Everything below the tabbed sections: ability notes, gearing, enchants, macros, changelog."
+  },
+  "brewmaster-pve": {
+    "title": "Brewmaster PvE Guide",
+    "spec": "brewmaster",
+    "banner": "/img/uploads/2020/08/Jari-BrM.png",
+    "file": "docs/tww/brewmaster/pve-guide.mdx",
+    "wp_id": "21941",
+    "groups": [
+      {
+        "key": "builds",
+        "heading": "Talent Builds",
+        "wp_text": "Talents Title",
+        "wp_tabs": "Talent Tabs",
+        "tabs": [
+          [
+            "standard",
+            "Standard/Defensive Raiding"
+          ],
+          [
+            "advanced",
+            "Advanced/Offensive Raiding"
+          ],
+          [
+            "mythicplus",
+            "Mythic+ (Lower Keys)"
+          ],
+          [
+            "delves",
+            "Delves/Open World"
+          ]
+        ]
+      },
+      {
+        "key": "priority",
+        "heading": "Ability Priority",
+        "wp_text": "Ability Priority Title",
+        "wp_tabs": "Priority Tabs",
+        "tabs": [
+          [
+            "opener",
+            "Brewmaster Monk Opener"
+          ],
+          [
+            "rotation",
+            "Brewmaster Monk Rotation Priority"
+          ]
+        ]
+      }
+    ],
+    "body": "Everything below the tabbed sections: ability usage, gearing, macros, changelog."
+  },
+  "mistweaver-pve": {
+    "title": "Mistweaver PvE Guide",
+    "spec": "mistweaver",
+    "banner": "/img/uploads/2020/08/Jari-MW.png",
+    "file": "docs/tww/mistweaver/pve-guide.mdx",
+    "wp_id": "16973",
+    "groups": [
+      {
+        "key": "builds",
+        "heading": "Talent Builds",
+        "wp_text": "Talents Title",
+        "wp_tabs": "Talent Tabs",
+        "tabs": [
+          [
+            "raid_sheilun",
+            "Standard Raid Talents (Sheilun's Gift)"
+          ],
+          [
+            "raid_upwelling",
+            "Standard Raid Talents (Upwelling)"
+          ],
+          [
+            "mythicplus",
+            "M+ Default"
+          ]
+        ]
+      },
+      {
+        "key": "priority",
+        "heading": "Ability Priority",
+        "wp_text": "Ability Priority Title",
+        "wp_tabs": "Ability Priority Tabs",
+        "tabs": [
+          [
+            "dungeon",
+            "Dungeon Healing"
+          ],
+          [
+            "raid",
+            "Raid Healing"
+          ]
+        ]
+      }
+    ],
+    "body": "Everything below the tabbed sections: ability usage, gearing, WeakAuras, macros, changelog."
+  },
+  "windwalker-mop": {
+    "title": "Classic Windwalker PvE Guide (Mists)",
+    "spec": "windwalker",
+    "banner": "/img/uploads/2020/08/Jari-WW.png",
+    "file": "docs/mop/windwalker/pve-guide.mdx",
+    "wp_id": "24090",
+    "groups": [
+      {
+        "key": "builds",
+        "heading": "Talent Builds",
+        "wp_text": "Talents Title",
+        "wp_tabs": "Talent Tabs",
+        "tabs": [
+          [
+            "singletarget",
+            "Single Target/Raid"
+          ],
+          [
+            "multitarget",
+            "Multi-Target/Dungeons"
+          ],
+          [
+            "openworld",
+            "Open World/Leveling"
+          ]
+        ]
+      },
+      {
+        "key": "priority",
+        "heading": "Abilities",
+        "wp_text": "ST/Ability Priority Text",
+        "wp_tabs": "Priority Tabs",
+        "wp_outro": "Openers Title",
+        "tabs": [
+          [
+            "opener",
+            "Opener"
+          ],
+          [
+            "singletarget",
+            "Single Target"
+          ],
+          [
+            "multitarget",
+            "Multi Target"
+          ]
+        ]
+      },
+      {
+        "key": "gear",
+        "heading": "Gearing",
+        "wp_text": "Gearing",
+        "wp_tabs": "BiS List Tabs",
+        "tabs": [
+          [
+            "preraid",
+            "Pre-Raid"
+          ],
+          [
+            "throneofthunder",
+            "Throne of Thunder"
+          ]
+        ]
+      }
+    ],
+    "body": "Everything below the tabbed sections: gems, enchants, miscellaneous, WeakAuras, macros."
+  }
+}

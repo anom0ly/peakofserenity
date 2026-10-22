@@ -1,0 +1,90 @@
+---
+title: Stat Weights and You
+slug: /2016/09/14/stat-weights-and-you
+date: '2016-09-14T15:03:52'
+authors:
+- pandanaconda
+tags:
+- Windwalker
+description: '"Follow Up" Article slightly more updated./2017/10/16/stat-weights-and-you-round-2/ With Legion and how easy to come by the gear is and how easily you can…'
+wp_id: 2385
+original_url: https://www.peakofserenity.com/2016/09/14/stat-weights-and-you/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+### ["Follow Up" Article slightly more updated.](/2017/10/16/stat-weights-and-you-round-2/)
+
+With Legion and how easy to come by the gear is and how easily you can tailor your perfect set of stats, more and more people have been coming in and asking about gearing and, specifically, stats weights.
+
+However, "stats weight" is probably the single most misunderstood theorycrafting tool laying around. Most of the terms associated with it are misunderstood or used in the wrong way (diminishing returns, soft cap, hard cap, breakpoints, …). The concept itself is not clear and leads to a lot of issues within guides. However, most people don’t really care: they want numbers telling them what to do and have no way to check whether those numbers are true or not.
+
+We’d like to enlighten you with some of the information on how it works. First, I’ll just give rough information on how stats weights work, how to get them and what to do with it, as well as our simplified stats balancing method. Eventually I’ll try to elaborate for those who want to look further into it, explaining those scary words and some advanced things about weights.
+
+#### What are stats weights?
+
+[![](http://sf.co.ua/13/07/wallpaper-2921923.jpg)](http://sf.co.ua/13/07/wallpaper-2921923.jpg)Stats weights are numbers associated with primary/secondary stats meant to give relative « weights » of importance. If one stat weight is twice as big as another, it means gaining some of that stat will increase the dps twice as much as the other one does. Stats weights are, in essence, local. They are calculated (usually via Simulation tools like [SimulationCraft](https://simulationcraft.org/), notably) at one specific gearset, for one specific type of fight (oftentimes single target), duration, etc.
+
+To calculate stats weights, SimCraft basically calculates the gains in dps that would result from a very small increase in each stat, then divides those gains by the amount of stats gained. It is very similar, in that regard, to calculus and the computation of a derivative (https://en.wikipedia.org/wiki/Derivative):
+
+We assume that damage per second is a continuous function of your stats and derive stats weights out of the gains the same why we’d do it for a function of several variables (here, we consider dps as a continuous function of primary stats, versatility, haste, critical chance, mastery ratings.) If you’re into that, look further into partial derivation of a multiple variable function at set values for all variables except one. Here, our multiple variables are all your different stats and we’re doing partial derivation on one stat.
+
+One other thing worth noting: for gear gain, it is often risky to look at very small gains and take the results as definitive. Some amount of haste gain could push it to some amount that allows one extra cast during each [Serenity](http://www.wowhead.com/spell=152173), or each [momentum](https://www.wowhead.com/spell=206476/momentum) window, or each [combustion](https://www.wowhead.com/spell=190319/combustion) or whatnot. Pushing these very small breakpoints will result in huge stats weights which do not reflect the reality of things or are only true for a very small gain.
+
+![](http://study.com/cimages/course-image/calculus_98661_large.jpg)For instance, if you’re calculating your stat weight at a point where haste is reaching such a breakpoint, SimCraft will go crazy and tell you haste is 12 times better than any other stat. Of course, if you’d watched a bit further, you’d have seen than in fact it wasn’t, and as soon as you had one extra haste gem SimCraft went back to telling you that haste was not your best stat. Furthermore, just because SimCraft saw such a breakpoint doesn’t mean it really exists. It could be due to action priority lists being rigid and not reacting the way humans do to some things lining up or not.
+
+To avoid this happening to you, there is a tool in [SimulationCraft](https://simulationcraft.org/) called plotting that allows you to see how your dps evolves with your stats by small increments (you can control all these aspects) and see how smoothly they evolve.
+
+**TL;DR: Stats weights tell you how much of a dps increase each secondary stat is compared to your primary stat. They are tied to your current gear set and change as you change it. Usually, the more you stack one stat, the worse it gets, meaning you will likely have to sim regularly.**
+
+#### How do I get stats weights?
+
+This, to some extent, is the easy part. First solution is to go to [Beotorch.com](http://www.beotorch.com), create an account, find your character from armory, check the « Calculate Scale Factors » and you’re good to go. After a few minutes, you’ll have results including a list of values associated with each stats. This is literally the best tool to get Simcraft stats weights easily as it was designed for exactly that. It will use the base action priority list for it, which is usually very decent/the best available work from Hinalover for Windwalkers. It will allow you to sim variable fight lengths, number of targets, AoE spawns…
+
+![](https://www.statnews.com/wp-content/uploads/2016/04/Scale_STAT-1024x576.jpg)If you wanna look further into it, or into this « plotting » I mentioned earlier, then try the real [SimulationCraft](https://simulationcraft.org/) engine. It is what [Beotorch.com](http://www.beotorch.com) runs to get you these, but running it yourself grants you extra freedom. You can change anything on your gear, your stats, your race, any sort of settings. Just go to options -> stats scaling and check the « all stats » options.
+
+If you wanna check plotting it’s in there as well; there are many options I’ll let you discover.
+
+#### What do I do with these numbers then?
+
+While Pawn is a great add-on that tells you how much of an upgrade each item you drop can be, it has it’s limit. The limits are not in the add-on itself, they are in how you use them. If I was to use this string coming out of leveling, in 800 gear, the following would happen.
+
+First all the big ilvl upgrades would win just because of the amount of stats I’d gain. However, my gear would slowly turn into a more mastery heavy one and low haste one, up until a point where it becomes obvious I’ve overdone it and mastery is my worst stat and haste my best one.
+
+To avoid this, two solutions:
+
+[![editweights](http://www.walkingthewind.com/wp-content/uploads/2016/09/editweights.png)](http://www.walkingthewind.com/2016/09/14/stat-weights-and-you/editweights/)First one is what this article has been about: simulate it. [Beotorch.com](http://www.beotorch.com) is an excessively easy tool to use, takes a couple minutes. I know it’s hard to simulate your gear when the loot drops and you have to decide whether to take it or leave it for someone else. But you probably won’t change 5 items in one run, or when you do most will be obvious gains because of crazy ilvl increases.
+Therefore, whenever you change a couple items, when you go offline run a sim on [Beotorch.com](http://www.beotorch.com) or Simcraft and update your stats weights string. It’ll cover changes for your next run just fine.
+
+**If you're ever looking to determine if X item is better than Y, its always best to sim your character with that slot empty. This will provide you with the stat weights needed to best compare two or more items directly.**
+
+The other solution is one I fancy a lot. What follows is only valuable for Windwalkers.
+
+I don’t like trusting all my gear management in a tool like Simcraft. Not because Simcraft doesn’t work, it’s usually very good. But rather because of my own possible failures. Therefore, I always like to do some napkin math to sanity check results.
+
+Babylonius and I, with the help of some very solid people (Navv from simcraft, FieryDemise from RavenHoldt, Hinalover) have done a lot of calculations to try and push the idea that stats weights are simple partial derivations. Thanks to that work, we ended up finding the exact « gaps » between stats that would allow us to balance our gear.
+
+![](http://caninetraining.com.au/images/easyblog_articles/65/stone-balance.png)When following these rules, you should find your stats weights even out very nicely and have roughly Crit=Vers=Mastery >> haste.
+
+Of course, this is not absolute. Having a strong trinket that values critical chance, haste and versatility but not mastery can change these numbers quite a bit (aka telling you to drop 700-1000 mastery rating for instance.) But this is the best we could achieve as general rules:
+
+**Outdated as of 7.1.5, just examples of the interaction between stats.**
+
+-Blood elf: Mastery 4500 above Versatility, Versatility 800 above Crit rating; haste anywhere between 5% and 10%
+
+-Other races: Mastery 4500 above versatility, Versatility 400 above Crit rating; haste anywhere between 5% and 10%
+
+This rule is not very important: you should not go crazy about them and end up having mastery OCDs. Just because versatility is less than 800 ahead of Crit rating doesn’t mean you should absolutely go for versatility; you probably are still looking for some mastery. However it gives you guidelines to how well balanced gear probably looks like.
+
+I’ll try to develop where these estimations come from and the mathematical justifications in next stats weights post.
+
+#### Conclusion
+
+With these two ways of approximating what your stats should look like, you could always compare them to sanity check for yourself. If you run, for instance, a trinket like Faulty Countermeasure, you might find that in your sims the amount mastery should be above other stats is rather 3500 or something. Something like a trinket proccing a specific stat will drop that stat’s weight quickly.
+
+When it comes to stats weight, always use them with a grain of salt. If you have different ways of obtaining them do so every now and then (SimCraft, [Beotorch.com](http://www.beotorch.com), AskMrRobot, our sanity checks) rather than using one blindly.
+
+And as some very smart people would say, for most items you’ll go after item lvl anyways.
+
+**TL:DR - Stat weights are not valid forever, just for the next small portion of stats that you gain. They don't dictate replacing items, just what stat you want next. Best practice is to sim your character regularly. If you want to determine if one item is better than another, sim your character with that socket empty and use the stat weights generated to compare them. Take all stat weights with a grain of salt. Scroll up slightly to see the stat gaps that help dictate what stat is better than another.**
+
+Hopefully, this answers more questions than it creates. As always you can find us on [Discord](https://discord.gg/0dkfBMAxzTkmAVwq) to answer questions, and if you liked what you read don’t hesitate to scroll down or to the top and subscribe and [support](http://www.walkingthewind.com/donate/) WtW.

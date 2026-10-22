@@ -1,0 +1,78 @@
+---
+title: Simulationcraft and Windwalkers - Opportunities and Errors
+slug: /2017/09/17/simulationcraft-and-windwalkers-opportunities-and-errors
+date: '2017-09-17T09:56:10'
+authors:
+- juko
+tags:
+- Windwalker
+description: The Windwalker Playstyle and Simulations If you've been following windwalker discussion through Legion, it won't be the first time you hear about the…
+wp_id: 8181
+original_url: https://www.peakofserenity.com/2017/09/17/simulationcraft-and-windwalkers-opportunities-and-errors/
+---
+
+## The Windwalker Playstyle and Simulations
+
+If you've been following windwalker discussion through Legion, it won't be the first time you hear about the difficulties involved with windwalkers and simulationcraft. The nature of windwalkers playstyle as a spec heavily reliant on flexible resource management makes it difficult to program a fitting Action Priority List (APL) that simulates perfectly in every scenario. Over the course of the expansion the resource spending in the windwalker profile has already been tuned several times and will be tuned again when people start using T21. A notable example of this was when [Katsuo's Eclipse](http://www.wowhead.com/item=137029/katsuos-eclipse) was performing extremely well in early T19 simulations because the resource spending wasn't tuned correctly for the T19 2pc.
+
+With the current T20 4pc + T19 2pc build where you interrupt [Fists of Fury](http://www.wowhead.com/spell=113656/fists-of-fury) during [Serenity](http://www.wowhead.com/spell=152173/serenity), there are also a few issues, as the way simulations handle interrupts of channeled abilities is a bit different from how you would do it in-game. Currently the windwalker simulations will only interrupt [Fists of Fury](http://www.wowhead.com/spell=113656/fists-of-fury) immediately following a tick, which sometimes causes it to channel longer than it should have. This is negligible in the standard [Serenity](http://www.wowhead.com/spell=152173/serenity) rotation with one [Fists of Fury](http://www.wowhead.com/spell=113656/fists-of-fury) being cancelled, but is very apparent in the opener where simulations currently only performs a RSK-SotW-BoK-RSK-FoF-RSK-FoF-RSK-FoF sequence during [Serenity](http://www.wowhead.com/spell=152173/serenity) .
+
+With windwalker simulations being imperfect, many people are often left wondering if you can even trust simulations to answer questions about customizing their windwalker. This article serves as an explanation to the problems windwalker simulations have but also a guide to reading your windwalker simulations and includes tools to better evaluate some of the more complicated simulation situations.
+
+If you aren't very familiar with Simulationcraft, consider checking out this page first: [http://peakofserenity.com/how-to-simcraft/](/how-to-simcraft/)
+
+## Haste - Just blame the APL?
+
+As mentioned earlier, programming a flexible resource management is very difficult, and windwalkers will often find that with changing amounts of haste that you also have to change how you manage chi and energy. On top of that, simulations typically has some few smaller haste breakpoints where it is suddenly losing or gaining a cast of abilities like [Rising Sun Kick](http://www.wowhead.com/spell=107428/rising-sun-kick) or [Fists of Fury](http://www.wowhead.com/spell=113656/fists-of-fury). Because of this, haste can often have some very weird values when using simulationcraft to find stat weights. Getting a negative haste value or one twice the weight of mastery can happen and neither are obviously not accurate depictions of a haste value for the simulated character.
+
+Does this mean you sometimes just can't figure out how valuable haste is to you? Not necessarily, you will never be able to get a 100% accurate value, but there are ways to figure out how much haste you want. In my opinion, simulation plots is one of the best ways to understand haste value. You can enable plots by going to the "Plots" tab in the simulationcraft options. ![](/img/uploads/2017/09/Windwalker-haste-plot-300x258.png)
+
+In the plot above you can see how much DPS simulationcraft is getting as a result of adding or removing haste from the default T20M profile in a 300 seconds 20% variance simulation compared to the same thing done with mastery. Mastery has a nice linear scaling, but haste has some issues. The large jumps you see around the -2k mark is related to the profile gaining casts during [Serenity](http://www.wowhead.com/spell=152173/serenity). These breakpoints are somewhat misleading as they are a result of the difficulties with [Fists of Fury](http://www.wowhead.com/spell=113656/fists-of-fury) interrupting. More interesting is the later decline in haste value when adding haste. This is partly because the profile doesn't adapt to spending resources more aggressively, but also because resource waste unavoidably increases at higher haste levels. As a point of reference, the profile used for the plot has 13.75% haste.
+
+Because of the non-linear behaviour with haste, you'll often find windwalkers aren't using stat weights or pawn to determine whether an item with haste is an upgrade, but rather simulating each individual change of those gear pieces. If you absolutely need a stat weight, consider adding/removing some haste with "**gear_haste_rating=**" until you get away from the breakpoints and then run another scaling simulation or manually set it to some lower value relative to your mastery value, that could be 70%
+
+Don't bother trying to figure out anything with haste values in multi-target sims, the resource management is not optimized for multitarget simulations and you won't get very accurate results.
+
+## Belt or Boots?
+
+Since the launch of Tomb of Sargeras, there has been a lot of discussion around the actual value of [Katsuo's Eclipse](http://www.wowhead.com/item=137029/katsuos-eclipse) and whether they are worth using over other legendaries. Since most of our damage is currently being done during [Serenity](http://www.wowhead.com/spell=152173/serenity), where Fists of Fury is free anyway, the extra chi is rarely a noticeable gain. Combine that with a very high burst potential where [Cinidaria](http://www.wowhead.com/item=133976/cinidaria-the-symbiote) gains value, many top monks are now opting to use that instead of boots.
+
+However, a lot of people are now unsure which is the best choice for them. If you just put 2 gearsets using [Katsuo's](http://www.wowhead.com/item=137029/katsuos-eclipse) and [Cinidaria](http://www.wowhead.com/item=133976/cinidaria-the-symbiote) respectively into your simulation profile, you will often see [Katsuo's](/how-to-simcraft/) coming out on top as seen in the example below.
+
+![](/img/uploads/2017/09/Katsuo-vs-Cinidaria-300x51.png)
+
+If you look a little further into it, you will find that the damage from [Cinidaria](http://www.wowhead.com/item=133976/cinidaria-the-symbiote) is lower than what you would typically see in an actual raid fight. This is because of a few things; Simulations not perfectly executing the heroism opener, resource spending not being perfectly tuned for non-boots and because the target health goes below 90% faster than it would in a typical fight.
+
+To get a better comparison you can insert "**enemy_death_pct=**" in the top of your simulation profile and then add a health% that gives cinidaria damage matching how much it's doing in actual raid logs. The death% can sometimes be as high as 40% or more depending on the fight and raid composition you want to simulate. ![](/img/uploads/2017/09/Katsuo-vs-Cinidaria-4-300x50.png)
+
+In the above comparison i had it set so [Cinidaria](http://www.wowhead.com/item=133976/cinidaria-the-symbiote) was doing approximately 4% of the damage. It's important that you check logs to see what you can realistically do with belt and then adapt. If with these kind of sims [Cinidaria](http://www.wowhead.com/item=133976/cinidaria-the-symbiote) is performing close to the same DPS or more, then it's worth using.
+
+## Trinkets and Custom Item APL
+
+In Legion there are a lot more trinkets to choose from compared to earlier expansions. This has led to tools like the trinket spreadsheets being made to get an overview of which trinkets you'd want to pursue for your character. Among these trinkets are some that have on-use effects, that often requires special thought to using. This means that simulations will also have to be programmed to use the trinkets optimally, which because of the various setups of double on-use trinkets is hard to optimize and there hasn't been done very much. Windwalker currently has 2 trinkets with custom APL: [Vial of Ceaseless Toxins](http://www.wowhead.com/item=147011/vial-of-ceaseless-toxins&bonus=3561:1482) and [Specter of Betrayal](http://www.wowhead.com/item=151190/specter-of-betrayal&bonus=3561:1492) but there is a few other trinkets that could benefit from using custom APL.
+
+**DISCLAIMER: THE FOLLOWING APL EXAMPLES ARE NOT OPTIMIZED FOR USE WITH ANOTHER ON-USE TRINKET - INSERT THE LINES IN THE ACTIONS.CD LIST IN YOUR SIMULATION PROFILE**
+
+[Void Stalkers Contract](http://www.wowhead.com/item=151307/void-stalkers-contract&bonus=1826:1497) - the conditions can also be used for [Umbral Moonglaives](http://www.wowhead.com/item=147012/umbral-moonglaives&bonus=3561:1482) but it doesn't gain as much:
+
+> actions.cd+=/use_item,name=void_stalkers_contract,if=cooldown.serenity.remains>20|buff.serenity.up|!talent.serenity.enabled|target.time_to_die&lt;=cooldown.serenity.remains
+
+![](/img/uploads/2017/09/Contract-Custom-300x59.png)
+
+[Horn of Valor](http://www.wowhead.com/item=133642/horn-of-valor&bonus=1826:1497) or [Badge of Conquest](http://www.wowhead.com/item=145818/ferocious-gladiators-badge-of-conquest):
+
+> actions.cd+=/use_item,name=horn_of_valor,if=cooldown.serenity.remains>30|buff.serenity.up|!talent.serenity.enabled|target.time_to_die&lt;=20
+
+![](/img/uploads/2017/09/Horn-Custom-300x63.png)
+
+[Gift of Radiance](http://www.wowhead.com/item=133647/gift-of-radiance&bonus=1826:1497) (you can copy [Vials](http://www.wowhead.com/item=147011/vial-of-ceaseless-toxins&bonus=3561:1482) conditions, but here is the simple version):
+
+> actions.cd+=/use_item,name=gift_of_radiance,if=buff.serenity.up|!talent.serenity.enabled|target.time_to_die&lt;=cooldown.serenity.remains
+
+![](/img/uploads/2017/09/Gift-Custom-300x59.png)
+
+[Ring of Collapsing Futures](http://www.wowhead.com/item=142173/ring-of-collapsing-futures&bonus=1826:1457) - does not put on-use trinkets on cooldown - macro it with your [Strike of the Windlord](http://www.wowhead.com/spell=205320/strike-of-the-windlord)
+
+> actions.cd+=/use_item,name=ring_of_collapsing_futures,if=(cooldown.serenity.remains>=20&buff.temptation.stack&lt;1)|buff.serenity.up|(!talent.serenity.enabled&buff.temptation.stack&lt;1)|target.time_to_die&lt;=cooldown.serenity.remains
+
+![](/img/uploads/2017/09/RoCF-300x62.png)

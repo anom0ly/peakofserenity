@@ -1,0 +1,180 @@
+---
+title: 'Windwalker Log Analysis: Raid Logs'
+slug: /tww/windwalker/pve-guide/log-analysis/raid
+authors:
+- babylonius
+last_update:
+  date: '2023-08-01'
+description: ''
+wp_id: 22840
+original_url: https://www.peakofserenity.com/tww/windwalker/pve-guide/log-analysis/raid/
+---
+
+![Jari WW](/img/uploads/2020/08/Jari-WW.png)
+
+[**Starting**](/tww/windwalker/pve-guide/log-analysis/)
+
+[**Tools**](/tww/windwalker/pve-guide/log-analysis/tools/)
+
+[**Raid**](/tww/windwalker/pve-guide/log-analysis/raid/)
+
+[**Mythic+**](/tww/windwalker/pve-guide/log-analysis/mythicplus/)
+
+This page will be covering Single Target raid encounters. Mostly how to identify the common mistakes done by every other Windwalker. We'll also be talking about Cleave/AOE to a certain extent.
+
+When looking at a log there are a few common mistakes done by almost every other Windwalker. Most parses or individual performances can be improved easily by fixing all or just some of this. These differences can be split into 3 categories. (Keep in mind parses can be misleading because of high gear differences)
+
+1. **Fight Preparation**: Gear, Enchants, Talents, evaluated fight time, potion and CD usage
+2. **Windwalker Basics**: Resource management, buff uptime, debuff uptime, ability priority/usage
+3. **Advanced Gameplay**: opener, CD Windows, buff windows, trinket usage, karma/ToD usage, FoF clipping
+
+So what are the things to specifically look out for and where do we find them?
+
+## Fight Preparation
+
+The first thing you can and should do either before you pull a boss or after a night of prog is checking all the mentioned stuff above. Just search a few of the best logs fitting your prerequisites like trinkets, kill date and ~fight time. Now you can check differences in those things on the summary page with ease. Maybe your gear is not as good as theirs, but you get a rough idea of what you want to play. This can be especially important for talent choices.
+
+Dont just look at one log, some players just don't care in farm or even in prog or just forget to change talents. Always check multiple if you are unsure.
+
+Like mentioned before, due to the nature of Windwalker CD usage or rather CD syncing/desyncing is a highly relevant topic. Make a plan for yourself and check other logs if and why they synced/desynced their cooldowns. But how do you do that?
+
+Select the boss-> player/friendlies(select the other monk)->go to casts->select Statue+Serenity+Xuen in the graph by clicking the name (and untick any preselected ones)
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-205331.png)
+
+Mousing over the bars itself will show you when exactly the person used their cd's. This will give you an idea how your cooldowns can be popped most efficiently and you can start to work around everything else now.
+
+## Windwalker Basics
+
+#### Buff Uptime
+
+[Hit Combo](https://www.wowhead.com/spell=196740/hit-combo) uptime is extremely important to Windwalker. Breaking your mastery or losing the buff due to excessive downtime means you have a minimum of 6 GCDs to bring yourself back to the 6% damage buff.
+
+Select your Windwalker, and scroll to Damage Buffs. you'll find [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo) there. If the bar is entirely colored with an uptime of more than 99.7%, then it means your [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo) uptime is effectively perfect.
+
+Let's look as identifying [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo) issues, using this sample log:
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-205350.png) ![](/img/uploads/2023/07/Screenshot-2023-07-31-205409.png)
+
+Here the monk lost [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo) 3 times, which is not a good sign. To identify why this is broken, we can zoom this graph display (click and drag!) to the moment where the stacks are lost e.g between 1:00-1:30
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-205431.png)
+
+We then go to Casts > Timeline while in this specific time frame
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-205451.png)
+
+Two problems are clear: [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo) dropped once because of excessive downtime (remember [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo) has a duration of 8 seconds!) and another from casting [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) > Roll > [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm). Roll does not count for mastery/hit combo, so the buff is lost. In fact, those two are the only ways players lose [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo). Always be mindful of [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo)'s duration especially if you have forced downtime, and also mind your last ability. As a rule of thumb, if the ability does not do damage, it does not count for [Hit Combo](https://www.wowhead.com/spell=196740/hit-combo).
+
+#### Debuff Uptime
+
+For Windwalkers this tier there is only really one relevant maintenance debuff: [Fae Exposure](https://www.wowhead.com/spell=356773/fae-exposure). High uptime is necessary for us to do damage, and as of now, it also buffs non-monk damage, further increasing its priority. Tracking this is fairly straightforward. Simply select Enemies > Debuffs > All Abilities > F > [Fae Exposure](https://www.wowhead.com/spell=356773/fae-exposure). If there is more than 1 Windwalker in the group, change the source to your own Monk.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-210100.png) ![](/img/uploads/2023/07/Screenshot-2023-07-31-210112.png)
+
+Even accounting for forced downtime in Forgotten Experiments Heroic, this [Fae Exposure](https://www.wowhead.com/spell=356773/fae-exposure) uptime totals to about 41%, which is very poor. Generally speaking, good logs have between 70-80%, if not more. Some bosses, such as Zskarn, and Sarkareth have less uptime due to larger amounts of movement, so you need to take that into account when looking at logs of fights.
+
+#### Ability Priority and Usage
+
+What separates a good monk vs a great monk is the number of casts they do. This is a direct comparison of a 99% parse vs a 29% parse. Some things stand out in particular: Player 2 (pink) has more [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) casts but less total [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick)s and especially less [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick). [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) casts are particularly important but we do not provide a guideline of how many of those you should cast, mainly because of the various forms of cooldown reduction available ([Teachings of the Monastery](https://www.wowhead.com/spell=116645/teachings-of-the-monastery), [Xuen's Battlegear](https://www.wowhead.com/beta/spell=392993/xuens-battlegear), [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick)).
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-210131.png)
+
+Because of this, we recommend you to review the [Ability Priority section of the PvE Guide](/tww/windwalker/pve-guide/#Priority_Lists).
+
+#### Resource Management
+
+This is a fairly simple point and applies to almost every spec in the game. In the case of Windwalker there is a primary and a secondary resource with Chi and Energy.
+
+**The main goal is to not overcap Chi or Energy.**
+
+With the current talent settings it's somewhat likely you'll overcap at least some Chi and probably a lot of Energy during your [Serenity](https://www.wowhead.com/spell=152173/serenity) windows.
+
+Select yourself-go to Resources -> select Chi or Energy, now you see how much and how you gained/overcapped resources.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-210146.png)
+
+## Advanced Gameplay
+
+#### Opener
+
+Incorrect openers are a very common mistake. It doesn't look like much but poor openers can significantly affect your starting dps. As always, refer to the [Opener section of the PvE Guide](/tww/windwalker/pve-guide/#Openers) for information.
+
+Grille's log is more or less on point. However Player 2 (Pink) has some serious issues. Let's break it down
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-211341.png) ![](/img/uploads/2023/07/Screenshot-2023-07-31-211356.png)
+
+1. Their [beacon](https://www.wowhead.com/item=203963/beacon-to-the-beyond) is not empowered by [Fae Exposure](https://www.wowhead.com/spell=356773/fae-exposure)
+2. They cast [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) in [Serenity](https://www.wowhead.com/spell=152173/serenity), effectively wasting the [Serenity](https://www.wowhead.com/spell=152173/serenity) buff. They also cast it more than once. There is no need to generate Chi when it's free for the duration of [Serenity](https://www.wowhead.com/spell=152173/serenity)
+3. They cast [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp) after [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm), wasting both [Serenity](https://www.wowhead.com/spell=152173/serenity) buff and [Skyreach](https://www.wowhead.com/spell=392991/skyreach)'s crit effect
+4. They cast [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) a grand total of 1 time each in the first [Serenity](https://www.wowhead.com/spell=152173/serenity) window
+
+#### Cooldown Sequences
+
+Good [Serenity](https://www.wowhead.com/spell=152173/serenity) setup after the first/opener also makes a sizeable difference You can simply go to the **Casts** tab > **Timeline** and have a clean view of your CD sequence.
+
+Here is an example of a bad CD sequence, because they cast [Serenity](https://www.wowhead.com/spell=152173/serenity) but had no other GCD to use it with. They also used [Invoke Xuen, the White Tiger](https://www.wowhead.com/spell=123904/invoke-xuen-the-white-tiger) after [Serenity](https://www.wowhead.com/spell=152173/serenity), meaning they effectively wasted 2 GCDs during the main damage cooldown.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-211412.png)
+
+#### [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma) Usage
+
+[Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma) may be a defensive, but it does offer DPS. Use it to its maximum defensive value but this is always going to be your first defensive button for incoming damage. This is a sample of a decent [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma) usage. 4 casts over 6 minutes while the absorb is completely spent. Ideally speaking it always reaches the same peak. You can check [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma) efficiency by going to [Your Monk] > Healing > [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma).
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-211426.png)
+
+#### [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) Clipping
+
+A very common mistake is clipping [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury), specifically outside [Serenity](https://www.wowhead.com/spell=152173/serenity). You always want 5 ticks total per [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury). Any less means your [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) does a minimum of 20% less damage, which is significant. To identify this, simply go to Damage Done tab > Select [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) on the ability breakdown > Click [Serenity](https://www.wowhead.com/spell=152173/serenity) twice. This means that you will see [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) damage while Serenity is NOT active.
+
+**Important**: Understand that some [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) will be channeled near the end of [Serenity](https://www.wowhead.com/spell=152173/serenity), so they will look like they don't channel fully if you are using the aura filters.
+
+The ticks are represented by the grey lines, and as you can see, this player's [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) significantly needs work, as only one of them has 5 lines = 5 ticks = fully channeled.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-211440.png)
+
+#### Trinket Usage
+
+Trinket usage mostly comes down to 3 major points to be aware of:
+
+- Sim for what is your best option.
+- Use as often as possible or to specific add spawns/burst timing, without losing a cast overall.
+- Buff the trinket use with [Fae Exposure](https://www.wowhead.com/spell=356773/fae-exposure).
+
+Simply check in a good log with comparable trinkets when to use them if you are unsure by checking the casts tab and selecting the trinket.
+
+#### [Skyreach](https://www.wowhead.com/spell=392991/skyreach)/[Skytouch](https://www.wowhead.com/spell=405044/skytouch) Windows
+
+With the former Shadowlands legendary "[Keefers Skyreach](https://www.wowhead.com/spell=337334/keefers-skyreach)" introduced as a talent, WW got a new kind of per target burst on a 1min cd.
+
+In general you want to optimize these short burst windows, so you get as many hard hitting abilities in them as possible. Mainly speaking [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick), [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury), and [Strike of the Windlord](https://www.wowhead.com/beta/spell=392983/strike-of-the-windlord). On the other hand you don't want to delay those for too long. As a rule of thumb we advise to at most hold any spell for up to 2-3 gcd's. Same goes for the reverse. If your burst is coming up in 2-3 globals and your [Skyreach](https://www.wowhead.com/spell=392991/skyreach) is ready it's fine to delay your next [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm). If you have to delay more than that, use your [Skyreach](https://www.wowhead.com/spell=392991/skyreach) window beforehand and pop your cd's afterwards when [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) and [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) are back up again.
+
+You can check your ability usage by selecting **[[Your Monk]]** - **Damage Done** - check [Skyreach](https://www.wowhead.com/spell=392991/skyreach) bottom right below the **Graph** - **Zoom** in per window.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-211454.png)
+
+For a slightly better readability you can then swap to casts-timelines to get a quick and easy view on what abilities were used.
+
+![](/img/uploads/2023/07/Screenshot-2023-07-31-211513.png)
+
+## AOE Scenarios
+
+This is a very spicy and hard to evaluate topic.
+
+In general all the things that are important for single target still apply, but there are a few things that can change your priorities. **BUT**: It's always a question of how your raid handles AoE/add spawns/priority damage and what you shall do. So we'll just give some pointers to whether or not change things for AoE and what to be aware of in AoE/Cleave fights.
+
+- **Talents**: Some people will go for a [Touch of Death](http://www.wowhead.com/spell=322109)​ cleave build, some will stay mostly ST with the [Serenity](https://www.wowhead.com/spell=152173/serenity) build. This depends on what your raid needs!
+- **CD Usage**: Depending on the frequency of add spawns it's sometimes valuable to hold CD's for those. Research the top logs to see what to do.
+- **Ability priority**: Depending on the number of targets your ability priority might change. Best to read up on this on the [PvE Guide](/tww/windwalker/pve-guide/) as well.
+- **[Strike of the Windlord](https://www.wowhead.com/beta/spell=392983/strike-of-the-windlord)**: Whenever there are add spawns coming up soon and your [Strike of the Windlord](https://www.wowhead.com/beta/spell=392983/strike-of-the-windlord) is about to be off CD it's most likely best to delay its use for a few seconds. You deal more damage with it and it adds some nice value to [Thunderfist](https://www.wowhead.com/beta/spell=392985/thunderfist) main target funnel.
+- **[Mark of the Crane](https://www.wowhead.com/spell=228287/mark-of-the-crane)**: Whenever your ability priority shifts towards using [Spinning Crane Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick) in AoE you want to apply [Mark of the Crane](https://www.wowhead.com/spell=228287/mark-of-the-crane) to as many targets as possible.
+- **[Skyreach](https://www.wowhead.com/spell=392991/skyreach)**: You want to always get the maximum use out of your possible [Skyreach](https://www.wowhead.com/spell=392991/skyreach) on all targets. keep an eye out for that.
+- **[Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury)**: Always try to hit maximum targets. Simple as that.
+
+[**Starting**](/tww/windwalker/pve-guide/log-analysis/)
+
+[**Tools**](/tww/windwalker/pve-guide/log-analysis/tools/)
+
+[**Raid**](/tww/windwalker/pve-guide/log-analysis/raid/)
+
+[**Mythic+**](/tww/windwalker/pve-guide/log-analysis/mythicplus/)

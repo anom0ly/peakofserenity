@@ -1,0 +1,99 @@
+---
+title: Shedding (Nether)Light on the Nether Crucible
+slug: /2017/08/13/shedding-netherlight-on-the-nether-crucible
+date: '2017-08-13T12:52:12'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '7.3'
+- Item Spotlight
+- Legion
+- Relics
+- Spreadsheets
+- Theorycrafting
+description: In Patch 7.3, Blizzard is introducing a new tool to the, seemingly ever increasing, complexity of things to do that is; Legion. It is a relatively confusing…
+wp_id: 8003
+original_url: https://www.peakofserenity.com/2017/08/13/shedding-netherlight-on-the-nether-crucible/
+---
+
+In Patch 7.3, Blizzard is introducing a new tool to the, seemingly ever increasing, complexity of things to do that is; Legion. It is a relatively confusing new tool that has required several Q&A responses from Blizzard to try and clarify things, and its still not totally clear. For more information, check out WoWhead: [https://www.wowhead.com/news=268045/netherlight-crucible-and-relic-customization-in-patch-7-3](https://www.wowhead.com/news=268045/netherlight-crucible-and-relic-customization-in-patch-7-3)
+
+Here's what we (I) know, or at least think I know:
+
+- All relics will now be available to be modified by the Netherlight Crucible
+- You have to take the relic to the Crucible to augment it
+- Each relic now has its own randomly generated talent-tree-esque choices to make
+- Tier 1 of all relics is a +5 to the weapon item level provided by the relic
+- Tier 2 are new passive damage increases split into "Shadow" and "Light", each relic will have one Shadow choice and one Light choice
+- Tier 3 provides additional ranks in any of the traits that have more than one rank, only two of these options are available depending on which Tier 2 choice you took. This means that, theoretically, all our traits can have 7 ranks, but with the right combination, you could have two traits at 7 ranks.
+- Tier 3 traits will not be the same as the base trait that the relic provides
+- All of these Tiers open for different relic slots at different times, based on the current Artifact Power level of your Artifact
+
+#### Tier 2 Traits
+
+##### Shadow
+
+- [Master of Shadows](https://ptr.wowhead.com/spell=252091): Mastery increased by 500. Avoidance increased by 500.
+- [Murderous Intent](https://ptr.wowhead.com/spell=252191): Your Versatility is increased by 1500 while Concordance of the Legionfall is active.
+- [Shadowbind](https://ptr.wowhead.com/spell=252875): Your spells and abilities have a chance to deal 200000 Shadow damage and heal you for 200000.
+- [Chaotic Darkness](https://ptr.wowhead.com/spell=252888): Your spells and abilities have a chance to deal 60000 to 300000 Shadow damage and heal you for 60000 to 300000.
+- [Torment the Weak](https://ptr.wowhead.com/spell=252906): Your spells and abilities have a chance to cause Torment, dealing 80000 Shadow damage over 15 sec. This effect stacks up to 3 times.
+- [Dark Sorrows](https://ptr.wowhead.com/spell=252922): Your spells and abilities have a chance to afflict the target with Sorrow, causing it to burst after 8 sec, dealing 133100 Shadow damage.
+
+##### Holy
+
+- [Light Speed](https://ptr.wowhead.com/spell=252088): Haste increased by 500. Movement speed increased by 500.
+- [Refractive Shell](https://ptr.wowhead.com/spell=252207): Your spells and abilities have the chance to cause Refractive Shell, absorbing 300000 damage. Lasts 10 sec.
+- [Shocklight](https://ptr.wowhead.com/spell=252799): While Concordance of the Legionfall is active, your critical strike is increased by 1500.
+- [Secure in the Light](https://ptr.wowhead.com/spell=253070): Your harmful spells and abilities have the chance to deal 135000 additional damage and grant you Holy Bulwark, absorbing up to 77500 damage over 8 sec.
+- [Infusion of Light](https://ptr.wowhead.com/spell=253093): Your harmful spells and abilities have the chance to deal 101000 additional Holy damage. Your helpful spells and abilities have a chance to heal for 116000.
+- [Light's Embrace](https://ptr.wowhead.com/spell=253111): When you take damage, you have a chance to generate Light's Embrace, stacking up to 5 times. Light's Embrace heals for 45500 damage over 6 sec.
+
+#### How does this work?
+
+Basically all it does is add more variables to the question "Do I take X or Y relic?"
+
+Rather than just looking at how many item levels the relic provides to the weapon and the trait it provides, we'll have to take that information, AND add how strong the Tier 2 passive is, AND the strength of the Tier 3 trait. Adding to that; you'll only have two of the three Tier 3 options available to you based on which Tier 2 you pick, so you may have to take a "less optimal" Tier 2 in order to get a "more optimal" Tier 3, or visa versa. This is going to add some steps to getting a relic and knowing if its better or not.
+
+1. Get Relic (knowing only the base +item level and trait)
+2. Go to Netherlight Crucible
+3. Plug the Relic into the Netherlight Crucible[![](/img/uploads/2017/08/642720-244x300.jpg)](/img/uploads/2017/08/642720.jpg)
+4. Determine best upgrade path to maximize the Relic
+5. **THEN** compare to currently equipped relic
+6. Ask to get summoned back
+7. Apologize to raid for taking so long
+8. Tell them if its useful or useless
+9. If useless, apologize to others who could have used it and maybe got more use out of it
+
+Those final 4 steps are important, because [upon plugging the relic into the Crucible, it becomes bound to your character](https://www.wowhead.com/news=268045/netherlight-crucible-and-relic-customization-in-patch-7-3). So if its not better than what you currently have, you can't trade it to someone else for them to have a chance for that relic to be useful.
+
+#### What does this mean?
+
+I have been improving the relic tool on my spreadsheet in preparation for 7.3 and this new tool. Instead of just telling you what relic is better, it will show you the total item level worth of that relic based on all the traits, then tell you which is better. I am unsure how tools like raidbots will handle the variable relic path, but I am glad I'm not having to code that stuff, yeesh.
+
+Using the data from my current character and the new relic tool we can use some examples for what this will mean for us. These are not final numbers, they're using t20 4pc and t21 2pc, just because that's what I was testing at the time.
+
+**DO NOT, take these as anything more than numbers to demonstrate the thought process and how we'll determine things**. **For real numbers see the [Artifact Guide page](/tww/windwalker/).**
+
+[![](/img/uploads/2017/08/NLC.png)](/img/uploads/2017/08/NLC.png)
+
+So the first thing you'll do is look at the trait that is available on the relic. If the relic doesn't give [Rising Winds](https://www.wowhead.com/spell=195263/rising-winds) nor [Fists of the Wind](http://legion.wowhead.com/spell=195291/fists-of-the-wind) (or [Strength of Xuen](https://www.wowhead.com/spell=195267/strength-of-xuen) with t21), it will be more difficult for the Tier 2 and 3 traits to be enough to make that relic worthwhile. After that, you'd look at whatever combination of Tier 2 and Tier 3 traits gets you the most worth. Like I said above, this could mean going for a "less optimal" trait like [Shocklight](https://ptr.wowhead.com/spell=252799) if it lets you get a stronger trait like [Rising Winds](https://www.wowhead.com/spell=195263/rising-winds), or even taking a "more optimal" Tier 2 trait like [Murderous Intent](https://ptr.wowhead.com/spell=252191) despite it only allow you to choose "less optimal" Tier 3 traits. You'll be looking for what combination gets you the best results, which will differ for everyone.
+
+In an ideal world, all 3 of your relic slots would be filled with relics that have both [Rising Winds](https://www.wowhead.com/spell=195263/rising-winds) and [Fists of the Wind](http://legion.wowhead.com/spell=195291/fists-of-the-wind) traits in the base or Tier 3 slot and a strong Tier 2 like [Murderous Intent](https://ptr.wowhead.com/spell=252191), [Infusion of Light](https://ptr.wowhead.com/spell=253093) or [Secure in the Light](https://ptr.wowhead.com/spell=253070). With this new system, that will be difficult to do. It will, however, be more likely that a relic has *something* of worth on it.
+
+Throwing some, likely incorrect, napkin math around, to look for the chance of getting the best possible relic. Assuming you know what the base trait is, which only 1 of the 10 traits are "best", of the Tier 2 traits, only 1 of 12 would be "best", giving you an 8% chance of getting the best possible Tier 2 trait, then two chances at 1 in 9 that the Tier 3 trait is the next "best", because each Tier 2 trait connects to only two of the three Tier 3 traits. You're left with a 1.8% chance of the "best possible" relic trait combination, assuming the base trait is the first or second best artifact trait.
+
+However, this also means that you have a 3 or 4 in 12 chance that the Tier 2 traits will at least be "strong" if not "best", and three, 2 or 3 in 9, chances that the Tier 3 traits will be "strong", which will pretty much guarantee that *at least something* on any relic will be strong. If you open yourself up to 3 of 10 relic and Tier 3 traits and 4 of 12 Tier 2 traits being "strong enough", then you give any relic a MUCH higher chance of any relic dropping being 'strong enough" even if it doesn't have the best possible base relic trait.
+
+So there's certainly a silver lining, and functionally it will accomplish what Blizzard wanted to accomplish in terms of making every relic have a strong chance of being of some use. But it does make true "min/max"ing relics more difficult than just aiming for high item level and a good trait.
+
+#### TL:DR
+
+Harder to get "perfect" relic, easier to turn any relic into "good enough".
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius), where I stream all my raids as well as article writing and more.

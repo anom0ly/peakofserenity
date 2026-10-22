@@ -1,0 +1,90 @@
+---
+title: 'State of the Spec: Windwalker in 8.1'
+slug: /2018/12/23/state-of-the-spec-windwalker-in-8-1
+date: '2018-12-23T15:42:12'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.1'
+description: Updated with 2 more bugs that I forgot about. Well its been almost two weeks since 8.1 came, and since it came with some changes to Windwalker, now is a…
+wp_id: 13250
+original_url: https://www.peakofserenity.com/2018/12/23/state-of-the-spec-windwalker-in-8-1/
+---
+
+**Updated with 2 more bugs that I forgot about.**
+
+Well its been almost two weeks since 8.1 came, and since it came with some changes to Windwalker, now is a good time to start looking at how those changes affected things. For anyone who isn't super familiar with what changed, check out the [last 8.1 article](/2018/11/21/windwalker-guide-to-8-1-changes/) where I go through each change and try to predict how it will affect the spec. Lets see how right I was....
+
+### What Did Change
+
+##### The "Touches"
+
+This includes the changes that were made to [Touch of Death](https://ptr.wowhead.com/spell=115080/touch-of-death), [Touch of Karma](https://ptr.wowhead.com/spell=122470/touch-of-karma), and [Good Karma](https://ptr.wowhead.com/spell=280195/good-karma). There are two sides to these changes. The first is that these changes cut down on the overall % of our damage that was tied into the two Touch abilities. This is pretty indisputable. If you take any random sample of logs from just about any boss in Uldir, you'll see that the damage from these two abilities was cut in half or more. This is widely accepted as a good move.
+
+The flip side of that coin is that it did hurt our single target damage most of all. Although its difficult to quite put a number to it, comparing pre- and post- 8.1 numbers can be done a few ways. The first is to look at WarcraftLogs stacked bars, which everyone loves to look at to make snap judgements about how strong a spec is. For single target concerns, best to look at strictly boss damage; [from 8.1](https://www.warcraftlogs.com/zone/statistics/19#aggregate=amount&metric=bossdps) and [from 8.0](https://www.warcraftlogs.com/zone/statistics/19#region=1&aggregate=amount&metric=bossdps).
+
+Looking at this data, Windwalker fell from around 9th overall and 5th melee down to 15th overall and 7th melee. This is where the changes that we experienced in 8.1 is the most palpable. No one likes to lose damage, and Windwalker lost a decent amount in single target.
+
+However, the biggest positive is that we can go back to using [Ring of Peace](http://bfa.wowhead.com/spell=116844) as often as we want, which is a huge change, specially if you've been listening to the past few [Podcast episodes](/podcast/) talking about dungeons and how much cheese can happen using [Ring of Peace](http://bfa.wowhead.com/spell=116844) in dungeons.
+
+##### Aura Buff
+
+This was the change that was largely meant to offset the damage loss from the Touch spells. [Windwalker Monk](https://ptr.wowhead.com/spell=137025/windwalker-monk) going from -27 to -21% certainly did something to help make up for some of the damage lost, however, it didnt make up for all of it. Looking at [WCL parses from 8.0](https://www.warcraftlogs.com/zone/statistics/19#region=1), Windwalkers were 13th overall and 8th for melee, somehow with both Rogue and Death Knight specs ahead of us. [Now in 8.1](https://www.warcraftlogs.com/zone/statistics/19#), Windwalker is 18th overall and 11th for Melee specs, this time with all Rogue, Death Knight, and Warrior specs higher than us on these charts. Now, I could spend an hour rationalizing how just looking at these charts is not an important way to compare specs, but this is what people look at to say whether a spec is good or bad, and being 3rd to last out of all melee, when melee spots are very selective, is not a great place to be.
+
+One thing I've always done to break down the stacked bars is to take that data and put it \*surprise\* [in a spreadsheet](https://docs.google.com/spreadsheets/d/16f_24vRrVi9MWKMBDUimwA-JpFXbRLkbcGyjmszwZhU/edit?usp=sharing). Although its not a great comparison, the most recent chart of similar kind is from back in [September after Uldir's 3rd week](https://docs.google.com/spreadsheets/d/1M3hvUSCGqg1oSLT86KY6ANaUPh2wH7JGsDXxwcusJZ8/edit?usp=sharing). I wish I had the forethought to take the data the Monday before 8.1, but here we are. **It should be noted that as Uldir progressed, Windwalker tended to slowly, but consistently, fall down the charts for a number of reasons, so don't see that Windwalker went from almost perfectly average to half a standard deviation below average overnight. 8.1 didn't help the overall situation, but it wasn't the sole cause either.** From my experience taking this data, this most closely predicts what specs will receive buffs or nerfs, most of the time, although not the size or manner of the change.
+
+Right now, Windwalker hovers between 2.37% and 1.22% below the average. Statistically this is a pretty good spot to be, but from a community-perspective, perspective, this is the end of the world. What is interesting, is that statistically, this is just about the best balanced specs have ever been in the few years I've been taking data this way. In each metric I look at, there is no more than one spec at a time that's more than 2 standard deviations above or below the average, where normally there is 2-3 above and another 2-3 below. Obviously a 15% damage difference between first and worst isn't great, but typically its been even bigger. What this means is that although some specs are a bit too strong and others a bit too weak, the bulk of the specs are statistically "fine", with 16 of the 24 specs being within 1 standard deviation from the average, considered to be within the "average range". Even when looking strictly at melee, Windwalkers, although toward the bottom of the average range, are still statistically "fine", being around 2.5% to 3% below the average in overall and boss damage. And again,
+
+All of this stats talk is well and good, but people look at the order of the colored bars and make their judgments there. From that metric, Windwalkers are doing very poorly and could use further buffs. I'll talk down below about what, if anything, could be changed.
+
+##### Azerite Traits
+
+These are the changes that have cause most of the discussion and questions we've gotten in Discord so far since the patch, so lets get some stuff cleared up. **These traits are strong.**
+
+- [Glory of the Dawn](https://ptr.wowhead.com/spell=288634/glory-of-the-dawn) is just about the weakest of the new 3, but still a strong single target trait to grab one of if you can't get the others. It also provides a smidge more resources to the rotation to help speed it up a bit. There are many reports of going a LOOOONG time without a proc, but RNG gonna RNG.
+- [Fury of Xuen](https://www.wowhead.com/spell=287055/fury-of-xuen) is an exceptionally strong single target and low target cleave trait. Having another Xuen do damage with you is visually awesome and a good chunk of damage. Having a HUGE amount of haste come in a chunk can also be pretty magically strong if it happens at the right time. Sims have been a little weird with this, but rest assured, you probably want one of these.
+- [Dance of Chi-Ji](https://www.wowhead.com/spell=286587/dance-of-chi-ji) is an extremely strong AOE trait, and one that just about everyone should have one of if you plan on doing any M+ during your life. There is still a pretty big bug, that I'll talk about in a bit, but its still very strong even with those issues.
+- [Open Palm Strikes](https://www.wowhead.com/spell=279918) is still our strongest all-around trait. If you're looking to grab a trait for general use in raids, dungeons, bosses, trash, WQ, you can't do much better than [Open Palm Strikes](https://www.wowhead.com/spell=279918).
+
+The strength of these traits, and the fact that the new 3 are their strongest with 1 trait, is what leads many of us to be optimistic for how much Windwalker will gain when "Season 2" starts on January 22nd. Having access to grab one trait of each of the new 3, as well as stack 3 [Open Palm Strikes](https://www.wowhead.com/spell=279918) can potentially help Windwalker see more gain from the extra ring of traits than most specs, helping us going into the next raid.
+
+##### [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind')
+
+So this change turned out to be a little bit worse than I predicted, in quite a few ways. Firstly, people have noticed that while having your energy 20-30% of your energy regen gone with one toggle wasn't great, having to press another button every 6 seconds or less, is even worse. I still maintain that this is what happens when people cry "not fast enough" or "not enough button presses" without really thinking things through or providing realistic solutions. The slow speed and few button presses of WW when using [Rushing Jade Wind](https://www.wowhead.com/spell=261715/rushing-jade-wind) was a huge complaint that people had voiced quite loudly, it just didn't get fixed in the way that they expected. Ask for higher APM, get higher APM. This seems to get even worse, being more disruptive to the flow and more work, with more haste.
+
+The second problem this created is that making this change resulted in [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') losing some of its power. Like I mentioned in the previous 8.1 article, it went from 5% AP per energy used to 3.6% AP per energy used, with slightly higher AP per energy if the chi "technically" came from [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) or another source other than [Tiger Palm](http://bfa.wowhead.com/spell=100780). Because of this, the difference in strength between [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') and [Hit Combo](http://bfa.wowhead.com/spell=196740) is much smaller in pure AOE situations, if any difference at all. This is leading many people to take [Hit Combo](http://bfa.wowhead.com/spell=196740) in M+ as a very small, if any, loss of damage on AOE is offset by 5-6% more damage on bosses. [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') is a little less than 50% stronger than [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) per chi, and when you factor in the damage that gets added to the other AOE abilities like [Fists of Fury](http://bfa.wowhead.com/spell=113656) and [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175), that gap gets much smaller, and in situations where you have enough chi, like short pulls with time to regen in between pulls, [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') can fall behind.
+
+Another factor this has is on the balance of using [Energizing Elixir](http://bfa.wowhead.com/spell=115288) or [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) in dungeons. Because [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') no longer drains energy, it becomes more difficult to use [Energizing Elixir](http://bfa.wowhead.com/spell=115288) to its full potential. This leads [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947), which is much easier to use to its full potential, to being much less of a numerical loss, and realistically maybe even the better choice in M+, which is what we're also seeing with some of the "higher level" Windwalkers in M+.
+
+### What Could Use to Change
+
+Like I said above, there are a few things that could still be improved about Windwalker in order to make the spec more functional and competitive.
+
+##### Overall Balance
+
+Changing the [Windwalker Monk](https://ptr.wowhead.com/spell=137025/windwalker-monk) aura from -27% to -21% was a good start to compensating Windwalkers for the damage lost from the changes that were made to the Touch spells. However, its clear that some further change would be beneficial. Simply changing the aura from -21% to -18% would move Windwalkers into the top half of the overall damage charts. With the Touch spells becoming a much smaller amount of our overall damage, the aura affects more of our damage than it had previously. The aura could go as high as -15% and still have Windwalkers be within the average range, just toward the top of it instead of the bottom.
+
+As I said above when discussing the Azerite Traits, its possible that some of this gap will be closed when all specs have access to another ring of traits. Windwalkers are in the enviable position of having 3 strong traits to grab one of, as well as a strong trait to stack, in [Open Palm Strikes](https://www.wowhead.com/spell=279918). Its difficult to predict if this will have any affect on how Windwalkers compare to other specs, but Windwalkers are certainly in a good position for it, theoretically. I would expect that any spec tuning, for anyone, will come after the
+
+##### Bugs
+
+If you've been watching in Discord recently, you may have seen several people ask about bugs. This should come as no surprise as Windwalker has had some pretty beefy bugs, pretty much all the time, generally involved with what I can assume is an incredibly complicated code for [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639). So here are the few that we're experiencing right now:
+
+1. [Tiger Palm](http://bfa.wowhead.com/spell=100780) does not always generate the Chi that its supposed to. There's more weirdness to it than that even, so its easiest to just see what [Talby has posted in the Bug Report thread about it](https://us.forums.blizzard.com/en/wow/t/windwalker-tiger-palm-not-generating-chi-on-use-unable-to-use-abilities/50307).
+2. [Dance of Chi-Ji](https://www.wowhead.com/spell=286587/dance-of-chi-ji) damage is reduced, but not replicated, during [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639). This leads to our strongest AOE trait being 1/3 as strong during our strongest AOE cooldown, which is... less than optimal. [Once again, our resident MVP, Talby, has posted about this on the Bug Report forums](https://us.forums.blizzard.com/en/wow/t/windwalker-dance-of-chi-ji-bug-with-sck/56075).
+3. Mark of the Crane continues to be a screwy mess. At times you'll generate more stacks than there are targets, other times the stacks will fall off despite doing what, you thought, had refreshed them. If you really pay attention to your stacks, they often seem to be incorrect more frequently than correct. The "bright" side of this, if you could call it that, is that the stacks are only 10% and they don't have any real consequence on how or when we use our abilities. It still tends to be damage lost rather than damage gained, but it could be worse... I guess?
+4. [https://www.wowhead.com/spell=287055/fury-of-xuen](https://www.wowhead.com/spell=287055/fury-of-xuen) has a fabulously bugged tooltip. Although there is a 1.5% chance per stack, the tooltip chooses to round up to 2%. However this becomes 2% per stack, so at 50 stacks, people are seeing the tooltip say that they have a 100% chance to proc Xuen, when in reality it's a 75% chance. This means that you don't actually have a 100% chance to proc until you're at 67 stacks, where the tooltip says you have a 134% chance to proc. Tooltip are fun.
+5. People are also finding that [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) is not always usable when its off cooldown and [Fists of Fury](http://bfa.wowhead.com/spell=113656) and [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) are both on cooldown. We've seen this behavior back in Legion when people were using the trinket from Ursoc, [BTI](https://www.wowhead.com/item=139329/bloodthirsty-instinct&bonus=1807:1472). This seemed to be because the haste proc would change the cooldown of the abilities, but this wouldn't be registered correctly by the game, so it wouldn't recognize that [Fists of Fury](http://bfa.wowhead.com/spell=113656) and [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) were both on cooldown. This is just our best guess as to why it was happening, but it fits with the fact that its happening again now when people are starting to get [Fury of Xuen](https://www.wowhead.com/spell=287055/fury-of-xuen) procs with huge amounts of haste again.
+
+### Overall
+
+Overall, as I said in the 8.1 article, I think the changes for Windwalker that came with the patch were overall positive for the spec, even if they did come at the cost of some damage. The changes should also make Windwalker a little bit easier and more consistent to balance in the future.
+
+The only change that I, personally, would classify as a negative, other than the new bugs, is the change to [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind'). While it was clear that it needed to change from a functional standpoint, and I understand trying to use a method thats already in place, the Brewmaster method of [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') does not translate to Windwalker very well. It would be better if, like the other talents in its tier, it cost no resources. The toggled nature of it previously was not a bad way of it being set up, however, it would have been better if it reduced your regen rather than actively took away your energy. As it stands, it probably needs to be buffed from 10% AP per tick to 12-15% in order for it to have any relevance in content.
+
+Obviously something like taking [Energizing Elixir](http://bfa.wowhead.com/spell=115288) off the GCD would go a long way to making that talent usable again, because right now that's a major barrier to it being used in any content.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).

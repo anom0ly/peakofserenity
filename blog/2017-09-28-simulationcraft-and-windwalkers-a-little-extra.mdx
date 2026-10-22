@@ -1,0 +1,46 @@
+---
+title: Simulationcraft and Windwalkers - A little extra
+slug: /2017/09/28/simulationcraft-and-windwalkers-a-little-extra
+date: '2017-09-28T07:56:58'
+authors:
+- juko
+tags:
+- Windwalker
+description: Extending from last time After my last post, some people have been reaching out to me on discord with questions, and i realized there were a few more things…
+wp_id: 8238
+original_url: https://www.peakofserenity.com/2017/09/28/simulationcraft-and-windwalkers-a-little-extra/
+---
+
+## Extending from last time
+
+After my last post, some people have been reaching out to me on discord with questions, and i realized there were a few more things to explain, so here's a follow-up with some extra things.
+
+### Using Vial and Specter together
+
+I got some questions over the last week from people believing that simulations are using these 2 trinkets wrong when both are equipped, and that is partly true. The Windwalker simulation profile uses these 2 trinkets together differently than is otherwise the most optimal way of doing it in-game. When both are equipped, simulations will use [Vial](http://www.wowhead.com/item=147011/vial-of-ceaseless-toxins&bonus=3561:1482) as soon as it can and then focus on fitting [Specter](http://www.wowhead.com/item=151190/specter-of-betrayal&bonus=3561:1492) into [Serenity](http://www.wowhead.com/spell=152173/serenity) whenever possible to also have 2 specter hits. However, in reality you would use [Specter](http://www.wowhead.com/item=151190/specter-of-betrayal&bonus=3561:1492) first right as you enter serenity and then use [Vial](http://www.wowhead.com/item=147011/vial-of-ceaseless-toxins&bonus=3561:1482) at the end of [Serenity](http://www.wowhead.com/spell=152173/serenity) to gain the damage bonus on all specter hits and on the initial tick of vial. The reason simulations don't do it this way is that it would at default fight timers lose vial casts, and therefore overall damage.
+
+### Infernal Cinders and Engine of Eradication
+
+While [Infernal Cinders](http://www.wowhead.com/item=147009/infernal-cinders&bonus=3561:1482) isn't used much as it by itself isn't very good for Windwalkers, and the specs that do use it - Retribution and Havoc - aren't very popular, so you're unlikely to have many other [Infernal Cinders](http://www.wowhead.com/item=147009/infernal-cinders&bonus=3561:1482) buffing yours. If you do happen to have people in your raid team using it, there is a way to apply the extra crit chance from their trinkets in your simulations. If you in your simulation profile add the line "**legion.infernal_cinders_users=**" in and then the number of infernal cinders being used in your raid team, it will increase the crit chance on the trinket. NOTE: This line will apply the crit chance buff to all simulated characters in a profile. In the simulation results below i used the T20M Windwalker profile with only a [Vial](http://www.wowhead.com/item=147011/vial-of-ceaseless-toxins&bonus=3561:1482) and then replaced it with [Infernal Cinders](http://www.wowhead.com/item=147009/infernal-cinders&bonus=3561:1482) in the comparison.
+
+![](/img/uploads/2017/09/Infernal-Cinders-1-300x48.png) ![](/img/uploads/2017/09/Infernal-Cinders-4-300x45.png) ![](/img/uploads/2017/09/Infernal-Cinders-7-300x48.png)
+
+Even with 7 users and 93.6% crit, [Infernal Cinders](http://www.wowhead.com/item=147009/infernal-cinders&bonus=3561:1482) still loses to [Vial](http://www.wowhead.com/item=147011/vial-of-ceaseless-toxins&bonus=3561:1482) but isn't too far behind.
+
+[Engine](http://www.wowhead.com/item=147015/engine-of-eradication&bonus=3563:1512#links) on the other hand, is a pretty good trinket for Windwalkers, but sometimes you can't pick up all the orbs consistently and might consider taking a trinket more consistent for that fight. You can edit how many orbs are being picked up in your simulations by adding the following line into your simulation profile "**legion.engine_of_eradication_orbs=**" followed by the number of orbs you expect to pick up on average. As with the line for [Infernal Cinders](http://www.wowhead.com/item=147009/infernal-cinders&bonus=3561:1482), this applies to all characters in the profile, so you will have to run the simulation several times if you want to check for different amount of orbs collected. Using the T20M profile with [Engine](http://www.wowhead.com/item=147015/engine-of-eradication&bonus=3563:1512#links) as the only trinket, these were the results.
+
+- 4 orbs = 1511690 DPS - 40.10% up-time
+- 3 orbs = 1501887 DPS - 35.35% up-time
+- 2 orbs = 1491862 DPS - 30.65% up-time
+- 1 orb = 1481730 DPS - 25.72% up-time
+- 0 orbs = 1471285 DPS - 20.67% up-time
+
+### Losing DPS when Doing Comparison-Simulations?
+
+Many may not know this, but simulation results can often be skewed depending on the amount of characters being simulated in the same simulation. This is especially the case for Windwalkers using [Serenity](http://www.wowhead.com/spell=152173/serenity) in default 300 seconds 20% variance simulations as there is often a Serenity cast at the very end of the longest of those simulations. Usually you would think that this means that all simulations run are between 240 and 360 seconds long, but that isn't exactly what happens. The simulations don't end on a pre-set timer, but when a target dummy set up in the simulation dies. This means that there is an extra level of variance depending on much damage is being done to the target. This variance is decreased whenever you add more characters to a simulation, as they're less likely to all be doing more or less DPS than usual at the same time.
+
+How do you fix this? With the line "**single_actor_batch=1**". Add this anywhere in your simulation profile and all the characters will be simulated individually, making sure the variance doesn't change depending on the number of simulated characters.
+
+### Can i do any of this with Raidbots?
+
+Yes and no. You can't use the lines that change the settings of the simulation itself unless you're using the advanced simulation, but custom APL can be added to the "Custom APL" section below the simulation options just as you would add it to a simulation profile in the SimulationCraft client. Raidbots does however already use "**single_actor_batch=1**" because it also improves simulation time when running a lot of characters/copies in the same comparison.

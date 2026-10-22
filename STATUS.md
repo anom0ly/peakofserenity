@@ -1,6 +1,6 @@
 # Status
 
-_Last updated 2026-10-17._ Current phase: **1. Pilot**.
+_Last updated 2026-10-22._ Current phase: **2. Full conversion** (in review).
 
 ## Done
 - Inventoried the WordPress export ([migration/INVENTORY.md](migration/INVENTORY.md)).
@@ -24,18 +24,41 @@ _Last updated 2026-10-17._ Current phase: **1. Pilot**.
   against the Pages CMS docs. Posts can't be renamed (it would change their URL); guides can be edited but not
   created, renamed or deleted from the editor.
 
+### Full conversion (2026-10-22)
+- Everything published is converted: 216 news posts, 215 podcast episodes, and 18 guide pages. The hub pages
+  are React pages, and `/login/` and the 5 retired Mistweaver guides are redirects. Files edited in Pages CMS
+  were left untouched (`--skip-existing`).
+- Tabbed guides: Windwalker, Brewmaster and Mistweaver PvE, plus Mists Classic Windwalker. Their tab groups are
+  defined once in `src/guideTypes.json`, which the site, the converter and `tools/pages_config.py` all read.
+  `tools/pages_config.py` writes `.pages.yml`. In Pages CMS, each tabbed guide has its own entry under Guides,
+  and the other guide pages are in one list.
+- Talent import strings: every one found in the source (24 across guides and posts) appears verbatim in the output.
+- Podcasts:
+  - each episode is at `/podcast/<slug>/`, with an audio player;
+  - `/podcast/` lists the episodes and `/podcast/archive/` is the one-page archive, linked from the footer;
+  - `static/podcast/feed.xml` is an iTunes-style feed, and the old `/feed/podcast/...` addresses redirect to it.
+- Tags keep their WordPress addresses (`blog/tags.yml`).
+- `static/_redirects` gets generated rules for:
+  - category archives → tag pages;
+  - author archives → author pages;
+  - every old `/df/`, `/sl/`, `/bfa/` or unprefixed guide link found in content → the current page or its
+    nearest parent;
+  - `/feed/` → `/rss.xml`.
+- Images:
+  - 329 of 386 referenced files were downloaded;
+  - 65 return 404 on the live site too, and are listed in the review list;
+  - `tools/compress_images.py` shrank them from 108 MB to 80 MB, and the one GIF over Cloudflare's 25 MiB
+    limit was scaled down.
+- The build passes. Its remaining broken-link warnings are all files missing on the live site, links to
+  `archive`-status posts, or WordPress preview links. All of them are on the review list.
+
 ## In progress
-- Nothing running.
+- PR "Full conversion" open for review on a preview deploy.
 
 ## Next
-- Owner: connect the repo to Cloudflare Pages (build `npm run build`, output `build`) and to Pages CMS, so the pilot
-  can be previewed and 1–2 authors can test.
-- In the author test, check that a save in the rich-text editor (set to write Markdown) keeps talent strings, the
-  coloured talent legend (raw `<span>` HTML) and escaped `\{ \}` intact; an unescaped `{` in a `.mdx` body breaks
-  the build. If it doesn't, switch posts to `.md` with Docusaurus `markdown.format: 'detect'`.
-- Full conversion: remaining guides (each needs a guide type in `src/guideTypes.js` + `.pages.yml`), all posts,
-  podcasts plus their archive page, generated redirects.
-- Compress images before the full download (33 pilot images are 37 MB).
+- Owner: decide where podcast audio lives (see Open questions). Then check the review list, especially the
+  `archive`-status posts that other posts link to.
+- Spot-check the preview: the three new tabbed guides, a few old posts, the podcast archive, and redirects.
 
 ## Waiting on
 - Nothing. Images come straight from the live site with `tools/fetch_images.py` (the uploads folder won't be
@@ -47,6 +70,10 @@ _Last updated 2026-10-17._ Current phase: **1. Pilot**.
 - Old Mistweaver guides (`/tww/mistweaver/pve-guide-shadowlands/` and the four `advanced-*` spotlights): retire with 301 redirects.
 
 ## Open questions
+- **Podcast audio.** The 215 MP3s are about 10 GB and stay on the WordPress server for now, so episode pages
+  and the feed still link there. Cloudflare Pages can't host them (25 MiB per file). Options: Cloudflare R2
+  (cheap, same account), an existing podcast host, or keep the old server's uploads folder online. 11 early
+  episodes already point at walkingthewind.com and may be gone.
 - From the brief: comments, AdSense, search, publish-directly vs review step.
 
 ## Content changed on WordPress after the 2026-10-17 export

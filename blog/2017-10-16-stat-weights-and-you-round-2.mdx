@@ -1,0 +1,59 @@
+---
+title: 'Stat Weights and You: Round 2'
+slug: /2017/10/16/stat-weights-and-you-round-2
+date: '2017-10-16T21:43:36'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '7.3'
+- 7.3.2
+- FAQ
+- Sims
+- Spreadsheets
+- Stats
+- Theorycrafting
+- Trinkets
+description: Recently we've been getting many questions, in Discord, about stat weights and the results that people are seeing from SimulationCraft This is something…
+wp_id: 8284
+original_url: https://www.peakofserenity.com/2017/10/16/stat-weights-and-you-round-2/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+Recently we've been getting many questions, in Discord, about stat weights and the results that people are seeing from [SimulationCraft](http://www.simulationcraft.org/). This is something that we largely predicted, looking at how stat weights work in general and how stat scaling works in Legion. Hopefully this article will help to clear things up, and not get more confusing. And hopefully when the real smart people read this, there's not too much I need to correct.
+
+#### Whats a "Stat Weight"?
+
+Firstly, I recommend checking out the original article where we discussed how stat weights work: [Stat Weights and You](/2016/09/14/stat-weights-and-you/). To give a brief TL:DR; stat weights are a numerical representation of how much you gain from a certain amount of stats. Typically, a program like [SimulationCraft](http://www.simulationcraft.org/) or a [spreadsheet like mine](https://docs.google.com/spreadsheets/d/1tapLQC24TypvnaAYL5mV4P9wVK4jJ0Imkeh3pbY9F5w/edit?usp=sharing), will look at increasing a stat by a large portion then dividing it by the stat rating amount being increased. For example, my spreadsheet adds 1% to a stat, then takes the DPS gained by doing so and divides it by the stat conversion. So if adding 1% Mastery increases DPS by 10,000, then each point of mastery increases DPS by 31.25, (10,000/320) so Mastery's stat weight at that point would be 31.25.
+
+#### Why do weights change?
+
+A long time ago you may have heard words like "Cap" and "Diminishing Returns". These terms are largely obsolete compared to how often they were thrown around in the past. Sure, there are "Caps", or points where you don't gain anything from going over X stat %, but those aren't as prevalent as they used to be in the days of Hit and Expertise. While we do still have "Diminishing Returns", they are resulting from how statistics work more than how the stats themselves work.
+
+What I mean by that is the more you get of one stat, the less overall benefit you gain from adding more of that stat. To use an exaggerated example, if you do 100% damage, and Mastery increases your damage by a %, adding 5% Mastery increases your damage from 100% to 105% or a 5% damage gain. However, if, as a result of your stats, you're doing 150% of your original damage, adding that 5% Mastery increases your damage from 150% to 155% for only a 3.33% overall damage gain. This is what I mean by "statistically diminishing returns", or DR, and typically why someone may see a stat's weight decrease as they get more of that stat.
+
+On top of DR, getting more of one stat increases the weight of the other stats relative to one another due to how our stats interact with one another. Our stats are applied multiplicatively, so if you have 10% mastery, your damage is increased by 10%, if you have 10% Vers, the post mastery damage is increased by another 10% for a total of 21% more damage. Add another 10% crit, and on average you'll gain 10% more damage on top of the post mastery/vers number, or 33.1% more damage than with no stats. If you have 50% mastery and no other stats, adding 10% more Mastery will increase your damage from 150% to 160%, for a gain of 6.6% over the previous total. However, if you add 10% Vers instead of Mastery, you multiply rather than add, so your damage goes from 150% to 165%, for a 15% gain. This is why you can see your stat weights move one stat ahead of others at certain points.
+
+Next, not all our stats effect all of our damage equally. Versatility now effects all our damage, one of the few things I'll ever take direct credit for. Critical Strike effects nearly all our damage except [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma), which cannot crit. Because [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](https://www.wowhead.com/spell=122470/touch-of-karma) account for roughly 5% of our damage, this means that 1% Crit will increase our overall damage by 0.95%, whereas 1% Vers will increase our overall damage by 1%. If you'd like to see how much of your damage is effected by each stat, then look in the "% Effected" column of the Calculations tab of my [spreadsheet](https://docs.google.com/spreadsheets/d/1tapLQC24TypvnaAYL5mV4P9wVK4jJ0Imkeh3pbY9F5w/edit?usp=sharing). These numbers can fluctuate quite a bit (statistically speaking) just by changing a trinket, as trinkets that do damage are effected by Crit and Vers, but not Mastery. So having a damage trinket will decrease the relative weight of Mastery, and increase the relative weight of Crit and Vers. This is part of the way that the Netherlight Crucible is changing things around.
+
+Lastly, each secondary stat has a different conversion rate from rating to percentage. It takes 320 Mastery to gain 1% Mastery, but 400 Crit to gain 1% Crit, 375 Haste for 1% Haste, and 475 Versatility for 1% Vers. Because secondary stat budgets on items are static and dependent on their item levels, you cannot simply switch 1% Mastery for 1% Crit due to needing 80 more secondary stats. This means that even if 1% of a stat increases your DPS by 10,000, each stat of Mastery is 31.25 DPS, whereas each stat of Vers is only 21.05 DPS.
+
+**So if you take all four of these factors; statistically diminishing returns, multiplicative stat interaction, varying stat contribution, and differing conversion rates, you can see why there isn't one stat string to rule them all and why the stat recommendations on my [Stat guide](/tww/windwalker/) page can be both outdated and updated at the same time.**
+
+#### But what about now?
+
+So nowadays people are starting to get to the point where Versatility is pulling ahead, or passing other stats like Mastery, contrary to what my [Stat guide](/tww/windwalker/) says, which is causing some confusion. In some cases, people are even seeing secondary stat's weights catch up to Agility, which may seem insane. However, Agility follows the same rules and restrictions that govern the stat weights of secondary stats. This reason, coupled with how Blizzard set up their stat scaling on gear is what is creating the situation some people may be experiencing.
+
+This expansion, Blizzard put a lot more emphasis on primary stats with the 7.1.5 stat conversion changes, which you can read about somewhere on this site if you're so interested, suffice it to say that secondary stats matter less now than they did before for most classes. Besides changing how stats were converted from ratings to percentages, they also changed the scaling of stats on gear to have a steeper curve. (Yes, its a curve, not linear). Using [Xuen's Tunic](https://www.wowhead.com/item=147151/xuens-tunic&bonus=3561:1482) as an example, at item level 900, it has 2,170 Agility, and 1,626 secondary stats. At 905 it has 2,273 Agi and 1,683 secondary stats. This means that it gained 103 Agility but only 57 secondary stats. Similarly, going from 950 (3,458 Agi, 1,992 secondaries) to 955 (3,623 Agi and 2030 secondary stats) see a gain of 165 Agi and 38 secondaries. Because of this huge, and widening, gap between primary and secondary stats, people are seeing the stat weights for secondary stats catch up, and maybe even, pass Agility's weight.
+
+**However, this gap is also why that fact is pretty much 100% irrelevant for most situations except looking at the value of sockets and what gems you should put in them.**
+
+#### TL:DR
+
+[SimulationCraft](http://www.simulationcraft.org/) is right, because of many factors described above, the stat weights you're seeing are totally believable. (Except maybe Haste, but see the pin in [Discord](http://www.discord.gg/peakofserenity) for an explanation of that).
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius), where I stream all my raids as well as article writing and more.

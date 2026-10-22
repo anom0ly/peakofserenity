@@ -1,0 +1,76 @@
+---
+title: Windwalker 8.1.5 Survival Guide
+slug: /2019/03/10/windwalker-8-1-5-survival-guide
+date: '2019-03-10T22:59:22'
+authors:
+- babylonius
+tags:
+- Windwalker
+- 8.1.5
+description: So 8.1.5 is here, or soon will be, and there are a few changes to Windwalker that people should be aware of, so I'll quickly cover what has changed and how…
+wp_id: 13761
+original_url: https://www.peakofserenity.com/2019/03/10/windwalker-8-1-5-survival-guide/
+---
+
+So 8.1.5 is here, or soon will be, and there are a few changes to Windwalker that people should be aware of, so I'll quickly cover what has changed and how they affect the spec.
+
+### Bug Fixes and QoL Improvements
+
+Finally, the moment that everyone has been waiting for: fixes to some of the bugs and annoying tendencies that Windwalkers have had since Alpha/Beta:
+
+- [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) should no longer reduce, but correctly increase the damage of several Azerite traits: [Pressure Point](https://ptr.wowhead.com/spell=278577/pressure-point), [Glory of the Dawn](https://ptr.wowhead.com/spell=288634/glory-of-the-dawn), and [Dance of Chi-Ji](https://ptr.wowhead.com/spell=286586/dance-of-chi-ji).
+- [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) should interact correctly with [Mark of the Crane](https://ptr.wowhead.com/spell=228287/mark-of-the-crane).
+- [Whirling Dragon Punch](https://ptr.wowhead.com/spell=152175/whirling-dragon-punch) should no longer be unavailable when [Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://ptr.wowhead.com/spell=107428/rising-sun-kick) are both on cooldown.
+- [Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury) will now select a new primary target if the first one dies.
+
+We've been asking for these for so long, they merit their own special attention.
+
+[Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) should no longer reduce, but correctly increase the damage of several Azerite traits: [Pressure Point](https://ptr.wowhead.com/spell=278577/pressure-point), [Glory of the Dawn](https://ptr.wowhead.com/spell=288634/glory-of-the-dawn), and [Dance of Chi-Ji](https://ptr.wowhead.com/spell=286586/dance-of-chi-ji).
+
+This is a set of bugs that many people may not know about as they're easily missed if you're not paying attention closely to your numbers. They're pretty typical for how anything interacts with [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire), have been for awhile, and probably will still happen more times in the future.
+
+Basically what you need to know is that before 8.1.5, any time that [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) was out, these three traits saw their damage reduced to 45%. This is to be expected, its what that happens to all abilities, however, the [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) spirits do not replicate these traits, so they just go down to doing 45% of their damage, rather than being buffed to 135% (45% x 3) like they're supposed to.
+
+This change means that they will do the damage they're supposed to. This won't be reflected in sims because we, purposefully, never implemented the bugs into the sims. However, there should be a noticeable change in damage in M+, mainly due to [Dance of Chi-Ji](https://ptr.wowhead.com/spell=286586/dance-of-chi-ji) doing MUCH more damage during [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) than it does/did before 8.1.5.
+
+[Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) should interact correctly with [Mark of the Crane](https://ptr.wowhead.com/spell=228287/mark-of-the-crane).
+
+This is another one that likely passed under the radar of most people. This is also the only change in 8.1.5 that is actually going to reduce our damage. Basically what happened is that when our [Storm, Earth, and Fire](https://ptr.wowhead.com/spell=137639/storm-earth-and-fire) tagged targets with[Mark of the Crane](https://ptr.wowhead.com/spell=228287/mark-of-the-crane), the tags wouldn't always fade even when the target died. This meant that you could easily keep your stacks for a whole fight, or even have multiple stacks on a single target fight. It also meant that, at times, you would not be able to generate stacks when you should have been able to. With this change, things \*should\* work the way that they're supposed to, and the way we'd expect them to.
+
+[Whirling Dragon Punch](https://ptr.wowhead.com/spell=152175/whirling-dragon-punch) should no longer be unavailable when [Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://ptr.wowhead.com/spell=107428/rising-sun-kick) are both on cooldown.
+
+This bug has been around for as long as [Whirling Dragon Punch](https://ptr.wowhead.com/spell=152175/whirling-dragon-punch), but only reared its ugly heady every now and again when we are dealing with large haste procs such as [Fury of Xuen](https://www.wowhead.com/spell=287055/fury-of-xuen) or [Bloodthirsty Instinct](https://www.wowhead.com/item=139329/bloodthirsty-instinct&bonus=1807:1472). What happens is that a large haste proc changes the cooldown of [Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://ptr.wowhead.com/spell=107428/rising-sun-kick) so much that the actually cooldown of the ability changes more than the tooltip, and whether or not you can use [Whirling Dragon Punch](https://ptr.wowhead.com/spell=152175/whirling-dragon-punch) depends on the value of the tooltip, or visa versa, I can't remember, but its inconsequential. Basically you'd see both abilities on cooldown, but [Whirling Dragon Punch](https://ptr.wowhead.com/spell=152175/whirling-dragon-punch) wouldn't, so you wouldn't be able to use it. 8.1.5 fixes how they are calculated, so [Whirling Dragon Punch](https://ptr.wowhead.com/spell=152175/whirling-dragon-punch) should work when it is supposed to.
+
+[Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury) will now select a new primary target if the first one dies.
+
+This was another change that we've been asking for ever since [Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury) no longer dealt 100% damage to each target it hit. Currently it deals 100% damage to your current target and 50% damage to each other target hit. However, if that first target would die, you would still only deal 50% damage to all other targets, even if you selected a new one. With this change, if your first target dies, [Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury) will pick a new target to deal 100% damage to. It will default to whatever new target you have targeted, or pick the closest one to you if you don't select a new target. No more having carefully pick what target you have when you cast [Fists of Fury](https://ptr.wowhead.com/spell=113656/fists-of-fury)!!
+
+### EE Change
+
+**[Energizing Elixir](https://ptr.wowhead.com/spell=115288/energizing-elixir)**   Chug an Energizing Elixir, ~~refilling all your Energy and instantly generate 2 Chi.~~ granting 2 Chi and generating 75 Energy over 5 sec.
+
+This is another change that we've been asking for since [Energizing Elixir](https://ptr.wowhead.com/spell=115288/energizing-elixir) was changed into its pre-8.1.5 version and put on the GCD. It is an enormous improvement to the ease-of-use of this talent. Rather than giving you 100 energy all at once, and inevitably wasting 30-40 energy of it, this version allows you to use all of the resources that it gives you. But the big questions are, how good is it? when do I use it? is it better than the other talents? As you can, hopefully, expect... this isn't a simple question.
+
+##### How to use it
+
+This is the simpler question to answer. Basically you want to use it as often as you can, as long as you can make use of the Chi and Energy without overcapping, so you'll probably want to try to use [Tiger Palm](http://bfa.wowhead.com/spell=100780) shortly after it to avoid capping. You will also want to avoid using [Fists of Fury](http://bfa.wowhead.com/spell=113656) while you have the buff up, as doing so will likely mean that you'll overcap your energy.
+
+##### When to use it
+
+Now, when to pick this talent over the others is a little bit more complicated. In general, we'll still aim to use [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) for all situations. Its ease of use and fluidity should keep it on top for most players in most situations. However, with the plethora of traits we have that give back resources, the extra resources from [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) and [Energizing Elixir](https://ptr.wowhead.com/spell=115288/energizing-elixir) aren't as needed, helping [Ascension](https://www.wowhead.com/spell=115396) become a semi-viable option. Basically this is how its going to work:
+
+1. [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947/fist-of-the-white-tiger) - Most consistent and easiest to use talent, also "feels" the "smoothest" according to most people. Should be the default.
+2. [Energizing Elixir](https://ptr.wowhead.com/spell=115288/energizing-elixir) - Highest theoretical maximum, but "feels" the worst as its the most disruptive to the rotation. Will be even easier to use, likely even preferable in AOE situations.
+3. [Ascension](https://www.wowhead.com/spell=115396) - Lowest theoretical maximum, but harder to mess up, gains relevance with more downtime away from bosses and if you have all the traits that give you resources like: [Fury of Xuen](https://www.wowhead.com/spell=287055/fury-of-xuen), [Glory of the Dawn](https://ptr.wowhead.com/spell=288634/glory-of-the-dawn), [Open Palm Strikes](https://www.wowhead.com/spell=279918), and [Dance of Chi-Ji](https://www.wowhead.com/spell=286587/dance-of-chi-ji)
+
+As I said, the recommendation is going to stay with [Fist of the White Tiger](http://bfa.wowhead.com/spell=261947) for all content, but the other two will be reasonable choices if you prefer them.
+
+### Bonus: Spinning Crane Kick
+
+I don't have an excuse for this, nor a real reason that we got it wrong, but at some point in the last few months, the breakpoint for switching to [Spinning Crane Kick](http://bfa.wowhead.com/spell=101546) over [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) or [Blackout Kick](http://bfa.wowhead.com/spell=100784) stopped being a nice clean 3 targets regardless of stacks, and became 2 targets and 3 stacks. I can't find a reasonable explanation for this, and it somehow slipped past all of us who normally pay attention to this. I am positive that, at some point, it was an even 3 targets, but now its not, and I don't know how or when it happened, and I'm sorry I didn't catch it sooner.
+
+The guides have been updated to reflect this change.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).

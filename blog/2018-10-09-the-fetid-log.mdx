@@ -1,0 +1,97 @@
+---
+title: The Fetid Log, a Zen Meditation
+slug: /2018/10/09/the-fetid-log
+date: '2018-10-09T23:54:56'
+authors:
+- emallson
+tags:
+- Brewmaster
+- '8.0'
+description: A user came into brew-lounge recently with some questions about their tank. This isn’t unusual—far from it! Peak of Serenity’s Brewmaster section is exactly…
+wp_id: 12711
+original_url: https://www.peakofserenity.com/2018/10/09/the-fetid-log/
+image: /img/uploads/2018/10/Brew-Musing_narrow.jpg
+---
+
+A user came into `#brew-lounge` recently with some questions about their tank. This isn’t unusual—far from it! Peak of Serenity’s Brewmaster section is exactly where we want people to come with questions about their tank. However, we were not prepared. Not for this.
+
+This particular individual came because they felt their BrM tank was difficult to heal. As usual, we asked for logs. Upon inspection, this tank had all the hallmarks of someone inexperienced with the spec. Low [ISB](https://www.wowhead.com/spell=115308/ironskin-brew) uptime, excessive [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) casts, clean Heroic Fetid kill.
+
+Wait.
+
+Clean...Heroic Fetid...kill? That just can’t be possible, right? Fetid has some of the highest tank damage in Uldir, so someone badly screwing up couldn’t possibly be killing this boss, right? Not on Heroic, RIGHT?
+
+We were *not* prepared.
+
+This spawned a huge discussion that quickly spilled from `#brew-lounge` into private chats between BrM veterans (both official and unofficial). An unhappiness with the spec had already been cropping up in the discord. In this log, that feeling of unhappiness was given form. We knew and had previously remarked that BrM is a very forgiving tank spec. None of us, however, realized quite how forgiving it truly was.
+
+After extensive discussion with other BrM Veterans, I am writing this post with the goal of illustrating exactly how problematic the current state of Brewmaster is. Not only is the spec forgiving, but it is also nearly impossible to tell how good (or badly) you are playing the spec without turning to external tools like (shameless self-plug) [WoWAnalyzer](https://wowanalyzer.com). Further, the punishment for poor play is rarely felt by the offending Brewmaster. Instead, the nature of our power shifts the burden onto the healers, and even they may not realize the problem without doing exactly what the protagonist of our tale did: asking vets to review the log.
+
+## Comparative Log Analysis
+
+The main tool I’m going to use to accomplish this is the same tool we consistently fall back on: log analysis. To protect the innocent, I will not be providing log links. The two logs I will use are (1) the offending log, (2) a log with comparable kill time (but much, much better play). We’ll call these the offending log and the reference log, respectively. Both logs have a Brewmaster *main-tanking* Heroic Fetid Devourer, which means they spend most of the fight getting hit in the face extremely hard by melee attacks.
+
+![ISB usage in the offending log](/img/uploads/2018/10/isb_off-300x79.png)![ISB usage in the reference log](/img/uploads/2018/10/isb_ref-300x77.png)
+
+**Figure:** [Ironskin](https://www.wowhead.com/spell=115308/ironskin-brew) usage for the offending log (top) and the reference log.
+
+A quick glance at the analyzer applied to the offending log reveals what should be a fatal issue: tragically low [Ironskin](https://www.wowhead.com/spell=115308/ironskin-brew) uptime. This player eschewed maintaining the buff in favor of casting [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) more. They purified a total of 36 times in 4m 28s, as compared to 19 times in 4m 34s in the reference log. Despite having nearly double the casts of the reference player, the offending player removed only 28% more damage (2.57m vs 2.00m). The cost from this in [Ironskin](https://www.wowhead.com/spell=115308/ironskin-brew) uptime was profound, with a drop from nearly 88% of hits mitigated to a mere 29%.
+
+That the reference player tanked more effectively is reflected in the amount of damage taken, but only slightly. The offending player took an average of 21k damage per second, while the reference player took a slightly lower 18k dps. We see a similarly small drop in external healing required when looking back at Warcraft Logs: 14.4k external healing required per second versus 12.6k.
+
+This doesn’t line up with our understanding of [how Brewmasters function](/tww/brewmaster/). A drop in [Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew) uptime this substantial should be met with a similarly large change in various incoming damage / healing metrics. In short: *a tank playing incorrectly should be taking more damage, and require more healing.* Or at least, that is what we expect—yet it is not what we find.
+
+I dug and dug, looking for some numerical representation of the impact that this poor play had. TMI? Nope. Raw DTPS? Nada. Nothing reflected the severity of this gap. On a whim, I commented on this in veteran chat. My fellow Peak author, [shrike](/bfa/authors/), suggested that we should at least see an increase in spikiness reflected in the amount and kind of heals they received. In fact, one doesn’t even need to dig that far. We can just look at the HP charts.
+
+![Tank HP in the offending log](/img/uploads/2018/10/hp_off-1024x280.png)
+![Tank HP in the reference log](/img/uploads/2018/10/hp_ref-1024x303.png)
+
+**Figure:** HP (and Max HP in red) vs fight time. Top: Offending Log, Bottom: Reference.
+
+The difference between the drops in health in the offending and reference logs is that the former has *instantaneous drops* due to lack of mitigation, while the latter has *slow, steady drops* due to lack of healing received. This is much easier to see if I pull my own (much shorter) Fetid log on one of our Mythic group’s Heroic runs.
+
+![Tank HP in emallson's personal log](/img/uploads/2018/10/hp_emall-1024x291.png)
+
+**Figure:** HP (and max HP) vs fight time. Personal Log.
+
+Over the course of this log, I get ticked down, and then healed back up by a combination of [Beacon of Light](https://www.wowhead.com/spell=53563/beacon-of-light) and [Rejuvenation](https://www.wowhead.com/spell=774/rejuvenation). While I occasionally drop a bit low due to gaps in healing after a [Stomp](https://www.wowhead.com/spell=262288/shockwave-stomp), there are no large spikes. The same is largely true in the reference log. This leaves us in a situation where the only real difference between playing a Brewmaster poorly or well is qualitative: how “spiky” were you (this is surprisingly hard to quantify). In the (paraphrased) words of shrike:
+
+*“Is there a metric for healer heart attacks?”* - shrike, 2018, probably
+
+Exactly as she predicted, the difference in spikiness can be seen both in the number and kind of casts received. The counts of the top 6 casts targeting the (brew) tank in both logs can be seen below. It is worth noting that the difference in scales makes the bars deceptive. For example: the offending player received a whopping 27 [Healing Wave](https://www.wowhead.com/spell=77472/healing-wave) casts, while the top cast on the reference player was a Resto Druid maintaining [Rejuvenation](https://www.wowhead.com/spell=774/rejuvenation) with 16 casts (a full 11 fewer). This player received almost as many heals in the top 3 ([Healing Wave](https://www.wowhead.com/spell=77472/healing-wave), [Soothing Mist](https://www.wowhead.com/spell=115175/soothing-mist), and [Flash Heal](https://www.wowhead.com/spell=2061)) as the reference player received in the top 6.
+
+![Casts targeting the tank in the offending log](/img/uploads/2018/10/casts_off-1024x144.png)![Casts targeting the tank in the reference log](/img/uploads/2018/10/casts_ref-1024x145.png)
+
+**Figure:** Casts targeting the tank in each of the offending (top) and reference (bottom) logs.
+
+Of course, these logs are not perfectly comparable. The reference log has a Holy Paladin with the amazing [Beacon of Light](https://www.wowhead.com/spell=53563/beacon-of-light) on the Brewmaster tank, while the offending log doesn’t. However, this only accounts for 15% of total healing received in the reference log, and won’t remove the spiky behavior of the offending tank’s healthbar.
+
+This puts us in an awkward situation. The tank in question fails many of the (external-only) checks for if a Brewmaster is playing well, but failing these checks isn’t actually reflected in the signals the tank is receiving. Maybe they notice that their health is moving in bigger chunks, but compared to a Paladin or Death Knight a Brewmaster is still fairly smooth even with [Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew) down. In fact, the only players that are really feeling the impact of this tank’s errors are the healers.
+
+## Tanking: The Healer’s Problem?
+
+Recall what I wrote earlier: “this doesn’t line up with our assumptions.” What if our assumptions are wrong? What if the onus of a tank’s survival isn’t intended to be on the tank, but on the healers? That would certainly explain what we see in these logs, but ultimately leaves us with a bit of an existential crisis. If we aren’t intended to bear the bulk of the responsibility for our own survival, then what is our purpose? To pass butter?
+
+Alternately, maybe this is just a tuning error. A really, truly obscene tuning error. It wouldn’t come as a surprise to many in the tank community to see Brewmasters hit with the nerfbat. While a straightforward nerf to [Stagger](https://www.wowhead.com/spell=115069/stagger) might make this player die to H Fetid, it won’t actually solve the underlying problem this log reveals: there is no tangible reward for playing well.
+
+This is, in my mind, the true heart of the problem. The only way for a Brewmaster to tell if they’re doing well or not is to ask their healers and hope they’re sufficiently knowledgeable to give a good answer. Given a few competent healers, we won’t really die to our own mistakes unless the damage intake is so high that they simply can’t put out that level of HPS. At the same time, good play isn’t rewarded. We can’t go without a healer for more than a few seconds *ever* no matter how well we play. It feels like we have no control.
+
+It feels like our play and our abilities *simply don’t matter.*
+
+I wish I could present a solution for this, but I really can’t. It has become increasingly clear to the tank community that [Stagger](https://www.wowhead.com/spell=115069/stagger) is much, much stronger than the tooltip lets on. I believe I represent the Official™ position of Peak when I say that [Stagger](https://www.wowhead.com/spell=115069/stagger) is so fundamentally powerful that it is not only stifling our ability to be strong in other areas but also eliminating the ability for players to examine their own play without substantial external tools.
+
+The aim of the design team to have [ISB](https://www.wowhead.com/spell=115308/ironskin-brew) used as an active mitigation tool seems to just have resulted in it being necessary only if you like your healers and want them to like you too. The alternative of maintaining the [ISB](https://www.wowhead.com/spell=115308/ironskin-brew) buff 100% of the time smooths things out and reduces damage intake a little bit, but changes so little we could literally just be taunt dummies and let the healers do the work. I don’t like this.
+
+## This Sucks
+
+I would like to return to a point mentioned in the introduction: we knew something was wrong. We felt it. In the BFA world, tanks have little control over their fate. While this was true to some degree in Legion, the effect has grown dramatically more pronounced—and as a result, the burden of poor play has shifted from the Brewmaster to the poor, unfortunate souls healing the Brewmaster.
+
+It isn’t fun to be a mana sponge. It isn’t fun to press our buttons and eke out barely less damage taken than someone that just presses [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) when its up. It isn’t fun that the biggest difference between the offending log and the reference log is slightly slower HP drops, and that the biggest difference between the reference log and my log is the healing team.
+
+This is an opinion piece, so I’ll end with my opinion: tanking right now isn’t fun because what we do barely matters. I expect that we will see similar takes from veterans of other specs in the upcoming megathreads---though, perhaps with a few more deaths because not everyone has [Stagger](https://www.wowhead.com/spell=115069/stagger). I hope Blizzard reads and listens to this feedback, because I would like to enjoy tanking again.
+
+**Addendum (11 October 2018)**
+This post has *really* blown up, and in the process a few points of confusion have come up.
+
+- I failed to mention that these were both main-tanks and not off-tanks. This has been fixed.
+- This article is not saying "it doesn't matter if you use [ISB](https://www.wowhead.com/spell=115308/ironskin-brew)." The point is that as a tank we both have little impact on our own survival and virtually no in-game feedback on how well we're playing. However, *maintaining [ISB](https://www.wowhead.com/spell=115308/ironskin-brew) makes you easier to heal* even if you can't tell, so please don't stop pressing [ISB](https://www.wowhead.com/spell=115308/ironskin-brew)!

@@ -1,0 +1,54 @@
+---
+title: 'Advanced: Extra Damage at the End of Storm, Earth, and Fire'
+slug: /2018/09/20/advanced-cancelaura-macros-for-storm-earth-and-fire
+date: '2018-09-20T01:23:41'
+authors:
+- mickey
+tags:
+- General
+- Windwalker
+- '8.0'
+description: 'As of 11/17/2020, this has finally been fixed after 4 long years. Rest in peace, WDP bug. The rest of this article is no longer applicable. --- TL;DR: You…'
+wp_id: 12487
+original_url: https://www.peakofserenity.com/2018/09/20/advanced-cancelaura-macros-for-storm-earth-and-fire/
+---
+
+**As of 11/17/2020, this has finally been fixed after 4 long years. Rest in peace, WDP bug.**
+
+The rest of this article is no longer applicable.
+
+---
+
+**TL;DR:** You can get extra damage on [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) by using it as [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) expires (around ~0.2 or 0.3 seconds left on it, depending on latency) and the clones rush back to you. They can get the cast off, but without their usual damage reduction, so you can do up to 300% of normal [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) damage. There is a WeakAura to help with the timing [here.](https://wago.io/cIBFt3XHY)
+
+[**Click here for a demonstration video from JFunk.**](https://clips.twitch.tv/CredulousCoweringMuleFutureMan)
+
+Continue reading for a deeper explanation on why this works and how it plays out.
+
+---
+
+> **Use this one weird trick to gain DPS. Blizzard *hates* it!**
+
+### Explanation
+
+So what exactly is the bug we're talking about here? The answer has to do with the way you and your clones deal reduced damage. As you probably know, when you pop [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) , you summon two clones that each mimic your abilities. Both clones and the spirit you control all deal 45% of your normal damage. This damage reduction is applied by the actual buff, [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) , that appears on your character and clones during the duration of the spell. Removing the buff manually, which is no longer possible due to this article getting too popular, will take away the damage reduction but also despawn your clones. The bug that we're going to take advantage of here is that the clones don't actually despawn right away; you may recall the FSK-like animation of your clones rushing back into your body as they despawn. During this window, the [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) buff is gone, but your clones are technically still active. What you can do is use a spell in this time and try to get you and your two clones to perform the attack... **but without the damage set to 45% of normal value.**
+
+First of all, yes, the timing is difficult to get consistently. It's up to you whether practicing and trying to use this trick is really worth it to your gameplay or not. I only discovered it by mistake (independently, long after a handful of high level monks knew the trick as an open secret) when testing BFA openers for another article and reviewing logs.
+
+While you have probably heard of this as the "WDP bug," it can be done with most spells. It's generally used with [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) simply because it does the most damage in the single GCD window, basically tied with [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) in single target and blowing anything out of the water in AoE. Let's go over some general details of how the trick performs and how it interacts with each spell. There's a few key things to know:
+
+- **This trick is definitely not an exact science, and sometimes it seems to give unexpected results regardless of the rest of the guidelines listed below.**
+- This trick is ping dependent. The higher your ping, the less consistent the bonus damage is. My testing results are from a connection with about a 67 ms ping on average.
+- This trick is dependent on the position of your clones when you hit the macro. Generally, the closer they are to your actual character, the more likely it is to work. Rushing back from faraway targets, or even the other side of a boss with a very large hitbox, can cause it to fail sometimes.
+- [Rising Sun Kick](http://bfa.wowhead.com/spell=107428): Generally, it is much harder to pull off and less consistent than [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175). Unless you just happen to see this come off cooldown as [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) is ending, it's not really worth trying.
+- [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175): Overall, the trick is much more consistent when using [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175). When performing it, I usually saw both clones dealt a full 100% damage on all three hits of [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175). My own character would flip flop between dealing 100% with all three hits, and dealing 100% on two hits and 45% on the last.
+
+If you're really set on getting the full use out of this technique, the best advice I can give is to practice it a lot, in as many situations as you can, to get a feel for the timing on your specific connection. If you get it down consistently and want to min max it, considering holding [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) when you know you might cast [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) soon, but also try to start [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) when there's around 13-14 seconds left on the cooldown of [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175). That way, you'll waste the least amount of time with [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) sitting off cooldown, and still have room to attempt the bug. Also, since [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) is the main use of the bug and does uncapped AoE damage, this trick is obviously much more worth attempting in heavy AoE or dungeon trash compared to a single target boss, though it's still a nice damage boost there.
+
+### Video Demo
+
+[**Click here for a demonstration video from JFunk.**](https://clips.twitch.tv/CredulousCoweringMuleFutureMan)
+
+### WeakAura
+
+To help with the timing, you will want to see the remaining duration of [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) down to at least tenths of a second. I've made a simple WeakAura to show exactly that, which you can grab [here.](https://wago.io/cIBFt3XHY)

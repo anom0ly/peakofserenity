@@ -1,0 +1,99 @@
+---
+title: 'A glimpse into theorycrafting: RSK versus FoF'
+slug: /2022/01/30/a-glimpse-into-theorycrafting-rsk-versus-fof
+date: '2022-01-30T12:12:09'
+authors:
+- scurch
+tags:
+- Windwalker
+- '9.2'
+description: '!Warning! This article serves as a window into theorycrafting, if you do not care about boring math stuff feel free to skip it entirely. The conclusions…'
+wp_id: 20976
+original_url: https://www.peakofserenity.com/2022/01/30/a-glimpse-into-theorycrafting-rsk-versus-fof/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+##### !Warning! This article serves as a window into theorycrafting, if you do not care about boring math stuff feel free to skip it entirely. The conclusions drawn here will be included in the guides found on this website.
+
+### Introduction
+
+Anybody who has played Windwalker runs into this problem very early on. Your [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) are both ready to be used. You are now forced to choose between delaying one of these two by using the other one first, so which one do you choose? Most of you will have looked at our guides on the site and the discord server and read what is said there. But how did I as the guide writer figure out this answer? With the upcoming 40% bonus damage to [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) from the 9.2 tier set I revisited this question and thought I would give you a glimpse into the world of theorycrafting by showing my work behind the answer.
+
+Our end goal will be determining how much damage you lose from delaying your [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) or your [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick). The screenshots are from a Google Sheet, a link to it will be at the bottom.
+
+### Doing the math
+
+Let's start with step 1: An input to change 2 parameters, if you are wearing the 2 set and your amount of Haste. Why you need these 2 becomes will become clear later on.
+
+![](/img/uploads/2022/01/2022_01_30__50.png)
+
+Up next we need to know how much damage these abilities do. [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) is included here, more on that later.
+
+![](/img/uploads/2022/01/2022_01_30__66.png)
+
+This shows the Attack Power (AP%) modifier and the product of the [Windwalker aura](https://www.wowhead.com/spell=137025/windwalker-monk) for that specific spell. Lastly is the damage which is just these 2 things multiplied by each other.
+
+But it's not that easy, as you cannot auto attack while channeling [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury). I am going to make a generalization here and say you lose 70% AP worth during a full channel. This will change slightly based on factors such as the amount of mastery you have, but for the purpose of giving an overall recommendation in the guide this generalization will do. We will also look at how much Chi each of the abilities cost to get a damage per Chi value.
+
+![](/img/uploads/2022/01/2022_01_30__65.png)
+
+Once more, this number isn't accurate enough for us. This only includes the damage that [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) does and is missing the value of the cooldown reduction part. So let's figure out how big the value of 1 second of cooldown reduction of [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury). and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) is. If you miss a cast of [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) you don't lose all of its damage as you'd spend that generated Chi another way, in our case [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick). So we look at how much better our 2 big spenders are than [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick).
+
+![](/img/uploads/2022/01/2022_01_30__64.png)
+
+Now that we know how much damage we lose from missing 1 whole cast of these 2 spells we can figure out how much damage we lose from delaying these spells by 1 second. This is a simple case of dividing the value of the whole cast by the cooldown.
+
+![](/img/uploads/2022/01/2022_01_30__62.png)
+
+Now that we know the value of 1 second of the cooldowns we add this up to our [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) damage from before to get the accurate picture of how much [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) really provides.
+
+![](/img/uploads/2022/01/2022_01_30__60.png)
+
+Remember how we had figure out how much better [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) are than [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick)? We now have to repeat this one more time to see how much better they are compared to [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) if you include its cooldown effect.
+
+![](/img/uploads/2022/01/2022_01_30__59.png)
+
+Now we finally have all we need to calculate our original question. We have 2 options.
+Option 1: [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) --> [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) this means you delay your [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) by our Global Cooldown of 1 second.
+Option 2: [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) --> [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) this means you delay your [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) by the channel time of [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury).
+
+![](/img/uploads/2022/01/2022_01_30__58.png)
+
+As you can see you lose more damage going for option 2.
+
+We have our answer, but this raises another question. What if they are not both off cooldown, what if [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) is off cooldown and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) would come off cooldown during the channel of [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury)? Should we still go for Option 1 in this case and delay [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) even more, at what point should we switch over to option 2? To do this we have to find the equilibrium between the 2 options. Let's write the formula to do this.
+
+![](/img/uploads/2022/01/2022_01_30__67.png)
+
+There we have our answer. They are equal if [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) is off cooldown and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) still has 1.71 seconds of cooldown left. Anything below that and you should go with option 1, anything above that and you should go with option 2.
+
+One last interesting scenario to look at is if you have to use 1 global cooldown in between the 2 spells. An example would be if you didn't prepare 5 chi or if you would overcap your energy and you have to use a [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm). We just add 1 second to our delay for each of the option.
+
+![](/img/uploads/2022/01/2022_01_30__68.png)
+
+As we can see both options lose even more damage, but option 1 loses more than option 2 compared to our first scenario.
+
+We finally have our answer to what you should do if you find yourself in this scenario and have exactly 10% haste and no 2-set. Seeing how everybody's character is different we'll plot a graph to showcase what it would look like at different inputs.
+
+![](/img/uploads/2022/01/2022_01_30__71.png)
+
+### Conclusion
+
+Time to draw some general conclusions that are easy to remember.
+
+- Without the 2-set (blue line) you'd always use [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) first, and even going as far as waiting for [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) if it would come off cooldown before halfway into your [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) channel.
+- With the 2-set equipped (red line) you use [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) first unless you have both [Invoker's Delight](https://www.wowhead.com/spell=338321/invokers-delight) and [Bloodlust](https://www.wowhead.com/spell=2825/bloodlust) active to reach the threshold of 65% haste, waiting for a cooldown to come up either way is negligible and practically not worth it.
+- Without the 2-set + having to use 1 global in between (yellow line) you'd always use [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) first, and even going as far as waiting for [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) if it would come off cooldown (1.5 - each big haste buff) seconds into your [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) channel.
+- With the 2-set equipped + having to use 1 global in between (green line) you always [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) first, and if you have a big haste buff active you'd even go as far as waiting for [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) if it would come off cooldown halfway during the global cooldown of [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick), with 2 big haste buffs that increases to anytime during the global cooldown of [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick).
+
+Great, now we're done, right? No. Doing the math is fine and all but we have to make sure they work practically. Having played Windwalker for a while I can tell you there are certain haste levels where going for either option 1 or option 2 will lead to a bad cycle where [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) and [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) keep coming off cooldown at the same time. You should be on the lookout for these and adjust if necessary.
+
+Here is a example of this. Imagine we are wearing the 2-set and are at 100% haste, looking at the red line this means we should be using [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) before [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) if they both come off at the same time. I made a timeline to show you what happens when you take option 1 and option 2.
+
+![](/img/uploads/2022/01/2022_01_30__73.png)
+
+As you can see if you follow my earlier math you'd go with option 2 and end up having [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) come off cooldown at the same time for every single [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury). If you instead went with option 1 you'd only have them come off at the same time every 2nd [Fists of Fury](https://www.wowhead.com/spell=113656/fists-of-fury).
+
+There we have it, finally we have our answer in full. I hope I showed you that while it may seem like a small question it can have a long and complicated answer, but if you're crazy like me that's the fun part.
+
+[Link to the Google Sheet](https://docs.google.com/spreadsheets/d/1-SAd2bNNMZHS9nBsRMczlnqJyLwNZMx6P0EYE8TjSMk/edit?usp=sharing)

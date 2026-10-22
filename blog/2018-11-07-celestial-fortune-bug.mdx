@@ -1,0 +1,67 @@
+---
+title: Celestial Misfortune, a Zen Meditation
+slug: /2018/11/07/celestial-fortune-bug
+date: '2018-11-07T20:21:03'
+authors:
+- emallson
+tags:
+- Brewmaster
+description: 'Did you know Celestial Fortune is bugged? Until the 30th of October, it actually had two bugs. The first is relatively well-known and pretty benign: the…'
+wp_id: 12928
+original_url: https://www.peakofserenity.com/2018/11/07/celestial-fortune-bug/
+image: /img/uploads/2018/10/Brew-Musing_narrow.jpg
+---
+
+Did you know [Celestial Fortune](https://www.wowhead.com/spell=216519) is bugged? Until the 30th of October, it actually had two bugs. The first is relatively well-known and pretty benign: the absorb portion of [Celestial Fortune](https://www.wowhead.com/spell=216519) won’t trigger until you’ve entered combat at least once since logging in. This basically never matters outside of testing spell interactions on beta and PTR. The other bug, however, is what we’re talking about today. It was a bit more problematic.
+
+## What is Celestial Fortune?
+
+Before getting into the details of the bug, I think it is worthwhile to first explain the mechanics of the ability itself. While the tooltip may seem pretty clear, there are actually some unnoted behaviors that could be clarified.
+
+Going by the tooltip, [Celestial Fortune](https://www.wowhead.com/spell=216519) is a passive ability that causes you to have a chance when healed to get healed for an additional 65%. The chance for this to trigger is equal to your critical strike chance, which gives that stat a defensive value. However, it also has a hidden effect:
+
+*Whenever an absorb is placed on you, its effect is increased by your critical strike chance.*
+
+This means that, for example, if a Discipline Priest throws a [Power World: Shield](https://www.wowhead.com/spell=17) on you, [Celestial Fortune](https://www.wowhead.com/spell=216519) will secretly increase the amount absorbed. While we haven’t received developer confirmation of this, our current understanding is that this is intended to make shields (especially those tied to trinkets or external cooldowns like [Life Cocoon](https://www.wowhead.com/spell=116849)) more reliable. These effects are often used proactively to deal with tank mechanics, and having them randomly fail to shield for enough would be extremely frustrating.
+
+[Celestial Fortune](https://www.wowhead.com/spell=216519) itself will proc on basically anything. If it heals you (and isn’t CF itself), it can proc the healing effect. There are, however, quirks with the effect. In Legion the biggest example was the trinket [Archimonde’s Hatred Reborn](https://www.wowhead.com/item=144249), which gave a large shield that was further boosted by this effect. AHR dealt damage to enemies based on the amount absorbed. However, it would not deal damage for additional absorption provided by [Celestial Fortune](https://www.wowhead.com/spell=216519). While this quirk was due to the odd interaction between two rather odd effects, it remained a common point of confusion throughout much of Legion. We don’t currently have any big examples of that in BFA, but who knows what will pop up on PTR in a few months.
+
+## The Bug
+
+You’re not here to learn how [Celestial Fortune](https://www.wowhead.com/spell=216519) works, though. You’re here for something way, way more interesting than that. Two weeks ago, I was implementing the Celestial Fortune tracker on [WoWAnalyzer](https://www.wowanalyzer.com/report/Vw2px8zRCX4yW9Qf/11-Mythic+Mythrax+-+Kill+(9:09)/8-Eisenpelz/celestial-fortune), which breaks down your healing received both by source player and spell. Unlike Warcraft Logs’ default interface, it also applies spec-specific knowledge to attribute healing to absorbs like [Power Word: Shield](https://www.wowhead.com/spell=17). In the process of building this feature, I spent a lot of time debugging weird cases where [Celestial Fortune](https://www.wowhead.com/spell=216519) procs occurred but weren’t the right size for the associated heals. In the process, I found this gem:
+
+[![ A large Celestial Fortune proc, but the only recent heal is from Judgment of Light.](/img/uploads/2018/11/stagger_cf_mother.png)](https://www.warcraftlogs.com/reports/dYJTvGCwKr9BWkLX/#fight=8&source=4&view=events&eventstart=1823563)
+
+*A large Celestial Fortune proc, but the only recent heal is from Judgment of Light.*
+
+I poked my fellow Brewmaster veterans as I hunted for the cause. After eliminating the usual offender ([Blessing of Sacrifice](https://www.wowhead.com/spell=6940) frequently causes logging weirdness), [Paoanii](/bfa/authors/#brewmaster) realized what was actually happening: [Celestial Fortune](https://www.wowhead.com/spell=216519) was healing me for damage taken from [Defense Grid](https://www.wowhead.com/spell=267821)!
+
+This raised huge questions. How common was this? Was this a one-off thing, or did it happen all the time? How much healing did it give? What conditions caused it to occur? More digging followed, and we quickly verified that this was happening on almost every boss. No special conditions needed to trigger it.
+
+*Celestial Fortune treated environmental damage as healing.*
+
+Turns out that [Celestial Fortune](https://www.wowhead.com/spell=216519) really would proc off basically anything. After updating my code to account for this possibility, all of the error cases I’d found where a [Celestial Fortune](https://www.wowhead.com/spell=216519) heal didn’t line up with the actual heal went away immediately. A little bit more testing immediately showed us the severity of the bug. On Mythic MOTHER, I received about 400 healing per second---19% of [Celestial Fortune](https://www.wowhead.com/spell=216519)’s total healing---from only this bug.
+
+![Healing received from Defense Grid on M Mother.](/img/uploads/2018/11/Screenshot_from_2018-10-26_18-42-12.png)
+
+*Healing received from Defense Grid on M Mother.*
+
+Most bosses in Uldir don’t have a ton of damage from environmental sources; MOTHER and Mythrax are the real outliers. That said, pulling up my then-best Mythrax log gave a shocking result: the bug provided **806 HPS**. In a world where tank damage taken tends to be 12-25k per second, this is pretty substantial. We couldn’t sit on this.
+
+![Healing received from the Environment on a ~3 minute wipe on Mythrax.](/img/uploads/2018/11/Screenshot_from_2018-10-26_18-45-51.png)
+
+*Healing received from the Environment on a ~3 minute wipe on Mythrax.*
+
+### Reporting & Resolution
+
+We identified the bug on the afternoon of Friday, October 26th and reported it within an hour. Much to our surprise, we received word that it was fixed by the following Tuesday. We’ve since independently confirmed that it is fixed.
+
+## Going Forward
+
+It is rather difficult to estimate the impact of this fix in the long term because, as it turns out, *this bug has existed since [Celestial Fortune](https://www.wowhead.com/spell=216519) was first added to the game in patch 7.0.1.* As a result, we don't have good references for our performance without it. As an aside, this bug neatly explains some of the [absurd healing logs](https://www.warcraftlogs.com/reports/7F8KzgqRMArVaDZ9#fight=16&type=healing&start=3917906&end=3942510) people got during transition into phase 3 on M Argus. Ultimately, this means all we have to predict the future with is what we see post-fix---which isn’t much.
+
+[![The Celestial Fortune bug manifesting in Legion Pre-Patch](/img/uploads/2018/11/unknown.png)](https://www.warcraftlogs.com/reports/Lz6MGbHryvR4Qdg2#fight=34&type=healing&pins=0%24Separate%24%23244F4B%24healing%240%240.0.0.Any%24122775235.0.0.Monk%24true%240.0.0.Any%24false%24216521%5E0%24Separate%24%23909049%24damage%241%240.0.0.Any%240.0.0.Any%24true%24122775235.0.0.Monk%24false%24184990&start=6703164&end=6706165&target=6&view=events)
+
+*The Celestial Fortune bug manifesting in Legion Pre-Patch (Image courtesy of Woliance)*
+
+The change hasn’t seemed to alter the status quo at all. As my guild recleared Mythic after the hotfix, none of the healers noticed---even after I told them about it. In the end, this *is* a nerf. While we’re going to have to wait to truly see the severity, in Uldir it seems little more than a love tap. Even on Mythrax, the healing would’ve only amounted to ~5% of the total I received on my post-hotfix kill. The real upside to this is that we don’t become accidentally broken on a boss in the future and have [Celestial Fortune](https://www.wowhead.com/spell=216519) die for this bug’s sins. Given how small the nerf seems in practice, I think this is a price I’m willing to pay.

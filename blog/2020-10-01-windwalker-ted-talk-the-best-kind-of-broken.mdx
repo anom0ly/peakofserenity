@@ -1,0 +1,75 @@
+---
+title: 'Windwalker TED Talk: The Best Kind of Broken'
+slug: /2020/10/01/windwalker-ted-talk-the-best-kind-of-broken
+date: '2020-10-01T00:22:23'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.3'
+- '9.0'
+description: So yesterday, ever observant, Shakugan, noticed that there appeared to be some bizarre behavior with Whirling Dragon Punch Now, I know what you're saying,…
+wp_id: 16152
+original_url: https://www.peakofserenity.com/2020/10/01/windwalker-ted-talk-the-best-kind-of-broken/
+image: /img/uploads/2016/08/fVOvCHb.png
+---
+
+So yesterday, ever observant, Shakugan, noticed that there appeared to be some bizarre behavior with [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175). Now, I know what you're saying, "Wow, Babs, shit being broken for Windwalker... how original?". However, I'm here to tell you that this new bug is a good bug and one that should be embraced. My name is Babylonius and Welcome to my TED Talk.
+
+### What's going on?
+
+![](/img/uploads/2020/09/unknown.png)
+
+This is the situation that started it all last night. Now, nothing may appear amiss, until you realize that [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) did 21 hits of damage but had "-" casts (that means zero). Well obviously this is a little weird, so further investigation was done and in his infinite wisdom, Shakugan put together a video to illustrate it.
+
+[Video: RandomWDP.mp4](/img/uploads/2020/09/RandomWDP.mp4)
+
+If you look closely, you can see that the CombatLog (left) shows damage events from [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175), but if you watch his actionbars, he never actually presses it. This is indeed very weird. This was further confirmed by everyone's favorite person, Mik, by verifying that this is the case on PTR like Shakugan showed above, by finding [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) damage events without ever pressing the actual [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) button:
+
+![](/img/uploads/2020/09/unknown-1.png)
+
+A little more testing and it appears that these damage events are getting triggered any time the [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) buff falls off. This is the same buff that was put in place to (unsuccessfully) make sure that [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) would be usable when [Fists of Fury](http://bfa.wowhead.com/spell=113656) and [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) were on cooldown. This means that if [Fists of Fury](http://bfa.wowhead.com/spell=113656) and [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) are both on cooldown then the instant one of them comes off CD, there will be [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) damage events. If you use that ability, the [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) buff will return, and disappear the next time [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) or [Fists of Fury](http://bfa.wowhead.com/spell=113656) comes off CD. You can, theoretically, get these damage events every time [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) or [Fists of Fury](http://bfa.wowhead.com/spell=113656) come off cooldown, as long as the other one is still on cooldown. Its not something that would be easy, or really possible, to abuse, but its a fun little chunk of damage.
+
+It is possible that it has something to do with this new line that was added to [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175)'s spell data at some point, which is most likely just them trying to find a way to fix it, but we don't know for sure;
+
+![](/img/uploads/2020/10/unknown.png)
+
+### Why is this good?
+
+So this was mentioned to me last night before I fell asleep, and upon waking up this morning, I actually felt really good about what its doing for a variety of reasons. So here is my Pro and Con list:
+
+##### Pros
+
+- You cannot be in a situation where [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) should be castable but isn't (bug fix)
+- You cannot abuse the end of [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) to try and eek out more [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) damage (bug fix)
+- You're not in a situation where [Blackout Kick](http://bfa.wowhead.com/spell=100784) not reducing [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) makes things line up all wonky.
+- You can't get killed by using [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175)  at the wrong time and getting knocked up.
+- Makes it very easy to make baseline and replace with something else
+- Adds some skill element to always keeping them desynced
+- Adds consistent sustained AOE and ST pressure
+- Keeps [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) relevant during AOE
+
+##### Cons
+
+- One less button to press
+- Takes away the "skill shot" of using it at the end of [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639)
+- Would make an active talent a passive without further changes
+- Removes burst potential
+- Cannot avoid knockbacks
+- [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) reduces its damage... because of course it does
+
+Personally, the Pros outweigh the Cons, but I know that I am not always in the majority for how I like Windwalker to play, so for me the loss of one active button isn't a bad thing. It does also open up the potential for moving [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) to baseline and opening up that talent slot. Obviously the continued barrier of [Storm, Earth, and Fire](http://bfa.wowhead.com/spell=137639) not working with it the right way is annoying, but that's a problem they've solved before just by making it so they do copy it or it doesn't get reduced.
+
+I think having a further benefit to keeping things on cooldown is a great thing. I think having a reason to use [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) consistently inside AOE is a great thing. I think the bugs that now become irrelevant is a great thing. I think giving Windwalkers more consistent AOE pressure is a good thing. However, the more I thought about all this, the more clearly I saw the perfect way that this should work.
+
+### What would be perfect?
+
+So my ideal world has two options; (1) [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) keeps this functionality and replaces [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') in its talent row, OR (2) [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') gains this functionality as a passive and [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) is no more.
+
+I think this the best case scenario because right now [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') is an awful spell that will never be used. It is also currently the only "active" ability in its row, and it feels horrible to use. By making [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') activate any time [Rising Sun Kick](http://bfa.wowhead.com/spell=107428) and [Fists of Fury](http://bfa.wowhead.com/spell=113656) are on CD for the duration that they're on CD, or just as one time proc whenever both are on CD, it makes it a passive ability that comes from your active play. It would then be paired with [Hit Combo](http://bfa.wowhead.com/spell=196740) which is the definition of a passive that adds nothing to your kit, and [Dance of Chi-Ji](https://shadowlands.wowhead.com/spell=325201/dance-of-chi-ji) which is a passive proc that has an active way to use it. I think this gives a really good discrepancy in how you want to do your damage, and since they all would affect single target and AOE, they would all be reasonably easy to balance between each other.
+
+By moving [Whirling Dragon Punch](http://bfa.wowhead.com/spell=152175) in this form down one row lower or replacing the awful [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') with this functionality, it would free up a talent slot for something like [TEB](https://www.wowhead.com/spell=247483/tigereye-brew) or [Strike of the Windlord](https://www.wowhead.com/spell=205320/strike-of-the-windlord) in the top row. This could also be made the way that you trigger [Strike of the Windlord](https://www.wowhead.com/spell=205320/strike-of-the-windlord) and put that in the spot where [Rushing Jade Wind](https://www.wowhead.com/spell=281955/rushing-jade-wind') is so that you have one single target proc, one passive, and one AOE proc in the same row. There are a dozen ways to utilize this, but the big point is that this passive function actually feels like a really great fit to the Windwalker martial arts and wind theme. It something that would reward good play of keeping things on cooldowns, without being very punishing for mistakes.
+
+Honestly, I'd be super happy if it was a baseline function of the spec, although I will admit that I could just be looking for the sweet release from any of these bugs. Is this Stockholm syndrome?
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity), [PayPal](http://paypal.me/peakofserenity), or buying [Peak Merchandise](https://teespring.com/stores/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).

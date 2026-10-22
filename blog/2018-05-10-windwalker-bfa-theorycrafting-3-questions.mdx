@@ -1,0 +1,130 @@
+---
+title: Windwalker BfA Theorycrafting; 3 Questions.
+slug: /2018/05/10/windwalker-bfa-theorycrafting-3-questions
+date: '2018-05-10T19:37:54'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '8.0'
+description: Dungeon guides for Mythic Plus are starting to be rolled out, check the nav bar above for whats been done --- Recently there have been many questions about…
+wp_id: 9924
+original_url: https://www.peakofserenity.com/2018/05/10/windwalker-bfa-theorycrafting-3-questions/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+---
+
+\*\***Dungeon guides for Mythic Plus are starting to be rolled out, check the nav bar above for whats been done\*\***
+
+---
+
+Recently there have been many questions about some talent choices in BfA, how to use some abilities, and people interested in getting into theorycrafting. There has been discussion in a [thread on the Official Forums](https://us.battle.net/forums/en/wow/topic/20764026305), where many numbers have been thrown around that don't match the numbers I've gotten with my own math and research. So I thought I'd write things up to help explain the math behind some choices as well as give some of you an insight into the theorycrafting that goes into specs. Today I'm going to tackle the math behind [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) vs [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175), [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947) vs [Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir), and the point at which we drop abilities in favor of [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick). **I do not have any formal training in math, so don't be shocked if someone points out an error and things need to be adjusted.**
+
+Any and all of this math can become hopelessly meaningless as tuning continues leading up to, and through the expansion's release. So don't be shocked if the numbers are different if you're looking at this article after it was released.
+
+If you are someone who wants to get into theorycrafting, then check out these problems and come up with your own solution, then check it against what I've done.
+
+#### Constants
+
+- [Windwalker Aura](http://bfa.wowhead.com/spell=137025/windwalker-monk) (http://bfa.wowhead.com/spell=137025/windwalker-monk) - Modifies nearly all abilities by -20% (Effect #1); maybe another -21% (Effect #4, not sure if thats in addition to #1 or two sides of the same coin); plus extra modifiers to specific abilities relevant to these discussions; +26% to [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick), [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick), [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) (Effect #5); +140% to [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) (Effect #8); and +50% to [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) (Effect #9).
+- Armor Reduction, Mastery, Vers, Crit, [Hit Combo](https://bfa.wowhead.com/spell=196740/hit-combo), and [Windwalker Aura](http://bfa.wowhead.com/spell=137025/windwalker-monk) effects #1 and #4 are constant through all abilities discussed, so no need to include them in the math.
+- [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) - 27% base AP \* +26% = 34% AP
+- [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) - 77% base AP \* +50% (Effect #9) x\* +26% (Effect #5) = 145.53% AP
+- [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) - 115% base AP \* +26% (Effect #5) \* +70% ([RSK Rank 2](https://bfa.wowhead.com/spell=262840/rising-sun-kick)) = 246.33% AP
+- [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) - 248.7% base AP per target, no additional modifiers
+- [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) - 5 hits of 94.185% base AP = 470.925% base AP, no additional modifiers
+- [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) - 40% base AP \* +140% = 96% AP per target
+- Mark of the Crane - +10% damage to [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) per stack
+- [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947) - 87.75% + 87.75% \* 0.5 (offhand penalty) = 131.25% AP no additional modifiers
+
+#### PS v WDP
+
+[Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) currently increases the damage by [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) by 200% and provides 1 Chi, so that each buffed [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) will hit for an additional 64% AP (34% \* 200%) every 15s, or 4 times per minute (0s, 15s, 30s, 45s). The best way to compare the 1 Chi is to turn it into a [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick), since that's where our excess resources go in single target. This adds another 145.53% AP to each [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) buff, for a total of 209.53% AP every 15s, or 838.12% AP per minute
+
+[Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) has a base cooldown of 24s modified by haste, so with 0 haste, you can perform 2.5 [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) per minute. This equates to 621.75% AP per minute at 0 haste.
+
+This means that with 0 haste, [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) does more damage than [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) on single target. As soon as you add a second target, [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) doubles in damage, and [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) doesn't change, so [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) wins handily. However, because [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175)'s cooldown is affected by haste, there is a haste "breakpoint" where you'd get enough [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175)'s per minute to pass the 838.12% AP per minute that [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) provides.
+
+To figure this out you just divide the 838.12% from AP by the 248.7% that [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) provides to see that 3.37 [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) per minute is what you'd need for [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) to match [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes)'s output in single target. So then we figure out what haste you'd need to get to that 3.37 [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) per minute (WDPPM? lol)
+
+First we figure out that 3.37 [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) means that it would have to have a CD of 18.39 seconds. So, to get from 24s to 18.39s, we have to reverse the haste formula of Base CD / (1+ Haste) = Modified CD
+
+- 24 / (1+H) = 18.39
+- 24 = 18.39 \* (1+H)
+- 24/18.39 = 1+H
+- 1.305 = 1+H
+- H = 30.5
+
+**So you'd need at least 30.5% haste for [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) to beat [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) in single target.** This is without taking the cooldown reduction that each [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) provides to [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) and [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury). To do that, you need to take the AP provided by each ability and factor in how much of the cooldown you gain per [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) used:
+
+Without Haste, [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) has a 10 second CD, so for every [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) you get back 1 second, or 1/10th the worth of a [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick). For [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) it is 1/24 without haste. This equates to roughly 19.6% AP from [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) and 24.9% AP from [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick). Since this occurs 4 times a minute, that equals 178% AP every minute. Add this to the 838.12% from before and you get a total of 1,016% AP maximum provided by [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) and all that it provides. This means that you'd need 4.08 [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) per minute to match, requiring a cooldown of 14.7 seconds, which comes from 63.27% haste. However, the more haste you get, the larger the impact you get from the 1 second CD from [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick), as 1/9 of a RSK is more damage than 1/10. **I'm sure you get the point, as it currently stands [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) cannot match the damage potential of [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) on single target.**
+
+If you look at two targets, then things get more slightly complicated as the damage from [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) goes to 497.4% per cast, or 1,243.5% AP per minute before haste is a factor. The only change that needs to be made for the [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) formula is to consider the 50% extra damage that [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) does to the second target, which adds just another 39.2% AP per minute, so the total of [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) only goes to 1,055.2%, which is easily attained by [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175).
+
+#### FotWT v EE
+
+This one gets a little bit confusing as you're comparing the pure resources provided by [Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir) to the resources and direct damage provided by [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947), its not easy, but its doable. The first step you have to do is to bring all the numbers into common ground, the easiest of which is to turn them all into their potential damage.
+
+[Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir) provides 2 Chi and a full energy bar every 1 minute. In a perfect scenario, that's 100 energy every minute. However, some energy potential gets lost because.... you need to have 1 or less Chi going in so you can use [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) right after to get the energy regeneration started ASAP. This means that you need to accommodate the 2 Chi it generates, and another 2 Chi from the [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) that you use. In an ideal world you use [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) to get to 0 energy, then an ability, then [Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir), followed by [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) again. So you lose 3 GCD worth of energy regen from each of those abilities before the second [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm).
+
+This takes the maximum gain for [Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir) down to 2 Chi and 70 energy without any haste; as your haste goes up, the waste goes up \*BOOM I'M A POET\*. 70 energy equates to 1.4 [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm) which then translates to 2.8 Chi, plus the 2 it generates on use for a total of 4.8.
+
+Similar to above, its easiest to turn this extra Chi into [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick), as that's where our extra Chi goes. 4.8 [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) is 698.54% AP, plus 4.8 seconds off of [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) and [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick), for another 94.08% from [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) and 119.52% from [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick), for a total of 912.14% AP.
+
+[Fist of the White Tiger](https://bfa.wowhead.com/spell=261947) provides one extra Chi and costs 10 energy less than a [Tiger Palm](https://bfa.wowhead.com/spell=100780/tiger-palm), every 30 seconds. This equates to 1.4 Chi every 30 seconds, or 2.8 Chi per minute, which is worth roughly 532% AP when converted into [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) after considering the CDR it provides. When you add the damage that two [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947) do on use, the total is 794.55% AP.
+
+**So, [Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir)'s 912.14% AP is still nearly 50% better than [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947)'s 794.55% AP.** I'd certainly like to see that gap closed a little bit more.
+
+#### SCK Stacks
+
+This one is more straightforward. [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick)'s damage gets multiplied by +10% damage with each stack you have. Its easy to figure this out as you just need to find the point that the damage of [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) beats out each other ability. Typically this calculation is done on a "per chi" basis, as that is what Windwalkers are limited by in an AOE situation. I'm not including the CDR change in these calculations as it doesn't have a large affect on the results. Here's how much AP each ability does per Chi.
+
+- [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) - 145.53% AP for 1 Chi = 145.53% AP per Chi
+- [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) - 246.33% AP for 2 Chi = 123.165% AP per Chi
+- [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) - 470.925% AP for 3 Chi = 156.975% AP per Chi, each additional target takes 50% damage
+- [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) -  96% AP per target for 2 Chi = 48% AP per chi per target before stacks are considered
+- [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) - 248.7% base AP per target, this is more complicated as it costs no Chi, but technically requires 5 Chi to be spent in order to use it.
+
+To figure out how many stacks you'd need to use [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) rather than each ability, you figure out how many [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) would equal the damage of that ability, subtract 1 (to account for the base damage), then multiply by 10 (to account for the 10% increases). Here's how it would work on single target:
+
+- [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) - 145.53% AP per Chi = 20.3 stacks
+- [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) - 123.165% AP per Chi = 15.7 stacks
+- [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) - 156.975% AP per Chi = 22.7 stacks
+
+As you can see, these numbers are almost certainly not reachable When you jump up to 2 targets, [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) and [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) don't gain any damage, where as [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) does double the damage to 96% AP per chi and [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) gains 50% damage to 235.46% AP:
+
+- [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) - 5.2 stacks
+- [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) - 2.8 stacks
+- [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) - 14.5 stacks
+
+These numbers are MUCH more achievable and its even easily possible to have 3 stacks with 2 targets so that you'd drop [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) from the rotation. I'd certainly like to see [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) and [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) reverse positions as dropping [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) before you drop [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) doesn't make much sense compared to how Windwalker has just about always been. Now three targets, [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) and [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) don't change, [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) triples to 144% AP per chi and [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) gains 100% damage to 213.95% AP:
+
+- [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) - 0.1 stack
+- [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) - 0 stacks
+- [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) - 11.8 stacks
+
+These numbers are not only attainable, they're impossible not to attain. The damage that [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) provides to 3 or more targets is more than enough to ignore how many stacks you have and simply drop [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) and [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick). The stacks you'd need to drop [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) level out a bit as you get more targets:
+
+- 1 Target - 22.7 stacks
+- 2 Targets - 14.5 stacks
+- 3 Targets - 11.8 stacks
+- 4 Targets - 10.4 stacks
+- 5 Targets - 9.6 stacks
+- 6 Targets - 9.07 stacks
+- 7 Targets - 8.7 stacks
+- 8 Targets - 8.4 stacks
+- 9 Targets - 8.2 stacks
+- 10 Targets - 8 stacks
+
+As you can see, it still technically decreases, but at a much slower rate as you get more targets. [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) is more complicated because its hard to quite put a number on how much chi it costs as it depends on whether or not you're using [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) and [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury). If you're using both anyway, [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) is free; if you're dropping [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) and only use it to trigger [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) then [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) costs the 2 Chi cost of [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick), but you also have to include the damage you get from that, same goes for [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury). However, pretty much anyway you slice it, it always does more AP per chi than [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury), so you can use the above numbers to see that in nearly every situation its worth using [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) and the ability that trigger it at least once in order to use it. A specific number, if one is reasonable, will come as we get closer to the expansion, but 13 or more stacks is a good baseline.
+
+#### Conclusions
+
+1. As it currently stands [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) cannot match the damage potential of [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) on single target. Although with even 2 targets, [Power Strikes](https://bfa.wowhead.com/spell=121817/power-strikes) cannot match [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175).
+2. [Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir)'s 912.14% AP maximum is still nearly 50% better than [Fist of the White Tiger](https://bfa.wowhead.com/spell=261947)'s 663.3% AP, leaving lots of room to use [Energizing Elixir](https://bfa.wowhead.com/spell=115288/energizing-elixir) at less than its maximum and still have it be best.
+3. Never use [Spinning Crane Kick](https://bfa.wowhead.com/spell=101546/spinning-crane-kick) on single target, use it in place of [Blackout Kick](https://bfa.wowhead.com/spell=100784/blackout-kick) and [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) with at least 5 stacks on 2 targets, and always with 3 or more targets. Dropping [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) requires a decreasing amount of stacks as you gain more targets, but not much less than 8 stacks even at super high target amounts. [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175) generally requires 13 or more stacks to be dropped. Before that, only use [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) and [Fists of Fury](https://bfa.wowhead.com/spell=113656/fists-of-fury) to trigger the use of [Whirling Dragon Punch](https://bfa.wowhead.com/spell=152175).
+
+I hope you've enjoyed this look into some of that math that goes into the decisions you see on the guides. More hopefully, my math is correct.
+
+If you like the content that I, and the others at PeakofSerenity provide, then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius), where I stream all my raids as well as article writing and more.

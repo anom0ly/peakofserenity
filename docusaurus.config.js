@@ -61,11 +61,35 @@ const config = {
         postsPerPage: 10,
         blogSidebarCount: 0,
         authorsMapPath: 'authors.yml',
+        // WordPress tag addresses (/tag/<nicename>/); tags not in the file still work.
+        tags: 'tags.yml',
         onInlineTags: 'ignore',
         onInlineAuthors: 'warn',
         onUntruncatedBlogPosts: 'ignore',
         showReadingTime: false,
         feedOptions: {type: ['rss', 'atom'], xslt: false},
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        // Podcast episodes keep /podcast/<slug>/; /podcast/ lists them and /podcast/archive/ is the full archive.
+        // The podcast feed with audio enclosures is static/podcast/feed.xml (written by tools/wp2mdx.py).
+        id: 'podcast',
+        path: 'podcast',
+        routeBasePath: 'podcast',
+        tagsBasePath: 'tag',
+        blogTitle: 'PeakCraft Podcast',
+        blogDescription: 'Every episode of the Peak of Serenity podcast',
+        postsPerPage: 20,
+        blogSidebarCount: 0,
+        authorsMapPath: '../blog/authors.yml',
+        tags: '../blog/tags.yml',
+        onInlineTags: 'ignore',
+        onInlineAuthors: 'warn',
+        onUntruncatedBlogPosts: 'ignore',
+        showReadingTime: false,
+        feedOptions: {type: null},
       },
     ],
   ],
@@ -86,7 +110,7 @@ const config = {
             items: [
               {label: 'PvE Quick Guide', to: '/tww/brewmaster/pve-guide/'},
               {label: 'Acronyms', to: '/tww/brewmaster/acronyms/'},
-              {label: 'Articles/News', to: '/category/brewmaster/'},
+              {label: 'Articles/News', to: '/tag/brewmaster/'},
             ],
           },
           {
@@ -103,7 +127,7 @@ const config = {
             label: 'Windwalker',
             to: '/tww/windwalker/',
             items: [
-              {label: 'Articles/News', to: '/category/windwalker/'},
+              {label: 'Articles/News', to: '/tag/windwalker/'},
               {label: 'Acronyms', to: '/tww/windwalker/acronyms/'},
               {label: 'Advanced Tricks', to: '/tww/windwalker/pve-guide/advanced-tricks/'},
               {label: 'Class Tree In-Depth', to: '/tww/windwalker/pve-guide/class-tree-in-depth/'},
@@ -133,7 +157,10 @@ const config = {
         links: [
           {
             title: 'Community',
-            items: [{label: 'Discord', href: 'https://discord.gg/peakofserenity'}],
+            items: [
+              {label: 'Discord', href: 'https://discord.gg/peakofserenity'},
+              {label: 'Podcast archive', to: '/podcast/archive/'},
+            ],
           },
           {
             title: 'Support Peak',
