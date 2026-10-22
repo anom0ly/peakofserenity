@@ -12,7 +12,8 @@ import {ArticleListHeader} from '@site/src/components/ArticleList';
 export default function BlogListPage(props) {
   const {metadata, items, sidebar} = props;
   const {blogTitle, blogDescription, permalink} = metadata;
-  const isNews = permalink.startsWith('/news');
+  // The news list's own permalink is "/" (blog-at-root moves only its route to /news/), so check for podcast instead
+  const isNews = !permalink.startsWith('/podcast');
   return (
     <HtmlClassNameProvider className={clsx(ThemeClassNames.wrapper.blogPages, ThemeClassNames.page.blogListPage)}>
       <PageMetadata title={blogTitle} description={blogDescription} />
