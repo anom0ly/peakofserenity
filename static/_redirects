@@ -12,7 +12,6 @@
 /login/ / 301
 /tww/ / 301
 /mop/ /mop/windwalker/ 301
-/page/* /news/ 301
 
 # Feeds: the news feed, and the old podcast feed Apple Podcasts and other apps subscribed to
 /feed/ /rss.xml 301
