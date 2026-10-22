@@ -24,9 +24,9 @@ openers:            # shadopan / conduit
 The body under the front matter holds the sections that were never tabbed (Ability Usage, Gearing,
 Gems/Enchants, Voidcores, Miscellaneous, Macros, Changelog), as plain Markdown.
 
-Field values are Markdown. Two pieces of raw HTML are allowed inside tab fields: coloured text
-(`<span style="color: #339966">…</span>`, used for the talent-colour legend) and tables whose cells hold lists
-or images. Everything else is plain Markdown.
+Field values are Markdown. Colour-coded text (the talent legend) uses coloured-square emoji (🟩 🟦 🟪 ⬜ 🟥)
+instead of coloured HTML, because Pages CMS strips coloured text when an author saves. Tables whose cells hold
+lists or images may stay as raw HTML. Everything else is plain Markdown.
 
 The guide layout (`src/components/GuideTabs`, hooked in through `src/theme/DocItem/Content`) renders the
 banner, `intro`, then each group's heading, intro and tabs in the order above, then the body. The group
