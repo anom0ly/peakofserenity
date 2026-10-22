@@ -327,8 +327,9 @@ def clean_html(raw, where, keep_colors=False):
     for sp in soup.find_all("span"):
         m = re.search(r"color:\s*(#[0-9a-fA-F]{3,6}|[a-z]+)", sp.get("style", ""))
         if m and keep_colors:
-            sp.attrs = {"style": "color: %s" % m.group(1)}
-            sp["data-keep"] = "1"
+            # Pages CMS strips coloured HTML on save, so colour-coded text gets a coloured emoji instead
+            sp.insert_before(NavigableString(colour_emoji(m.group(1)) + " "))
+            sp.unwrap()
         else:
             if m:
                 colours += 1
@@ -371,6 +372,23 @@ def strip_attrs_html(el):
         keep = {k: v for k, v in t.attrs.items() if k in ("href", "src", "alt", "colspan", "rowspan")}
         t.attrs = keep
     return re.sub(r"\n\s*\n", "\n", str(el))
+
+
+EMOJI_SQUARES = {"🟥": (255, 0, 0), "🟧": (255, 140, 0), "🟨": (255, 220, 0), "🟩": (0, 170, 80),
+                 "🟦": (0, 150, 255), "🟪": (140, 0, 255), "⬜": (255, 255, 255), "⬛": (0, 0, 0)}
+
+
+def colour_emoji(colour):
+    """Nearest coloured-square emoji for a CSS hex colour (named colours fall back to the name)."""
+    names = {"red": "🟥", "orange": "🟧", "yellow": "🟨", "green": "🟩", "blue": "🟦",
+             "purple": "🟪", "white": "⬜", "black": "⬛"}
+    if not colour.startswith("#"):
+        return names.get(colour.lower(), "")
+    h = colour.lstrip("#")
+    if len(h) == 3:
+        h = "".join(c * 2 for c in h)
+    rgb = tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return min(EMOJI_SQUARES, key=lambda e: sum((a - b) ** 2 for a, b in zip(rgb, EMOJI_SQUARES[e])))
 
 
 def to_markdown(raw, where, keep_colors=False, shift_h1=True):
