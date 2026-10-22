@@ -147,6 +147,9 @@ def main():
         "fields": guide_fields(), "operations": no_edit,
     })
     config = {
+        # Commit as the signed-in author (name + email) instead of the Pages CMS app, so the history shows who
+        # changed what.
+        "settings": {"commit": {"identity": "user"}},
         "media": {"input": "static/img", "output": "/img"},
         "components": {"authors": {"label": "Authors", "type": "select",
                                    "options": {"values": authors, "multiple": True}}},
