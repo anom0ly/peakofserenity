@@ -7,7 +7,7 @@ export default function Hub() {
       title="The War Within Windwalker"
       spec="windwalker"
       banner="/img/uploads/2020/08/Jari-WW.png"
-      links={[{label: 'PvE Guide', to: '/tww/windwalker/pve-guide/'}, {label: 'Recent Articles', to: '/category/windwalker/'}]}
+      links={[{label: 'PvE Guide', to: '/tww/windwalker/pve-guide/'}, {label: 'Recent Articles', to: '/tag/windwalker/'}]}
     />
   );
 }

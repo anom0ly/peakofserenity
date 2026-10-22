@@ -1,0 +1,111 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.breadcrumb {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  color: #b8d4da;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.intro {
+  max-width: 40rem;
+  color: #d6e6ea;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.pill {
+  padding: 0.625rem 1.125rem;
+  border: 1px solid var(--pos-button);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.pill:hover {
+  color: #fff;
+  text-decoration: none;
+  background: var(--pos-bg-raised);
+}
+
+.pillActive,
+.pillActive:hover {
+  background: var(--pos-button);
+  color: var(--pos-bg);
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--pos-bg-raised);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 1.125rem 1.25rem 1.375rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.cardTitle a {
+  color: #fff;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #b8d4da;
+}
+
+.summary {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #e3eef1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.1875rem 0.625rem;
+  border-radius: 999px;
+  background: var(--pos-bg);
+  font-size: 0.75rem;
+}

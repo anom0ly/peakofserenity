@@ -112,3 +112,17 @@ html[data-theme='dark'] {
   max-height: 100%;
   object-fit: contain;
 }
+
+/* Post list paging (src/theme/BlogListPaginator) */
+.pos-list-pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.pos-list-pager__page {
+  color: #b8d4da;
+}
