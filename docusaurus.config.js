@@ -1,5 +1,6 @@
 // @ts-check
 const {themes: prismThemes} = require('prism-react-renderer');
+const remarkEmbeds = require('./src/plugins/remark-embeds');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -41,6 +42,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: false,
           showLastUpdateTime: true,
+          remarkPlugins: [remarkEmbeds],
         },
         blog: false,
         theme: {customCss: require.resolve('./src/css/custom.css')},
@@ -66,6 +68,7 @@ const config = {
         onInlineTags: 'ignore',
         onInlineAuthors: 'warn',
         onUntruncatedBlogPosts: 'ignore',
+        remarkPlugins: [remarkEmbeds],
         showReadingTime: false,
         feedOptions: {type: ['rss', 'atom'], xslt: false},
       },
@@ -88,6 +91,7 @@ const config = {
         onInlineTags: 'ignore',
         onInlineAuthors: 'warn',
         onUntruncatedBlogPosts: 'ignore',
+        remarkPlugins: [remarkEmbeds],
         showReadingTime: false,
         feedOptions: {type: null},
       },

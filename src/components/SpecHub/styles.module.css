@@ -15,3 +15,13 @@
 .button {
   min-width: 14rem;
 }
+
+.intro {
+  max-width: 760px;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+}

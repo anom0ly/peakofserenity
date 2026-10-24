@@ -93,6 +93,66 @@
 /author/seiryoku1/* /authors/seiryoku/ 301
 /author/syrupsss/* /authors/syrupsss/ 301
 
+# Tags used only by podcast episodes -> their podcast tag page
+/tag/10-0/* /podcast/tag/10-0/ 301
+/tag/10-0-5/* /podcast/tag/10-0-5/ 301
+/tag/10-0-7/* /podcast/tag/10-0-7/ 301
+/tag/10-1/* /podcast/tag/10-1/ 301
+/tag/10-1-5/* /podcast/tag/10-1-5/ 301
+/tag/10-2/* /podcast/tag/10-2/ 301
+/tag/9-1/* /podcast/tag/9-1/ 301
+/tag/9-1-5/* /podcast/tag/9-1-5/ 301
+/tag/9-2-5/* /podcast/tag/9-2-5/ 301
+/tag/aberrus/* /podcast/tag/aberrus/ 301
+/tag/amirdrassil/* /podcast/tag/amirdrassil/ 301
+/tag/augmentation/* /podcast/tag/augmentation/ 301
+/tag/blizzard-buyout/* /podcast/tag/blizzard-buyout/ 301
+/tag/blizzcon/* /podcast/tag/blizzcon/ 301
+/tag/castle-nathria/* /podcast/tag/castle-nathria/ 301
+/tag/cataclysm/* /podcast/tag/cataclysm/ 301
+/tag/classic/* /podcast/tag/classic/ 301
+/tag/conduits/* /podcast/tag/conduits/ 301
+/tag/covenants/* /podcast/tag/covenants/ 301
+/tag/diablo/* /podcast/tag/diablo/ 301
+/tag/domination-gems/* /podcast/tag/domination-gems/ 301
+/tag/dragonflight/* /podcast/tag/dragonflight/ 301
+/tag/dragonflight-alpha/* /podcast/tag/dragonflight-alpha/ 301
+/tag/evoker/* /podcast/tag/evoker/ 301
+/tag/fists-of-fury/* /podcast/tag/fists-of-fury/ 301
+/tag/great-push/* /podcast/tag/great-push/ 301
+/tag/hardcore/* /podcast/tag/hardcore/ 301
+/tag/interview/* /podcast/tag/interview/ 301
+/tag/lore/* /podcast/tag/lore/ 301
+/tag/mdi/* /podcast/tag/mdi/ 301
+/tag/mists-of-pandaria/* /podcast/tag/mists-of-pandaria/ 301
+/tag/overlays/* /podcast/tag/overlays/ 301
+/tag/podcast/* /podcast/tag/podcast/ 301
+/tag/prepatch/* /podcast/tag/prepatch/ 301
+/tag/professions/* /podcast/tag/professions/ 301
+/tag/race-to-world-first/* /podcast/tag/race-to-world-first/ 301
+/tag/raid-testing/* /podcast/tag/raid-testing/ 301
+/tag/recap/* /podcast/tag/recap/ 301
+/tag/retrospective/* /podcast/tag/retrospective/ 301
+/tag/rwf/* /podcast/tag/rwf/ 301
+/tag/sanctum-of-domination/* /podcast/tag/sanctum-of-domination/ 301
+/tag/season-4/* /podcast/tag/season-4/ 301
+/tag/season-of-discovery/* /podcast/tag/season-of-discovery/ 301
+/tag/sepulcher-of-the-first-ones/* /podcast/tag/sepulcher-of-the-first-ones/ 301
+/tag/shadowlands-season-4/* /podcast/tag/shadowlands-season-4/ 301
+/tag/soulbinds/* /podcast/tag/soulbinds/ 301
+/tag/sylvanas-windrunner/* /podcast/tag/sylvanas-windrunner/ 301
+/tag/tazavesh/* /podcast/tag/tazavesh/ 301
+/tag/the-war-within/* /podcast/tag/the-war-within/ 301
+/tag/timerunning/* /podcast/tag/timerunning/ 301
+/tag/trading-post/* /podcast/tag/trading-post/ 301
+/tag/vault-of-the-incarnates/* /podcast/tag/vault-of-the-incarnates/ 301
+/tag/warcraft-logs/* /podcast/tag/warcraft-logs/ 301
+/tag/wotlk/* /podcast/tag/wotlk/ 301
+/tag/wowanalyzer/* /podcast/tag/wowanalyzer/ 301
+
+# Podcast series archives -> the podcast archive
+/series/* /podcast/archive/ 301
+
 # Links in old content to /df/, /sl/, /bfa/ and unprefixed guide paths
 /bfa/brewmaster/azerite/ /tww/brewmaster/ 301
 /bfa/brewmaster/bfa-tank-trinket-guide/ /tww/brewmaster/ 301
@@ -135,8 +195,17 @@
 /windwalker/guide/pve/stats-gems-and-enchants/ /tww/windwalker/ 301
 /windwalker/mythic-plus/ /tww/windwalker/ 301
 
-# Anything else under the old expansion prefixes -> the current guides
-/df/* /tww/:splat 301
-/sl/* /tww/:splat 301
-/bfa/* /tww/:splat 301
+# Anything else under the old expansion prefixes -> that spec's hub, else the homepage
+/df/brewmaster/* /tww/brewmaster/ 301
+/df/mistweaver/* /tww/mistweaver/ 301
+/df/windwalker/* /tww/windwalker/ 301
+/df/* / 301
+/sl/brewmaster/* /tww/brewmaster/ 301
+/sl/mistweaver/* /tww/mistweaver/ 301
+/sl/windwalker/* /tww/windwalker/ 301
+/sl/* / 301
+/bfa/brewmaster/* /tww/brewmaster/ 301
+/bfa/mistweaver/* /tww/mistweaver/ 301
+/bfa/windwalker/* /tww/windwalker/ 301
+/bfa/* / 301
 

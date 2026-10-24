@@ -67,6 +67,13 @@
   object-fit: cover;
 }
 
+/* The wide spec banners (2000x501) are shown whole; cropping them to 16:9 cut off the lettering */
+.banner {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2000 / 501;
+}
+
 .body {
   display: flex;
   flex-direction: column;

@@ -146,6 +146,8 @@ def wpautop(text):
         if not chunk:
             continue
         if re.match(r"</?%s[\s/>]" % block, chunk):
+            if re.match(r"<t[dh][\s>]", chunk):  # a line break inside a table cell, as WordPress shows it
+                chunk = re.sub(r"(?<!>)[ \t]*\r?\n\s*(?!</?%s[\s/>])" % block, "<br />\n", chunk)
             out.append(chunk)
         else:
             out.append("<p>" + re.sub(r"\s*\n\s*", "<br />\n", chunk) + "</p>")
@@ -210,6 +212,10 @@ def expand_shortcodes(text, where):
 
     # Divi code modules hold raw HTML/JS: keep content out, flag for review
     def code(m):
+        yt = re.fullmatch(r"\s*(?:<p>)?\s*\[youtube\s+(https?://\S+?)(?:[?&]si=[^\s\]]*)?(?:&amp;[^\s\]]*)?\s*\]\s*(?:</p>)?\s*", m.group(1))
+        if yt:  # Jetpack [youtube url] -> a bare link on its own line, which the site renders as a player
+            url = yt.group(1)
+            return '<p><a href="%s">%s</a></p>' % (url, url)
         REVIEW.add(where, "Divi code module (raw HTML/script) was removed; check what it showed: %s"
                    % re.sub(r"\s+", " ", m.group(1))[:120])
         return ""
@@ -420,6 +426,12 @@ class MdConverter(MarkdownConverter):
             return '<span style="%s">%s</span>' % (el["style"], text)
         return text
 
+    def convert_br(self, el, text, *args, **kw):
+        # A Markdown table cell is one line, so a line break inside it stays an HTML <br />
+        if el.find_parent(["td", "th"]):
+            return "<br />"
+        return super().convert_br(el, text, *args, **kw)
+
     def convert_figure(self, el, text, *args, **kw):
         return "\n\n" + text.strip() + "\n\n"
 
@@ -460,7 +472,7 @@ def to_markdown(raw, where, keep_colors=False, shift_h1=True):
     if shift_h1 and soup.find("h1"):
         for h in soup.find_all(re.compile(r"^h[1-6]$")):
             h.name = "h%d" % min(int(h.name[1]) + 1, 6)
-    md = MdConverter(heading_style="ATX", bullets="-", escape_misc=False,
+    md = MdConverter(heading_style="ATX", bullets="-", escape_misc=False, newline_style="backslash",
                      escape_underscores=False, wrap=False, autolinks=False).convert_soup(soup)
     md = md.replace(" ", " ")
     md = re.sub(r"[ \t]+\n", "\n", md)
@@ -839,11 +851,25 @@ def write_tags_and_redirects(outdir, items, converted, authors, parents):
         key = author_key(name)
         if any(key in [author_key(n) for n in author_keys(items[p], authors)] for p in converted):
             lines.append("/author/%s/* /authors/%s/ 301" % (re.sub(r"[^a-z0-9-]+", "-", login.lower()), key))
+    # Tags only podcasts use have no news tag page; podcast tag pages live under /podcast/tag/
+    news_tags = {nice for p in converted if items[p]["type"] == "post"
+                 for dom, _, nice in items[p]["cats"] if dom == "post_tag"}
+    podcast_only = sorted({nice for p in converted if items[p]["type"] == "podcast"
+                           for dom, _, nice in items[p]["cats"] if dom == "post_tag"} - news_tags)
+    lines += ["", "# Tags used only by podcast episodes -> their podcast tag page"]
+    for nice in podcast_only:
+        lines.append("/tag/%s/* /podcast/tag/%s/ 301" % (nice, nice))
+    lines += ["", "# Podcast series archives -> the podcast archive",
+              "/series/* /podcast/archive/ 301"]
     lines += ["", "# Links in old content to /df/, /sl/, /bfa/ and unprefixed guide paths"]
     for old, new in sorted(OLD_LINKS.items()):
         lines.append("%s %s 301" % (old, new))
-    lines += ["", "# Anything else under the old expansion prefixes -> the current guides",
-              "/df/* /tww/:splat 301", "/sl/* /tww/:splat 301", "/bfa/* /tww/:splat 301", ""]
+    lines += ["", "# Anything else under the old expansion prefixes -> that spec's hub, else the homepage"]
+    for prefix in ("df", "sl", "bfa"):
+        for spec in ("brewmaster", "mistweaver", "windwalker"):
+            lines.append("/%s/%s/* /tww/%s/ 301" % (prefix, spec, spec))
+        lines.append("/%s/* / 301" % prefix)
+    lines.append("")
     path = os.path.join(outdir, "static", "_redirects")
     head = open(path).read().split(REDIRECTS_MARK)[0].rstrip("\n") + "\n\n"
     with open(path, "w") as f:
