@@ -44,7 +44,7 @@ These are the abilities with the simplest target scaling formula:
 totalDamage = baseDamage * min(targetCount, 20)
 ```
 
-If you have 1 target, deal 100% of base damage. On 2 targets, deal 200%. 5 targets, 500%, 20 targets, 2000%. Easy.
+If you have 1 target, deal 100% of base damage. On 2 targets, deal 200%. 5 targets, 500%, 20 targets, 2000%. Easy.\
 The min() part just means "whichever of the 2 values is lower". To clarify, the game is kind of lying to you. When a tooltip on a multi-target ability says "Deal x amount of damage to all enemies", it actually means "up to 20". This is a hard cap for which there are very few exceptions, and to my knowledge none in terms of direct damage (see below). If you have a pack with, for example, 21 enemies, an uncapped spell will deal 2000% (or 20x) of base damage, split across 21 targets. That means each target takes 95.24% of base damage each. On 40 targets, each target takes 50% of base damage each.
 
 It should be noted that *very* few uncapped abilities make up a significant portion of their specialization's overall aoe damage breakdown. It does happen, but only in a handful of specs. That is to say, being an "uncapped" damage spec does not have a strong correlation with being a "meta" spec.
@@ -86,13 +86,13 @@ Unfortunately, the same hard cap of 20 applies, but let's just ignore that and l
 
 Let's fill in some numbers, and let's take a sqrt cap of 5 as the example since it is the most common threshold.
 
-At 3 targets, the formula is baseDamage \* 3 \* sqrt(5 / max(5, 3)).
+At 3 targets, the formula is baseDamage \* 3 \* sqrt(5 / max(5, 3)).\
 Max(5, 3) returns 5. Sqrt(5/5) equals 1. The final calculation is therefore baseDamage \* 3 \* 1, because at 3 targets, square root scaling isn't active yet.
 
-At 6 targets, you get baseDamage \* 6 \* sqrt(5 / max(5, 6)).
+At 6 targets, you get baseDamage \* 6 \* sqrt(5 / max(5, 6)).\
 Max(5, 6) returns 6. Sqrt(5/6) equals approx 0.91. The final calculation is now baseDamage \* 6 \* 0.91, which is a totalDamage value of 548%. This is where the dampening on the totalDamage starts.
 
-At 20 targets (remember, our hard cap), we get baseDamage \* 20 \* sqrt(5 / max(5, 20)).
+At 20 targets (remember, our hard cap), we get baseDamage \* 20 \* sqrt(5 / max(5, 20)).\
 5 / 20 equals 0.25, and the sqrt of 0.25 equals 0.5. So, the totalDamage equals baseDamage \* 20 \* 0.5, or 1000%, or half of what an "Uncapped" ability would do.
 
 At this time, *most* aoe abilities are sqrt capped with varying thresholds.
@@ -128,9 +128,9 @@ totalDamage = baseDamage * min(targetCount, targetCap)
 
 You'll notice that it's the same formula as the "Uncapped" spells, just with a variable for the targetCap. With a targetCap of 5, the damage will simply not increase beyond 5 times the baseDamage. Of course, there is no ability with a hard cap greater than 20.
 
-With a targetCap of 5:
-At 3 targets, totalDamage is equal to 3 \* baseDamage, or 300%.
-At 5 targets, totalDamage is equal to 5 \* baseDamage, or 500%.
+With a targetCap of 5:\
+At 3 targets, totalDamage is equal to 3 \* baseDamage, or 300%.\
+At 5 targets, totalDamage is equal to 5 \* baseDamage, or 500%.\
 At 15 targets, totalDamage is equal to 5 \* baseDamage, or 500%.
 
 Nice and straightforward.
@@ -161,9 +161,9 @@ totalDamage = baseDamage + offTargetCount * (baseDamage / targetCount)
 
 The + in this formula indicates that Strike of the Windlord always deals its full baseDamage against your main target, while each secondary target (if present) takes (baseDamage / total targetCount) each.
 
-At 1 target, offTargetCount equals 0. So, totalDamage is just baseDamage + 0.
-At 2 targets, offTargetCount equals 1, so the calculation is baseDamage + 1 \* (baseDamage / 2), or 100% + 50%, for a total amount of 150%. 100% on the main target, 50% on "each" secondary target.
-At 5 targets, offTargetCount equals 4, so baseDamage + 4 \* (baseDamage / 5), or 100% + 4 \* 20%, for a total amount of 180%. The main target takes 100%, each of the 4 secondary targets takes 20%.
+At 1 target, offTargetCount equals 0. So, totalDamage is just baseDamage + 0.\
+At 2 targets, offTargetCount equals 1, so the calculation is baseDamage + 1 \* (baseDamage / 2), or 100% + 50%, for a total amount of 150%. 100% on the main target, 50% on "each" secondary target.\
+At 5 targets, offTargetCount equals 4, so baseDamage + 4 \* (baseDamage / 5), or 100% + 4 \* 20%, for a total amount of 180%. The main target takes 100%, each of the 4 secondary targets takes 20%.\
 At 20 targets, offTargetCount equals 19, so baseDamage + 19 \* (baseDamage / 20), or 100% + 19 \* 5%, for a total of 195%.
 
 It should be immediately obvious that this is very bad target scaling, since even at 20 targets, the totalDamage doesn't even pass 2x baseDamage.
@@ -184,8 +184,8 @@ totalDamage = baseDamage * (1 + (damageBonus * min(offTargetCount, offTargetCap)
 
 This is the standard method for trinkets that describe their effect as "Damage increased per target struck, up to x" (usually x is 5). This is slightly incorrect, it should actually say "per *additional* target". Let's use the standard values for trinket scaling, namely 15% per additional target, in the examples:
 
-On 1 target, you get baseDamage \*  (1 + (0.15 \* 0)), or just baseDamage.
-On 3 targets, you get baseDamage \*  (1 + (0.15 \* 2), or 130%
+On 1 target, you get baseDamage \*  (1 + (0.15 \* 0)), or just baseDamage.\
+On 3 targets, you get baseDamage \*  (1 + (0.15 \* 2), or 130%\
 On 5 targets and beyond, baseDamage \*  (1 + (0.15 \* 4), you get 160%, which is the hard cap for this example.
 
 As a special mention, [Celestial Conduit](https://www.wowhead.com/spell=443028/celestial-conduit) follows a very similar scaling method. It deals 6% per additional target, up to 30%. The exact formula appears to be something like this:

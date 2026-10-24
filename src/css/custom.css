@@ -126,3 +126,25 @@ html[data-theme='dark'] {
 .pos-list-pager__page {
   color: #b8d4da;
 }
+
+/* Videos and charts embedded from a link on its own line (src/plugins/remark-embeds.js) */
+.embed {
+  margin: 0 0 var(--ifm-paragraph-margin-bottom);
+}
+.embed iframe,
+.embed video {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  border: 0;
+  border-radius: 6px;
+}
+.embed--video iframe,
+.embed--mp4 video {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+.embed--chart iframe {
+  height: 420px;
+  background: #fff;
+}

@@ -61,7 +61,7 @@ function ArticleCard({metadata}) {
   return (
     <article className={styles.card}>
       <Link to={permalink} tabIndex={-1} aria-hidden="true">
-        <img className={styles.image} src={image} alt="" loading="lazy" />
+        <img className={frontMatter.image ? styles.image : styles.banner} src={image} alt="" loading="lazy" />
       </Link>
       <div className={styles.body}>
         <Heading as="h2" className={styles.cardTitle}>

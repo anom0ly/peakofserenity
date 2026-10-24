@@ -1,6 +1,6 @@
 # Status
 
-_Last updated 2026-10-22._ Current phase: **2. Full conversion** (in review).
+_Last updated 2026-10-24._ Current phase: **2. Full conversion** (in review).
 
 ## Done
 - Inventoried the WordPress export ([migration/INVENTORY.md](migration/INVENTORY.md)).
@@ -52,8 +52,22 @@ _Last updated 2026-10-22._ Current phase: **2. Full conversion** (in review).
 - The build passes. Its remaining broken-link warnings are all files missing on the live site, links to
   `archive`-status posts, or WordPress preview links. All of them are on the review list.
 
+### QA fixes (2026-10-24)
+QA compared the build with the live site (every sitemap URL, every built page). Fixed:
+- Line breaks inside paragraphs (`<br>`) were dropped, so lists ran together on 179 pages. The converter now
+  writes Markdown hard breaks (a `\` at the end of the line), and `<br />` inside table cells.
+  Everything was re-converted except the two files already edited in Pages CMS
+  (`docs/tww/windwalker/pve-guide.mdx`, `blog/2026-08-10-windwalker-monk-12-1-survival-guide.mdx`),
+  which were patched by hand.
+- Tags used only by podcast episodes redirect to `/podcast/tag/<tag>/`, and `/series/*` to the podcast archive.
+- Links to full-size images no longer get a trailing slash (`src/theme/MDXComponents/A`).
+- A YouTube, published Google Sheets chart, Twitch clip or .mp4 link on a line of its own, showing its own
+  address, renders as a player (`src/plugins/remark-embeds.js`); the source stays a plain link.
+- Spec hub pages have their welcome text back; podcast cards show the whole banner.
+- Unknown `/df/`, `/sl/`, `/bfa/` addresses go to the spec hub (or the homepage) instead of a 404.
+
 ## In progress
-- PR "Full conversion" open for review on a preview deploy.
+- PR "QA fixes" open for review on a preview deploy.
 
 ## Next
 - Owner: decide where podcast audio lives (see Open questions). Then check the review list, especially the

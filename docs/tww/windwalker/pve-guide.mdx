@@ -970,7 +970,7 @@ Best explained in a flowchart:
 
 Currently, all races sim within a small range of each other and reshuffle constantly. Other than that, **pick whatever race you prefer.**
 
-Using the racial available to you depends highly on the exact racial. In general, they are divided into three different groups.
+Using the racial available to you depends highly on the exact racial. In general, they are divided into three different groups.\
 Buff racials, direct damage racials and special racials.
 
 Buff racials are the following racials:
@@ -980,7 +980,7 @@ Buff racials are the following racials:
 - [Blood Fury](https://www.wowhead.com/spell=33697/blood-fury) (Orc)
 - [Fireblood](https://www.wowhead.com/spell=265221/fireblood) (Dark Iron Dwarf)
 
-Those are used with your cooldowns and can be put into a Burst Macro like the macro you can find in the macro section.
+Those are used with your cooldowns and can be put into a Burst Macro like the macro you can find in the macro section.\
 Direct damage racials are the following racials:
 
 - [Arcane Pulse](https://www.wowhead.com/spell=260364/arcane-pulse) (Nightborne)
@@ -991,7 +991,7 @@ Direct damage racials are the following racials:
 - [Rocket Barrage](https://www.wowhead.com/spell=69041/rocket-barrage) (Goblin)
 - [Thorn Bloom](https://www.wowhead.com/beta/spell=1237885/thorn-bloom) (Haranir)
 
-Those are very undertuned and are used at the very end of the priority or whenever you are unable to cast something else.
+Those are very undertuned and are used at the very end of the priority or whenever you are unable to cast something else.\
 The only special racial existing right now is the Blood Elf racial [Arcane Torrent](https://www.wowhead.com/spell=28730/arcane-torrent). This can be used whenever you need a quick chi for your big spenders and you are not able to press a tiger palm for it.
 
 ### Professions
@@ -1056,16 +1056,16 @@ This macro layers [Zenith Stomp](https://www.wowhead.com/spell=1272696/zenith-st
 /cast Zenith
 ```
 
-This Macro uses your on-use stat trinket and potions in the correct order to allow your [Zenith Stomp](https://www.wowhead.com/spell=1272694/zenith-stomp) from casting [Zenith](https://www.wowhead.com/spell=1249625/zenith) to be affected by the stat buffs as well. However, this macro has a few nuances you need to adjust for your personal use, so here is an explanation for all lines and how to change them appropriately.
+This Macro uses your on-use stat trinket and potions in the correct order to allow your [Zenith Stomp](https://www.wowhead.com/spell=1272694/zenith-stomp) from casting [Zenith](https://www.wowhead.com/spell=1249625/zenith) to be affected by the stat buffs as well. However, this macro has a few nuances you need to adjust for your personal use, so here is an explanation for all lines and how to change them appropriately.\
 **/use [pet][known:450615]13**This line uses your trinket in slot 13 whenever you have an active pet **OR** when you are talented into Shado-Pan by utilizing the very first passive point [Flurry Strikes](https://www.wowhead.com/spell=450615/flurry-strikes?spellModifier=137025). For Windwalker the only active pet that triggers this condition is a summoned Xuen from [Invoke Xuen, the White Tiger](https://www.wowhead.com/spell=123904/invoke-xuen-the-white-tiger) by talenting into Conduit of the Celestials. If you have your on-use stat trinket on slot 14 you need to adjust this line. If you don't use a trinket that should be used that close between Xuen and Zenith or don't have one (example for the first would be a trinket like [Algeth'ar Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box)) you should delete this line to make sure you don't accidentally misuse the trinket you have.
-**/use [mod:shift,pet][mod:shift,known:450615]item:212971**
-**/use [mod:shift,pet][mod:shift,known:450615]item:212265**
-Those two lines allow you to use less binds by using a shift modifier to pop your potion at the same time as your trinket, right before your [Zenith Stomp](https://www.wowhead.com/spell=1272694/zenith-stomp) from casting [Zenith](https://www.wowhead.com/spell=1249625/zenith). The used IDs are the [Fleeting Tempered Potion](https://www.wowhead.com/item=212971/fleeting-tempered-potion) and the normal [Tempered Potion](https://www.wowhead.com/item=212265/tempered-potion), both at rank 3. By using this order given in the macro, you will first use your existing Fleeting Potions before starting to use your personal property. If you use rank 2 or even rank 1 potions, you can add those lines by using the same format with the IDs you can find on wowhead. If you want to use different modifiers, you can also replace shift by ctrl or alt or even get rid of it fully. Just be aware that you may end up consuming all your precious potions in content you may not want to use them for if you remove the modifier condition.
+**/use [mod:shift,pet][mod:shift,known:450615]item:212971**\
+**/use [mod:shift,pet][mod:shift,known:450615]item:212265**\
+Those two lines allow you to use less binds by using a shift modifier to pop your potion at the same time as your trinket, right before your [Zenith Stomp](https://www.wowhead.com/spell=1272694/zenith-stomp) from casting [Zenith](https://www.wowhead.com/spell=1249625/zenith). The used IDs are the [Fleeting Tempered Potion](https://www.wowhead.com/item=212971/fleeting-tempered-potion) and the normal [Tempered Potion](https://www.wowhead.com/item=212265/tempered-potion), both at rank 3. By using this order given in the macro, you will first use your existing Fleeting Potions before starting to use your personal property. If you use rank 2 or even rank 1 potions, you can add those lines by using the same format with the IDs you can find on wowhead. If you want to use different modifiers, you can also replace shift by ctrl or alt or even get rid of it fully. Just be aware that you may end up consuming all your precious potions in content you may not want to use them for if you remove the modifier condition.\
 **/cast Zenith**Simply casts [Zenith](https://www.wowhead.com/spell=1249625/zenith) as the very last thing inside this macro.
 
 ##### Seperating Invoke Xuen, the White Tiger and Celestial Conduit
 
-When you want to seperate [Invoke Xuen, the White Tiger](https://www.wowhead.com/spell=123904/invoke-xuen-the-white-tiger) and [Celestial Conduit](https://www.wowhead.com/spell=443028/celestial-conduit) as seperate keybinds, just because you are used to it from your time in The War Within you can use the following two macros.
+When you want to seperate [Invoke Xuen, the White Tiger](https://www.wowhead.com/spell=123904/invoke-xuen-the-white-tiger) and [Celestial Conduit](https://www.wowhead.com/spell=443028/celestial-conduit) as seperate keybinds, just because you are used to it from your time in The War Within you can use the following two macros.\
 This is for Xuen:
 
 ```
