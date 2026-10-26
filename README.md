@@ -21,6 +21,20 @@ npm start          # local preview at http://localhost:3000
 npm run build      # what Cloudflare Pages runs; output in build/
 ```
 
+## Migration mode (temporary barebones site)
+
+Two Cloudflare Pages environment variables (Settings → Variables and Secrets → Production), then redeploy:
+
+- `MIGRATION_MODE=true` builds only the landing page ("we're moving"), the three spec guides and the Windwalker
+  guide's sub-pages. Every other address shows a "this page hasn't moved over yet" page. Remove it (or set it to
+  anything else) and redeploy to bring the full site back; no content is deleted.
+- `PODCAST_MEDIA_URL=<public address of the R2 bucket "podcasts">` (no trailing slash) points the podcast feed's
+  MP3 links at R2 and redirects old `/wp-content/uploads/...` addresses there. It works in either mode.
+
+```sh
+MIGRATION_MODE=true PODCAST_MEDIA_URL=https://media.example.com npm run build
+```
+
 ## Re-running the conversion
 
 ```sh
