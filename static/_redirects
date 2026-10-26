@@ -14,6 +14,10 @@
 /tww/ / 301
 /mop/ /mop/windwalker/ 301
 
+# Dead links from old posts -> nearest current page (decision 2026-10-26)
+/how-to-simcraft/ /tww/windwalker/pve-guide/sim101/ 301
+/2017/06/24/post-ama-discussion-round-2/ /tww/windwalker/ 301
+
 # Feeds: the news feed, and the old podcast feed Apple Podcasts and other apps subscribed to
 /feed/ /rss.xml 301
 /feed/podcast/* /podcast/feed.xml 301
