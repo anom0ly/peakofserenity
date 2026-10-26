@@ -14,3 +14,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # The temporary barebones site (see docusaurus.config.js) must keep building too.
+      - run: npm run build
+        env:
+          MIGRATION_MODE: 'true'
+          PODCAST_MEDIA_URL: https://media.example.com
