@@ -1,6 +1,7 @@
 # Status
 
-_Last updated 2026-10-24._ Current phase: **2. Full conversion** (in review).
+_Last updated 2026-10-27._ Current phase: **3. Live in migration mode.** peakofserenity.com and www are served by
+Cloudflare Pages with `MIGRATION_MODE=true` (landing page and spec guides only).
 
 ## Done
 - Inventoried the WordPress export ([migration/INVENTORY.md](migration/INVENTORY.md)).
@@ -66,17 +67,25 @@ QA compared the build with the live site (every sitemap URL, every built page). 
 - Spec hub pages have their welcome text back; podcast cards show the whole banner.
 - Unknown `/df/`, `/sl/`, `/bfa/` addresses go to the spec hub (or the homepage) instead of a 404.
 
+### Since QA (2026-10-26 to 2026-10-27)
+- Migration mode: a barebones build (landing page, the three spec guides, Windwalker guide sub-pages, and a
+  "this page hasn't moved yet" page for everything else), switched on by `MIGRATION_MODE=true`. Live on the domain.
+- Podcast audio moved to the R2 bucket `podcasts`, served at `media.peakofserenity.com`; episode pages and the
+  feed link there, and old `/wp-content/uploads/*.mp3` addresses redirect to it. Episode 15 and the Episode 5
+  recap video were already gone from the old server.
+- Fixes from the problem-pages checklist: tables, colours, buttons, descriptions, collapsible sections, stat
+  sliders, podcast artwork.
+
 ## In progress
-- PR "QA fixes" open for review on a preview deploy.
+- Working through the problem-pages checklist before the full site is switched back on.
 
 ## Next
-- Owner: decide where podcast audio lives (see Open questions). Then check the review list, especially the
-  `archive`-status posts that other posts link to.
-- Spot-check the preview: the three new tabbed guides, a few old posts, the podcast archive, and redirects.
+- Remove `MIGRATION_MODE` in Cloudflare Pages and redeploy to bring back the full site.
+- Check the podcast directories (Apple, Spotify, etc.) pick up the new feed and audio addresses.
+- Recheck `npm audit` when Docusaurus 3.11 is out: the current warnings are all in build-time tooling.
 
 ## Waiting on
-- Nothing. Images come straight from the live site with `tools/fetch_images.py` (the uploads folder won't be
-  provided); failures go on the review list.
+- Nothing.
 
 ## Decisions (2026-10-17)
 - Podcasts: convert all 215 episodes, plus one archive page listing them.
@@ -84,11 +93,7 @@ QA compared the build with the live site (every sitemap URL, every built page). 
 - Old Mistweaver guides (`/tww/mistweaver/pve-guide-shadowlands/` and the four `advanced-*` spotlights): retire with 301 redirects.
 
 ## Open questions
-- **Podcast audio.** The 215 MP3s are about 10 GB and stay on the WordPress server for now, so episode pages
-  and the feed still link there. Cloudflare Pages can't host them (25 MiB per file). Options: Cloudflare R2
-  (cheap, same account), an existing podcast host, or keep the old server's uploads folder online. 11 early
-  episodes already point at walkingthewind.com and may be gone.
-- From the brief: comments, AdSense, search, publish-directly vs review step.
+- From the brief: comments, AdSense, search.
 
 ## Content changed on WordPress after the 2026-10-17 export
 - None noted yet.
