@@ -33,21 +33,27 @@ Let’s kick things off by taking a look at how damage has shaken out in the Ete
 
 **Table:** Damage taken and healing done in EP. Damage taken / purified taken from [Pumps](https://raider.io/characters/us/frostmourne/Pumpsw)' logs and my own. Trinket healing taken from logs with dual defensive trinkets. Purified damage is calculated with WoWAnalyzer. Values in pink are better than both tanks, while values in yellow are better than either. Azshara not shown.
 
-|  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
-|  | **Purified Damage (HPS)** | | **Trinket Healing (HPS)** | | |
-| **Boss** | **emallson** | **Pumps** | **Edicts** | **Urchin** | **Total** |
-| Sivara | 5.1k | 5.0k | 3.8k | 5.0k | 8.7k |
-| Radiance | 0.5k | 2.5k | 2.6k | 3.1k | 5.7k |
-| Behemoth | 3.4k | 4.9k | 3.6k | 4.7k | 8.3k |
-| Ashvane | 5.8k | 4.8k | 3.4k | 5.1k | 8.5k |
-| Orgozoa | 5.5k | 8.9k | 3.1k | 3.9k | 7.0k |
-| Queen's Court | 4.6k | 8.2k | 3.9k | 4.0k | 7.9k |
-| Za'qul | 13.0k | 20.0k | 4.4k | 5.5k | 9.9k |
+<table>
+  <thead>
+    <tr><th></th><th colSpan="2">Purified Damage (HPS)</th><th colSpan="3">Trinket Healing (HPS)</th></tr>
+    <tr><th>Boss</th><th>emallson</th><th>Pumps</th><th>Edicts</th><th>Urchin</th><th>Total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Sivara</td><td>5.1k</td><td>5.0k</td><td>3.8k</td><td>5.0k</td><td style={{background: '#f4c7c3', color: '#1b1b1b'}}>8.7k</td></tr>
+    <tr><td>Radiance</td><td>0.5k</td><td>2.5k</td><td style={{background: '#f4c7c3', color: '#1b1b1b'}}>2.6k</td><td style={{background: '#f4c7c3', color: '#1b1b1b'}}>3.1k</td><td style={{background: '#f4c7c3', color: '#1b1b1b'}}>5.7k</td></tr>
+    <tr><td>Behemoth</td><td>3.4k</td><td>4.9k</td><td style={{background: '#fce8b2', color: '#1b1b1b'}}>3.6k</td><td style={{background: '#fce8b2', color: '#1b1b1b'}}>4.7k</td><td style={{background: '#f4c7c3', color: '#1b1b1b'}}>8.3k</td></tr>
+    <tr><td>Ashvane</td><td>5.8k</td><td>4.8k</td><td>3.4k</td><td style={{background: '#fce8b2', color: '#1b1b1b'}}>5.1k</td><td style={{background: '#f4c7c3', color: '#1b1b1b'}}>8.5k</td></tr>
+    <tr><td>Orgozoa</td><td>5.5k</td><td>8.9k</td><td>3.1k</td><td>3.9k</td><td style={{background: '#fce8b2', color: '#1b1b1b'}}>7.0k</td></tr>
+    <tr><td>Queen's Court</td><td>4.6k</td><td>8.2k</td><td>3.9k</td><td>4.0k</td><td style={{background: '#fce8b2', color: '#1b1b1b'}}>7.9k</td></tr>
+    <tr><td>Za'qul</td><td>13.0k</td><td>20.0k</td><td>4.4k</td><td>5.5k</td><td>9.9k</td></tr>
+  </tbody>
+</table>
 
 Something that should immediately stand out is that the amount of damage purified is less than the healing done by the combination of [Edicts](https://www.wowhead.com/item=169315/edicts-of-the-faithless) and [Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin). Frequently, the healing done by just [Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin) is near or above total mitigation from [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew). This problem has been exacerbated by the enormous amounts of nigh-unmitigatable magic damage in the Eternal Palace. For example, look at this log of Mythic Radiance. Despite taking a similar amount of damage as on Sivara, I only purified 1/9th the amount of damage. This is due to a shift in damage away from physical sources and into magical ones.
 
-![Staggered damage on Mythic Radiance](/img/uploads/2019/10/stagger_radiance-1024x332.png)**Figure:** Stagger on M Radiance. Sometimes there just isn’t anything to purify.
+![Staggered damage on Mythic Radiance](/img/uploads/2019/10/stagger_radiance-1024x332.png)
+
+**Figure:** Stagger on M Radiance. Sometimes there just isn’t anything to purify.
 
 Maybe [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) isn’t the problem. Maybe I’m *just bad.* Balancing [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew) with [Ironskin Brew](https://www.wowhead.com/spell=115308/ironskin-brew) is supposed to be the hard part of playing Brewmaster, right? Let’s try to eliminate that factor. The table also shows the amount that was purified by Honestly’s Brewmaster, [Pumps](https://www.warcraftlogs.com/character/us/frostmourne/pumpsw). While consistently higher than mine (suppose I need to purify more), they are still massively outstripped by these trinkets on 4 of 8 fights. On two of the remaining fights, the trinkets provide near the value of purifies used by Pumps.
 
@@ -59,9 +65,8 @@ A user contacted my fellow moderator and theorycrafter Paoanii recently with som
 
 **Table:** Damage taken / healing required on The Court Log.
 
-|  |  |  |
-| --- | --- | --- |
 |  | **Never Purified** | **Purified** |
+| --- | --- | --- |
 | **DTPS** | 60.6k | 54.9k |
 | **EHRPS** | 30.2k | 37.7k |
 | **# of Heals Received** | 107 | 103 |
@@ -70,7 +75,9 @@ As can be seen from the table above, replacing purification with tank trinkets s
 
 The picture isn’t pretty. The next two figures show the heals cast on each target. The total number of heals received is very close, despite the gap in healing required. We can also see that the one that never purified received 10 [Holy Shock](https://www.wowhead.com/spell=20473/holy-shock) casts, while the purifying player received only 1. [Holy Shock](https://www.wowhead.com/spell=20473/holy-shock) is a substantial heal, but this gap is much more likely to be due to a difference in *who has the [Beacon](https://www.wowhead.com/spell=53563/beacon-of-light)*. The player that purified had [Beacon of Light](https://www.wowhead.com/spell=53563/beacon-of-light) active, which produced 15k HPS---or 40% of all external healing they received and 25% of all healing received.
 
-![Casts on the Brewmaster that used Purifying Brew](/img/uploads/2019/10/qc_blue.png)**Figure:** Casts on the BrM that used Purifying Brew.
+![Casts on the Brewmaster that used Purifying Brew](/img/uploads/2019/10/qc_blue.png)
+
+**Figure:** Casts on the BrM that used Purifying Brew.
 
 ![Casts on the Brewmaster that never used Purifying Brew](/img/uploads/2019/10/qc_red.png)
 
@@ -78,7 +85,7 @@ The picture isn’t pretty. The next two figures show the heals cast on each tar
 
 Aside from [Holy Shock](https://www.wowhead.com/spell=20473/holy-shock), the most noticeable increase is in [Vivifie](https://www.wowhead.com/spell=116670/vivify)s. This is likely for a similar reason (10 [holy shock](https://www.wowhead.com/spell=20473/holy-shock)s do not do 15k HPS, no matter how much `#mist-lounge` complains), but worth noting.
 
-My Professional Opinion™ is that there is *not* a substantial difference in the amount of healer attention required between these two players. That is to say: *it is better defensively to wear* *[Edicts](https://www.wowhead.com/item=169315/edicts-of-the-faithless) +**[Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin) and ignore your class abilities than to play your class reasonably well and use DPS trinkets.* Of course, *it is best to do both!* Wearing tank trinkets doesn’t prevent casting [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew). ***Don’t stop Purifying!***
+My Professional Opinion™ is that there is *not* a substantial difference in the amount of healer attention required between these two players. That is to say: *it is better defensively to wear [Edicts](https://www.wowhead.com/item=169315/edicts-of-the-faithless) + [Urchin](https://www.wowhead.com/item=169310/bloodthirsty-urchin) and ignore your class abilities than to play your class reasonably well and use DPS trinkets.* Of course, *it is best to do both!* Wearing tank trinkets doesn’t prevent casting [Purifying Brew](https://www.wowhead.com/spell=119582/purifying-brew). ***Don’t stop Purifying!***
 
 ## This (Still) Sucks
 
