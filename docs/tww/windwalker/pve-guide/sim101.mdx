@@ -42,23 +42,23 @@ To sum up what option from raidbots is best used for any use case you might have
 
 ## Fight Styles in Detail
 
-### Patchwerk
+### ▸ Patchwerk
 
 Patchwerk is mostly used to simulate static fights. Examples would be councillike fights or even pure single target fights that don't include a lot of mechanics or have any add spawns. Due to the very frequent usage of such bosses in raids, this is the default chosen by most people to optimize their chars for raid content. This can also be used to simulate shorter combats with a lot of targets. Due to the way our cooldown management is made in the APL this is not a recommended use case and shouldn't be used to optimize for dungeon content.
 
-### Dungeon Slice
+### ▸ Dungeon Slice
 
 Dungeon Slice and Dungeon Route are two different fight styles, even tho both have the same goal. Simulating a full dungeon. [Dungeon Slice](https://medium.com/raidbots/mythic-simming-with-dungeon-slice-68a834880975) was made years ago with the goal to generalize whole dungeons into a shorter fight style to make gearing decisions for dungeons easier. If you followed the link and read through the article written by Seriallos you may already have noticed the issue with it. Dungeons nowadays are much different, with a lot of bigger pulls that are not properly mirrored by such a fight style. Dungeon Slice can have some issues with a few trinkets that require a higher target count, but even for those it's still "fine". What you use to simulate dungeons is up to you. Dungeon Slice is also a good tool to make gearing decisions for raid fights that involve add spawns due to the way it values single target and low target cleave.
 
-### Dungeon Route
+### ▸ Dungeon Route
 
 Dungeon Slice and Dungeon Route are two different fight styles, even tho both have the same goal. Simulating a full dungeon. If you want a much more detailed sim that represents a dungeon of your choice, with the route of your choice, you have to use Dungeon Route. You probably already noticed that this is not a default fight style on raidbots. That's because of the nature of Dungeon Route itself. The goal here is to make it as flexible as possible. The steps are fairly simple. Get [Method Dungeon Tools (MDT)](https://www.curseforge.com/wow/addons/mythic-dungeon-tools) and this [Weakaura](https://wago.io/Yya4XBbl-). In MDT you can build your own routes of the dungeons with the key level you decide. The weakaura makes it possible to extract those routes as a fight style for your sim. In the top right corner of your MDT window, you will find two things. A setting to decide the % of the health you will deal to the enemies (default is 27%, based on your group you can adjust that) and right next to it, you have a button that is called "SimC Export". When you press this button, a pop-up opens with the current route as a bunch of lines that are raid events. Those raid events will be your trash packs and bosses in the sim. Now just copy the content of the popup like you did with your /simc popup. When you now open raidbots and insert your normal /simc export or decide to use the "Load from Armory" option, you can scroll down to the end of the page. There you can find a part that is named "Custom APL and SimC Options". Extend this and enable the expert mode with the checkbox. You will have 4 input boxes now that are named "Header", "Pre-Actor", "Post-Actor" and "Footer". Paste your route into the Footer. This will overwrite all settings about the fight style that you have in the Simulation Options above. Dungeon Route requires a lot more effort but will be the most accurate simulation of a dungeon at this point. What you use to simulate dungeons is up to you.
 
-### Movement Sims
+### ▸ Movement Sims
 
 There are 3 different fighstyles that are selectable on raidbots right now that include movement. Hectic Add Cleave, Light Movement and Heavy Movement. While the idea to simulate fights with a lot of movement sounds great, we still have a lot of issues with those sims. The APL has to support those. For now that's not the case (at least for Monks) which is why we recommend to never use any of those. If you still use those the results you get can be very different since movement in combats is always a thing a player can plan for while the APL does not do that right now. It's the same issue you would have when you would stop to play proactively and start to play reactively. A good example is the usage of cooldowns. The APL has no conditions for incoming movement, so it can happen that it uses all your damage cooldowns just to run around like a chicken for the next ten seconds.
 
-### Target Dummy
+### ▸ Target Dummy
 
 Target Dummy is a fight style that automatically disables all raid buffs, consumables and the usage of Touch of Karma and Touch of Death. This fight style can be used to get a rough idea about the dps your character is capable of on a target dummy. Due to the difference between human and APL and the difference in iterations, you might not match your simulated dps, but you may come close to it.
 
@@ -78,7 +78,7 @@ Target Dummy is a fight style that automatically disables all raid buffs, consum
 
 **Compare Consumables/Racials** To use this just open any Quicksim, post your /simc export or use the "Load from Armory" option. Enable the expert mode in the "Custom APL and SimC Options" section and paste what you want to use into the "Footer". This will create other profiles in the Quicksim with the things you want to compare. If you want to compare any consumables, it's recommended to change the consumable for the default profile to "None". This can be found in the simulation options. Combination sims (like comparing different Potions and Phial options at the same time) are not possible with that, since you would need to create those combinations. Small note for the racial sims. While you can still do such sims and decide based on the very very very marginal differences, we don't recommend on doing so. Utility and even looks are reasons to pick races, not the very marginal dps differences.
 
-### Food - Feast/Feast-Equivalent
+### ▸ Food - Feast/Feast-Equivalent
 
 copy="Food: (445 mainstat) Feast"\
 food=feast_of_the_midnight_masquerade\
@@ -89,7 +89,7 @@ food=beledars_bounty\
 copy="Food: (469 lowest secondary) Everything Stew"\
 food=everything_stew
 
-### Food - Specific Secondaries
+### ▸ Food - Specific Secondaries
 
 copy="Food: (328 Crit) Fiery Fish Sticks"\
 food=fiery_fish_sticks\
@@ -100,7 +100,7 @@ food=salty_dog\
 copy="Food: (328 Haste) Zesty Nibblers"\
 food=zesty_nibblers
 
-### Food - Split Secondaries
+### ▸ Food - Split Secondaries
 
 copy="Food: (235 Mastery/Haste) Chippy Tea" \
 food=chippy_tea \
@@ -115,7 +115,7 @@ food=salt_baked_seafood \
 copy="Food: (235 Haste/Vers) Sweet and Spicy Soup" \
 food=sweet_and_spicy_soup
 
-### Flasks
+### ▸ Flasks
 
 copy="Flask: Flask of Alchemical Chaos" \
 flask=flask_of_alchemical_chaos_3 \
@@ -128,7 +128,7 @@ flask=flask_of_tempered_versatility_3 \
 copy="Flask: Flask of Tempered Aggression" \
 flask=flask_of_tempered_aggression_3
 
-### Weapon Enhancements - DW
+### ▸ Weapon Enhancements - DW
 
 copy="Ironclaw Whetstone DW"\
 temporary_enchant=main_hand:ironclaw_whetstone_3/off_hand:ironclaw_whetstone_3\
@@ -143,7 +143,7 @@ temporary_enchant=main_hand:ironclaw_whetstone_3/off_hand:algari_mana_oil_3\
 copy="Oil of the Deep Toxins/Algari Mana Oil DW"\
 temporary_enchant=main_hand:oil_of_deep_toxins_3/off_hand:algari_mana_oil_3
 
-### Weapon Enhancements - 2h
+### ▸ Weapon Enhancements - 2h
 
 copy="Ironclaw Whetstone"\
 temporary_enchant=main_hand:ironclaw_whetstone_3\
@@ -152,7 +152,7 @@ temporary_enchant=main_hand:oil_of_deep_toxins_3\
 copy="Algari Mana Oil"\
 temporary_enchant=main_hand:algari_mana_oil_3
 
-### Races - Horde
+### ▸ Races - Horde
 
 profileset."Pandaren"+="race=pandaren"\
 profileset."Blood Elf"+="race=blood_elf"\
@@ -177,7 +177,7 @@ profileset."Zandalari Troll (Pa'ku)"+="race=zandalari_troll"\
 profileset."Zandalari Troll (Pa'ku)"+="zandalari_loa=paku"\
 profileset."Vulpera"+="race=vulpera"
 
-### Races - Alliance
+### ▸ Races - Alliance
 
 profileset."Pandaren"+="race=pandaren"\
 profileset."Draenei"+="race=draenei"\

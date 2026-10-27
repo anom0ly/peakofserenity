@@ -1,0 +1,80 @@
+/* Stat blocks from the original post, laid out with flex-grow so each block's width follows its value */
+.equation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
+  margin: 0 0 1em;
+}
+@media (min-width: 760px) {
+  .equation {
+    justify-content: center;
+    padding: 0 1em;
+  }
+}
+.op {
+  font-weight: 600;
+}
+.statRow,
+.damageRow {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.statRow {
+  width: 60%;
+}
+.damageRow {
+  width: 6em;
+}
+.block {
+  position: relative;
+  flex-basis: 0;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+}
+.small {
+  font-size: 75%;
+}
+.damage {
+  background: hsl(120deg 14% 97%);
+}
+.bonus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(200deg 100% 50%);
+}
+.mastery {
+  background: hsl(140deg 39% 79%);
+}
+.crit {
+  background: hsl(17deg 39% 79%);
+}
+.vers {
+  background: hsl(300deg 46% 70%);
+}
+.haste {
+  background: hsl(200deg 39% 79%);
+}
+.none {
+  background: repeating-linear-gradient(45deg, hsl(191deg 5% 24%) 0 10px, hsl(191deg 5% 30%) 10px 20px);
+}
+.sliders {
+  margin: 1em 0;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin: 0.25em 0;
+}
+.sliders .equation {
+  margin-top: 1em;
+}

@@ -15,6 +15,8 @@ original_url: https://www.peakofserenity.com/2023/10/18/what-stats-should-i-use-
 image: /img/uploads/2018/10/Brew-Musing_narrow.jpg
 ---
 
+import {StatEquation, StatSliders} from '@site/src/components/StatModel';
+
 For a *very* long time, Crit/Vers has been the *de facto* stat combination for Brewmasters in virtually all content. Mastery has always been a staple for defensive use in Mythic+, but has never overtaken Crit/Vers for damage.
 
 Until now. Sort of. In some cases. *Ugh.*
@@ -31,7 +33,7 @@ But, the magic of WoW is that *the choice is yours*. You can work things out you
 
 ### Offensive Stat Reference
 
-As a reminder, this reference *only* covers the offensive benefits. See [below](#Offensive Stat Reference) for defensive benefits.
+As a reminder, this reference *only* covers the offensive benefits. See [below](#defensive-stat-reference) for defensive benefits.
 
 <table>
 <thead>
@@ -46,7 +48,7 @@ As a reminder, this reference *only* covers the offensive benefits. See [below](
 <td>Critical Strike</td>
 <td>
 <ul>
-<li>Good Scaling (94% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+<li>Good Scaling (94% <a href="#how-stats-scale-aka-what-is-conversion-rate">Conversion Rate</a>)</li>
 <li>Applies to Monk damage sources</li>
 <li>Applies to gear &amp; item damage sources</li>
 </ul>
@@ -61,7 +63,7 @@ As a reminder, this reference *only* covers the offensive benefits. See [below](
 <td>Mastery</td>
 <td>
 <ul>
-<li>Good Scaling (94% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+<li>Good Scaling (94% <a href="#how-stats-scale-aka-what-is-conversion-rate">Conversion Rate</a>)</li>
 <li>Applies to Monk ability damage sources, and gear &amp; item sources that copy Monk ability damage via <a href="https://www.wowhead.com/spell=117906/mastery-elusive-brawler">Mastery: Elusive Brawler</a>'s Attack Power increase</li>
 <li>Constant benefit: all damage is increased, period. No RNG</li>
 </ul>
@@ -83,7 +85,7 @@ As a reminder, this reference *only* covers the offensive benefits. See [below](
 </td>
 <td>
 <ul>
-<li>OK Scaling (83% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+<li>OK Scaling (83% <a href="#how-stats-scale-aka-what-is-conversion-rate">Conversion Rate</a>)</li>
 </ul>
 </td>
 </tr>
@@ -91,7 +93,7 @@ As a reminder, this reference *only* covers the offensive benefits. See [below](
 <td>Haste</td>
 <td>
 <ul>
-<li>Best Scaling (100% <a href="#How_Stats_Scale_aka_What_is_“Conversion_Rate”">Conversion Rate</a>)</li>
+<li>Best Scaling (100% <a href="#how-stats-scale-aka-what-is-conversion-rate">Conversion Rate</a>)</li>
 <li>Applies to <i>almost</i> all damage-over-time effects</li>
 <li>Increases the proc rate of some gear &amp; item damage sources</li>
 <li>Reduces cooldowns of some relevant damage spells</li>
@@ -143,9 +145,9 @@ All of that said: it is a useful question to keep in mind for the possible futur
 <td>Critical Strike</td>
 <td>
 <ul>
-<li>Functions as a “virtual damage reduction” by amplifying all incoming healing. (see <a href="#Queueing_Theory_“Virtual_Damage_Reduction”">here</a> for an explanation)</li>
+<li>Functions as a “virtual damage reduction” by amplifying all incoming healing. (see <a href="#queueing-theory--virtual-damage-reduction">here</a> for an explanation)</li>
 <li>Helpful against all types of damage</li>
-<li>Scales very well off of self-healing (capable of &gt;165% efficiency!—see <a href="#Defensive_Power_Efficiency_Reference">note</a>) and reasonably well off of external healing (75% efficiency) via <a href="https://www.wowhead.com/spell=216519/celestial-fortune">Celestial Fortune</a></li>
+<li>Scales very well off of self-healing (capable of &gt;165% efficiency!—see <a href="#defensive-power-efficiency-reference">note</a>) and reasonably well off of external healing (75% efficiency) via <a href="https://www.wowhead.com/spell=216519/celestial-fortune">Celestial Fortune</a></li>
 </ul>
 </td>
 <td>
@@ -263,7 +265,7 @@ Keg Smash Damage = 0.9 * (Agility + 6 * Weapon DPS)
                        * (1 + Mastery %)
 ```
 
-But this is just a single hit! What if it crits? On average, it works out to another multiplicative modifier ([proof](#Proof_Critical_Strike_as_a_Damage_Multiplier)):
+But this is just a single hit! What if it crits? On average, it works out to another multiplicative modifier ([proof](#proof-critical-strike-as-a-damage-multiplier)):
 
 ```
 Keg Smash Damage = 0.9 * (Agility + 6 * Weapon DPS)
@@ -284,87 +286,27 @@ Keg Smash Damage = 0.9 * (Agility + 6 * Weapon DPS)
 
 Easy enough. Now, how do we maximize it? We know that Mastery is reasonably efficient, so let's put all of our points there. Let's say that we gain 70% Vers from our gear, have 10,000 Agility and 500 Weapon DPS. The text format is a bit of a pain, so let's switch to a block-based format. These numbers give us 11,700 damage as a baseline. After applying our modifiers, we get:
 
-11,700
-
-×
-
-70% Vers
-
-=
-
-19,890
+<StatEquation vers={70} />
 
 Great! What if we pick a more efficient stat? The conversion rate says that we’ll get about 80% Mastery, giving us:
 
-11,700
-
-×
-
-80% Mastery
-
-=
-
-21,060
+<StatEquation mastery={80} />
 
 We get a bit more damage (shown in light blue), as expected from a more efficient stat.
 
 What happens if we split our available secondaries between the two, 50/50? That would give us 40% Mastery and 35% Vers (roughly).
 
-11,700
-
-×
-
-40% Mastery
-
-35% Vers
-
-=
-
-22,113
+<StatEquation mastery={40} vers={35} />
 
 It went up! We moved some rating from a more efficient stat to a less efficient stat—getting lower overall stat percentages in the process—and yet got *more damage!*
 
 What if we split up the Mastery with Crit without touching Vers? 20% Mastery, 20% Crit, and 35% Vers.
 
-11,700
-
-×
-
-20% Mastery
-
-20% Crit
-
-35% Vers
-
-=
-
-22,745
+<StatEquation mastery={20} crit={20} vers={35} />
 
 It went up again! I’ll let you try it with a 4-way split on your own ;)
 
-Mastery
-
-Critical Strike
-
-Versatility
-
-Haste
-
-11,700
-
-×
-
-20% Mastery
-
-20% Crit
-
-35% Vers
-
-0% Haste
-
-=
-
-22,745
+<StatSliders />
 
 While this model is extremely basic, it illustrates an incredibly important fact: **because stats multiply together, stacking a single stat is** ***almost never*** **worthwhile over a 2- or 3-way split.**
 

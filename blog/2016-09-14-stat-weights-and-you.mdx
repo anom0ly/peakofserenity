@@ -22,7 +22,7 @@ We’d like to enlighten you with some of the information on how it works. First
 
 #### What are stats weights?
 
-[![](http://sf.co.ua/13/07/wallpaper-2921923.jpg)](http://sf.co.ua/13/07/wallpaper-2921923.jpg)Stats weights are numbers associated with primary/secondary stats meant to give relative « weights » of importance. If one stat weight is twice as big as another, it means gaining some of that stat will increase the dps twice as much as the other one does. Stats weights are, in essence, local. They are calculated (usually via Simulation tools like [SimulationCraft](https://simulationcraft.org/), notably) at one specific gearset, for one specific type of fight (oftentimes single target), duration, etc.
+Stats weights are numbers associated with primary/secondary stats meant to give relative « weights » of importance. If one stat weight is twice as big as another, it means gaining some of that stat will increase the dps twice as much as the other one does. Stats weights are, in essence, local. They are calculated (usually via Simulation tools like [SimulationCraft](https://simulationcraft.org/), notably) at one specific gearset, for one specific type of fight (oftentimes single target), duration, etc.
 
 To calculate stats weights, SimCraft basically calculates the gains in dps that would result from a very small increase in each stat, then divides those gains by the amount of stats gained. It is very similar, in that regard, to calculus and the computation of a derivative (https://en.wikipedia.org/wiki/Derivative):
 
@@ -30,7 +30,7 @@ We assume that damage per second is a continuous function of your stats and deri
 
 One other thing worth noting: for gear gain, it is often risky to look at very small gains and take the results as definitive. Some amount of haste gain could push it to some amount that allows one extra cast during each [Serenity](http://www.wowhead.com/spell=152173), or each [momentum](https://www.wowhead.com/spell=206476/momentum) window, or each [combustion](https://www.wowhead.com/spell=190319/combustion) or whatnot. Pushing these very small breakpoints will result in huge stats weights which do not reflect the reality of things or are only true for a very small gain.
 
-![](http://study.com/cimages/course-image/calculus_98661_large.jpg)For instance, if you’re calculating your stat weight at a point where haste is reaching such a breakpoint, SimCraft will go crazy and tell you haste is 12 times better than any other stat. Of course, if you’d watched a bit further, you’d have seen than in fact it wasn’t, and as soon as you had one extra haste gem SimCraft went back to telling you that haste was not your best stat. Furthermore, just because SimCraft saw such a breakpoint doesn’t mean it really exists. It could be due to action priority lists being rigid and not reacting the way humans do to some things lining up or not.
+![](/img/external/study.com/calculus_98661_large.jpg)For instance, if you’re calculating your stat weight at a point where haste is reaching such a breakpoint, SimCraft will go crazy and tell you haste is 12 times better than any other stat. Of course, if you’d watched a bit further, you’d have seen than in fact it wasn’t, and as soon as you had one extra haste gem SimCraft went back to telling you that haste was not your best stat. Furthermore, just because SimCraft saw such a breakpoint doesn’t mean it really exists. It could be due to action priority lists being rigid and not reacting the way humans do to some things lining up or not.
 
 To avoid this happening to you, there is a tool in [SimulationCraft](https://simulationcraft.org/) called plotting that allows you to see how your dps evolves with your stats by small increments (you can control all these aspects) and see how smoothly they evolve.
 
@@ -40,7 +40,7 @@ To avoid this happening to you, there is a tool in [SimulationCraft](https://sim
 
 This, to some extent, is the easy part. First solution is to go to [Beotorch.com](http://www.beotorch.com), create an account, find your character from armory, check the « Calculate Scale Factors » and you’re good to go. After a few minutes, you’ll have results including a list of values associated with each stats. This is literally the best tool to get Simcraft stats weights easily as it was designed for exactly that. It will use the base action priority list for it, which is usually very decent/the best available work from Hinalover for Windwalkers. It will allow you to sim variable fight lengths, number of targets, AoE spawns…
 
-![](https://www.statnews.com/wp-content/uploads/2016/04/Scale_STAT-1024x576.jpg)If you wanna look further into it, or into this « plotting » I mentioned earlier, then try the real [SimulationCraft](https://simulationcraft.org/) engine. It is what [Beotorch.com](http://www.beotorch.com) runs to get you these, but running it yourself grants you extra freedom. You can change anything on your gear, your stats, your race, any sort of settings. Just go to options -> stats scaling and check the « all stats » options.
+![](/img/external/www.statnews.com/Scale_STAT-1024x576.jpg)If you wanna look further into it, or into this « plotting » I mentioned earlier, then try the real [SimulationCraft](https://simulationcraft.org/) engine. It is what [Beotorch.com](http://www.beotorch.com) runs to get you these, but running it yourself grants you extra freedom. You can change anything on your gear, your stats, your race, any sort of settings. Just go to options -> stats scaling and check the « all stats » options.
 
 If you wanna check plotting it’s in there as well; there are many options I’ll let you discover.
 
@@ -52,7 +52,7 @@ First all the big ilvl upgrades would win just because of the amount of stats I�
 
 To avoid this, two solutions:
 
-[![editweights](http://www.walkingthewind.com/wp-content/uploads/2016/09/editweights.png)](http://www.walkingthewind.com/2016/09/14/stat-weights-and-you/editweights/)First one is what this article has been about: simulate it. [Beotorch.com](http://www.beotorch.com) is an excessively easy tool to use, takes a couple minutes. I know it’s hard to simulate your gear when the loot drops and you have to decide whether to take it or leave it for someone else. But you probably won’t change 5 items in one run, or when you do most will be obvious gains because of crazy ilvl increases.\
+First one is what this article has been about: simulate it. [Beotorch.com](http://www.beotorch.com) is an excessively easy tool to use, takes a couple minutes. I know it’s hard to simulate your gear when the loot drops and you have to decide whether to take it or leave it for someone else. But you probably won’t change 5 items in one run, or when you do most will be obvious gains because of crazy ilvl increases.\
 Therefore, whenever you change a couple items, when you go offline run a sim on [Beotorch.com](http://www.beotorch.com) or Simcraft and update your stats weights string. It’ll cover changes for your next run just fine.
 
 **If you're ever looking to determine if X item is better than Y, its always best to sim your character with that slot empty. This will provide you with the stat weights needed to best compare two or more items directly.**
@@ -63,7 +63,7 @@ I don’t like trusting all my gear management in a tool like Simcraft. Not beca
 
 Babylonius and I, with the help of some very solid people (Navv from simcraft, FieryDemise from RavenHoldt, Hinalover) have done a lot of calculations to try and push the idea that stats weights are simple partial derivations. Thanks to that work, we ended up finding the exact « gaps » between stats that would allow us to balance our gear.
 
-![](http://caninetraining.com.au/images/easyblog_articles/65/stone-balance.png)When following these rules, you should find your stats weights even out very nicely and have roughly Crit=Vers=Mastery >> haste.
+When following these rules, you should find your stats weights even out very nicely and have roughly Crit=Vers=Mastery >> haste.
 
 Of course, this is not absolute. Having a strong trinket that values critical chance, haste and versatility but not mastery can change these numbers quite a bit (aka telling you to drop 700-1000 mastery rating for instance.) But this is the best we could achieve as general rules:
 

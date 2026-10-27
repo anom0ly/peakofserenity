@@ -7,7 +7,7 @@
   <language>en</language>
   <description>Podcast for Monk, by Monk.</description>
   <itunes:author>Peak of Serenity</itunes:author>
-  <itunes:image href="https://www.peakofserenity.com/img/uploads/2018/02/No_margin_transparent.png"/>
+  <itunes:image href="https://www.peakofserenity.com/podcast/artwork.png"/>
   <itunes:category text="Leisure"><itunes:category text="Video Games"/></itunes:category>
   <itunes:explicit>false</itunes:explicit>
   <item>
