@@ -86,8 +86,6 @@ html[data-theme='dark'] {
 }
 .button--pos:hover {
   color: #fff;
-  border-radius: 25px;
-  letter-spacing: 2px;
 }
 
 /* Rows of page buttons in guides (src/plugins/remark-embeds.js) */
