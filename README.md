@@ -28,8 +28,9 @@ Two Cloudflare Pages environment variables (Settings â†’ Variables and Secrets â
 - `MIGRATION_MODE=true` builds only the landing page ("we're moving"), the three spec guides and the Windwalker
   guide's sub-pages. Every other address shows a "this page hasn't moved over yet" page. Remove it (or set it to
   anything else) and redeploy to bring the full site back; no content is deleted.
-- `PODCAST_MEDIA_URL=<public address of the R2 bucket "podcasts">` (no trailing slash) points the podcast feed's
-  MP3 links at R2 and redirects old `/wp-content/uploads/...` addresses there. It works in either mode.
+- `PODCAST_MEDIA_URL=<public address of the R2 bucket "podcasts">` (no trailing slash) is optional: it defaults to
+  `https://media.peakofserenity.com`. The episodes and feed link there directly; old `/wp-content/uploads/...`
+  addresses redirect to it. It works in either mode.
 
 ```sh
 MIGRATION_MODE=true PODCAST_MEDIA_URL=https://media.example.com npm run build

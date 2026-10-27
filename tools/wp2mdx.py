@@ -43,6 +43,12 @@ NS = {
 SITE_RE = re.compile(r"^https?://(?:www\.)?peakofserenity\.com", re.I)
 UPLOADS_RE = re.compile(r"^(?:https?://(?:www\.)?peakofserenity\.com)?/wp-content/uploads/", re.I)
 IMG_BASE = "/img/uploads/"
+# Podcast MP3s live in the R2 bucket "podcasts" under their WordPress paths. The earliest episodes were linked from
+# walkingthewind.com (no longer online); their files are on peakofserenity.com under 2017/03/, one under a new name.
+MEDIA_BASE = "https://media.peakofserenity.com/wp-content/uploads/"
+WTW_AUDIO_RE = re.compile(r"^https?://(?:www\.)?walkingthewind\.com/wp-content/uploads/\d{4}/\d{2}/", re.I)
+WTW_RENAMED = {"Ep-7-Trinket-Changes-and-Best-in-Slots.mp3": "Ep-8-Trinket-Changes-and-Best-in-Slots.mp3"}
+MISSING_AUDIO = {"2017/06/Ep-15-Babs-on-Tomb-and-Current-State-of-WW.mp3"}  # gone before the move, not in R2
 TALENT_RE = re.compile(r"\b[A-Za-z0-9+/]{60,}\b")  # talent import strings
 
 # Tabbed guides: src/guideTypes.json lists each guide type's tab groups (front-matter key, the Divi text module
@@ -632,6 +638,19 @@ def summary(md):
     return plain if len(plain) <= 157 else plain[:157].rsplit(" ", 1)[0] + "…"
 
 
+def media_url(audio):
+    """The R2 address of a podcast MP3, or the original address if it isn't in the bucket."""
+    if not audio.lower().endswith(".mp3"):
+        return audio
+    if UPLOADS_RE.match(audio):
+        path = UPLOADS_RE.sub("", audio)
+        return audio if path in MISSING_AUDIO else MEDIA_BASE + path
+    if WTW_AUDIO_RE.match(audio):
+        name = WTW_AUDIO_RE.sub("", audio)
+        return MEDIA_BASE + "2017/03/" + WTW_RENAMED.get(name, name)
+    return audio
+
+
 def convert_podcast(item, authors):
     where = "podcast %s %s" % (item["id"], item["link"])
     md = to_markdown(item["content"], where)
@@ -646,14 +665,14 @@ def convert_podcast(item, authors):
         "tags": dedupe([c[1] for c in item["cats"] if c[0] == "post_tag"]),
         "series": dedupe([c[1] for c in item["cats"] if c[0] == "series"]),
         "description": seo_description(item) or summary(md),
-        "audio": audio,
+        "audio": media_url(audio),
         "duration": meta.get("duration", ""),
         "wp_id": int(item["id"]),
         "original_url": item["link"],
     }
     if not audio:
         REVIEW.add(where, "No audio file")
-    elif not UPLOADS_RE.match(audio):
+    elif not UPLOADS_RE.match(audio) and not WTW_AUDIO_RE.match(audio):
         REVIEW.add(where, "Audio file is hosted elsewhere and may be gone: %s" % audio)
     cover = meta.get("cover_image") or ATTACHMENT_IDS.get(meta.get("_thumbnail_id", ""))
     if cover:
@@ -900,7 +919,7 @@ def write_podcast_feed(outdir, items, pids):
     <enclosure url="%s" length="%s" type="%s"/>
     <itunes:duration>%s</itunes:duration>
   </item>""" % (escape(it["title"]), it["slug"], escape(html.unescape(meta.get("ssp_guid") or it["link"])),
-              format_datetime(when), escape(notes), escape(meta["audio_file"].strip()),
+              format_datetime(when), escape(notes), escape(media_url(meta["audio_file"].strip())),
               meta.get("filesize_raw") or (enc[1] if len(enc) > 1 else "0"),
               enc[2].strip() if len(enc) > 2 and enc[2].strip() else "audio/mpeg", meta.get("duration", "")))
     feed = """<?xml version="1.0" encoding="UTF-8"?>

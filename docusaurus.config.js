@@ -12,9 +12,9 @@ const migrationGuides = [
   'tww/windwalker/pve-guide.mdx',
   'tww/windwalker/pve-guide/**/*.mdx',
 ];
-// Base URL of the public R2 bucket "podcasts" (no trailing slash). When set, the podcast feed's MP3 links and old
-// /wp-content/uploads/*.mp3 addresses point there instead of the WordPress site.
-const podcastMediaUrl = (process.env.PODCAST_MEDIA_URL || '').replace(/\/+$/, '');
+// Base URL of the public R2 bucket "podcasts" (no trailing slash). The episodes and feed link there directly; old
+// /wp-content/uploads/*.mp3 addresses redirect there. PODCAST_MEDIA_URL overrides the redirect target.
+const podcastMediaUrl = (process.env.PODCAST_MEDIA_URL || 'https://media.peakofserenity.com').replace(/\/+$/, '');
 
 const fullNavbar = [
   // Mirrors the live "TWW Main Menu".
