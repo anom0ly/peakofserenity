@@ -1,6 +1,7 @@
 // @ts-check
 const {themes: prismThemes} = require('prism-react-renderer');
 const remarkEmbeds = require('./src/plugins/remark-embeds');
+const remarkCollapsible = require('./src/plugins/remark-collapsible');
 
 // Migration mode (MIGRATION_MODE=true in the Cloudflare Pages build settings) publishes only a landing page and the
 // three spec guides; news, articles, podcast pages, tags and the hub pages are left out of the build. Nothing is
@@ -119,6 +120,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: false,
           showLastUpdateTime: true,
+          beforeDefaultRemarkPlugins: [remarkCollapsible],
           remarkPlugins: [remarkEmbeds],
           ...(migrationMode && {include: migrationGuides}),
         },
@@ -154,6 +156,7 @@ const config = {
           onInlineTags: 'ignore',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'ignore',
+          beforeDefaultRemarkPlugins: [remarkCollapsible],
           remarkPlugins: [remarkEmbeds],
           showReadingTime: false,
           feedOptions: {type: ['rss', 'atom'], xslt: false},
@@ -177,6 +180,7 @@ const config = {
           onInlineTags: 'ignore',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'ignore',
+          beforeDefaultRemarkPlugins: [remarkCollapsible],
           remarkPlugins: [remarkEmbeds],
           showReadingTime: false,
           feedOptions: {type: null},

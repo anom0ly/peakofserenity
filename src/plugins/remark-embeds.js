@@ -1,6 +1,7 @@
 // A link on a line of its own, showing its own address (as WordPress auto-embeds), becomes a player:
 // YouTube videos, published Google Sheets charts, Twitch clips and .mp4 files.
 // The source stays a plain Markdown link, so Pages CMS can edit it.
+// It also turns runs of bold page links into a row of buttons (see groupButtons).
 
 const TWITCH_PARENTS = ['www.peakofserenity.com', 'peakofserenity.com', 'localhost'];
 
@@ -71,6 +72,46 @@ function toEmbed(node) {
   };
 }
 
+// Two or more paragraphs in a row that each hold just one bold link to a page on this site
+// (the old Divi button rows, e.g. Starting / Tools / Raid / Mythic+) become one centred row of buttons.
+function buttonLink(node) {
+  if (node.type !== 'paragraph') return null;
+  const kids = (node.children || []).filter((c) => !(c.type === 'text' && !c.value.trim()));
+  if (kids.length !== 1 || kids[0].type !== 'link' || !kids[0].url.startsWith('/')) return null;
+  const link = kids[0];
+  if (link.children.length !== 1 || link.children[0].type !== 'strong') return null;
+  return link;
+}
+
+function groupButtons(parent) {
+  const out = [];
+  let run = [];
+  const flush = () => {
+    if (run.length >= 2) {
+      const links = run.map(({link}) => ({
+        ...link,
+        children: link.children[0].children,
+        data: {hProperties: {className: ['button', 'button--pos']}},
+      }));
+      out.push({type: 'linkButtons', data: {hName: 'div', hProperties: {className: ['link-buttons']}}, children: links});
+    } else {
+      out.push(...run.map(({node}) => node));
+    }
+    run = [];
+  };
+  for (const node of parent.children) {
+    const link = buttonLink(node);
+    if (link) {
+      run.push({node, link});
+    } else {
+      flush();
+      out.push(node);
+    }
+  }
+  flush();
+  parent.children = out;
+}
+
 module.exports = function remarkEmbeds() {
   return (tree) => {
     const walk = (parent) => {
@@ -84,5 +125,6 @@ module.exports = function remarkEmbeds() {
       });
     };
     walk(tree);
+    groupButtons(tree);
   };
 };
