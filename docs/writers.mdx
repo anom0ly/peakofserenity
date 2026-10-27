@@ -1,0 +1,144 @@
+---
+title: Writer's Guide
+slug: /writers
+unlisted: true
+last_update:
+  date: '2026-10-27'
+description: How to write and edit news posts and class guides on Peak of Serenity with Pages CMS.
+---
+
+This page is the how-to for writing on peakofserenity.com. It isn't linked from anywhere on the site, so share the link only with writers. You can edit it yourself in Pages CMS under **Guides**, then **Other guide pages**.
+
+## Official docs
+
+The official Pages CMS documentation is at [pagescms.org/docs](https://pagescms.org/docs/). It covers installing and configuring Pages CMS and has no guide for writers. The pages worth a look are:
+
+- [Introduction](https://pagescms.org/docs/): what Pages CMS is. You edit in a web page, and every save is stored in our GitHub repository.
+- [Collaborators](https://pagescms.org/docs/configuration/collaborators/): how email invites work and what an invited writer can and can't do.
+- [Rich-text field](https://pagescms.org/docs/configuration/fields/rich-text/): the text editor, including its Editor/Source switch.
+
+## Getting access
+
+You need an invite from Justin. You don't need a GitHub account.
+
+1. Justin invites you by email from Pages CMS.
+2. Open the invite email and follow its link to [app.pagescms.org](https://app.pagescms.org).
+3. Sign in with the same email address the invite went to.
+4. Pick the **peakofserenity_migration** project. Bookmark the page you land on.
+
+## What's in the editor
+
+The left-hand menu matches the site's sections.
+
+| Menu item | What it is | What you can do |
+| --- | --- | --- |
+| News Posts | Articles under /news/ | Write new posts, edit and delete posts |
+| Guides | The four tabbed class guides, plus "Other guide pages" (acronyms, finding a guild, this guide, and so on) | Edit only. New guide pages are added by Justin |
+| Podcast Episodes | Episode pages with audio and show notes | Add and edit episodes |
+| Authors | The list of author names and profiles | Add or update your own profile. It's plain text, so copy the layout of an existing entry |
+| Media | Every image on the site | Upload and pick images |
+
+Each page opens as a form. Short boxes hold the title, date, authors and summary. Large text boxes hold the writing itself. Each box has a one-line hint under it saying where its text appears on the site.
+
+## Writing a news post
+
+1. Go to **News Posts** and click **Add an entry**.
+2. **Title**: type the final title now. The post's web address is built from the title and today's date the first time you save, and it can't be changed later.
+3. **Publish date**: when it should show as posted.
+4. **Author(s)**: pick yourself. Add co-authors if you wrote it together.
+5. **Tags**: one per line. Use the spec (Windwalker, Brewmaster, Mistweaver or General), the patch number (for example 12.1), and any topics.
+6. **Short summary**: one or two sentences. This shows on the news list, in Google and in Discord link previews.
+7. **Preview image** (optional): the picture shown when the post is shared.
+8. **Post**: write the article. The toolbar does headings, bold, italics, lists, links, quotes and images.
+9. Click **Save**. The post goes live on its own a few minutes later (see [Saving publishes](#saving-publishes)).
+
+To fix a typo in an old post, open it from the list, change it and save. Only delete a post if you're sure, because its address stops working.
+
+## Editing a class guide
+
+Each tabbed guide is one form, laid out top to bottom in the same order as the page. Go to **Guides** and pick the guide: Windwalker, Brewmaster or Mistweaver PvE, or Classic Windwalker (Mists).
+
+### How the form maps to the page
+
+| Form box | Where it shows on the guide |
+| --- | --- |
+| Guide title | The page title |
+| Last updated, Date | "Last updated" at the bottom of the page |
+| Authors | The author line |
+| Short summary | Google and Discord previews only |
+| Introduction | The text under the banner |
+| A section, for example **Talent Builds** | One tabbed box on the page. Its **Section heading** is the title above the tabs and also its entry in the table of contents |
+| Text above the tabs | Optional text between that heading and the tabs |
+| **Tab: Raid**, **Tab: Mythic+** and so on | Everything a reader sees after clicking that tab. One box per tab, in the order the tabs appear |
+| Text below the tabs (Classic only) | Optional text under the tabs |
+| Rest of the guide | Everything after the tabbed sections: ability notes, gearing, macros, changelog |
+
+Click a section's name to fold it open and see its tab boxes.
+
+### Updating a tab
+
+1. Open the guide, unfold the section, and find the box named after the tab, for example **Tab: Mythic+**.
+2. Edit the text. Keep the style already used in that tab: the same heading size for sub-headings (such as "Shado-Pan"), and bold for import lines.
+3. Change **Last updated** to today's date.
+4. Click **Save**.
+
+The tabs themselves are fixed. To add, remove or rename a tab, ask Justin, because that's a change to the site's code.
+
+### Talent import strings
+
+Paste talent strings exactly as Wowhead or the game gives them. One changed letter breaks the import.
+
+- Existing builds look like **Default Import: C0QAAAA…**, where the string is a link to the Wowhead talent calculator.
+- To replace a build, select the old string, paste the new one, then click the link button and paste the new Wowhead calculator address.
+- Never let the editor wrap, bold part of, or auto-correct a string. If it looks wrong, switch the box to **Source**, check the string there, and switch back.
+
+### The colour legend
+
+The old site coloured talent names. The editor removes text colour when you save, so the guides use coloured squares instead. Copy and paste them from an existing legend:
+
+- 🟩 Green = Always Pick
+- 🟦 Blue = Pick as very strong default optional Talents
+- 🟪 Purple = Pick based on your demands in the content of your Choice
+- ⬜ White = Pick for very situational Niche Situations
+- 🟥 Red = Never Pick
+
+Orange 🟧 and yellow 🟨 are also available. Put the square in front of the talent name.
+
+### Spell and item tooltips
+
+Any link to a Wowhead spell or item page gets a hover tooltip on the live site automatically. Link the ability name to its Wowhead page and nothing else is needed.
+
+## Images
+
+1. In the text box, put the cursor where the image goes and click the image button. For a post's preview image, use the **Preview image** box.
+2. Pick an existing image, or upload a new one. Put new uploads in the folder for this year and month, for example **uploads/2026/10**.
+3. Fill in the description (alt text) so screen readers and Google know what it shows.
+
+Keep each image under 25 MB; anything bigger stops the site from publishing. Screenshots are best saved as PNG or WebP, and photos as JPG. If an image is more than about 2 MB, shrink it first with a free tool such as [Squoosh](https://squoosh.app).
+
+## Saving publishes
+
+There is no draft or review step: **Save** publishes your change to the live site.
+
+1. Save stores your change in the site's GitHub repository, under your name.
+2. Cloudflare sees the change and rebuilds the whole site. This takes a few minutes.
+3. The new version replaces the live site. Refresh the page to see it.
+
+If something you saved breaks the rebuild, the live site simply stays on the last good version and your change doesn't appear. Nothing goes down. Tell Justin if your change hasn't shown up after 15 minutes.
+
+Every save is kept, so any earlier version of a page can be brought back. Ask Justin if you need one.
+
+Two people editing the same guide at once can overwrite each other. Say in Discord before a big guide edit, and save often.
+
+## Rules that keep the site building
+
+| Don't | Why | Do instead |
+| --- | --- | --- |
+| Type curly braces \{ \} or a lone &lt; in normal text | The site reads them as code and the rebuild fails | Reword, or use ( ) and "less than" |
+| Colour text | The editor strips colour on save | Use the coloured squares from the legend |
+| Change talent strings by hand | One wrong letter breaks the import | Paste the whole string fresh from Wowhead or the game |
+| Delete or edit HTML you see in **Source** view, such as a table or an embedded video | It's there on purpose and the toolbar can't recreate it | Change only the words between the tags, or ask Justin |
+| Rename a post after it's published | Its address would change and old links would break | Fix the title text only; the address stays |
+| Upload images over 25 MB | Cloudflare refuses the whole rebuild | Shrink the image first |
+
+When in doubt, change less, save, and check the live page a few minutes later.

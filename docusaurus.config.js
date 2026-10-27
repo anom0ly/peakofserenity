@@ -12,6 +12,8 @@ const migrationGuides = [
   'tww/mistweaver/pve-guide.mdx',
   'tww/windwalker/pve-guide.mdx',
   'tww/windwalker/pve-guide/**/*.mdx',
+  // The writers' how-to (/writers/): unlisted, so it stays out of the sitemap and search engines.
+  'writers.mdx',
 ];
 // Base URL of the public R2 bucket "podcasts" (no trailing slash). The episodes and feed link there directly; old
 // /wp-content/uploads/*.mp3 addresses redirect there. PODCAST_MEDIA_URL overrides the redirect target.
