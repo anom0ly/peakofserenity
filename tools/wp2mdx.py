@@ -868,17 +868,19 @@ def write_tags_and_redirects(outdir, items, converted, authors, parents):
                 "# Tags not listed here still work; Docusaurus makes their address from the name.\n")
         yaml.dump(tags, f, sort_keys=False, allow_unicode=True)
 
-    lines = ["", "# WordPress category archives -> tag pages (nested ones first: the first matching rule wins)"]
+    # Exact-address rules: Cloudflare Pages allows 2,000 of those but only 100 with a * (it ignores every rule after the
+    # 100th), so wildcards are kept for the few catch-alls. Paged archives (/category/x/page/2/) get the 404 page.
+    lines = ["", "# WordPress category archives -> tag pages"]
     for nice in sorted(categories):
         if parents.get(nice):
-            lines.append("/category/%s/%s/* %s 301" % (parents[nice], nice, CATEGORY_TAG[nice]))
+            lines.append("/category/%s/%s/ %s 301" % (parents[nice], nice, CATEGORY_TAG[nice]))
     for nice in sorted(categories):
-        lines.append("/category/%s/* %s 301" % (nice, CATEGORY_TAG[nice]))
+        lines.append("/category/%s/ %s 301" % (nice, CATEGORY_TAG[nice]))
     lines += ["", "# Author archives -> author pages"]
     for login, name in sorted(authors.items()):
         key = author_key(name)
         if any(key in [author_key(n) for n in author_keys(items[p], authors)] for p in converted):
-            lines.append("/author/%s/* /authors/%s/ 301" % (re.sub(r"[^a-z0-9-]+", "-", login.lower()), key))
+            lines.append("/author/%s/ /authors/%s/ 301" % (re.sub(r"[^a-z0-9-]+", "-", login.lower()), key))
     # Tags only podcasts use have no news tag page; podcast tag pages live under /podcast/tag/
     news_tags = {nice for p in converted if items[p]["type"] == "post"
                  for dom, _, nice in items[p]["cats"] if dom == "post_tag"}
@@ -886,7 +888,7 @@ def write_tags_and_redirects(outdir, items, converted, authors, parents):
                            for dom, _, nice in items[p]["cats"] if dom == "post_tag"} - news_tags)
     lines += ["", "# Tags used only by podcast episodes -> their podcast tag page"]
     for nice in podcast_only:
-        lines.append("/tag/%s/* /podcast/tag/%s/ 301" % (nice, nice))
+        lines.append("/tag/%s/ /podcast/tag/%s/ 301" % (nice, nice))
     lines += ["", "# Podcast series archives -> the podcast archive",
               "/series/* /podcast/archive/ 301"]
     lines += ["", "# Links in old content to /df/, /sl/, /bfa/ and unprefixed guide paths"]
