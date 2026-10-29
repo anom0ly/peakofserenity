@@ -1,0 +1,56 @@
+.ad {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7f9ea4;
+}
+
+.unit {
+  display: block;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--pos-tab-border);
+  background: var(--pos-bg-raised);
+  color: #7f9ea4;
+  font-size: 0.8rem;
+}
+
+/* Under the table of contents: 160px wide (narrower when the column is) by 600px. */
+.rail {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 160px;
+}
+
+.rail .unit,
+.rail .placeholder {
+  min-height: 600px;
+}
+
+/* Below the post, with a divider so it reads as separate from the guide. Phones and narrow tablets only. */
+.end {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--pos-bg-raised);
+}
+
+.end .unit,
+.end .placeholder {
+  min-height: 250px;
+}
+
+@media (min-width: 997px) {
+  .end {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+.rail {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+/* Leave room for the 600px ad and its label; a short window still gets a few rows of contents. */
+.rail .toc {
+  position: static;
+  max-height: max(12rem, calc(100vh - var(--ifm-navbar-height) - 2rem - 640px));
+}
+
+@media (max-width: 996px) {
+  .rail {
+    display: none;
+  }
+}

@@ -24,6 +24,17 @@ const podcastMediaUrl = (process.env.PODCAST_MEDIA_URL || 'https://media.peakofs
 const gaMeasurementId = 'G-PDRKCDL1GQ';
 const analyticsEnabled = process.env.CF_PAGES_BRANCH === 'main';
 
+// AdSense: one ad in the table-of-contents column on desktop and one below the post on phones (src/components/AdSlot).
+// ADS_ENABLED=true in the Cloudflare Pages build settings turns the ads on; migration mode keeps them off. ADSENSE_SLOT
+// is the display ad unit's slot ID; until it's set, the slots show a dashed placeholder and Google's script isn't loaded.
+// The verification tag and static/ads.txt stay in every build so the AdSense account can review the site.
+const adsenseClient = 'ca-pub-9960844448742082';
+const ads = {
+  enabled: process.env.ADS_ENABLED === 'true' && !migrationMode,
+  client: adsenseClient,
+  slot: process.env.ADSENSE_SLOT || '',
+};
+
 const fullNavbar = [
   // Mirrors the live "TWW Main Menu".
   {
@@ -100,9 +111,10 @@ const config = {
   onBrokenAnchors: 'warn',
   markdown: {hooks: {onBrokenMarkdownLinks: 'warn', onBrokenMarkdownImages: 'warn'}},
   i18n: {defaultLocale: 'en', locales: ['en']},
-  customFields: {migrationMode},
+  customFields: {migrationMode, ads},
 
   headTags: [
+    {tagName: 'meta', attributes: {name: 'google-adsense-account', content: adsenseClient}},
     {
       tagName: 'script',
       attributes: {},
@@ -110,7 +122,12 @@ const config = {
         "const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'tiny'};",
     },
   ],
-  scripts: [{src: 'https://wow.zamimg.com/js/tooltips.js', async: true}],
+  scripts: [
+    {src: 'https://wow.zamimg.com/js/tooltips.js', async: true},
+    ...(ads.enabled && ads.slot
+      ? [{src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`, async: true, crossorigin: 'anonymous'}]
+      : []),
+  ],
   clientModules: [
     require.resolve('./src/clientModules/wowhead.js'),
     require.resolve('./src/clientModules/imageZoom.js'),
