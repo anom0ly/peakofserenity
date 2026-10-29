@@ -1,12 +1,11 @@
 ---
 title: Writer's Guide
-slug: /writers
-unlisted: true
 last_update:
-  date: '2026-10-27'
-description: How to write and edit news posts and class guides on Peak of Serenity with Pages CMS.
+  date: 2026-10-27
+description: How to write and edit news posts and class guides on Peak of
+  Serenity with Pages CMS.
+slug: /writers
 ---
-
 This page is the how-to for writing on peakofserenity.com. It isn't linked from anywhere on the site, so share the link only with writers. You can edit it yourself in Pages CMS under **Guides**, then **Other guide pages**.
 
 ## Official docs
@@ -19,9 +18,9 @@ The official Pages CMS documentation is at [pagescms.org/docs](https://pagescms.
 
 ## Getting access
 
-You need an invite from Justin. You don't need a GitHub account.
+You need an invite from Anomoly. You don't need a GitHub account.
 
-1. Justin invites you by email from Pages CMS.
+1. Anomoly invites you by email from Pages CMS. (Ping on Discord if needed)
 2. Open the invite email and follow its link to [app.pagescms.org](https://app.pagescms.org).
 3. Sign in with the same email address the invite went to.
 4. Pick the **peakofserenity** project. Bookmark the page you land on.
@@ -30,13 +29,15 @@ You need an invite from Justin. You don't need a GitHub account.
 
 The left-hand menu matches the site's sections.
 
+
 | Menu item | What it is | What you can do |
-| --- | --- | --- |
+| ---------------- | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | News Posts | Articles under /news/ | Write new posts, edit and delete posts |
-| Guides | The four tabbed class guides, plus "Other guide pages" (acronyms, finding a guild, this guide, and so on) | Edit only. New guide pages are added by Justin |
+| Guides | The four tabbed class guides, plus "Other guide pages" (acronyms, finding a guild, this guide, and so on) | Edit only. New guide pages are added by Anomoly |
 | Podcast Episodes | Episode pages with audio and show notes | Add and edit episodes |
 | Authors | The list of author names and profiles | Add or update your own profile. It's plain text, so copy the layout of an existing entry |
 | Media | Every image on the site | Upload and pick images |
+
 
 Each page opens as a form. Short boxes hold the title, date, authors and summary. Large text boxes hold the writing itself. Each box has a one-line hint under it saying where its text appears on the site.
 
@@ -60,8 +61,9 @@ Each tabbed guide is one form, laid out top to bottom in the same order as the p
 
 ### How the form maps to the page
 
+
 | Form box | Where it shows on the guide |
-| --- | --- |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | Guide title | The page title |
 | Last updated, Date | "Last updated" at the bottom of the page |
 | Authors | The author line |
@@ -73,6 +75,7 @@ Each tabbed guide is one form, laid out top to bottom in the same order as the p
 | Text below the tabs (Classic only) | Optional text under the tabs |
 | Rest of the guide | Everything after the tabbed sections: ability notes, gearing, macros, changelog |
 
+
 Click a section's name to fold it open and see its tab boxes.
 
 ### Updating a tab
@@ -82,7 +85,7 @@ Click a section's name to fold it open and see its tab boxes.
 3. Change **Last updated** to today's date.
 4. Click **Save**.
 
-The tabs themselves are fixed. To add, remove or rename a tab, ask Justin, because that's a change to the site's code.
+The tabs themselves are fixed. To add, remove or rename a tab, ask Anomoly, because that's a change to the site's code.
 
 ### Talent import strings
 
@@ -126,21 +129,23 @@ The one exception is a news post with **Draft** switched on. It is saved but sta
 2. Cloudflare sees the change and rebuilds the whole site. This takes a few minutes.
 3. The new version replaces the live site. Refresh the page to see it.
 
-If something you saved breaks the rebuild, the live site simply stays on the last good version and your change doesn't appear. Nothing goes down. Tell Justin if your change hasn't shown up after 15 minutes.
+If something you saved breaks the rebuild, the live site simply stays on the last good version and your change doesn't appear. Nothing goes down. Tell Anomoly if your change hasn't shown up after 15 minutes.
 
-Every save is kept, so any earlier version of a page can be brought back. Ask Justin if you need one.
+Every save is kept, so any earlier version of a page can be brought back. Ask Anomoly if you need one.
 
 Two people editing the same guide at once can overwrite each other. Say in Discord before a big guide edit, and save often.
 
 ## Rules that keep the site building
 
+
 | Don't | Why | Do instead |
-| --- | --- | --- |
-| Type curly braces \{ \} or a lone &lt; in normal text | The site reads them as code and the rebuild fails | Reword, or use ( ) and "less than" |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------------------------ |
+| Type curly braces or a lone &lt; in normal text | The site reads them as code and the rebuild fails | Reword, or use ( ) and "less than" |
 | Colour text | The editor strips colour on save | Use the coloured squares from the legend |
 | Change talent strings by hand | One wrong letter breaks the import | Paste the whole string fresh from Wowhead or the game |
-| Delete or edit HTML you see in **Source** view, such as a table or an embedded video | It's there on purpose and the toolbar can't recreate it | Change only the words between the tags, or ask Justin |
+| Delete or edit HTML you see in **Source** view, such as a table or an embedded video | It's there on purpose and the toolbar can't recreate it | Change only the words between the tags, or ask Anomoly |
 | Rename a post after it's published | Its address would change and old links would break | Fix the title text only; the address stays |
 | Upload images over 25 MB | Cloudflare refuses the whole rebuild | Shrink the image first |
+
 
 When in doubt, change less, save, and check the live page a few minutes later.
