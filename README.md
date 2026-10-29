@@ -36,6 +36,13 @@ Two Cloudflare Pages environment variables (Settings â†’ Variables and Secrets â
 MIGRATION_MODE=true PODCAST_MEDIA_URL=https://media.example.com npm run build
 ```
 
+## Analytics
+
+Google Analytics 4 (`G-PDRKCDL1GQ`, set in `docusaurus.config.js`) loads only on production deploys of `main`
+(Cloudflare Pages sets `CF_PAGES_BRANCH`); preview deploys and local builds don't send anything. Outbound clicks and
+site search come from the stream's Enhanced measurement settings in Google Analytics; keep "Page changes based on
+browser history events" off there, since the plugin sends its own page view on every page change.
+
 ## Re-running the conversion
 
 ```sh

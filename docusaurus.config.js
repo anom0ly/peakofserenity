@@ -19,6 +19,11 @@ const migrationGuides = [
 // /wp-content/uploads/*.mp3 addresses redirect there. PODCAST_MEDIA_URL overrides the redirect target.
 const podcastMediaUrl = (process.env.PODCAST_MEDIA_URL || 'https://media.peakofserenity.com').replace(/\/+$/, '');
 
+// Google Analytics 4 property for the new site. Only production deploys of main load it (Cloudflare Pages sets
+// CF_PAGES_BRANCH), so preview deploys and local builds stay out of the stats.
+const gaMeasurementId = 'G-PDRKCDL1GQ';
+const analyticsEnabled = process.env.CF_PAGES_BRANCH === 'main';
+
 const fullNavbar = [
   // Mirrors the live "TWW Main Menu".
   {
@@ -135,6 +140,7 @@ const config = {
           },
         }),
         theme: {customCss: require.resolve('./src/css/custom.css')},
+        ...(analyticsEnabled && {gtag: {trackingID: gaMeasurementId, anonymizeIP: false}}),
       }),
     ],
   ],
