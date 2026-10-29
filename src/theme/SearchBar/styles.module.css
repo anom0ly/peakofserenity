@@ -1,0 +1,285 @@
+.root {
+  position: relative;
+  --search-spec-windwalker: #b0cef4;
+  --search-spec-brewmaster: #c5b990;
+  --search-spec-mistweaver: #ff8153;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 17rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--pos-bg-raised);
+  border: 1px solid var(--pos-tab-border);
+  border-radius: 6px;
+  cursor: text;
+}
+
+.box:focus-within {
+  border-color: var(--pos-link);
+}
+
+.box input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: 0;
+  outline: none;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.box input::placeholder {
+  color: #9fc3c4;
+}
+
+/* The browser's own clear button clashes with the dark box. */
+.box input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: none;
+  color: #9fc3c4;
+}
+
+.kbd {
+  font-family: inherit;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  padding: 0 0.3rem;
+  color: #9fc3c4;
+  background: none;
+  border: 1px solid #9fc3c4;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.phoneButton {
+  display: none;
+  padding: 0.35rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.phoneButton .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #fff;
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: var(--ifm-z-index-dropdown);
+  width: min(36rem, calc(100vw - 2rem));
+  background: var(--pos-bg-raised);
+  border: 1px solid var(--pos-tab-border);
+  border-radius: 8px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.phoneHead {
+  display: none;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.75rem 0.9rem 0.5rem;
+}
+
+.chip {
+  padding: 0.1rem 0.7rem;
+  font: inherit;
+  font-size: 0.8rem;
+  color: #9fc3c4;
+  background: none;
+  border: 1px solid #0a4f5c;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip[aria-pressed='true'] {
+  color: var(--pos-bg);
+  background: var(--pos-link);
+  border-color: var(--pos-link);
+  font-weight: 600;
+}
+
+.chip:focus-visible,
+.result:focus-visible,
+.cancel:focus-visible,
+.phoneButton:focus-visible {
+  outline: 2px solid var(--pos-link);
+  outline-offset: 2px;
+}
+
+.count {
+  padding: 0 0.9rem 0.3rem;
+  font-size: 0.78rem;
+  color: #9fc3c4;
+}
+
+.empty {
+  margin: 0;
+  padding: 0.75rem 0.9rem 1rem;
+  font-size: 0.9rem;
+  color: #9fc3c4;
+}
+
+.results {
+  max-height: min(28rem, 65vh);
+  margin: 0;
+  padding: 0 0.4rem 0.4rem;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.result {
+  display: block;
+  padding: 0.6rem 0.6rem;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.result:hover,
+.selected {
+  color: #fff;
+  text-decoration: none;
+  background: #0a3f4a;
+}
+
+.title {
+  display: block;
+  font-weight: 600;
+  color: var(--pos-link);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.1rem 0 0.2rem;
+  font-size: 0.75rem;
+  color: #9fc3c4;
+}
+
+.tag {
+  padding: 0 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+}
+
+.windwalker {
+  color: var(--search-spec-windwalker);
+}
+
+.brewmaster {
+  color: var(--search-spec-brewmaster);
+}
+
+.mistweaver {
+  color: var(--search-spec-mistweaver);
+}
+
+.excerpt {
+  display: block;
+  font-size: 0.85rem;
+  color: #d5e6e6;
+}
+
+.panel mark {
+  padding: 0 1px;
+  color: #fff;
+  background: rgba(0, 255, 150, 0.22);
+  border-radius: 2px;
+}
+
+.foot {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.75rem;
+  color: #9fc3c4;
+  border-top: 1px solid #0a4f5c;
+}
+
+.cancel {
+  padding: 0.3rem 0.2rem;
+  font: inherit;
+  color: var(--pos-link);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Phones and tablets: a magnifier in the navbar opens search full screen. */
+@media (max-width: 996px) {
+  .root > .box {
+    display: none;
+  }
+
+  .phoneButton {
+    display: block;
+  }
+
+  .panel {
+    position: fixed;
+    inset: 0;
+    z-index: calc(var(--ifm-z-index-fixed) + 10);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--pos-bg);
+  }
+
+  .phoneHead {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--pos-tab-border);
+  }
+
+  .phoneBox {
+    flex: 1;
+    width: auto;
+  }
+
+  .phoneBox input {
+    font-size: 1rem;
+  }
+
+  .results {
+    flex: 1;
+    max-height: none;
+    padding: 0 0.6rem;
+  }
+
+  .result {
+    border-bottom: 1px solid #0a3f4a;
+    border-radius: 0;
+  }
+
+  .foot {
+    display: none;
+  }
+}
