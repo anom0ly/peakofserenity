@@ -174,6 +174,9 @@
 /df/windwalker/pve-guide/log-analysis/raid/ /tww/windwalker/pve-guide/log-analysis/raid/ 301
 /df/windwalker/pve-guide/log-analysis/tools/ /tww/windwalker/pve-guide/log-analysis/tools/ 301
 /df/windwalker/pve-guide/references/ /tww/windwalker/pve-guide/references/ 301
+/mistweaver/analysing-your-healing-logs/ /tww/mistweaver/ 301
+/mistweaver/guide/healing/ /tww/mistweaver/ 301
+/mistweaver/guide/legendaries/ /tww/mistweaver/ 301
 /sl/brewmaster/castle-nathria/ /tww/brewmaster/ 301
 /sl/brewmaster/dungeons/ /tww/brewmaster/ 301
 /sl/brewmaster/pve-guide/ /tww/brewmaster/pve-guide/ 301
@@ -194,10 +197,20 @@
 /sl/windwalker/pve-guide/ /tww/windwalker/pve-guide/ 301
 /sl/windwalker/pve-guide/advanced-tricks/ /tww/windwalker/pve-guide/advanced-tricks/ 301
 /windwalker/encounters/antorus/ /tww/windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/ /tww/windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/demonic-inquisition/ /tww/windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/goroth/ /tww/windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/harjatan/ /tww/windwalker/ 301
 /windwalker/guide/acronyms/ /tww/windwalker/ 301
+/windwalker/guide/pve/ /tww/windwalker/ 301
 /windwalker/guide/pve/artifact/ /tww/windwalker/ 301
+/windwalker/guide/pve/gear/ /tww/windwalker/ 301
+/windwalker/guide/pve/legendaries/ /tww/windwalker/ 301
 /windwalker/guide/pve/rotations/ /tww/windwalker/ 301
+/windwalker/guide/pve/sim-compendium/ /tww/windwalker/ 301
 /windwalker/guide/pve/stats-gems-and-enchants/ /tww/windwalker/ 301
+/windwalker/guide/pve/talents/ /tww/windwalker/ 301
+/windwalker/guide/pve/trinkets/ /tww/windwalker/ 301
 /windwalker/mythic-plus/ /tww/windwalker/ 301
 
 # Anything else under the old expansion prefixes -> that spec's hub, else the homepage

@@ -1,0 +1,109 @@
+---
+title: Windwalker Stat Scaling - Some Solutions
+slug: /2017/07/12/windwalker-stat-scaling-some-solutions
+date: '2017-07-12T17:17:40'
+authors:
+- babylonius
+tags:
+- Windwalker
+- Class Changes
+- Expansion
+- Opinions
+- Personal
+- Raiding
+- Spreadsheets
+- Theorycrafting
+description: So my most recent article was centered around providing evidence to support the concern that Windwalkers don't get as much out of gear as other…
+wp_id: 7644
+original_url: https://www.peakofserenity.com/2017/07/12/windwalker-stat-scaling-some-solutions/
+image: /img/uploads/2016/09/maxresdefault-e1489369406918.jpg
+draft: true
+---
+
+[So my most recent article was centered around providing evidence to support the concern that Windwalkers don't get as much out of gear as other specs.](/2017/07/09/windwalker-scaling/) This was shown by being one of two specs with below 100% Vers scaling, and being one of the bottom in overall scaling based on stats and item level. I have it on good authority that several people at Blizzard have at least seen the article or know of its existence, so that's a step. The next step is to brainstorm some solution to the problem. To do this, as I'm not a SimC wiz, I'll be using [my spreadsheet](https://docs.google.com/spreadsheets/d/1DUnhky2NWm2DEg7GvmhDxzcA-hciEPaXgkfGr_auPzQ/edit?usp=sharing) that I developed pretty much for this purpose.
+
+**Before we get started, a few caveats:**
+
+- I'm using my character as the basis for these testing. [Here's a link to what I'm using as a base](/img/uploads/2017/07/Babs-Base.png).
+- This is not a simulation, and its not perfect, but I think its pretty darn close if I may say so.
+- I am not concerning myself with the DPS increase/decrease of these changes, just how it changes the worth and "weight" of each stat. Because of the aura buff(s), our DPS can be tuned separately. I am focusing entirely on ways to increase the worth of gear.
+- These are targeted changes, if nerfs to other abilities come as a result of these changes, then obviously the gain in stat weights won't be as much.
+- This is entirely my own work, although many of the ideas are not originally or entirely mine. There's always room (maybe a lot on this one) that I may have made a mistake somewhere.
+
+#### Baseline
+
+To show the baseline, I wanted to look at how a general change, such as increasing the aura: [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk). Currently it stands at 22%.
+
+- **Increase to 25%** - Taking [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk) from 22% to 25% increases DPS from 1,156,341 to 1,180,677 or 2.1%. It had a small effect on the weight of stats: [![](/img/uploads/2017/07/Aura25-2.png)](/img/uploads/2017/07/Aura25-2.png)The worth of all stats was increased slightly, with the exception of Stamina since the aura doesn't effect [Touch of Karma](http://legion.wowhead.com/spell=122470) or [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death). Overall the total weight of stats went from 125.836 to 128.472 for an increase of 2.09%. As you can see, the increase in the value of stats wasn't quite equal to the 2.1% increase in damage, due to Stamina not being increased.
+- **Increase to 30%** - If [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk) went from 22% to 30%, the DPS went from 1,156,341 to 1,221,238 or an increase of 5.61%. The value of stats goes up in a similar fashion:[![](/img/uploads/2017/07/Aura30.png)](/img/uploads/2017/07/Aura30.png)For this aura change the weight gain was 5.58%, so again, not equal to the gain in DPS due to a lack of increase in Stamina scaling.
+- **Increase to 50%** - Finally the most exaggerated example. By increasing [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk) from 22% to 50%, the spreadsheet DPS went from 1,156,341 to 1,383,479 for a 19.64% increase. The stats' values went up as well: [![](/img/uploads/2017/07/Aura50.png)](/img/uploads/2017/07/Aura50.png)The total weight went up 19.53%, yet again short of the increase in DPS.
+
+As you can see, increasing [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk) doesn't really help the problem, **it may even exacerbate it.**
+
+#### [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death)
+
+A popular idea to increase scaling and the worth of stats is to allow them to modify [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death). Currently [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) is based on 50% of your health multiplied by Mastery. Because its half your health, and 1 Stamina is 60 health, each point of Stamina is worth 30 damage every 90s, or 0.3 DPS per Stamina before Mastery is taken into consideration. It doesn't benefit from Versatility, Critical Strike, or Haste, so lets look at the effect adding those would have on the damage of [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) as well as the worth of those stats.
+
+- **Haste** - Allowing [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death)'s cooldown to be reduced by Haste like many of the other abilities would increase [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death)'s DPS from 26,527.57 to 30,553.59, or 15% more. It also increased the value of haste from 21.063 to 21.8. The increase to Haste's worth would be more in a situation where that CD reduction gets you another cast. If I increase the fight length from 300 to 330, it gets an additional cast, so Haste's weight goes from 20.278 to 21.228.
+- **Versatility** - [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) is one of the 4 sources of damage/healing in the game that isn't effected by Versatility, that I could find. Demonology has [one](https://www.wowhead.com/spell=211714/thalkiels-consumption), Retribution has [another](https://www.wowhead.com/spell=210220/holy-wrath), and Windwalker also has [Touch of Karma](http://legion.wowhead.com/spell=122470). If we add Versatility scaling to [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) then we see its DPS go up from 26,527.57 to 29,577.41 or 11.5% more. Versatility's weight goes from 21.678 to 22.348.
+- **Critical Strike** - Obviously this one couldn't go live in PvP, but if we gave [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) the ability to hit critically its DPS would go from 26,527.57 to 34,249.22 or up 29.1%. Crit's weight would go from 22.23 to 23.03.
+- **Stamina** - Currently [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) starts at 50% of your health. It used to be 100%. If we increase it from 50% to 100% of our Health, the DPS per Stamina goes up to 0.6. This effectively doubles the damage and Stamina's weight.
+- **All** - So now if we do all of them at once, [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death)'s DPS goes from 26,527.57 to 87,848.42 or 231.2% more DPS (lol)[![](/img/uploads/2017/07/ToD2.png)](/img/uploads/2017/07/ToD2.png)% more. I bumped the fight length to 330 to allow for the extra cast, and the weights went from: Because of the swing in amount of casts and damage they do, my spreadsheet character saw the value of all his stats, except WDPS, increase. The total weight of stats was increased from 125.836 to 153.007 or 21.6% more, although around 15% of that is simply the huge increase in Stamina's weight.
+
+#### [Touch of Karma](http://legion.wowhead.com/spell=122470)
+
+Next I looked at [Touch of Karma](http://legion.wowhead.com/spell=122470). Similarly to [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death), this ability does not scale with Agility, Critical Strike, Haste, or Versatility, and has the added "bonus" of not scaling with Mastery. It scales off of Stamina only, so it gains 0.3 DPS per Stam, like [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death).
+
+- **Mastery** - [Touch of Karma](http://legion.wowhead.com/spell=122470) is the only casted spell that Windwalker's have that isn't effected by Mastery. Mastery scaling could be added strictly to the output, the way the original version of [Cenedril, Reflector of Hatred](https://www.wowhead.com/item=137019/cenedril-reflector-of-hatred&bonus=3530) worked, or added to the absorb shield as well, such as making it absorb half your health multiplied by Mastery. Adding Mastery scaling increases the DPS from 25,232.90 DPS to 35,323.37 DPS, or a 40% DPS increase. Mastery's stat weight goes from 23.36 to 24.31.
+- **Haste** - Adding Haste scaling would be a minute boost to both our offensive and defensive prowess. By doing so, the DPS of [Touch of Karma](http://legion.wowhead.com/spell=122470) goes from 25,232.90 to 29.024.04 for a 15% increase to the spreadsheet. Similar to [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death), in order to show the benefit of Haste, I increased the fight duration on the spreadsheet from 300 to 330 to allow for another cast. Doing so increased the weight of Haste from 20.278 to 21.07.
+- **Versatility** - Allowing [Touch of Karma](http://legion.wowhead.com/spell=122470) to scale with Versatility, either in the output or both input and output would increase its DPS from 25,232.90 to 28,133.89, or an increase of 11.5%. The stat weight of Versatility goes from 21.68 to 22.32.
+- **Critical Strike** - Finally, allowing [Touch of Karma](http://legion.wowhead.com/spell=122470) to crit, or at least its ticks to crit, would increase the average DPS from 25,232.90 to 32,577.70 for a 29.1% increase. The weight also increases from 22.23 to 22.99.
+- **Stamina** - Similar to [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death), [Touch of Karma](http://legion.wowhead.com/spell=122470) starts at 50% of your health. If this would be increased back to 100%, it would double the damage and Stamina's weight. It would, however, make it more difficult in some encounters to soak to its fullest.
+- **All** - And here we go. By doing all the above changes, [Touch of Karma](http://legion.wowhead.com/spell=122470)'s DPS goes from 25,199.57 to 117,131.23 DPS, or 364.8% more DPS :-D. The stat weights do this: [![](/img/uploads/2017/07/ToK.png)](/img/uploads/2017/07/ToK.png)This is an increase in the total weight of stats from 125.836 to 155.973 or 23.9% more value from stats.
+
+#### Miscellanous Haste Ideas
+
+- **[Strike of the Windlord](http://legion.wowhead.com/spell=205320)** - This has long been one of my votes for helping solve some scaling issues. It already scales from the other stats, but is unique in that it doesn't scale from Haste. Adding Haste scaling increases the DPS of it on my character from 72,795.98 to 83,844.03 or 15.2% more DPS if used on CD. It also increases the weight of Haste from 20.278 to 22.912. This is the biggest change to helping Haste's scaling, and would, in fact, bring it just about in line with Mastery depending on how much of each you have.
+- **Removing/Lessening Chi Generation from [Energizing Elixir](http://legion.wowhead.com/spell=115288)** - Realistically, [Energizing Elixir](http://legion.wowhead.com/spell=115288) hurts Haste scaling quite a bit, by providing us with free Chi that isn't based around our Haste. This is a difficult thing to really model well, specially on a spreadsheet. However, in theory, reducing the effectiveness of [Energizing Elixir](http://legion.wowhead.com/spell=115288) should help Haste at least in a small amount.
+
+#### All (lol)
+
+So obviously, you're all wondering what happens if all of these happen at once. Well....
+
+[![](/img/uploads/2017/07/All-7-12.png)](/img/uploads/2017/07/All-7-12.png)
+
+[![](/img/uploads/2017/07/All-7-12-stats.png)](/img/uploads/2017/07/All-7-12-stats.png)
+
+This is a pretty huge change, and realistically Stamina going from 9.399 to 41.603 would be WAAAY too much. Although it would make choosing upgrades easier, we'd just go for item level and ignore everything else. This would be an overall stat weight increase of 45.5%, which is probably **a bit** more than needed.
+
+#### All (Realistic)
+
+So all that increase in Stamina scaling is a nice thought, but its definitely not realistic. If we go back to 50% health on [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](http://legion.wowhead.com/spell=122470), then things look a bit less crazy. [![](/img/uploads/2017/07/All-7-12-No-stam.png)](/img/uploads/2017/07/All-7-12-No-stam.png)
+
+[![](/img/uploads/2017/07/All-7-12-stats-no-stam.png)](/img/uploads/2017/07/All-7-12-stats-no-stam.png)
+
+Not only do all these changes constitute only a 7.4% increase in Windwalker's damage, almost entirely single target, but they serve to bring Haste very much into a desirable position alongside other stats. The overall gain in stat weights is also 20.7% which would almost certainly help to fix, or fix entirely, Windwalker's gear current scaling concerns.
+
+It is my personal opinion that if these changes were made, Windwalker's could see some of [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk) rolled back, if the DPS is considered too high, as it really makes the scaling issues worse. Another option would be add [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](http://legion.wowhead.com/spell=122470) to [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk) so that [the Aura](https://www.wowhead.com/spell=137025/windwalker-monk) covers a larger portion of our damage, and thus sees a closer DPS to Scaling ratio.
+
+If you'd like to see the spreadsheets that I used, with all the changes in place, with the exception of the Stamina increases, check them out:
+
+- **Baseline -** [https://docs.google.com/spreadsheets/d/1LI4sn-lfwB7nk2xjQLaIvDN7Ph0MmdUsMZ4hA-BT9NA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1LI4sn-lfwB7nk2xjQLaIvDN7Ph0MmdUsMZ4hA-BT9NA/edit?usp=sharing)
+- **[Strike of the Windlord](http://legion.wowhead.com/spell=205320)**  - [https://docs.google.com/spreadsheets/d/1cwNPfN5gpOR3wZAgvgqETuYoaRE5kJiBP-0oe4L8jTw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1cwNPfN5gpOR3wZAgvgqETuYoaRE5kJiBP-0oe4L8jTw/edit?usp=sharing)
+- **[Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death)** - [https://docs.google.com/spreadsheets/d/1QGqknElP997wZ53D44xOEy8fKX_D86fT0DGXZxS4WFs/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1QGqknElP997wZ53D44xOEy8fKX_D86fT0DGXZxS4WFs/edit?usp=sharing)
+- **[Touch of Karma](http://legion.wowhead.com/spell=122470)** - [https://docs.google.com/spreadsheets/d/1Auv1ltx0I8kjV2ph5aDaDfwygrbYp4UHfV-TGZZ7ay4/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Auv1ltx0I8kjV2ph5aDaDfwygrbYp4UHfV-TGZZ7ay4/edit?usp=sharing)
+- **All Changes** - [https://docs.google.com/spreadsheets/d/19SOmhNs-XhrEnnpMjaPxuNB2wuJ0_I7lDpzDpuxeFEY/edit?usp=sharing](https://docs.google.com/spreadsheets/d/19SOmhNs-XhrEnnpMjaPxuNB2wuJ0_I7lDpzDpuxeFEY/edit?usp=sharing)
+
+I am pretty damn impressed with these solutions, regardless of how likely or unlikely they are. I'm sure there are a lot of philosophical and design barriers to these solutions. As it was pointed out to me on my stream, no spec that has cooldown reduction from Haste, sees Haste actually reduce the cooldown of their Artifact ability. Other things like adding stat scaling to [Touch of Death](http://legion.wowhead.com/spell=115080/touch-of-death) and [Touch of Karma](http://legion.wowhead.com/spell=122470) would make these abilities very strong in PvP, but that can be adjusted on the PvP templates, and who cares about World PvP, amirite?
+
+We've also seen nearly all of these ideas proposed before without any changes made. Hopefully with the increase in communication recently, and the spotlight that was shown on Windwalkers through the AMA, and all the work I did to gather data on scaling in the last article, there may be a higher chance for these being received and considered.
+
+**Although this is almost certainly not the correct way of doing it,** I went into a copy of the Stat % Scaling spreadsheet I used in [the last article](/2017/07/09/windwalker-scaling/) and adjusted the first page based on the changes that came from the data above. You can find that version here: [https://docs.google.com/spreadsheets/d/1ykkh50bs-ARSkG6eRgWwA8l34xY_Pq-lSNfgl9nZuJM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1ykkh50bs-ARSkG6eRgWwA8l34xY_Pq-lSNfgl9nZuJM/edit?usp=sharing)
+
+As you can see, if this changes work out like I put it into this spreadsheet, **which they pretty much definitely DON'T!**, Windwalker's would move up toward the middle of the specs for stat scaling.
+
+---
+
+If you're as impressed with this as I am \*toot toot\*, and if you like the content that I, and the others at PeakofSerenity provide then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius).

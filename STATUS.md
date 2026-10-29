@@ -89,7 +89,9 @@ QA compared the build with the live site (every sitemap URL, every built page). 
 
 ## Decisions (2026-10-17)
 - Podcasts: convert all 215 episodes, plus one archive page listing them.
-- Posts with status `archive` (106, 2016–2018): left out for now.
+- Posts with status `archive` (106, 2016–2018): left out for now. Changed 2026-10-29: brought in as drafts (`draft: true`), off the live site
+  until someone turns Draft off in Pages CMS. Their review items and missing images are in
+  [migration/review-list-drafts.md](migration/review-list-drafts.md).
 - Old Mistweaver guides (`/tww/mistweaver/pve-guide-shadowlands/` and the four `advanced-*` spotlights): retire with 301 redirects.
 
 ## Open questions

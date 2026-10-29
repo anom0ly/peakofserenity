@@ -1,0 +1,80 @@
+---
+title: Let's talk about stagger
+slug: /2017/05/30/lets-talk-about-stagger
+date: '2017-05-30T03:32:34'
+authors:
+- rivers
+tags:
+- Brewmaster
+description: This week, I received a request for a stagger WeakAura string that took me by surprise. To be clear, it wasn't surprising that I got a WeakAura request,…
+wp_id: 6924
+original_url: https://www.peakofserenity.com/2017/05/30/lets-talk-about-stagger/
+draft: true
+---
+
+This week, I received a request for a stagger WeakAura string that took me by surprise. To be clear, it wasn't surprising that I got a WeakAura request, that happens all the time. Instead, it was the total misapprehension of how stagger works that caught me unawares, and I want to write this down so that next time I get somebody like that, I can send them a quick link for them to read in their own time.
+
+## Stagger. How does it work?!?
+
+Well, if you look at the [spell description](http://www.wowhead.com/spell=115069/stagger) for stagger, you get the following description:
+
+> "You shrug off attacks, delaying 40% of Physical damage, instead taking it over 10 sec. Affects magical attacks at 50% effectiveness."
+
+Sounds simple enough, right? Well, no. If it were that simple, then this post wouldn't need to exist, now would it? There are a few quirks in the mechanics of stagger that can't be explained in just over 20 words like that. We'll tackle that first sentence of the description (the second bit is just to clarify that magic an physical are not treated equally, and isn't of great interest here), and break it down phrase by phrase, now, shall we?
+
+First, we have "You shrug off attacks".  Stagger is an absorb effect, similar to [Power Word: Shield](http://www.wowhead.com/spell=17/power-word-shield). If you remember a few years back, you might have noticed that for a while, Brewmaster monks seemed to top every healing meter ever by an absolutely ridiculous margin. Part of this was due to how absurd the vengeance mechanic was back then, but it was also due to stagger; those healing meters would see that the game reported an absorb, and dutifully add it to the healing charts. Skada, Recount and Details! have since gotten smarter, and now filter out the absorb events from Stagger, but it is still important to know that they are an absorb effect. As an absorb, Stagger is applied *after* all other forms of damage reduction, and *before* other absorb effects. If you have a Pain Suppression effect on you from some friendly discipline priest, then as far as Stagger is concerned, the 40% of the damage that was removed by Pain Suppression never existed in the first place. On the other hand, your [legendary trinket](http://www.wowhead.com/item=144249/archimondes-hatred-reborn) will not reduce the damage going into stagger (though it can and will absorb the damage coming out of stagger).
+
+The next bit, "delaying 40% of Physical damage," is fairly straightforward. Whenever you take damage, 40% of it (that number can be modified in a number of ways - more on that another time) is absorbed. Essentially, you have a permanently active damage reduction effect on you, which can reduce the damage you take by anywhere from 20% to 99%, depending on the type of damage (physical or magic) and what effects  you have increasing it's power (most notably [Ironskin Brew](http://www.wowhead.com/spell=115308/ironskin-brew) [ISB for short]). That's quite powerful, but of course it comes with a price.
+
+The last bit of that sentence is the part that seems to cause the most confusion. "instead taking it over 10 sec." *seems* simple enough, but as it happens the actual process that stagger deals damage to you is rather intricate. Below is some pseudo-code that describes how exactly the stagger DoT functions:
+
+> ```
+> start
+> totalTicks = 20
+> checkInterval = .5 --seconds
+>
+> repeat every checkInterval\
+>
+> if (dmgHappenedSinceLastCheck) then\
+>
+> totalTicks = 20\
+>
+> damagePerTick = totalStagger / totalTicks\
+>
+> end\
+>
+> dealDamage(damagePerTick)\
+>
+> totalTicks = totalTicks - 1\
+>
+> totalStagger = totalStagger - damagePerTick
+>
+>
+>
+> if notInCombat then\
+>
+> totalTicks = totalTicks - 1\
+>
+> totalStagger = totalStagger - damagePerTick\
+>
+> end\
+>
+> end
+> ```
+>
+> ```
+> when dmgHappens
+>     totalStagger = totalStagger + newStaggerfromDmg
+> end
+> ```
+>
+> ```
+> when PurifyHappens --purifyAmount is whatever % is left over after purifying
+>     totalStagger = totalStagger * purifyAmount
+>     damagePerTick = damagePerTick * purifyAmount
+> end
+> ```
+
+That's quite a handful if you weren't familiar with it already, so go ahead and take the time to read what exactly it's doing. What's important here, is that the amount of damage stagger deals to you is only ever updated when you reduce it through some effect like [Purifying Brew](http://www.wowhead.com/spell=119582/purifying-brew), or when it is increased by taking damage. Otherwise, it keeps ticking away at the exact same rate for 10 seconds, every half second, until it all drains away. As it happens, this is a crucial part of why exactly stagger works so well in legion; were it to work like [Ignite](http://www.wowhead.com/spell=12846/mastery-ignite), it would actually be significantly weaker (but, more on that another time).
+
+If you've made it this far, then hopefully this has cleared up any confusion you have on the manner in which stagger functions. Thank you for your time! Next time you see me talk about stagger on this website, I'll be discussing the do's and don't's of ISB and Purify.

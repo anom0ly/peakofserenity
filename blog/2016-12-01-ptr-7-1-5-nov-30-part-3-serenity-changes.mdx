@@ -1,0 +1,51 @@
+---
+title: 'PTR 7.1.5 (Nov 30) Part 3: Serenity Changes'
+slug: /2016/12/01/ptr-7-1-5-nov-30-part-3-serenity-changes
+date: '2016-12-01T14:22:45'
+authors:
+- babylonius
+tags:
+- Windwalker
+- 7.1.5
+- Abilities
+- Class Changes
+- Fists of Fury
+- PTR
+- Serenity
+- Theorycrafting
+description: So, like I spoke about in Part 2 there was a change to Serenity on the PTR where it was no longer snapshotting the cooldown reduction. So after Serenity's…
+wp_id: 2937
+original_url: https://www.peakofserenity.com/2016/12/01/ptr-7-1-5-nov-30-part-3-serenity-changes/
+image: /img/uploads/2015/04/cropped-cropped-maxresdefault2.jpg
+draft: true
+---
+
+So, like I spoke about in [Part 2](http://www.walkingthewind.com/2016/11/30/ptr-7-1-5-notes-nov-29-part-2/), there was a change to Serenity on the PTR where it was no longer snapshotting the cooldown reduction. So after Serenity's buff was over, any abilities on CD were doubled the current time they had on them. I used the example of if [Fists of Fury](http://legion.wowhead.com/spell=113656/fists-of-fury) has 5s left on its cooldown when you leave [Serenity](http://legion.wowhead.com/spell=152173), it jumps up to 10s. The cooldown reduction going in is still there, so if [Fists of Fury](http://legion.wowhead.com/spell=113656/fists-of-fury) has 10s on its cooldown when you press [Serenity](http://legion.wowhead.com/spell=152173), it is cut to 5s.
+
+I've learned now, through some channels, that this is an intended change. So before you grab your pitchforks and storm the castle (not that you shouldn't, just remember the "castle to storm" isn't Discord or MMOChampion where I moderate, its the official forums), let me explain what this means.
+
+###### Why?
+
+It seems to be a philosophical change in an attempt to make it so that WW can use [Serenity](http://legion.wowhead.com/spell=152173) at any time. Unfortunately, preliminary theorycrafting shows that it doesn't do that at all. Obviously their intention was to make [Serenity](http://legion.wowhead.com/spell=152173) easier to use. Currently you have to carefully track the cooldown of several abilities and use them, ideally, when those abilities have some amount of cooldown left, which is counter-intuitive to most damage increasing buffs. Its understandable, therefore, that they would try to change that behavior to make it easier to use, it just seems that they've missed the mark.
+
+However, new testing has surfaced that this is how all haste cooldown reduction works on live, and has for a long time. Once the haste proc is over, the cooldown returns to normal. This is a change that seemingly no one noticed because in generally you'd never see it unless you were looking for it. But this does mean that Blizzard may also have been attempting to bring [Serenity](http://legion.wowhead.com/spell=152173) in line with other cooldown reduction mechanics.
+
+###### What does this mean?
+
+**Functionally all it does is make it so that we want/need to channel a full Fists of Fury during Serenity**, and it nerfs the overall cooldown reduction, if you're following [Pandanaconda's recommendation for maximizing Serenity's cooldown reduction](http://www.walkingthewind.com/2016/08/17/serenity-theorycrafting/). Mathematically, if you were maximizing the cooldown reduction, in addition to gaining half the cooldown of each ability, namely [Strike of the Windlord](http://legion.wowhead.com/spell=205320) and [Fists of Fury](http://legion.wowhead.com/spell=113656/fists-of-fury), you gained half the cooldown that was remaining when you pressed [Serenity](http://legion.wowhead.com/spell=152173). For [Strike of the Windlord](http://legion.wowhead.com/spell=205320) if you were using Serenity at the recommended 12s left on its cooldown, you gained a total cooldown reduction of 26 seconds. For [Fists of Fury](http://legion.wowhead.com/spell=113656/fists-of-fury), you gained a maximum of 7.5 + half its cooldown, or 19.5s with 0 haste. For [Rising Sun Kick](http://legion.wowhead.com/spell=107428), which you ideally use at 2s left in the cooldown then twice during [Serenity](http://legion.wowhead.com/spell=152173), you gain 1 + one full cooldown, or 11s maximum.
+
+The problem is that previous, cooldowns lined up so nicely that you barely had to delay anything and could use a WeakAura to know when to use Serenity optimally. Now the cooldowns aren't likely to line up as cleanly, which will make it harder to use optimally. This will be theorycrafted at some point in the future.
+
+**As Max pointed out, my math was wrong, so its been updated.**
+
+With this change to [Serenity](http://legion.wowhead.com/spell=152173), you will gain a flat 8s maximum cooldown reduction to all abilities due to each second of [Serenity](http://legion.wowhead.com/spell=152173) counting as 2s of non-[Serenity](http://legion.wowhead.com/spell=152173) time, so the net gain over 8s of [Serenity](http://legion.wowhead.com/spell=152173) is 8s of cooldown reduction.. If you delay any abilities during [Serenity](http://legion.wowhead.com/spell=152173), you'll gain less than the 8s maximum (8 minus time delayed). [Strike of the Windlord](http://legion.wowhead.com/spell=205320), [Fists of Fury](http://legion.wowhead.com/spell=113656/fists-of-fury), and [Rising Sun Kick](http://legion.wowhead.com/spell=107428)will have a net gain of 8s off their cooldowns per Serenity.
+
+We'll be working out how much of a change it is in terms of the overall DPS but you can guesstimate. If Serenity used to give 26s of a [Strike of the Windlord](http://legion.wowhead.com/spell=205320), that's 65% of another cast, in 7.1.5 you get 20% of a [Strike of the Windlord](http://legion.wowhead.com/spell=205320) for every Serenity. For [Fists of Fury](http://legion.wowhead.com/spell=113656/fists-of-fury), rather than gaining 19.5s of 24s or 81.25%, you'll gain 16s, or 33.3%. Obviously the effect this has on your DPS depends on your other stats. Based on my math and private spreadsheet, its roughly a 4% nerf to single target damage.
+
+It is a decent nerf, but not a game breaking one, and not one designed to specifically damage Windwalker DPS, just to unify similar mechanics. There will be other changes to Windwalker in the PTR eventually, and Blizzard does know the effect that this will have on Windwalkers. So if, after all these changes including the stat changes and all that, Windwalker is still under performing, we can comfortably expect some changes to bring us back in line. Because of the nature of the stat change, its hard to say how specs will stack up quite yet, and Windwalker will have been one of the least effected classes by that change, so its possible that WW is going to be strong simple by being least effected by the stat nerfs. Only time will tell.
+
+If you still feel the desire to riot, then make sure you do it in the appropriate places  (Official and PTR forums) and with the appropriate information.
+
+---
+
+Hopefully, this answers more questions than it creates. As always you can find us on [Discord](https://discord.gg/0dkfBMAxzTkmAVwq) to answer questions, and if you liked what you read then please scroll down or to the top and subscribe and [support](http://www.walkingthewind.com/donate/) WtW.

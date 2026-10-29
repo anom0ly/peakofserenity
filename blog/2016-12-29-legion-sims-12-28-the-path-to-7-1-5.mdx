@@ -1,0 +1,79 @@
+---
+title: Legion Sims 12.28 - The Path to 7.1.5
+slug: /2016/12/29/legion-sims-12-28-the-path-to-7-1-5
+date: '2016-12-29T02:32:18'
+authors:
+- babylonius
+tags:
+- Windwalker
+- 7.1.5
+- Class Changes
+- Gear
+- PTR
+- Talents
+- Theorycrafting
+description: Much of this is out of date, see the newest articles for updated information. As we've started to work on things for 7.1.5, I thought that I'd post some of…
+wp_id: 3034
+original_url: https://www.peakofserenity.com/2016/12/29/legion-sims-12-28-the-path-to-7-1-5/
+draft: true
+---
+
+**Much of this is out of date, see the newest article(s) for updated information.**
+
+As we've started to work on things for 7.1.5, I thought that I'd post some of our findings, and how we're going about testing things. Pretty much everything I'll be posting about in this and any further articles on the matter are purely for testing. **DO NOT, under any circumstances, take these as a 100% indication of how things will be in the patch.** There are too many moving parts with 7.1.5, so all of this is just best guesses and an attempt at systematic testing. This will be far from conclusive, far from final, and far from free of mistakes on my, or anyone else's part. **You've been warned.**\
+The majority, if not the entirety of these sims, plus all the others that still need to be done will be done over the next few days and weeks.
+
+##### The First Goal
+
+The first goal I wanted to work toward was helping to set up an "optimal" single target profile so that WW can show up accurately on the stacked spec rankings that everyone is so fond of bringing up like their the end-all-be-all. So this post will be all about single target everything, using a 400s 1-Boss Patchwerk with 30% fight length variance and Elite player skill.
+
+##### Step 1 : Tier Gear
+
+The first thing I did was to generate a best guess at a gear set. To do this, I enlisted the assistance of Aikurou - Earthen Ring (US) who had helped me in the past with setting up some simulations. What he did was to create a few Python scripts, which are far beyond my comprehension (I tried, it was a disaster), but which enabled me to generate any combination of [trinkets](https://repl.it/D8uU/0), [talents](https://repl.it/Ewmi/0), and [gear sets](https://repl.it/Ewn4/2) to be copy/pasted into SimCraft. This saves hours, if not days, and increases the level of thoroughness.
+
+Well, I quickly ran into the problem of exponential scaling, as I talked about in the [last podcast](http://www.walkingthewind.com/podcast/ep-5-stat-weights-and-complicated-things/). Using only the gear available through the Nighthold raid, there is just about 500,000 gear combinations, assuming everything is at an equal item level. Considering the Python script killed the browser when I pressed "Go", and SimCraft wouldn't even think of touching it without shutting down, I needed to narrow things down.
+
+Starting with the tier slots, since those are typically the core that the gear sets are built around. So I only ran the combinations of different gear in the 6 slots that have Tier options: helm, back, shoulders, hands, legs, and chest. This cut the number of possibilities down to a few hundred. I ran that list at 10,000 iterations each. I took the top 20 profiles from that and ran them again at 25,000 iterations each, and finally the top 5 from that at 50,000 iterations.
+
+##### Results
+
+The results of this were that, without taking legendaries into consideration, the Chest, Legs, and Shoulders were the preferred slots for Tier items. The 4th tier piece could be helm or back interchangably with almost no difference between the two. This means that the tier slots look like this:
+
+- Helm: [Hood of Enveloped Dissonance](https://www.wowhead.com/item=138331&bonus=3445) or [Vintage Suramar Nobility Hat](https://www.wowhead.com/item=140901&bonus=3445)
+- Shoulders: [Pauldrons of Enveloped Dissonance](https://www.wowhead.com/item=138337&bonus=3445)
+- Back: [Cloak of Temporal Recalibration](https://www.wowhead.com/item=140910&bonus=3445) or [Cloak of Enveloped Dissonance](https://www.wowhead.com/item=138367&bonus=3445)
+- Chest: [Tunic of Enveloped Dissonance](https://www.wowhead.com/item=138325&bonus=3445)
+- Hands: [Gloves of Synchronus Elements](https://www.wowhead.com/item=140905&bonus=3445)
+- Legs: [Leggings of Enveloped Dissonance](https://www.wowhead.com/item=138334&bonus=3445)
+
+##### Step 2: Non-Tier Slots
+
+Now that I had a core of items to start on, and a drastically reduced  number of combinations, the next step was to finish the other slots. In order to keep things a little bit easier, I omitted trinkets in this round as well so as to not overly complicate things as trinkets could theoretically swing things. I went about things the same way as above. Again, the only thing that was interchangeable was the tier helm/back. This left us with a final "Best in Slot" gear set:
+
+- Helm: [Hood of Enveloped Dissonance](https://www.wowhead.com/item=138331&bonus=3445) or [Vintage Suramar Nobility Hat](https://www.wowhead.com/item=140901&bonus=3445)
+- Neck: [Zealous Timestone Pendant](https://www.wowhead.com/item=140894/zealous-timestone-pendant&bonus=3445)
+- Shoulders: [Pauldrons of Enveloped Dissonance](https://www.wowhead.com/item=138337&bonus=3445)
+- Back: [Cloak of Temporal Recalibration](https://www.wowhead.com/item=140910&bonus=3445) or [Cloak of Enveloped Dissonance](https://www.wowhead.com/item=138367&bonus=3445)
+- Chest: [Tunic of Enveloped Dissonance](https://www.wowhead.com/item=138325&bonus=3445)
+- Wrists: [Bracers of Impossible Choices](https://www.wowhead.com/item=140889&bonus=3445)
+- Hands: [Gloves of Synchronus Elements](https://www.wowhead.com/item=140905&bonus=3445)
+- Belt: [High Shadow Councilor's Wrap](https://www.wowhead.com/item=140919&bonus=3445)
+- Legs: [Leggings of Enveloped Dissonance](https://www.wowhead.com/item=138334&bonus=3445)
+- Feet: [Grove-Tender's Moccasins](https://www.wowhead.com/item=140861&bonus=3445)
+- Rings: [Ring of Exclusive Servitude](https://www.wowhead.com/item=140906/ring-of-exclusive-servitude&bonus=3445) and [Spellblade's Gemmed Signet](https://www.wowhead.com/item=140895/spellblades-gemmed-signet&bonus=3445)
+
+##### Step 3: Trinkets
+
+Last but not least, trinkets. Not all trinkets have been implemented, and some may require minor tweaks to the APL so take a few more salt grains. As there was only a few trinkets so I didn't have to
+
+Currently the best two simming trinkets are [Convergence of Fates](https://www.wowhead.com/item=140806/convergence-of-fates&bonus=3445&spec=269) and [Arcanogolem Digit](https://www.wowhead.com/item=140794/arcanogolem-digit&bonus=3445). The trinket [Draught of Souls](https://www.wowhead.com/item=140808/draught-of-souls&bonus=3443) was doing incredibly high damage on PTR testing, and it is not implemented in SimCraft since its the first trinket with the on-use channel type function.
+
+##### Step 4: Talents
+
+Last but not least, the moment you've all be waiting for; Talents. With the change to Serenity and Blizzard's promise of fixing or buffing SEF, the most consistent question is about talents. Here are the sim results from talents. Still note that the sims are without any bugs with SEF, so if the bugs remain, it will be underperforming compared to the sims. It was also for the specific singlet target scenario listed above, and some talents may have situational uses. Some talents may also require tweaks or changes to the APL, which haven't been optimized yet.
+
+[Click here for the list](http://www.walkingthewind.com/wp-content/uploads/2016/12/Talents-1.html)
+
+Hopefully that helps people see some, if any, of the changes so far. As I sim more, I'll post more. As always you can find us on [Discord](https://discord.gg/0dkfBMAxzTkmAVwq) to answer questions, and if you liked what you read then please scroll down or to the top and subscribe and [support](http://www.walkingthewind.com/donate/) WtW.
+
+Let me know what you'd like me to be sure to sim next in the comments.
