@@ -1,5 +1,6 @@
-# Cloudflare Pages redirects: max 2,000 exact-address rules + 100 with a * (every rule after the 100th * one is
-# ignored, so keep wildcards for catch-alls only). The first match wins.
+# Cloudflare Pages redirects: max 2,000 exact-address rules + 100 with a * or :placeholder, and every rule after the
+# first wildcard counts against the 100. src/plugins/podcast-media.js moves the wildcards to the end of the built
+# file, so keep them for catch-alls only. The first match wins.
 # Hand-written rules go here; tools/wp2mdx.py --all rewrites everything below the marker.
 
 # Retired Mistweaver guides (decision 2026-10-17) -> current Mistweaver guide
