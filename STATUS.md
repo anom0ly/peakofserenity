@@ -75,6 +75,9 @@ QA compared the build with the live site (every sitemap URL, every built page). 
   recap video were already gone from the old server.
 - Fixes from the problem-pages checklist: tables, colours, buttons, descriptions, collapsible sections, stat
   sliders, podcast artwork.
+- Site search (2026-10-29): Pagefind indexes guides, news posts and podcast episodes after each build
+  (`src/plugins/pagefind.js`); the search box is `src/theme/SearchBar`, with spec and podcast filters and guides
+  and newer posts ranked first. It only appears on the full site, not in migration mode.
 
 ## In progress
 - Working through the problem-pages checklist before the full site is switched back on.

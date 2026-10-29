@@ -63,6 +63,8 @@ const fullNavbar = [
     ],
   },
   {to: '/news/', label: 'News', position: 'left'},
+  // Site search (src/theme/SearchBar); the migration-mode site has none.
+  {type: 'search', position: 'right'},
   {href: 'https://discord.gg/peakofserenity', label: 'Discord', position: 'right'},
   {
     label: 'Support Peak',
@@ -196,6 +198,8 @@ const config = {
       ],
     ]),
     [require.resolve('./src/plugins/podcast-media.js'), {mediaUrl: podcastMediaUrl}],
+    // Builds the site search index (build/pagefind/) from the finished pages.
+    ...(migrationMode ? [] : [require.resolve('./src/plugins/pagefind.js')]),
   ],
 
   themeConfig:
