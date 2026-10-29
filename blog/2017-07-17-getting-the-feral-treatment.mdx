@@ -1,0 +1,96 @@
+---
+title: Getting the "Feral Treatment"?
+slug: /2017/07/17/getting-the-feral-treatment
+date: '2017-07-17T15:30:43'
+authors:
+- babylonius
+tags:
+- Windwalker
+- '7.3'
+- Class Changes
+- Opinions
+- Personal
+- PTR
+- Spreadsheets
+- Talents
+- Theorycrafting
+description: Recently Blizzard has announced a batch of changes specifically targeted at Feral Druids and Frost Death Knights These changes seem to be designed to…
+wp_id: 7662
+original_url: https://www.peakofserenity.com/2017/07/17/getting-the-feral-treatment/
+draft: true
+---
+
+Recently Blizzard has announced a batch of changes specifically targeted at [Feral Druids](https://us.battle.net/forums/en/wow/topic/20757496609) and [Frost Death Knights](https://us.battle.net/forums/en/wow/topic/20757697601). These changes seem to be designed to address some reasonable problems existing in either spec. It is unclear and uncertain if these two specs will be the only ones seeing changes of these kind going into the next patch or if many of these changes will even stick. Frequently in Discord and other places, people have talked about Windwalker's needing the "Feral Treatment", and since I had spent the last few weeks writing articles about the [Issues with Stat Scaling](/2017/07/09/windwalker-scaling/) and some [Solutions](/2017/07/12/windwalker-stat-scaling-some-solutions/), I thought I'd take a crack at actually looking at what the "Feral Treatment" means, and whether it is what Windwalkers need.
+
+I am VERY far from a Feral or Frost expert, and really I know almost nothing about those specs, so this article will be about what philosophy appears to be behind the changes and how, or if, that can be applied to Windwalkers.
+
+#### Why are Feral and FDK seeing changes?
+
+Like I said above; [Feral Druids](https://us.battle.net/forums/en/wow/topic/20757496609), and now [Frost Death Knights](https://us.battle.net/forums/en/wow/topic/20757697601), have seen some announcements about reasonably sized overhauls of the specs in order to address problems. Specifically Blizzard posted about these goals with the [Feral Druid changes](https://us.battle.net/forums/en/wow/topic/20757496609):
+
+- **1. Reduce (but not necessarily displace entirely) the dominance of the big three complexifying and powerful talents: [Savage Roar,](https://www.wowhead.com/spell=52610/savage-roar) [Jagged Wounds](https://www.wowhead.com/spell=202032/jagged-wounds), and [Bloodtalons](https://www.wowhead.com/spell=155672/bloodtalons). Each of those talents is (on live) winning by a large margin in terms of throughput against other talents on their rows.**
+- **2. Balance out the power level of the last 3 talent rows, allowing more talents builds to be viable.**
+- **3. Increase the skill floor and reduce how punishing it can be to error when playing the rotation.**
+- **4. Compensate for power-level-reductions of talents with baseline damage increase to the spec so that at the highest level, performance isn’t really affected, but the bottom of the spec is brought up.**
+
+And for [Frost Death Knights](https://us.battle.net/forums/en/wow/topic/20757697601):
+
+- **1. The spec is too dominated by [Breath of Sindragosa](https://www.wowhead.com/spell=152279/breath-of-sindragosa) (which has knock-on effects on talent choice throughout the tree).**
+- **2. [Breath of Sindragosa](https://www.wowhead.com/spell=152279/breath-of-sindragosa), when you do use it, can be maintained for far too long. In addition to causing the talent/legendary lock-in around it, it means the demand for continuous time on target is very strict for extended periods of time.**
+- **3. The spec has many talents/legendaries that (individually or taken together) flood it with resources. [Breath of Sindragosa](https://www.wowhead.com/spell=152279/breath-of-sindragosa) contributes to this by encouraging you to take all of them, but it's also a problem on its own.**
+- **4. Talent balance generally has to be reviewed, especially after addressing all of the time.**
+- **5. We're trying to limit the scope of the changes in the patch, to address the above without opening up the core rotation for changes.**
+
+From an outside viewer, it appears the problems with both specs are the domination of one talent in each row and the effect that it has on how the spec plays and performs.
+
+Frost Death Knights seem to be stuck to using [Breath of Sindragosa](https://www.wowhead.com/spell=152279/breath-of-sindragosa) and are making all other talent decisions in order to benefit [Breath of Sindragosa](https://www.wowhead.com/spell=152279/breath-of-sindragosa). A very quick look at Frost Death Knight talent choices in raids through WCL, shows that [this talent combination](https://www.wowhead.com/talent-calc/death-knight/frost/cD7M), and taking either [Permafrost](https://www.wowhead.com/spell=207200) or [White Walker](https://www.wowhead.com/spell=212765) account for +90% of all kills, with [Breath of Sindragosa](https://www.wowhead.com/spell=152279), [Hungering Rune Weapon](https://www.wowhead.com/spell=207127), [Murderous Efficiency](https://www.wowhead.com/spell=207061) being taken [+99% of the kills on Mythic](https://www.warcraftlogs.com/statistics/13#class=DeathKnight&spec=Frost&combatantinfo=Talents) and [96% of the time on Heroic](https://www.warcraftlogs.com/statistics/13#class=DeathKnight&spec=Frost&combatantinfo=Talents&difficulty=4).
+
+Feral Druids have [Savage Roar,](https://www.wowhead.com/spell=52610/savage-roar) [Jagged Wounds](https://www.wowhead.com/spell=202032/jagged-wounds), and [Bloodtalons](https://www.wowhead.com/spell=155672/bloodtalons) mentioned. Looking again at WCL data, [Savage Roar](https://www.wowhead.com/spell=52610) and [Jagged Wounds](https://www.wowhead.com/spell=202032) are taken over [99.6% of the time in Mythic](https://www.warcraftlogs.com/statistics/13#class=Druid&spec=Feral&combatantinfo=Talents) and [96.7% and 98.4%, respectively, in Heroic](https://www.warcraftlogs.com/statistics/13#class=Druid&spec=Feral&combatantinfo=Talents&difficulty=4). [Bloodtalons](https://www.wowhead.com/spell=155672) is used [80.5% in Mythic](https://www.warcraftlogs.com/statistics/13#class=Druid&spec=Feral&combatantinfo=Talents) and [85.5% in Heroic](https://www.warcraftlogs.com/statistics/13#class=Druid&spec=Feral&combatantinfo=Talents&difficulty=4). Similar to Frost, this talent combination, with some wiggle room in the level 15 and 60 talents, account for [80.5% of Mythic kills](https://www.warcraftlogs.com/statistics/13#class=Druid&spec=Feral&combatantinfo=Talents) and [71.4% of Heroic kills](https://www.warcraftlogs.com/statistics/13#class=Druid&spec=Feral&combatantinfo=Talents&difficulty=4).
+
+#### Does Windwalker have similar problems?
+
+If the core problem that Blizzard is looking at, is talent imbalance, then it should be easy to look at the same data on WCL for Windwalkers. If the problem/question is, 'Are all Windwalker's using the same talents because of ____?', the answer is "Not really".
+
+[Hit Combo](https://www.wowhead.com/spell=196740) is the clear exception, being used [98.2% of the time on Heroic](https://www.warcraftlogs.com/statistics/13#class=Monk&spec=Windwalker&combatantinfo=Talents&difficulty=4) and [99.8% on Mythic](https://www.warcraftlogs.com/statistics/13#class=Monk&spec=Windwalker&combatantinfo=Talents). [Energizing Elixir](https://www.wowhead.com/spell=115288) is the next highest with [86.9% of the time on Heroic](https://www.warcraftlogs.com/statistics/13#class=Monk&spec=Windwalker&combatantinfo=Talents&difficulty=4) and [96.4% on Mythic](https://www.warcraftlogs.com/statistics/13#class=Monk&spec=Windwalker&combatantinfo=Talents). [Serenity](https://www.wowhead.com/spell=152173) is used in 71.2% of kills on Mythic, but only 45.1% on Heroic. Since the our level 100 tier of talents is (not) arguably the biggest "change how you play" talent tier, the fact that (only) 71.2% of Mythic kills, and not even the majority of Heroic kills are using the same talent, point to Windwalker not really having the same problem that I believe Blizzard is trying to fix with Ferals and Frost Death Knights.
+
+Now, that isn't to say that there isn't a similar problem on a smaller scale. Obviously, [Hit Combo](https://www.wowhead.com/spell=196740) being nearly 100% of all kills indicates that its the far and away winner of the level 90 tier, which it is. [Back in April](/2017/04/26/windwalkers-7-2-5-ptr-build-23993-april-26/), [Hit Combo](https://www.wowhead.com/spell=196740) was nerfed from 8 stacks to 6, nerfing its damage bonus from a maximum of 16% to 12%. This was largely believed to be done to give the other talents a chance. However, the other talents were also nerfed. [Invoke Xuen, the White Tiger](http://ptr.wowhead.com/spell=123904) lost 25% of its auto-attack damage, and [Rushing Jade Wind](http://ptr.wowhead.com/spell=116847) saw its maximum stacks it can provide dropped down to 2. This pretty much killed the chance that they had at being usable in all but the most "stars and planets align" situations.
+
+As I mentioned in the [Scaling Solutions](/2017/07/12/windwalker-stat-scaling-some-solutions/) article, [Energizing Elixir](https://www.wowhead.com/spell=115288) is a small-large part of why we don't scale well with Haste. It provides a TON of resources, and does so on demand. [Ascension](https://www.wowhead.com/spell=115396) was nerfed early on in Beta/Alpha and wasn't even competitive before it was nerfed. [Power Strikes](https://www.wowhead.com/spell=121817) provides a steady 4 Chi in 60 seconds, however its not quite on demand and it pails in comparison to the maximum benefit of [Energizing Elixir](https://www.wowhead.com/spell=115288) that maxes out at nearly 11 Chi (5 for free and 140 energy=5.8 Chi) in a perfect situation.
+
+#### Solutions?
+
+So since it would be hard to say that Windwalkers merit a talent overhaul like Frost DK and Feral, what solutions are there to the problems of the level 45 and 90 talent rows?
+
+**Level 45**
+
+The clear answer is that these abilities need to provide roughly equal amount of resources.
+
+- [Power Strikes](https://www.wowhead.com/spell=121817) currently provides 4 per minute, which is a good baseline and one that would be the most difficult to make any changes to.
+- [Energizing Elixir](https://www.wowhead.com/spell=115288) could be changed to only fill the Chi Bar OR the Energy Bar, NOT BOTH. This was suggested as soon as it was implemented in Alpha, because it was going to be too many resources, and you'd always be wasting part of it. If it provided just a full Chi Bar, then it would provide 5 Chi, on demand, every 60 seconds. With it providing a full Energy Bar, it would provide 5.8 Chi per minute (140 energy with 4/4 Traits), on demand, every 60 seconds. Both of these are higher than [Power Strikes](https://www.wowhead.com/spell=121817), but only a little, and Blizzard tends to prefer active talents to provide slightly more benefit than passive ones.
+- For [Ascension](https://www.wowhead.com/spell=115396) to be in line, it would certainly have to provide more regen, maybe 20% to be in the conversation, although I'm not sure exactly the number that would be required, someone smarter than me will figure it out.
+
+**Level 90**
+
+This talent tier is more difficult to balance, numbers wise, and largely just needs some philosophical changes made.
+
+- [Hit Combo](https://www.wowhead.com/spell=196740) could very easily be baked into our Mastery, and was something that I know many people (myself included) suggested back in Alpha. It just seems weird to have SOOO MANY things all based around one mechanic with their own small adjustments.
+- [Invoke Xuen, the White Tiger](https://www.wowhead.com/spell=123904) needs to be tweaked to either be focused on burst or sustain. As it stands, its a long duration/cooldown buff that does some AOE and some single target, it doesn't really have an identity.
+- [Rushing Jade Wind](https://www.wowhead.com/spell=116847/rushing-jade-wind) also could use an identity. Originally it was a talent that changed [Spinning Crane Kick](http://legion.wowhead.com/spell=101546/spinning-crane-kick) and generated Chi if it hit 3 or more targets. It was changed to a Chi spender, then to a Chi spender and [MotC](https://www.wowhead.com/spell=228287/mark-of-the-crane) generator, then saw its [MotC](https://www.wowhead.com/spell=228287/mark-of-the-crane) generation crushed, when it really was almost never used to do so. To see some use, it needs an identity, is it a generator of resources? of buffs? of damage? It could see its damage modified by [MotC](https://www.wowhead.com/spell=228287/mark-of-the-crane) rather than adding stacks, and become a secondary AOE ability. It could replace Tiger Palm and be an AOE generator.
+
+The grand idea of what this talent tier needs is just an identity. Right now [Hit Combo](https://www.wowhead.com/spell=196740) is the far and away winner, and if its simply nerfed, or the others are buffed, it will pretty much never be taken because of how everything is designed.
+
+What I'd like to see is [Hit Combo](https://www.wowhead.com/spell=196740) gets combined with our Mastery and replaced by a single target focused talent, like a stacking buff for abilities cast on the same target, that resets or loses a stack(s) when you change targets. [Rushing Jade Wind](https://www.wowhead.com/spell=116847/rushing-jade-wind) would be sustained AOE that benefited from [MotC](https://www.wowhead.com/spell=228287/mark-of-the-crane), or generated [MotC](https://www.wowhead.com/spell=228287/mark-of-the-crane) stacks and Chi to be used with [Spinning Crane Kick](http://legion.wowhead.com/spell=101546/spinning-crane-kick) as the big AOE spender. [Invoke Xuen, the White Tiger](https://www.wowhead.com/spell=123904) would see an increase in its target cap for [its lightning AOE](https://www.wowhead.com/spell=123996/crackling-tiger-lightning), or removal of its AOE completely to become more burst single target focused, as well as an increase in its damage.
+
+#### TL:DR
+
+Outside of the level 45 and 90 talents, based on the data present, (not theorycrafting or spreadsheets, or sims that says X > Y) Windwalkers are unlikely to qualify for a talent shuffle or re-balance, or the "Feral Treatment".
+
+Windwalker's level 45 and 90 talents could be rebalanced, but its not as large nor endemic an issue of need as Feral and Frost DKs.
+
+One thing is sure: "**Increase the skill floor and reduce how punishing it can be to error when playing the rotation.**" is DEFINITELY NOT something that Windwalker needs more of, that's pretty much our entire lives as Windwalkers, being punished for our mistakes. This has also sparked some interest in how our Talent tiers compare to other specs.
+
+---
+
+If you like the content that I, and the others at PeakofSerenity provide then please support us through [Patreon](https://www.patreon.com/peakofserenity) and [PayPal](http://paypal.me/peakofserenity). If you have any questions you can ask in [Discord](http://www.discord.gg/peakofserenity).
+
+You can also check me out on [Twitter](https://twitter.com/BabyloniusMonk), [YouTube](https://www.youtube.com/babyloniusmonk), and [Twitch](http://www.twitch.tv/babylonius).

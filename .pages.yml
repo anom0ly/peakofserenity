@@ -62,6 +62,7 @@ content:
     - title
     - date
     - authors
+    - draft
     primary: title
     sort:
     - date
@@ -104,6 +105,10 @@ content:
     type: rich-text
     options: &id001
       format: markdown
+  - name: draft
+    label: Draft
+    type: boolean
+    description: 'On: saved, but not on the live site. Turn it off and save to publish.'
   - name: slug
     type: string
     hidden: true

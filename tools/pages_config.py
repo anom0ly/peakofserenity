@@ -106,6 +106,11 @@ def post_fields(podcast=False):
         {"name": "image", "label": "Preview image", "type": "image",
          "description": "Optional. Shown when it is shared."},
         rich("body", "Show notes" if podcast else "Post"),
+    ]
+    if not podcast:
+        fields.append({"name": "draft", "label": "Draft", "type": "boolean",
+                       "description": "On: saved, but not on the live site. Turn it off and save to publish."})
+    fields += [
         hidden("slug"), hidden("wp_id", "number"), hidden("original_url"),
     ]
     return fields
@@ -121,6 +126,7 @@ def dated_collection(name, label, path, podcast=False):
     }
     if not podcast:
         c["exclude"] = ["authors.yml", "tags.yml"]
+        c["view"]["fields"].append("draft")
     c["operations"] = {"rename": False}  # renaming would change the post's address
     return c
 

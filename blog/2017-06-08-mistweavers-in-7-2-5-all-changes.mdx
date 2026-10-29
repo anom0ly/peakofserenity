@@ -1,0 +1,230 @@
+---
+title: Mistweavers in 7.2.5 - All Changes That Are Going Live
+slug: /2017/06/08/mistweavers-in-7-2-5-all-changes
+date: '2017-06-08T02:14:29'
+authors:
+- garg
+tags:
+- Mistweaver
+- 7.2.5
+- Abilities
+- Class Changes
+- PTR
+- Theorycrafting
+- Trinkets
+description: With this week's major build build 24271 marked as a release candidate, it's safe to assume that all the changes in the current build will be pushed to…
+wp_id: 7143
+original_url: https://www.peakofserenity.com/2017/06/08/mistweavers-in-7-2-5-all-changes/
+draft: true
+---
+
+With this week's major build (build 24271) marked as a release candidate, it's safe to assume that all the changes in the current build will be pushed to Live. Below, all those changes will be highlighted, as well as proposed changes to playstyle, some math, talks of a newer spreadsheet with 2 months of updates implemented, among whatever else is relevant for Mistweavers going into 7.2.5 and Tomb of Sargeras.
+
+---
+
+If you like this and the other content provided here on PeakofSerenity by myself and other Monks, consider supporting us through [Patreon](https://www.patreon.com/peakofserenity) or [Paypal](https://www.paypal.me/peakofserenity). If you have any questions, leave a comment below or join us on the Monk discord channel, [PeakofSerenity](http://discord.gg/PeakofSerenity).
+
+### Ability Changes
+
+#### [Mistweaver Monk](https://ptr.wowhead.com/spell=137024/mistweaver-monk) Aura Changes
+
+- The following spells have been buffed by 4% (not reflected in Wowhead tooltips): [Effuse](https://ptr.wowhead.com/spell=116694/effuse), [Enveloping Mist](https://ptr.wowhead.com/spell=124682/enveloping-mist), [Renewing Mist](https://ptr.wowhead.com/spell=119611/renewing-mist), [Vivify](https://ptr.wowhead.com/spell=116670/vivify), [Revival](https://ptr.wowhead.com/spell=115310/revival), [Chi Burst](https://ptr.wowhead.com/spell=130654/chi-burst), [Chi Wave](https://ptr.wowhead.com/spell=132463/chi-wave), [Sheilun's Gift](https://ptr.wowhead.com/spell=205406/sheiluns-gift), [Whispers of Shaohao](https://ptr.wowhead.com/spell=238130/whispers-of-shaohao)
+- [Rising Sun Kick](https://ptr.wowhead.com/spell=107428/rising-sun-kick) buffed by 14.29%.
+- [Tiger Palm](https://ptr.wowhead.com/spell=100780/tiger-palm) and [Blackout Kick](https://ptr.wowhead.com/spell=100784/blackout-kick) buffed by 13.64%.
+- [Spinning Crane Kick](https://ptr.wowhead.com/spell=212141/spinning-crane-kick) buffed by 13.33%.
+
+#### [Enveloping Mist](https://ptr.wowhead.com/spell=124682/enveloping-mist)
+
+- Mana cost reduced to 5.2%, down from 6.0%.
+
+#### [Vivify](https://ptr.wowhead.com/spell=116670/vivify)
+
+- Now heals each target for 300% Spell power, up from 275%.
+- Mana cost reduced to 4.0%, down from 4.5%.
+
+#### [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font)
+
+- Now has a 12 second cooldown
+- Each bolt heals for 135% Spell power, up from 110% Spell power.
+- The HoT now lasts 8 seconds baseline.
+- Able to channel while moving.
+  - [Thunder Focus Tea](https://ptr.wowhead.com/spell=116680/thunder-focus-tea) augment now channels the spell 100% faster, cutting cast time in half.
+- Mana cost reduced to 7.2%, down from 8%.
+
+#### [Life Cocoon](https://ptr.wowhead.com/spell=116849/life-cocoon)
+
+- Absorb amount buffed to 4200% Spell power, up from 3116.4%.
+
+#### [Rising Sun Kick](https://ptr.wowhead.com/spell=107428/rising-sun-kick)
+
+- Mana cost reduced to 1.5%, down from 2.0%.
+
+#### [Chi Wave](https://ptr.wowhead.com/spell=115098/chi-wave)
+
+- Healing buffed to 150% Spell power per hit, up from 86.7% Spell power.
+
+#### [Refreshing Jade Wind](https://ptr.wowhead.com/spell=196725/refreshing-jade-wind)
+
+- Duration and cooldown increased to 9 seconds, up from 6 seconds. Both still reduced by Haste.
+- Total ticks per target increased to 13, up from 9.
+- Radius increased to 10 yards, up from 8 yards
+- Mana reduced to 3.5%, down from 5.0%.
+
+### Healing Changes
+
+With all of the ability changes, there are a few key changes to Mistweaver healing going from 7.2 to 7.2.5.
+
+#### Basic Healing Changes
+
+There are a couple of changes to adjust to with [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) moving to a cooldown. However, I want to show a graph for Secondary Stat scaling for Mistweavers:
+
+![](/img/uploads/2017/06/chrome_2017-06-08_03-36-17-1024x455.png)
+
+This graph shows how much Spell power each secondary stats provides to a given spell's total Spell power. In the case of [Mana Tea](https://ptr.wowhead.com/spell=197908/mana-tea), it follows the new "rotation" (since we can no longer spam [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font)) of
+
+1. [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font)
+2. [Mana Tea](https://ptr.wowhead.com/spell=197908/mana-tea)
+3. [Vivify](https://ptr.wowhead.com/spell=116670/vivify) spam on players with [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) HoT
+4. [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) while [Mana Tea](https://ptr.wowhead.com/spell=197908/mana-tea) is still active
+
+There are 4 [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) entries, depending on how many double [Mastery: Gust of Mists](https://ptr.wowhead.com/spell=117907/mastery-gust-of-mists) proccing spells are used on targets with the [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) HoT on them while it's active. With [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) having a cooldown, [Mastery](https://ptr.wowhead.com/spell=117907/mastery-gust-of-mists) will have ample time to shine with its double hits, giving us burst Single Target healing during group-wide damage.
+
+This can be extended further into a pseudo burst healing "rotation"
+
+1. Build [Sheilun's Gift](https://ptr.wowhead.com/spell=205406/sheiluns-gift) stacks (through the [Effusive Mists](https://ptr.wowhead.com/spell=238094/effusive-mists?rank=0) trait) to a comfortable amount before damage.
+2. Cast [Sheilun's Gift](https://ptr.wowhead.com/spell=205406/sheiluns-gift) so its cast time ends right as group damage lands so [Whispers of Shaohao](https://ptr.wowhead.com/spell=238130/whispers-of-shaohao) heals injured people.
+3. Cast [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font).
+4. Assess the situation for [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) HoT chasing; whether you need to full on go into the [Mana Tea](https://ptr.wowhead.com/spell=197908/mana-tea) rotation, cast a few [Vivify](https://ptr.wowhead.com/spell=116670/vivify)s at regular mana cost, or to hit players with [Effuse](https://ptr.wowhead.com/spell=116694/effuse) for cheap burst healing.
+
+---
+
+#### Stat Changes
+
+With [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) gaining a cooldown, more of our healing will be casts that have [Mastery: Gust of Mists](https://ptr.wowhead.com/spell=117907/mastery-gust-of-mists) tied to it. As shown in the graph above, [Mastery: Gust of Mists](https://ptr.wowhead.com/spell=117907/mastery-gust-of-mists) makes up a sizable portion of spells' total healing. How that impacts overall weights will remain to be seen, as logs of this new playstyle need to be taken into account, especially with the Talent changes. There are theories, but nothing grounded in math to release.
+
+For now, follow this guideline:
+
+> Intellect > Crit > Versatility = Haste > Mastery
+
+---
+
+####
+
+#### Talent Changes
+
+[Refreshing Jade Wind](http://ptr.wowhead.com/spell=196725/refreshing-jade-wind), with its changes, is now a talent that can surpass [Invoke Chi-Ji, the Red Crane](https://ptr.wowhead.com/spell=198664/invoke-chi-ji-the-red-crane) on most raid fights, as you only need 4 casts of [Refreshing Jade Wind](http://ptr.wowhead.com/spell=196725/refreshing-jade-wind) over 3 minutes to surpass the raw healing of [Invoke Chi-Ji, the Red Crane](https://ptr.wowhead.com/spell=198664/invoke-chi-ji-the-red-crane). With the mana reduction to the talent, it doesn't significantly impact your mana over the course of a fight, making this talent much more appealing.
+
+The only types of fights where [Refreshing Jade Wind](http://ptr.wowhead.com/spell=196725/refreshing-jade-wind) is worse are also fights where [Invoke Chi-Ji, the Red Crane](https://ptr.wowhead.com/spell=198664/invoke-chi-ji-the-red-crane) shines; spread fights, where, for whatever reason, Mistweavers cannot be with a stacked group of people taking damage. [Summon Jade Serpent Statue](https://ptr.wowhead.com/spell=115313/summon-jade-serpent-statue) is still an incredibly niche talent that won't see much use unless a fight calls for a lot of Single Target healing.
+
+[Chi Wave](https://ptr.wowhead.com/spell=115098/chi-wave)'s buff doesn't make it better in either Dungeons or Raids.
+
+---
+
+#### [Thunder Focus Tea](https://ptr.wowhead.com/spell=116680/thunder-focus-tea) Changes
+
+It's time to revisit what to spend [Thunder Focus Tea](https://ptr.wowhead.com/spell=116680/thunder-focus-tea) on. Right now, the rule of thumb is to spend it on [Renewing Mist](https://ptr.wowhead.com/spell=115151/renewing-mist) for healing or [Vivify](https://ptr.wowhead.com/spell=116670/vivify) for mana. In 7.2.5, with the buffs to [Vivify](https://ptr.wowhead.com/spell=116670/vivify) and the change to [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font)'s [Thunder Focus Tea](https://ptr.wowhead.com/spell=116680/thunder-focus-tea) augment, we now have 3 consistent ways to spend [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea); for mana conservation, use it on [Vivify](https://www.wowhead.com/spell=116670/vivify); for more sustained healing, use it on [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist); for burst healing, use it on [Essence Font](https://www.wowhead.com/spell=191837/essence-font).
+
+Using [Thunder Focus Tea](https://ptr.wowhead.com/spell=116680/thunder-focus-tea) on [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) will be something to look forward to, as it allows you to start targeting people one GCD faster than a regular [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font), giving you better reaction to incoming damage with [Mastery: Gust of Mists](https://ptr.wowhead.com/spell=117907/mastery-gust-of-mists) double hits on low health targets faster.
+
+### Tomb of Sargeras Gearing
+
+#### Tier 20 Item Set Bonuses
+
+- [Tier 20 2 Piece Bonus](https://ptr.wowhead.com/spell=242257/item-monk-t20-mistweaver-2p-bonus) - [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) has a 40% chance on cast to proc [Surge of Mists](https://ptr.wowhead.com/spell=246328/surge-of-mists), reducing the cost of your next [Enveloping Mist](https://ptr.wowhead.com/spell=124682/enveloping-mist) cast within 15 seconds by 75%.
+- [Tier 20 4 Piece Bonus](https://ptr.wowhead.com/spell=242258/item-monk-t20-mistweaver-4p-bonus) - Consuming [Surge of Mists](https://ptr.wowhead.com/spell=246328/surge-of-mists) grants you the [Dance of Mists](https://ptr.wowhead.com/spell=247891/dance-of-mists) buff, increasing all healing done by 12% for the next 10 seconds.
+
+#### Tier Priority
+
+This tier bonus is definitely worth picking up (worth in iLvLs to come after Normal and Heroic logs have been compiled and entered into the spreadsheet). Follow this priority for acquiring tier pieces to complete it (higher pieces are better):
+
+1. [Shoulders](https://ptr.wowhead.com/item=147156/xuens-shoulderguards&bonus=3563)
+2. [Back](https://ptr.wowhead.com/item=147152/xuens-cloak&bonus=3563)
+3. [Chest](https://ptr.wowhead.com/item=147151/xuens-tunic&bonus=3563)
+4. [Legs](https://ptr.wowhead.com/item=147155/xuens-legguards&bonus=3563)
+5. [Hands](https://ptr.wowhead.com/item=147153/xuens-gauntlets&bonus=3563)
+6. [Head](https://ptr.wowhead.com/item=147154/xuens-helm&bonus=3563)
+
+#### Tomb of Sargeras Recommended Gear
+
+With "Best in Slot" lists being outdated thanks to Warforged/Titanforged, Tertiary Stats, and random sockets appearing on gear, only recommended gearing lists can be made.
+
+- Head - [Shadow-Scarred Headcover](https://ptr.wowhead.com/item=147034/shadow-scarred-headcover&bonus=3563)
+- Neck - [String of Extracted Incisors](https://ptr.wowhead.com/item=147013/string-of-extracted-incisors&bonus=3563)
+- Shoulder - [Xuen's Shoulderguards](https://ptr.wowhead.com/item=147156/xuens-shoulderguards&bonus=3563)
+- Back - [Xuen's Cloak](https://ptr.wowhead.com/item=147152/xuens-cloak&bonus=3563)
+- Chest - [Xuen's Tunic](https://ptr.wowhead.com/item=147151/xuens-tunic&bonus=3563)
+- Wrist - [Bracers of Rippling Darkness](https://ptr.wowhead.com/item=147042/bracers-of-rippling-darkness&bonus=3563)
+- Hands - [Gloves of Wayward Compulsions](https://ptr.wowhead.com/item=147032/gloves-of-wayward-compulsions&bonus=3563)
+- Waist - [Etched Bone Waistband](https://ptr.wowhead.com/item=147040/etched-bone-waistband&bonus=3563)
+- Legs - [Xuen's Legguards](https://ptr.wowhead.com/item=147155/xuens-legguards&bonus=3563)
+- Feet - [Glacier Walkers](https://ptr.wowhead.com/item=147029/glacier-walkers&bonus=3563)
+- Ring 1 - [Yathae's Thumb Ring](https://ptr.wowhead.com/item=147021/yathaes-thumb-ring&bonus=3563)
+- Ring 2 - [Seal of the Second Duumvirate](https://ptr.wowhead.com/item=147195/seal-of-the-second-duumvirate&bonus=3563)
+- Storm Relic - [Preserved Starlight Incense](https://ptr.wowhead.com/item=147114/preserved-starlight-incense&bonus=3563&spec=270)
+- Life Relic - [Moontalon's Feather](https://ptr.wowhead.com/item=147105/moontalons-feather&bonus=3563&spec=270)
+- Frost Relic - [Virus of Lethargy](https://ptr.wowhead.com/item=147094/virus-of-lethargy&bonus=3563&spec=270)
+
+#### Tomb Trinkets
+
+Tomb of Sargeras brings with it 6 trinkets available to healers (all of which are subject to change with tuning hotfixes):
+
+- [Barbaric Mindslaver](https://ptr.wowhead.com/item=147003/barbaric-mindslaver&bonus=3563) - Heals more often the lower mana you are, this trinket is a very good all around healing trinket.
+- [Charm of the Rising Tide](https://ptr.wowhead.com/item=147002/charm-of-the-rising-tide&bonus=3563) - An on-use trinket that increases Haste by an amount for every second stood still, up to 10 stacks. Situationally useful, but other options are more readily available and useful.
+- [Chalice of Moonlight](https://ptr.wowhead.com/item=147005/chalice-of-moonlight&bonus=3563) - A stat proc trinket that changes between Critical Strike in the day (6:30 AM - 6:30 PM server) and Haste at night (6:30 PM - 6:30 AM server). How it will act in instances on Live remains to be seen, as Blizzard have been flipping how it acts with seemingly every PTR build. If raids are always set to day time for the Crit proc, or if it will accurately follow day/night cycle.
+- [Sea Star of the Depthmother](https://ptr.wowhead.com/item=147004/sea-star-of-the-depthmother&bonus=3563) - Using [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) has a chance to place a buff on a nearby injured ally, healing them very rapidly for a very low amount. A very low amount.
+- [Archive of Faith](https://ptr.wowhead.com/item=147006/archive-of-faith&bonus=3563) - Large single target healing trinket with a low cooldown. Very niche, but *very* good in that niche.
+- [The Deceiver's Grand Design](https://ptr.wowhead.com/item=147007/the-deceivers-grand-design&bonus=3563) - The best trinket HPS-wise in Tomb, but, due to having its effectiveness tied to Tank damage taken, you really only need one per group.
+
+##### Rankings
+
+1. [Sea Star of the Depthmother](https://ptr.wowhead.com/item=147004/sea-star-of-the-depthmother&bonus=3563:1512)
+2. [Barbaric Mindslaver](https://www.wowhead.com/item=147003/barbaric-mindslaver&bonus=3563:1512)
+3. [Chalice of Moonlight](https://ptr.wowhead.com/item=147005/chalice-of-moonlight&bonus=3563)
+4. [The Deceiver's Grand Design](https://ptr.wowhead.com/item=147007/the-deceivers-grand-design&bonus=3563:1522)
+5. [Charm of the Rising Tide](https://ptr.wowhead.com/item=147002/charm-of-the-rising-tide&bonus=3563)
+6. [Archive of Faith](https://www.wowhead.com/item=147006/archive-of-faith&bonus=3563:1512)
+
+### Legendaries
+
+In 7.2.5, legendaries will be able to be upgraded to 970 iLvL with [Stabilized Titan Essence](https://ptr.wowhead.com/item=151423/stabilized-titan-essence)s. Depending on what you use your Mistweaver more for, the priority of upgrades will be slightly different.
+
+##### Raid Legendary Upgrade Priority
+
+1. [Velen's Future Sight](https://ptr.wowhead.com/item=144258/velens-future-sight&bonus=1502:3530)
+2. [Prydaz, Xavaric's Magnum Opus](https://ptr.wowhead.com/item=132444/prydaz-xavarics-magnum-opus&bonus=1502:3530)
+3. [Ei'thas, Lunar Glides of Eramas](https://ptr.wowhead.com/item=137028/eithas-lunar-glides-of-eramas&bonus=1502:3530)
+4. [Petrichor Lagniappe](https://ptr.wowhead.com/item=137096/petrichor-lagniappe&bonus=1502:3530)
+5. [Shelter of Rin](https://ptr.wowhead.com/item=144340/shelter-of-rin&bonus=1502:3530)
+6. [Leggings of the Black Flame](https://ptr.wowhead.com/item=137068/leggings-of-the-black-flame&bonus=1502:3530)
+7. [Sephuz's Secret](https://ptr.wowhead.com/item=132452/sephuzs-secret&bonus=1502:3530)
+8. [Unison Spaulders](https://ptr.wowhead.com/item=137073/unison-spaulders&bonus=1502:3530)
+9. [Ovyd's Winter Wrap](https://ptr.wowhead.com/item=138879/ovyds-winter-wrap&bonus=1502:3530)
+10. [Eye of Collidus the Warp-Watcher](https://ptr.wowhead.com/item=137045/eye-of-collidus-the-warp-watcher&bonus=1502:3530)
+11. [Sentinel's Eternal Refuge](https://ptr.wowhead.com/item=146669/the-sentinels-eternal-refuge&bonus=1502:3530)
+
+##### Dungeon Legendary Upgrade Priority
+
+1. [Velen's Future Sight](https://ptr.wowhead.com/item=144258/velens-future-sight&bonus=1502:3530)
+2. [Ovyd's Winter Wrap](https://ptr.wowhead.com/item=138879/ovyds-winter-wrap&bonus=1502:3530)
+3. [Prydaz, Xavaric's Magnum Opus](https://ptr.wowhead.com/item=132444/prydaz-xavarics-magnum-opus&bonus=1502:3530)
+4. [Ei'thas, Lunar Glides of Eramas](https://ptr.wowhead.com/item=137028/eithas-lunar-glides-of-eramas&bonus=1502:3530)
+5. [Sephuz's Secret](https://ptr.wowhead.com/item=132452/sephuzs-secret&bonus=1502:3530)
+6. [Shelter of Rin](https://ptr.wowhead.com/item=144340/shelter-of-rin&bonus=1502:3530)
+7. [Unison Spaulders](https://ptr.wowhead.com/item=137073/unison-spaulders&bonus=1502:3530)
+8. [Leggings of the Black Flame](https://ptr.wowhead.com/item=137068/leggings-of-the-black-flame&bonus=1502:3530)
+9. [Eye of Collidus the Warp-Watcher](https://ptr.wowhead.com/item=137045/eye-of-collidus-the-warp-watcher&bonus=1502:3530)
+10. [Petrichor Lagniappe](https://ptr.wowhead.com/item=137096/petrichor-lagniappe&bonus=1502:3530)
+11. [Sentinel's Eternal Refuge](https://ptr.wowhead.com/item=146669/the-sentinels-eternal-refuge&bonus=1502:3530)
+
+---
+
+There are two more legendaries being added to the current pool available to us:
+
+- [Doorway to Nowhere](https://ptr.wowhead.com/item=151784/doorway-to-nowhere&bonus=1502:3530) - [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font) has a 20% chance per cast to [Invoke Chi-Ji, the Red Crane](https://ptr.wowhead.com/spell=198664/invoke-chi-ji-the-red-crane) for 15 seconds.
+- [Soul of the Grandmaster](https://ptr.wowhead.com/item=151643/soul-of-the-grandmaster&bonus=1502:3530) - Passively confers the [Mist Wrap](https://ptr.wowhead.com/spell=197900/mist-wrap) talent, allowing us to effectively run two talents in the Level 45 row.
+
+[Doorway to Nowhere](https://ptr.wowhead.com/item=151784/doorway-to-nowhere&bonus=1502:3530) gets better the more [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font)s are cast. However, even maximizing the amount of [Essence Font](https://ptr.wowhead.com/spell=191837/essence-font)s every minute puts it firmly in the middle of the pack, on average. More than one Chi-Ji can be active at a time.
+
+[Soul of the Grandmaster](https://ptr.wowhead.com/item=151643/soul-of-the-grandmaster&bonus=1502:3530) (and [Mist Wrap](https://ptr.wowhead.com/spell=197900/mist-wrap), to be honest) are both fairly weak in a raid. This legendary's niche is where you're able to use [Lifecycles](https://ptr.wowhead.com/spell=197915/lifecycles) effectively, as it buffs [Enveloping Mist](https://ptr.wowhead.com/spell=124682/enveloping-mist)'s overall healing by 16.67%. But with the Tomb tier set reducing the mana cost of most of the [Enveloping Mist](https://ptr.wowhead.com/spell=124682/enveloping-mist)s we cast per minute, [Lifecycles](https://ptr.wowhead.com/spell=197915/lifecycles) is devalued in terms of total mana saved.
+
+Since the other two talents on the row are mana saving talents, [Soul of the Grandmaster](https://ptr.wowhead.com/item=151643/soul-of-the-grandmaster&bonus=1502:3530)'s effect is worthless in dungeons.
