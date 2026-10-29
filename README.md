@@ -43,6 +43,20 @@ Google Analytics 4 (`G-PDRKCDL1GQ`, set in `docusaurus.config.js`) loads only on
 site search come from the stream's Enhanced measurement settings in Google Analytics; keep "Page changes based on
 browser history events" off there, since the plugin sends its own page view on every page change.
 
+## Ads
+
+Google AdSense (publisher `ca-pub-9960844448742082`) shows one ad under the table of contents on desktop and one
+below the guide or post on phones. Two Cloudflare Pages environment variables, then redeploy:
+
+- `ADS_ENABLED=true` turns the ads on. Without it no ad slots render and Google's ad script isn't loaded. Migration
+  mode keeps ads off either way.
+- `ADSENSE_SLOT=<slot ID>` is the display ad unit from AdSense (Ads → By ad unit). Until it's set, the slots show a
+  dashed "Ad" placeholder, which is handy on a preview deploy.
+
+`static/ads.txt` and the `google-adsense-account` verification tag are in every build, so AdSense can review the site
+before ads are switched on. Auto ads, anchor ads, vignettes and side rails should stay off in the AdSense dashboard.
+The writers' guide never shows ads (`NO_ADS` in `src/components/AdSlot`).
+
 ## Re-running the conversion
 
 ```sh
