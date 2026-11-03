@@ -7,6 +7,7 @@ import Field from './Field';
 import styles from './styles.module.css';
 
 // The guide layout: banner, intro, then each tab group (heading, intro, tabs) from front matter.
+// Tabs have no groupId, so every tab group always opens on its first tab (nothing is remembered between visits).
 export default function GuideTabs({frontMatter}) {
   const type = guideTypes[frontMatter.guide_type];
   if (!type) return null;
@@ -27,7 +28,7 @@ export default function GuideTabs({frontMatter}) {
             </Heading>
             <Field value={data.intro} />
             {tabs.length > 0 && (
-              <Tabs groupId={`${frontMatter.guide_type}-${group.key}`} className={styles.tabs}>
+              <Tabs className={styles.tabs}>
                 {tabs.map(([name, label]) => (
                   <TabItem key={name} value={name} label={label}>
                     <Field value={data[name]} />
