@@ -111,6 +111,9 @@ syrupsss:
   name: syrupsss
   page:
     permalink: /syrupsss
+swirl:
+  name: Swirl
+  page: false
 talby:
   name: Talby
   page:

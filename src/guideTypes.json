@@ -196,15 +196,15 @@
         "tabs": [
           [
             "raid_sheilun",
-            "Standard Raid Talents (Sheilun's Gift)"
-          ],
-          [
-            "raid_upwelling",
-            "Standard Raid Talents (Upwelling)"
+            "Raid"
           ],
           [
             "mythicplus",
-            "M+ Default"
+            "Mythic+"
+          ],
+          [
+            "raid_upwelling",
+            "Delves"
           ]
         ]
       },
