@@ -1,262 +1,398 @@
 ---
 title: Mistweaver PvE Quick Guide
-slug: /tww/mistweaver/pve-guide
-authors:
-- mymiro
 last_update:
-  date: '2023-07-28'
-description: 'A quick guide to Mistweaver Monk healing in PvE: ability usage, talents, stats and gear in one place.'
-wp_id: 16973
-original_url: https://www.peakofserenity.com/tww/mistweaver/pve-guide/
-guide_type: mistweaver-pve
-intro: |
-  This guide is designed to a one-stop-shop to cover all bases for Mistweaver with just the information you need. For more in-depth, advanced information follow the "Advanced" section in the menu above. Navigate quickly to the section you need using the sidebar on the right.
+  date: 2026-11-03
+authors:
+  - swirl
+description: "A quick guide to Mistweaver Monk healing in Midnight: talent
+  builds, healing priorities, stats, gear and consumables in one place."
+intro: >-
+  This guide is a one-stop shop for Mistweaver healing in PvE, with just the
+  information you need. For deeper reading, use the "Advanced" section in the
+  menu above, and jump to any section with the sidebar on the right.
 
-  **This guide was updated for Dragonflight 10.0.7.** The overhaul of the earlier mentioned advanced guides is in progress. In general this guide will be regularly updated when discussion, theorycrafting, or testing yield new information.
+
+  **This guide has been updated for Midnight Patch 12.1.5 (Season 2)** and is
+  updated whenever discussion, theorycrafting, or testing turns up new
+  information.
+
+
+  #### New to Midnight?
+
+
+  - Midnight stripped out many of the stacking buffs Mistweaver used to juggle.
+  The spec now plays around short cooldowns, procs and mana.
+
+  - Mana is the main limit. Drink [Mana
+  Tea](https://www.wowhead.com/spell=197908/mana-tea) steadily and never sit at
+  20 stacks.
+
+  - [Diffuse Magic](https://www.wowhead.com/spell=1243287/diffuse-magic) is no
+  longer its own button. It's now a talent that gives you a second personal
+  magic dispel.
+
+  - The new apex talent,
+  [Spiritfont](https://www.wowhead.com/spell=1260677/spiritfont), is fed by
+  [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist) casts
+  and [Thunder Focus
+  Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea), not by
+  [Vivify](https://www.wowhead.com/spell=116670/vivify) or [Sheilun's
+  Gift](https://www.wowhead.com/spell=399491/sheiluns-gift).
+
+  - [Soothing Mist](https://www.wowhead.com/spell=115175/soothing-mist) now
+  follows you: casting [Vivify](https://www.wowhead.com/spell=116670/vivify) or
+  [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist) on
+  someone else moves the channel to them.
 builds:
   heading: Talent Builds
-  intro: |
-    Mistweavers are surprisingly flexible in builds between raiding and m+.
+  intro: >-
+    **Conduit of the Celestials is the recommended hero tree for raid, Mythic+
+    and Delves this season.** It is ahead of Master of Harmony for healing,
+    damage and survivability.
 
-    While raiding itself usually has a default setup that leaves only little room for good alternatives, you still get to change things up for a few specific bosses like [The Primal Council](https://www.wowhead.com/guide/raids/vault-of-the-incarnates/primal-council-strategy).
 
-    In m+ you can decide between a lot of talents even in the third section of the Mistweaver tree, only [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp) and the two nodes right below it are pretty much set in stone.
+    Class tree talents are flexible. Anything that doesn't directly increase
+    your healing or damage can be swapped for the utility a fight needs:
 
-    #### General information
 
-    *Mistweaver Tree*
+    - [Restoral](https://www.wowhead.com/spell=388615/restoral) is the raid
+    default, so you never mass-dispel by accident. Use
+    [Revival](https://www.wowhead.com/spell=115310/revival) in Mythic+, or in a
+    raid fight that rewards dispelling everyone at once.
 
-    - [Overflowing Mists](https://www.wowhead.com/spell=388511/overflowing-mists) is VERY underwhelming unless you use [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist) a LOT on your tank. It basically never triggers on any other party member, because it requires a direct physical hit. And no, [Melandrus](https://www.wowhead.com/guide/mythic-plus-dungeons/court-of-stars-strategy#overview-advisor-melandrus) Maelstrom doesn't trigger it, unfortunately. This is the first point to use if you want to change things in the second section.
-    - You can always flex the point(s) I used for [Spirit of the Crane](https://www.wowhead.com/spell=210802/spirit-of-the-crane) or [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea). Taking both talents for mana might seem like overkill, but on Tyrannical weeks some bosses can take a very long time.
-    - [Gift of the Celestials](https://www.wowhead.com/spell=388212/gift-of-the-celestials) or [Jade Bond](https://www.wowhead.com/spell=388031/jade-bond) comes down to the dungeon you're running and your confidence how you can handle the different CD timers.
-    - [Zen Pulse](https://www.wowhead.com/spell=124081/zen-pulse) and its follow up talent can be easily accessed, but even if this spell provides good numbers I prefer the value other nodes give me (such as better mana economy)
-  raid_sheilun: |
-    **Build Import:**
+    - Take [Diffuse Magic](https://www.wowhead.com/spell=1243287/diffuse-magic)
+    for a second personal magic dispel on top of
+    [Detox](https://www.wowhead.com/spell=115450/detox).
 
-    **B4QAAAAAAAAAAAAAAAAAAAAAA0CpgEJUaFJRE5AJNk0SRAAAAAAAAAAAAAJkUQikEJCSSSDyBEAAB**
+    - [Niuzao's
+    Protection](https://www.wowhead.com/spell=442747/niuzaos-protection) and
+    [Jade Sanctuary](https://www.wowhead.com/spell=443059/jade-sanctuary) are
+    interchangeable. Jade Sanctuary is the better pick on progression.
 
-    ![](/img/uploads/2023/03/Standard-Raid-Sheiluns-10_0_7-1024x484.png)
+    - Situational picks: [Improved
+    Detox](https://www.wowhead.com/spell=388874/improved-detox) for poisons and
+    diseases, [Pressure
+    Points](https://www.wowhead.com/spell=450432/pressure-points) for enrage
+    effects, [Swift Art](https://www.wowhead.com/spell=450622/swift-art) for
+    snares, [Disable](https://www.wowhead.com/spell=116095/disable) for a
+    dangerous mob, and [Tiger Tail
+    Sweep](https://www.wowhead.com/spell=264348/tiger-tail-sweep) with [Ancient
+    Arts](https://www.wowhead.com/spell=344359/ancient-arts) for a bigger, more
+    frequent [Leg Sweep](https://www.wowhead.com/spell=292306/leg-sweep).
 
-    **Personal Preference Changes:**
+    - Drop [Windwalking](https://www.wowhead.com/spell=157411/windwalking) if
+    another Monk in the group already has it.
+  raid_sheilun: |-
+    ##### Conduit of the Celestials
 
-    *Class Tree*
+    **Raid Import: [C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAghx2YZYzixMzyyM2wYGmZZZbmxCzoZMDYwgxYmZmhZbMGsYCAAAAgAsYZmlZbmBAAGwAMDYMMWkxMA](https://www.wowhead.com/talent-calc/blizzard/C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAghx2YZYzixMzyyM2wYGmZZZbmxCzoZMDYwgxYmZmhZbMGsYCAAAAgAsYZmlZbmBAAGwAMDYMMWkxMA)**
 
-    - This build tries to cover as many bases as possible with the auras, a lot of defensive capabilities and single target damage through [Eye of the Tiger](https://www.wowhead.com/spell=196607/eye-of-the-tiger).
-    - If you don't need the extra defense from [Fortifying Brew](https://www.wowhead.com/spell=115203/fortifying-brew), you can invest that point into [Improved Roll](https://www.wowhead.com/spell=328669/improved-roll) for some more mobilty or [Paralysis](https://www.wowhead.com/spell=115078/paralysis)/[Spear Hand Strike](https://www.wowhead.com/spell=116705/spear-hand-strike). You will also be able to drop [Disable](https://www.wowhead.com/spell=116095/disable). Be aware of your newly required pathing if you want to keep [Celerity](https://www.wowhead.com/spell=115173/celerity).
-    - If you want [Resonant Fists](https://www.wowhead.com/spell=389578/resonant-fists), you will have to drop 3-4 nodes, depending on whether or not you path through [Escape from Reality](https://www.wowhead.com/spell=394110/escape-from-reality). Your options would be [Bounce Back](https://www.wowhead.com/spell=389577/bounce-back), [Eye of the Tiger](https://www.wowhead.com/spell=196607/eye-of-the-tiger), [Disable](https://www.wowhead.com/spell=116095/disable)/[Fortifying Brew](https://www.wowhead.com/spell=115203/fortifying-brew) (you might need to invest 1 of those to keep [Celerity](https://www.wowhead.com/spell=115173/celerity)!)
+    This build is about covering the raid with [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist). Every Renewing Mist you have out speeds up your cooldowns through [Heart of the Jade Serpent](https://www.wowhead.com/spell=443294/heart-of-the-jade-serpent) and makes the others heal harder through [Misty Coalescence](https://www.wowhead.com/spell=1268817/misty-coalescence). [Rushing Wind Kick](https://www.wowhead.com/spell=1269159/rushing-wind-kick) extends them anywhere on the field through [Rising Mist](https://www.wowhead.com/spell=274909/rising-mist), and [Vivify](https://www.wowhead.com/spell=116670/vivify) turns that coverage into healing with [Invigorating Mists](https://www.wowhead.com/spell=274586/invigorating-mists).
 
-    \*\*\* As of now, [Bounce Back](https://www.wowhead.com/spell=389577/bounce-back) triggers on very few abilities in raids, even on mythic difficulty. We suspect that the damage calculation for the trigger is not correct. Please check in your logs if you even get the buff during the fight you're currently progressing on.
+    - [Invoke Yu'lon, the Jade Serpent](https://www.wowhead.com/spell=322118/invoke-yulon-the-jade-serpent) is the default celestial, and the build gives you Haste while it's out.
+    - [Energizing Brew](https://www.wowhead.com/spell=422031/energizing-brew) is the default mana talent. Try [Lifecycles](https://www.wowhead.com/spell=197915/lifecycles) on long fights if you run short, but it adds more presses to an already busy priority.
+    - Keep [Refreshment](https://www.wowhead.com/spell=467270/refreshment) and [Chrysalis](https://www.wowhead.com/spell=202424/chrysalis): extra [Life Cocoon](https://www.wowhead.com/spell=116849/life-cocoon) casts are a big part of your mana.
+  mythicplus: |-
+    ##### Conduit of the Celestials
 
-    *Mistweaver Tree*
+    **Mythic+ Import: [C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAghxyMLjZx2MmZsZsZZGmtZmtllZGLM0MmBMYAzyMzMDzGmhZZmAAAAAIAL2mZb2mZAAgBAYGwYgFZMDA](https://www.wowhead.com/talent-calc/blizzard/C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAghxyMLjZx2MmZsZsZZGmtZmtllZGLM0MmBMYAzyMzMDzGmhZZmAAAAAIAL2mZb2mZAAgBAYGwYgFZMDA)**
 
-    - [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea) is a completely optional node in the mid section of the tree, you can move it freely - but usually it is the best contender for this freely available point.
-    - [Jade Bond](https://www.wowhead.com/spell=388031/jade-bond) (~2:15min celestial only if you use [Chi-Ji](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane)) can be changed into [Gift of the Celestials](https://www.wowhead.com/spell=388212/gift-of-the-celestials) (1min celestial) if your timers favor it. [Jade Bond](https://www.wowhead.com/spell=388031/jade-bond) is the stronger option in general, so it is the default.
+    In dungeons most of your downtime goes into damage, and [Jadefire Teachings](https://www.wowhead.com/spell=467293/jadefire-teachings) turns more of it into healing through [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings).
 
-    This tree tries to amplify your [Chi-Ji](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane) windows with [Shaohao's Lessons](https://www.wowhead.com/spell=400089/shaohaos-lessons). Try to have 8+ clouds of [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) and use them just before [Chi-Ji](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane). Align your other uses of [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) either with required spotheal, or find another window to spam [Vivify](https://www.wowhead.com/spell=116670/vivify) with [Shaohao's Lessons](https://www.wowhead.com/spell=400089/shaohaos-lessons) active. This build has higher overall HPS potential than the other one, but the nature of putting more ressources into windows might not result in higher effective healing *every* time, but just in creating more overheal.
-  raid_upwelling: |
-    **Build Import:**
+    - [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) is your most important button, even while you focus one player. Ancient Teachings splits its healing across everyone who is injured, so holding it to hardcast a heal is almost always a loss.
+    - The build skips the apex talent [Spiritfont](https://www.wowhead.com/spell=1260677/spiritfont) for nodes with wider coverage.
+    - [Invigorating Mists](https://www.wowhead.com/spell=274586/invigorating-mists) is here for its [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) healing. Its Vivify cleave is wasted with only five players.
+    - [Gift of the Celestials](https://www.wowhead.com/spell=388212/gift-of-the-celestials) (a celestial every minute) is the safe default. [Jade Bond](https://www.wowhead.com/spell=388031/jade-bond) is better when you need long coverage for one mechanic.
 
-    **B4QAuCDthFWaY4tbX9WBFOGRG1SkCSkQpVkER4AJNaJSRAAAAAAAAAAAAAJkUQikEJCSSSDyBEAAB**
+    ##### Alternatives from Way of the Crane
 
-    ![](/img/uploads/2023/03/Standard-Raid-Upwelling-10_0_7-1024x483.png)
+    **No Apex Import: [C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAghxyMLjZx2MmZsYsZZGmtZmtllZGLMmmxMgBDYMzMzwshZYWmJAAAAACwitZWmtZGAAAGAmBMGYRGzA](https://www.wowhead.com/talent-calc/blizzard/C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAghxyMLjZx2MmZsYsZZGmtZmtllZGLMmmxMgBDYMzMzwshZYWmJAAAAACwitZWmtZGAAAGAmBMGYRGzA)**
 
-    **Personal Preference Changes:**
+    **Apex Import: [C4QAQnG51S19isUJoJoTeJ/IKDAAAAAAAghxyMGziNjZmtNDMDz2DMz2yyMjFGTzYGbYMGAzMzMMbYGmlZCAAAAMbTbz2MLzitZ2mtZGQAAMmZGMDYAWkxMA](https://www.wowhead.com/talent-calc/blizzard/C4QAQnG51S19isUJoJoTeJ%2FIKDAAAAAAAghxyMGziNjZmtNDMDz2DMz2yyMjFGTzYGbYMGAzMzMMbYGmlZCAAAAMbTbz2MLzitZ2mtZGQAAMmZGMDYAWkxMA)**
 
-    *Class Tree*
+    The No Apex build suits lower keys, where players top off quickly and [Spiritfont](https://www.wowhead.com/spell=1260677/spiritfont) gets less value. [Way of the Crane](https://www.wayofthecrane.io/talents) also suggests these dungeon swaps:
 
-    Check the other Raid Default Build.
+    - Keep [Improved Detox](https://www.wowhead.com/spell=388874/improved-detox) in every dungeon except Ruby Life Pools.
+    - Take [Pressure Points](https://www.wowhead.com/spell=450432/pressure-points) only in dungeons with enrage effects.
+    - [Disable](https://www.wowhead.com/spell=116095/disable) and [Stillstep Coil](https://www.wowhead.com/spell=1266733/stillstep-coil) help with kiting and slowing fixates or priority mobs.
+    - Pair [Tranquil Tea](https://www.wowhead.com/spell=1270621/tranquil-tea) with [Energizing Brew](https://www.wowhead.com/spell=422031/energizing-brew), or [Veil of Pride](https://www.wowhead.com/spell=400053/veil-of-pride) with [Lifecycles](https://www.wowhead.com/spell=197915/lifecycles). Tranquil Tea lets you force [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) clouds with [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea); Veil of Pride builds them faster but gives you less control.
+    - [Dance of Chi-Ji](https://www.wowhead.com/spell=438439/dance-of-chi-ji) is best for dungeons with big AoE pulls. [Mistline](https://www.wowhead.com/spell=1280297/mistline) is better for priority healing and lower keys.
+  raid_upwelling: |-
+    ##### Conduit of the Celestials
 
-    *Mistweaver Tree*
+    **Delves Import: [C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMWmZZML2mxMjNDYMzmZ222mZswQzYGLYwAGzMzMMbDzwsMTAAAAAEgFbzsNbzMAAAwAMDYMMDZMDA](https://www.wowhead.com/talent-calc/blizzard/C4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMWmZZML2mxMjNDYMzmZ222mZswQzYGLYwAGzMzMMbDzwsMTAAAAAEgFbzsNbzMAAAwAMDYMMDZMDA)**
 
-    Check the other Raid Default Build.
-
-    This build is recommended if you cannot generate more effective by buffing your [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane) window with [Shaohao's Lessons](https://www.wowhead.com/spell=400089/shaohaos-lessons). This build has slightly better downtime healing and can cover raiddamage in intervalls of around ~24-30sec very well thanks to the synergy of [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea), [Essence Font](https://www.wowhead.com/spell=191837/essence-font) and [Upwelling](https://www.wowhead.com/spell=274963/upwelling). [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp) is used as a cheap activator for [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings).
-
-    You may use the point from [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp) anywhere else, but then you fall back to using [Essence Font](https://www.wowhead.com/spell=191837/essence-font) very frequently to keep up [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings). Your [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea) will now be used for [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist) to get Haste from [Secret Infusion](https://www.wowhead.com/spell=388491/secret-infusion). Without [Secret Infusion](https://www.wowhead.com/spell=388491/secret-infusion), you will use it on [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick).
-  mythicplus: |
-    **Build Import:**
-
-    **B4QAuCDthFWaY4tbX9WBFOGRG1SkSRSCUatkQERSDSLFBAAAAAAAAAAAAkAlQikEJIJJJNIEAARA**
-
-    ![](/img/uploads/2023/03/M-Default-10_0_7-1024x485.png)
-
-    This build for m+ is just one variant of many that all serve a slightly different purpose or have a different focus. The class tree is a mix of solid defensives, healing throughput and handy utilities. The Mistweaver tree focuses on a similar playstyle as you experienced in Shadowlands for m+ with the addition of [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp).
-
-    **Personal Preference Changes:**
-
-    *Class Tree*
-
-    - [Improved Touch of Death](https://www.wowhead.com/spell=322113/improved-touch-of-death) gives you better opportunities to use [Touch of Death](https://www.wowhead.com/spell=322109/touch-of-death) on bosses or very high HP targets, but makes it harder to make proper execute snipes. We also don't get the 10% increased damage anymore.
-    - I'm personally not too fond of [Close to Heart](https://www.wowhead.com/spell=389574/close-to-heart) in m+, because you need to 3 points total to trigger the 8% increase due to pathing. Also the range is just 10y for the buff, which helps for fights like [Hyrja (Halls of Valor)](https://www.wowhead.com/guide/mythic-plus-dungeons/halls-of-valor-strategy#tips-hyrja) but not on more spread fights.
-    - [Fortifying Brew](https://www.wowhead.com/spell=115203/fortifying-brew) was taken here instead of [Paralysis](https://www.wowhead.com/spell=115078/paralysis). You could try to get the one point for [Paralysis](https://www.wowhead.com/spell=115078/paralysis) from somewhere else, but a defensive spell with 6min CD is an easy trade unless you know you will need it for specific mechanics.
-    - if you want [Generous Pour](https://www.wowhead.com/spell=389575/generous-pour), you will need to reallocate 3 points. [Fortifying Brew](https://www.wowhead.com/spell=115203/fortifying-brew) and [Disable](https://www.wowhead.com/spell=116095/disable) are your first choice, the 3rd is pretty much a choice between giving up some damage, some defense or some healing throughput.
-
-    *Mistweaver Tree*
-
-    - The new talent [Legacy of Wisdom](https://www.wowhead.com/spell=404408/legacy-of-wisdom) makes both [Shaohao's Lessons](https://www.wowhead.com/spell=400089/shaohaos-lessons) and [Veil of Pride](https://www.wowhead.com/spell=400053/veil-of-pride) a competitive choice. There is no consensus right now if one is allround superior.
-    - [Gift of the Celestials](https://www.wowhead.com/spell=388212/gift-of-the-celestials) is usually preferred for better flexibility on timers. Some dungeons like [Court of Stars](https://www.wowhead.com/zone=8079/court-of-stars) work well with [Jade Bond](https://www.wowhead.com/spell=388031/jade-bond).
-    - [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) is either used for its own healing potential or as a trigger for [Shaohao's Lessons](https://www.wowhead.com/spell=400089/shaohaos-lessons). Sometimes you want to boost your slightly weaker [Gift of the Celestials](https://www.wowhead.com/spell=388212/gift-of-the-celestials) [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane) with it. Sometimes you want to desync those to get better coverage.
+    Delves lean toward damage. This build skips the usual healing capstones and paths through [Secret Infusion](https://www.wowhead.com/spell=388491/secret-infusion) into [Dance of Chi-Ji](https://www.wowhead.com/spell=438439/dance-of-chi-ji) for more damage procs on big packs. It also picks up [Quick Footed](https://www.wowhead.com/spell=450503/quick-footed) and [Stillstep Coil](https://www.wowhead.com/spell=1266733/stillstep-coil) to get in and out of melee quickly.
 priority:
   heading: Ability Priority
-  intro: Healing has no defined rotation or priority system. It requires you to understand your spells and how best to use them to keep your group alive. In general, any downtime should be used to DPS, which is also incentivised by a few talents. You'll find rough guidelines below to deal with healing in different environments.
-  dungeon: |
-    This guideline expects you to run one of the suggested builds above. The exact priority can always shift a bit!
+  intro: Healing has no fixed rotation. You need to know your spells and when each
+    is worth casting. Spend any quiet moment doing damage. The lists below are
+    guidelines, not a script.
+  dungeon: >-
+    Conduit of the Celestials. Heal first, but keep weaving melee in rather than
+    saving it for filler.
 
-    - [Renewing Mist](https://bfa.wowhead.com/spell=115151/renewing-mist) should be used regularly to prevent it from reaching two stacks.
-    - [Vivify](https://www.wowhead.com/spell=116670/vivify) will be your main targeted heal outside of cooldowns.
-    - To heal a single target taking sustained damage, [Enveloping Mist](https://bfa.wowhead.com/spell=124682/enveloping-mist) is a great tool to counter any medium damage over time effects if the healing you passively generate is not enough. For very heavy sustained damage, you can add [Soothing Mist](https://bfa.wowhead.com/spell=115175/soothing-mist) to follow up your [Enveloping Mist](https://bfa.wowhead.com/spell=124682/enveloping-mist) with a few [Vivify](https://www.wowhead.com/spell=116670/vivify) casts.
-    - Use [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp) to refresh [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings) and apply the Healing over Time effect on your party members in order to quickly burst single targets through the double [Gust of Mists](https://bfa.wowhead.com/spell=191894/gust-of-mists) hits. Find a middle ground between hitting your team mates and setting the line up to give you an easy time to stay on it for [Ancient Concordance](https://www.wowhead.com/spell=388740/ancient-concordance) and [Awakened Faeline](https://www.wowhead.com/spell=388779/awakened-faeline).
-    - [Essence Font](https://bfa.wowhead.com/spell=191837/essence-font)
-      - without [Upwelling](https://www.wowhead.com/spell=274963/upwelling): Should only be used to get the HoT effect out, if [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp) couldn't hit enough targets. Cancelling a cast of it when your party has the HoT effect rolling on all of them will allow you to use Mastery-proccing spells faster for burst healing on any target that needs it. However, continuing the channel can be the right call in specific situations, normally when you need group healing while you yourself are moving. It depends on the situation at hand.
-      - with [Upwelling](https://www.wowhead.com/spell=274963/upwelling): Combine it with [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea) for a quick channel, which will also align [Yu'lon's Whisper](https://www.wowhead.com/spell=388038/yulons-whisper) with incoming damage. If you used [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea) on another spell, you should consider cancelling the cast if required.
-    - If you’re the only Monk, make sure [Mystic Touch](https://bfa.wowhead.com/spell=8647/mystic-touch) is applied to whatever is being damaged.
-    - [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane) should be used as often as possible to help provide more damage while getting effective healing out. Cooldowns are meant to be used, especially if you run [Gift of the Celestials](https://www.wowhead.com/spell=388212/gift-of-the-celestials).
-    - [Thunder Focus Tea](https://bfa.wowhead.com/spell=116680/thunder-focus-tea) should be used on [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) if you have neither [Secret Infusion](https://www.wowhead.com/spell=388491/secret-infusion) or [Upwelling](https://www.wowhead.com/spell=274963/upwelling) talented.
-      - If you run [Upwelling](https://www.wowhead.com/spell=274963/upwelling), you should try best to use it only with [Essence Font](https://bfa.wowhead.com/spell=191837/essence-font).
-      - If you run [Secret Infusion](https://www.wowhead.com/spell=388491/secret-infusion), you're more flexible in your [Thunder Focus Tea](https://bfa.wowhead.com/spell=116680/thunder-focus-tea) use. You can prioritise getting a certain buff, like additional mastery when using it on [Vivify](https://www.wowhead.com/spell=116670/vivify).
-    - You generate a LOT of passive healing through [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings) thanks to [Ancient Concordance](https://www.wowhead.com/spell=388740/ancient-concordance) or through [Spinning Crane Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick) if you have [Awakened Faeline](https://www.wowhead.com/spell=388779/awakened-faeline) talented. Especially in multi target situations, we're rewarded with a lot of healing if we play aggressive.
-  raid: |
-    This guideline expects you to run the suggested default raid build above.
 
-    - [Renewing Mist](https://bfa.wowhead.com/spell=115151/renewing-mist) should be used regularly to prevent it from reaching two stacks.
-    - [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) should be kept on cooldown.
-    - Fully channel [Essence Font](https://www.wowhead.com/spell=191837/essence-font) during raid-wide damage (when 6+ targets are hurt).
-    - Keep up [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings) through either [Essence Font](https://www.wowhead.com/spell=191837/essence-font) or [Faeline Stomp](https://www.wowhead.com/spell=388193/faeline-stomp). You prefer the latter if there's not enough damage coming in to justify casting [Essence Font](https://www.wowhead.com/spell=191837/essence-font), or you want to delay it with [Upwelling](https://www.wowhead.com/spell=274963/upwelling) to line it up with your next [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea).
-    - Use [Vivify](https://www.wowhead.com/spell=116670/vivify) to spot heal anyone who needs it or when you need extra hps for group healing and [Essence Font](https://www.wowhead.com/spell=191837/essence-font) isn't applicable.  Ensure [Renewing Mist](https://bfa.wowhead.com/spell=115151/renewing-mist) are out to leverage the additional healing from [Invigorating Mists](https://www.wowhead.com/spell=274586/invigorating-mists).
-    - For sustained single target damage, such as a heavy tank damage period or a hard hitting debuff, consider to use [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist). It is an expensive spell, but you get a lot of value from extending it through [Rising Mist](https://www.wowhead.com/spell=274909/rising-mist). You may also use [Soothing Mist](https://www.wowhead.com/spell=115175/soothing-mist) to apply the [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist) for a little bit easier follow up healing.
-    - Right before raid damage goes out cast [Yu'lon](https://www.wowhead.com/spell=322118/invoke-yulon-the-jade-serpent)/[Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane). You should try your best to use only your most efficient spells, as their uptime is limited.
-      - [Yu'lon](https://www.wowhead.com/spell=322118/invoke-yulon-the-jade-serpent): This means hardcasting as many [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist) as you can on different targets to apply [Enveloping Breath](https://www.wowhead.com/spell=343655/enveloping-breath) on the whole raid. Preferably you use [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea) or get [Innervate](https://www.wowhead.com/spell=29166/innervate).
-      - [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane): You should have prepared beforehand 3 stacks of [Teachings of the Monastery](https://www.wowhead.com/spell=116645/teachings-of-the-monastery) and have the [Essence Font](https://www.wowhead.com/spell=191837/essence-font) healing over time effect on your raid. You also want to have a fresh buff of [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings). To keep it simple, use this priority: [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) > [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick) > [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) > [Spinning Crane Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick). Stop at 2 stacks of the [Chi-Ji passive](https://www.wowhead.com/spell=343820/invoke-chi-ji-the-red-crane) to cast [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist). Refresh [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings) and the [Essence Font](https://www.wowhead.com/spell=191837/essence-font) healing over time effect when they run out (usually only happens if you use [Jade Bond](https://www.wowhead.com/spell=388031/jade-bond)).
-      - Read the Celestial Guide down below for more in-depth detail about them. (Work in progress)
-    - [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea) should be used for [Upwelling](https://www.wowhead.com/spell=274963/upwelling) + [Essence Font](https://www.wowhead.com/spell=191837/essence-font). If you don't run [Upwelling](https://www.wowhead.com/spell=274963/upwelling), use it on cooldown for [Renewing Mist](https://bfa.wowhead.com/spell=115151/renewing-mist) to get Haste from [Secret Infusion](https://www.wowhead.com/spell=388491/secret-infusion). If you don't have any of those two, use it on [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick).
-    - [Mystic Touch](https://www.wowhead.com/spell=8647/mystic-touch) should be applied to any target taking damage.
+    1. [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) to
+    save someone who would otherwise die.
+
+    2. [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick).
+
+    3. [Spinning Crane
+    Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick) with a
+    [Dance of Chi-Ji](https://www.wowhead.com/spell=438439/dance-of-chi-ji)
+    proc.
+
+    4. [Thunder Focus
+    Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea), empowering
+    [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick).
+    Press it on cooldown: [Heart of the Jade
+    Serpent](https://www.wowhead.com/spell=443294/heart-of-the-jade-serpent)
+    rewards every use.
+
+    5. [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist) if
+    someone is missing one or one is about to expire.
+
+    6. [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist)
+    with a [Strength of the Black
+    Ox](https://www.wowhead.com/spell=443112/strength-of-the-black-ox) proc.
+
+    7. [Spinning Crane
+    Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick) at 5 or more
+    targets.
+
+    8. [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) at least
+    once before each [Blackout
+    Kick](https://www.wowhead.com/spell=100784/blackout-kick).
+
+    9. [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea) as you need
+    mana.
+
+
+    **Melee by target count:** on 1 to 4 targets, [Rising Sun
+    Kick](https://www.wowhead.com/spell=107428/rising-sun-kick), then at least
+    one [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm), then
+    [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick). On 5 or
+    more, [Rising Sun
+    Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) on cooldown,
+    then [Spinning Crane
+    Kick](https://www.wowhead.com/spell=101546/spinning-crane-kick).
+
+
+    If you're the only Monk, keep [Mystic
+    Touch](https://www.wowhead.com/spell=8647/mystic-touch) on whatever the
+    group is hitting.
+
+
+    **Reading the damage in a key:**
+
+
+    - One injured player gets all of [Ancient
+    Teachings](https://www.wowhead.com/spell=388023/ancient-teachings), so keep
+    attacking. With two injured you can usually keep attacking too. At three or
+    more taking moderate or heavy damage, consider a cooldown.
+
+    - For heavy damage on one or two players, [Life
+    Cocoon](https://www.wowhead.com/spell=116849/life-cocoon) saves you casts.
+
+    - Before a big hit, ramp with 2 or 3 [Enveloping
+    Mist](https://www.wowhead.com/spell=124682/enveloping-mist) on the
+    squishiest players (DPS first, then yourself, then the tank). Make [Rising
+    Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) or a cast
+    heal your first press after the damage lands.
+
+    - Before spending a cooldown, check what will be back for the next mechanic.
+    [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) is
+    usually the safest emergency button.
+  raid: >-
+    Conduit of the Celestials with Yu'lon.
+
+
+    1. [Vivify](https://www.wowhead.com/spell=116670/vivify) to save someone who
+    would otherwise die.
+
+    2. [Rushing Wind
+    Kick](https://www.wowhead.com/spell=1269159/rushing-wind-kick).
+
+    3. [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist) at 3
+    charges.
+
+    4. [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea) at 20 stacks.
+
+    5. At 2 [Spiritfont](https://www.wowhead.com/spell=1260677/spiritfont)
+    stacks, spend one so you don't overcap.
+
+    6. [Thunder Focus
+    Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea), empowering
+    [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist).
+
+    7. Any remaining [Renewing
+    Mist](https://www.wowhead.com/spell=115151/renewing-mist) charges.
+
+    8. [Vivify](https://www.wowhead.com/spell=116670/vivify) when Renewing Mist
+    coverage is high and the raid is hurt.
+
+    9. [Spiritfont](https://www.wowhead.com/spell=1260677/spiritfont) procs when
+    the raid is hurt.
+
+    10. [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist)
+    with a [Strength of the Black
+    Ox](https://www.wowhead.com/spell=443112/strength-of-the-black-ox) proc.
+
+    11. [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea) with any
+    stacks.
+
+    12. [Blackout Kick](https://www.wowhead.com/spell=100784/blackout-kick), or
+    [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) while it's on
+    cooldown, to fill.
+
+
+    Save [Spiritfont](https://www.wowhead.com/spell=1260677/spiritfont) and
+    [Strength of the Black
+    Ox](https://www.wowhead.com/spell=443112/strength-of-the-black-ox) procs for
+    real damage rather than full health bars, and drink [Mana
+    Tea](https://www.wowhead.com/spell=197908/mana-tea) in quiet moments so you
+    go into the next damage window with mana.
+
+
+    **Renewing Mist tip:** cast it on players at full health who don't have one
+    yet. On its next tick it jumps to an injured ally within 20 yards. Recasting
+    on someone who already has one only works if an eligible target is nearby;
+    otherwise it just refreshes in place and you lose a Renewing Mist.
+slug: /tww/mistweaver/pve-guide
+guide_type: mistweaver-pve
+wp_id: 16973
+original_url: https://www.peakofserenity.com/tww/mistweaver/pve-guide/
 ---
+#### Cooldowns
 
-#### Ability Usage Notes
+- **[Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea)** empowers your next [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist) (instant, and heals its full HoT amount at once), [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist) (10 seconds longer) or [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) (9 seconds off its cooldown). With Conduit of the Celestials, press it as soon as it's ready. With [Secret Infusion](https://www.wowhead.com/spell=388491/secret-infusion), each empower also grants a stat: Critical Strike from Enveloping Mist, Haste from Renewing Mist, Versatility from Rising Sun Kick.
+- **[Invoke Yu'lon, the Jade Serpent](https://www.wowhead.com/spell=322118/invoke-yulon-the-jade-serpent) / [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane)**: [Gift of the Celestials](https://www.wowhead.com/spell=388212/gift-of-the-celestials) halves the cooldown to 1 minute and halves the duration with it. [Jade Bond](https://www.wowhead.com/spell=388031/jade-bond) keeps the 2-minute cooldown and makes the celestial much stronger. [Celestial Harmony](https://www.wowhead.com/spell=343655/celestial-harmony) shields 5 allies with [Chi Cocoon](https://www.wowhead.com/spell=406139/chi-cocoon) when you summon. With Yu'lon, cast [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist) to spread [Renewing Mist](https://www.wowhead.com/spell=115151/renewing-mist) through [Rapid Diffusion](https://www.wowhead.com/spell=388847/rapid-diffusion), then [Vivify](https://www.wowhead.com/spell=116670/vivify). Chi-Ji starts you at 4 [Teachings of the Monastery](https://www.wowhead.com/spell=116645/teachings-of-the-monastery) stacks: kick to heal through [Gust of Mists](https://www.wowhead.com/spell=343819/gust-of-mists), and your Enveloping Mists become instant and cheaper.
+- **[Revival](https://www.wowhead.com/spell=115310/revival) / [Restoral](https://www.wowhead.com/spell=388615/restoral)**: the same raid-wide heal, but Revival also dispels everyone. Restoral is the safe raid default.
+- **[Life Cocoon](https://www.wowhead.com/spell=116849/life-cocoon)**: your external. The lower the target's health, the more it's worth. [Chrysalis](https://www.wowhead.com/spell=202424/chrysalis) lowers the cooldown to 75 seconds.
+- **[Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift)** builds clouds over time and spends them all in one cast. [Veil of Pride](https://www.wowhead.com/spell=400053/veil-of-pride) builds them twice as fast, [Legacy of Wisdom](https://www.wowhead.com/spell=404408/legacy-of-wisdom) makes it hit 5 targets (great in dungeons), and [Emperor's Favor](https://www.wowhead.com/spell=471761/emperors-favor) makes it instant and stronger on the main target.
+- **[Celestial Conduit](https://www.wowhead.com/spell=443028/celestial-conduit)** (Conduit of the Celestials) heals and damages around you and, with [Unity Within](https://www.wowhead.com/spell=443589/unity-within), calls on all four celestials at once.
 
-- **[Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm)/[Blackout Kick](https://www.wowhead.com/spell=261916/blackout-kick)/[Spinning Crane Kick](https://www.wowhead.com/spell=322729/spinning-crane-kick)**– Your main "filler" abilities that no or very little mana. In general, use [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm)/[Blackout Kick](https://www.wowhead.com/spell=261916/blackout-kick) in single-target and [Spinning Crane Kick](https://www.wowhead.com/spell=322729/spinning-crane-kick) when facing 2 or more enemies.
-  - Prioritise [Blackout Kick](https://www.wowhead.com/spell=261916/blackout-kick) for more [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) resets.
-  - If you run [Spirit of the Crane](https://www.wowhead.com/spell=210802/spirit-of-the-crane), you may consider prioritising [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm) until you have 3 stacks of [Teachings of the Monastery](https://www.wowhead.com/spell=116645/teachings-of-the-monastery) for higher mana returns if required.
-  - If you run [Ancient Concordance](https://www.wowhead.com/spell=388740/ancient-concordance) and [Awakened Faeline](https://www.wowhead.com/spell=388779/awakened-faeline), you want to keep using [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm)/[Blackout Kick](https://www.wowhead.com/spell=261916/blackout-kick) at up to 3 targets. At 4, start [Spinning Crane Kick](https://www.wowhead.com/spell=322729/spinning-crane-kick) for more damage.
-- **[Ancient Concordance](https://www.wowhead.com/spell=388740/ancient-concordance)/[Awakened Faeline](https://www.wowhead.com/spell=388779/awakened-faeline)** – For healing, you will usually prefer [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm)/[Blackout Kick](https://www.wowhead.com/spell=261916/blackout-kick) over [Spinning Crane Kick](https://www.wowhead.com/spell=322729/spinning-crane-kick) until you reach a VERY high target count. Thanks to [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings), your healing from [Tiger Palm](https://www.wowhead.com/spell=100780/tiger-palm)/[Blackout Kick](https://www.wowhead.com/spell=261916/blackout-kick) can be distributed better on targets with different levels of required healing. [Spinning Crane Kick](https://www.wowhead.com/spell=322729/spinning-crane-kick) heals three targets for the same amount, so if the tank gets significantly more damage, he will still not receive more healing. Also [Blackout Kick](https://www.wowhead.com/spell=261916/blackout-kick) will grant you immediately all three stacks of [Chi-Ji passive](https://www.wowhead.com/spell=343820/invoke-chi-ji-the-red-crane) and a lot more [Gust of Mists (Chi-Ji)](https://www.wowhead.com/spell=343819/gust-of-mists).
-- **[Dampen Harm](https://www.wowhead.com/spell=122278/dampen-harm)/[Diffuse Magic](https://www.wowhead.com/spell=122783/diffuse-magic)/[Fortifying Brew](https://www.wowhead.com/spell=388917/fortifying-brew)** – your primary defensive cooldowns. Use as appropriate based on both the type of damage being taken and how large the hits are.
-- **[Touch of Death](http://www.wowhead.com/spell=322109)​** – Use when it can be triggered. If you are looking to really min/max, you can make sure to only use it when it will kill the target, as this can do a maximum of 100% of your HP as damage instead of the 35% it normally does to high HP targets.
-- **[Summon White Tiger Statue](https://www.wowhead.com/spell=388686/summon-white-tiger-statue)** – Mostly a "use on cooldown" button, easiest way is to macro it to something with an @cursor or @player targeting conditional.
+#### Responding to Damage
+
+- **Light damage:** let your HoTs handle it and keep attacking. With [Jadefire Teachings](https://www.wowhead.com/spell=467293/jadefire-teachings), [Ancient Teachings](https://www.wowhead.com/spell=388023/ancient-teachings) sends all of its healing to the one injured player.
+- **Medium damage:** spend a [Strength of the Black Ox](https://www.wowhead.com/spell=443112/strength-of-the-black-ox) or [Spiritfont](https://www.wowhead.com/spell=1260677/spiritfont) proc, or cast [Vivify](https://www.wowhead.com/spell=116670/vivify) or [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) (instant with [Vivacious Vivification](https://www.wowhead.com/spell=388812/vivacious-vivification)). Use [Life Cocoon](https://www.wowhead.com/spell=116849/life-cocoon) if more damage is coming.
+- **Heavy damage:** [Life Cocoon](https://www.wowhead.com/spell=116849/life-cocoon), then channel [Soothing Mist](https://www.wowhead.com/spell=115175/soothing-mist) and chain [Vivify](https://www.wowhead.com/spell=116670/vivify), [Sheilun's Gift](https://www.wowhead.com/spell=399491/sheiluns-gift) and [Enveloping Mist](https://www.wowhead.com/spell=124682/enveloping-mist), which are all instant during the channel.
+
+#### Before the Pull
+
+- Start at full mana: drink any [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea) stacks, or sit down with mana water.
+- Check that [Thunder Focus Tea](https://www.wowhead.com/spell=116680/thunder-focus-tea) and your other cooldowns are back after a wipe.
+- Put your flask, weapon oil and food buff on before the pull.
+- Check your talents for the fight, and whether another Monk already has [Windwalking](https://www.wowhead.com/spell=157411/windwalking).
 
 ## Gearing
 
 ### Stats
 
-**Dungeon Priority:**
+**Raid:** Intellect >> Haste > Critical Strike > Versatility >> Mastery
 
-Pure Healing: Intellect > Mastery > Haste = Versatility = Critical Strike (Please note that Mastery is primarily for spothealing! If other tools cover your need for that, Mastery will lose value.)\
-Damage Focus: Intellect > Haste = Versatility = Critical Strike > Mastery
+**Mythic+:** Intellect >> Haste > Mastery > Critical Strike > Versatility
 
-In general, taking higher item level pieces will be the standard course of action. All of the secondaries are either very close in terms of healing output or provide other benefits as faster GCDs or survivability. So the optimizations will be based on your specific group composition, level of ability and dungeon.
+Item level comes first: a big item level upgrade usually beats better stats. Haste makes your healing stronger and brings [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) and [Rushing Wind Kick](https://www.wowhead.com/spell=1269159/rushing-wind-kick) back faster. Critical Strike gives extra [Mana Tea](https://www.wowhead.com/spell=197908/mana-tea) stacks. Mastery is weak in raid, but in Mythic+ [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane) casts so many [Gust of Mists](https://www.wowhead.com/spell=343819/gust-of-mists) that it moves ahead of Critical Strike. In high keys where one-shots are a worry, Versatility can be worth more than Critical Strike. The priorities are the same for both hero trees.
 
-**Raid Priority:**
+Use [QE Live](https://questionablyepic.com/live/) to compare gear for your own character.
 
-If [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane) with [Upwelling](https://www.wowhead.com/spell=274963/upwelling): Intellect > Haste > Mastery = Crit > Versatility
-
-If [Invoke Chi-Ji, the Red Crane](https://www.wowhead.com/spell=325197/invoke-chi-ji-the-red-crane) without [Upwelling](https://www.wowhead.com/spell=274963/upwelling): Intellect > Haste > Crit > Mastery > Versatility
-
-If [Invoke Yu'lon, the Jade Serpent](https://www.wowhead.com/spell=322118/invoke-yulon-the-jade-serpent): Intellect > Haste >  Crit > Versatility >> Mastery
-
-These stat priorities should give you a rough idea of what gear to go for, but you should use the [QE Live tool](https://questionablyepic.com/live/) to compare gear, especially for raiding. The value of each stat will shift a lot based on your talents and playstyle.
-
-> One thing to note here, is the greatest impact you can make in your output is improving your play over improving your gear. While higher item level gear will have an impact, proper play will always outpace “perfect” gear optimization. - Abelito75
+> One thing to note here, is the greatest impact you can make in your output is improving your play over improving your gear. While higher item level gear will have an impact, proper play will always outpace "perfect" gear optimization. - Abelito75
 
 #### One Handed vs Two Handed Weapons
 
-**It doesn't matter. Autohits are normalized, Weapon damage is nowhere utilized for us and everything uses Attack Power, which is simply Spellpower x 1.04.**
+**It doesn't matter.** Auto attacks are normalized, weapon damage isn't used by any of our abilities, and everything scales with Attack Power, which comes from your Spell Power.
 
 #### Gems
 
-Always use double stat gems. Unless you use Elemental Lariat, take [Keen Ysemerald](https://www.wowhead.com/item=192948/keen-ysemerald) or [Crafty Ysemerald](https://www.wowhead.com/item=192945/crafty-ysemerald). If you use Elemental Lariat, you can mix the type of gems to get the according proccs.
-
-Earth = Mastery
-
-Air = Haste
-
-Fire = Crit
-
-Frost = Vers
+Use [Indecipherable Eversong Diamond](https://www.wowhead.com/item=240983/indecipherable-eversong-diamond) in your Eversong Diamond socket, since the other versions cost too much Intellect, and [Flawless Deadly Peridot](https://www.wowhead.com/item=240890/flawless-deadly-peridot) in every other socket.
 
 #### Enchants
 
-- Weapon – [Enchant Weapon - Sophic Devotion](https://www.wowhead.com/item=199970/enchant-weapon-sophic-devotion)
-- Cloak – [Enchant Cloak - Regenerative Leech](https://www.wowhead.com/item=200033/enchant-cloak-regenerative-leech) unless you need Avoidance for m+, then take [Enchant Cloak - Graceful Avoidance](https://www.wowhead.com/item=199947/enchant-cloak-graceful-avoidance)
-- Chest – [Enchant Chest - Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats)
-- Bracers – [Enchant Bracer - Devotion of Leech](https://www.wowhead.com/item=200022/enchant-bracer-devotion-of-leech) unless you need Avoidance for m+, then take [Enchant Bracer - Devotion of Avoidance](https://www.wowhead.com/item=199937/enchant-bracer-devotion-of-avoidance)
-- Boots – [Enchant Boots - Watcher's Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) or [Enchant Boots - Plainsrunner's Breeze](https://www.wowhead.com/item=200018/enchant-boots-plainsrunners-breeze), I prefer the latter.
-- Ring – [Enchant Ring - Devotion of Haste](https://www.wowhead.com/item=200038/enchant-ring-devotion-of-haste)
-- Legs – [Temporal Spellthread](https://www.wowhead.com/item=194016/temporal-spellthread)
+- Weapon – [Enchant Weapon - Acuity of the Ren'dorei](https://www.wowhead.com/item=244029/enchant-weapon-acuity-of-the-rendorei). Once you're fully geared, check QE Live to see whether Berserker's Rage pulls ahead.
+- Helm – [Enchant Helm - Empowered Hex of Leeching](https://www.wowhead.com/item=243951/enchant-helm-empowered-hex-of-leeching)
+- Shoulders – [Enchant Shoulders - Silvermoon's Mending](https://www.wowhead.com/item=244021/enchant-shoulders-silvermoons-mending)
+- Chest – [Enchant Chest - Mark of the Worldsoul](https://www.wowhead.com/item=243977/enchant-chest-mark-of-the-worldsoul)
+- Legs – [Sunfire Silk Spellthread](https://www.wowhead.com/item=240133/sunfire-silk-spellthread)
+- Boots – [Enchant Boots - Shaladrassil's Roots](https://www.wowhead.com/item=243983/enchant-boots-shaladrassils-roots)
+- Rings – [Enchant Ring - Silvermoon's Alacrity](https://www.wowhead.com/item=244015/enchant-ring-silvermoons-alacrity)
 
 #### Trinkets
 
-You should use [QE Live](https://questionablyepic.com/live/) to compare all your gear including trinkets.
+Compare trinkets for your own character with [QE Live](https://questionablyepic.com/live/). The standouts this season:
 
-Some notable trinkets are:
+- [Soulcoiler Ritual Vessel](https://www.wowhead.com/item=270162/soulcoiler-ritual-vessel) (Nek'zali the Soulcoiler) is the best raid trinket by a clear margin.
+- [Wavecaller's Seastone](https://www.wowhead.com/item=270167/wavecallers-seastone) (Nymrissa Wavecaller) completes the best-in-slot pair.
+- Also strong: [Gebbo's Bottomless Bag](https://www.wowhead.com/item=270164/gebbos-bottomless-bag), [Twisted Horror's Tendril](https://www.wowhead.com/item=281215/twisted-horrors-tendril), [Sigil of the Impending Eclipse](https://www.wowhead.com/item=280835/sigil-of-the-impending-eclipse) and [Preternatural Antivenom](https://www.wowhead.com/item=270171/preternatural-antivenom).
 
-- [Broodkeeper's Promise](https://www.wowhead.com/item=194307/broodkeepers-promise?bonus=7979) and [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935), which are the best raiding trinkets by a good mile.
-- [Mote of Sanctification](https://www.wowhead.com/item=133646/mote-of-sanctification?bonus=8810), an amazing m+ trinket, but not as strong in raids
-- [Miniature Singing Stone](https://www.wowhead.com/item=193678/miniature-singing-stone?bonus=7974), similar functionality as Mote. The whole effect is not instant, but it is stronger in raids.
-- [Alacritous Alchemist Stone](https://www.wowhead.com/item=202116/alacritous-alchemist-stone), one of the - if not THE - strongest trinket options if you focus on raiding from outside the raid itself. The Jewelcrafting Idols are about the same power level, but usually it is easier to find a crafter for the [Alacritous Alchemist Stone](https://www.wowhead.com/item=202116/alacritous-alchemist-stone).
+#### Tier Set
+
+- **2-piece:** [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) deals 30% more damage and [Rushing Wind Kick](https://www.wowhead.com/spell=1269159/rushing-wind-kick) heals for 100% more.
+- **4-piece:** [Rising Sun Kick](https://www.wowhead.com/spell=107428/rising-sun-kick) and [Rushing Wind Kick](https://www.wowhead.com/spell=1269159/rushing-wind-kick) can give you a free extra cast with no cooldown or mana cost. It works like a second charge, so you don't have to press it right away.
+
+In Season 2, catalyzed tier pieces keep their stats, so you can choose which items to convert.
+
+#### Crafting
+
+- First craft: [Aln'hara Cane](https://www.wowhead.com/item=245770/alnhara-cane) with [Darkmoon Sigil: Void](https://www.wowhead.com/item=245874/darkmoon-sigil-void).
+- Best embellishment on armor: [Arcanoweave Lining](https://www.wowhead.com/item=240167/arcanoweave-lining).
 
 #### "Best-in-Slot"
 
-The concept of "Best-in-slot" lists is mostly obsolete, thanks to the Tertiary stat Leech being very strong, sockets (especially on non-intellect slots like rings) and the Creation Catalyst, which was introduced late in Shadowlands and is supposed to make a return in Dragonflight. Gear should be assessed on a case-by-case basis rather than as a whole, using [QE Live](https://questionablyepic.com/live/).
+Fixed best-in-slot lists only describe a finished character. While you gear up, judge each item on its own: item level first, then stats, using [QE Live](https://questionablyepic.com/live/).
 
 ## Miscellaneous
 
 #### Consumables
 
-- Phial – [Phial of Elemental Chaos](https://www.wowhead.com/item=191357/phial-of-elemental-chaos) is slightly ahead of [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility), but the defensive part of Versatility might come in handy
-- Potion – [Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191381/elemental-potion-of-ultimate-power), unless you need Mana. Which one is the correct Mana potion is entirely situational.
-- Food – [Hoard of Draconic Delicacies](https://www.wowhead.com/item=197795/hoard-of-draconic-delicacies). You can use stat food that matches your gems/ring enchants if feasts are not available.
-- Weapon Enhancement – [Howling Rune](https://www.wowhead.com/item=194820/howling-rune)
+- Flask – [Flask of the Blood Knights](https://www.wowhead.com/item=241324/flask-of-the-blood-knights), or Flask of the Shattered Sun if you have too much Haste.
+- Potion – [Potion of Recklessness](https://www.wowhead.com/item=241288/potion-of-recklessness). Mana potions in combat aren't recommended.
+- Health potion – [Concentrated Silvermoon Health Potion](https://www.wowhead.com/item=271884/concentrated-silvermoon-health-potion)
+- Weapon oil – [Thalassian Phoenix Oil](https://www.wowhead.com/item=243734/thalassian-phoenix-oil)
+- Food – [Hearty Harandar Celebration](https://www.wowhead.com/item=266996/hearty-harandar-celebration), or [Hearty Royal Roast](https://www.wowhead.com/item=242747/hearty-royal-roast) on your own.
+- Mana water – any of the Cooking teas (Argentleaf, Sanguithorn, Azeroot, Mana Lily or Tranquility Bloom). Buy whichever is cheapest.
 
 #### Racials
 
-Each character race is within a small margin of power for throughput. However, it should be noted that the Blood Elf active racial ability, [Arcane Torrent](https://www.wowhead.com/spell=28730/arcane-torrent), is very useful as both an offensive dispel, as well as a mana recovery tool, especially with its quick cooldown. Its mana adds up over the duration of a fight.
+Racials make only a small difference, so pick the race you like. If you want to min-max:
+
+- **Night Elf:** [Shadowmeld](https://www.wowhead.com/spell=58984/shadowmeld) can drop certain Mythic+ mechanics, and [Touch of Elune](https://www.wowhead.com/spell=154748/touch-of-elune) gives Haste inside instances.
+- **Dwarf / Dark Iron Dwarf:** [Stoneform](https://www.wowhead.com/spell=20594/stoneform) and [Fireblood](https://www.wowhead.com/spell=265221/fireblood) remove bleeds. Stoneform's damage reduction makes Dwarf popular for high keys.
+- **Mag'har Orc:** [Ancestral Call](https://www.wowhead.com/spell=274738/ancestral-call) now lines up with [Invoke Yu'lon, the Jade Serpent](https://www.wowhead.com/spell=322118/invoke-yulon-the-jade-serpent) for extra Haste in raid.
 
 #### Professions
 
-Professions have no bearing on your ability to perform your role. **Pick whatever will make your playing time easier and more enjoyable.**
+Professions have little effect on your healing. **Pick whatever makes your play time easier and more enjoyable.** Leatherworking can craft armor close to best-in-slot, and Alchemy or Enchanting save you trips to the Auction House.
 
 #### WoWAnalyzer
 
-[https://wowanalyzer.com/](https://wowanalyzer.com/ "https://wowanalyzer.com/") Automated Log Review, maintained and updated for Dragonflight!
+[WoWAnalyzer](https://wowanalyzer.com/) reviews your logs automatically.
 
-## WeakAuras
+## Addons and UI
 
-WeakAuras are ways to show things on your screen in a customized and personalized way. The best WeakAuras are the ones that you set up for yourself specific to your style and needs. However, many people have already made ones for themselves to share, so check them out and use them as bases to customize your own.
+Midnight limits what addons can do and builds much more into the default interface, including the Cooldown Manager. Set that up first, then add only what you miss.
 
-[Wago.io](https://wago.io/weakauras/classes/monk/mistweaver)
-
-No WeakAuras are “required” but some are very useful:
-
-- [Essence Font Range Tracker](https://wago.io/bqOGiflS4)
-- [Refreshing Jade Wind Range Tracker](https://wago.io/py1xkkmxu)
-- [Mana Tea Time Remaining (with GCD Tracker)](https://wago.io/m-2hidgNI)
-- [Jade Serpent Statue Uptime](https://wago.io/1sU0XvEqp)
-- [Renewing Mist Tracker (circle)](https://wago.io/Z419oDiIM)/[Renewing Mist Tracker (Bar)](https://wago.io/zjziMZElA)/[Renewing Mist Tracker (Bar, but fancy looking)](https://wago.io/peOrk_Xja)
-- [Vivacious Vivification (Instant Vivify)](https://wago.io/3f_A10xyF)
-
-For full WA Packs for MW, please check out [Wago.io](https://wago.io/). Some highlighted ones are listed below:
-
-- Onyon's - [https://wago.io/4IdYy8LtF](https://wago.io/4IdYy8LtF "https://wago.io/4IdYy8LtF")
-- Mymiro's - [https://wago.io/NeCHHGcHi](https://wago.io/NeCHHGcHi "https://wago.io/NeCHHGcHi")
-- Afenar's - [https://wago.io/Afenar_Monk](https://wago.io/Afenar_Monk "https://wago.io/Afenar_Monk")
-- Luxthos' - [https://wago.io/LuxthosMonkDragonflight](https://wago.io/LuxthosMonkDragonflight "https://wago.io/LuxthosMonkDragonflight")
-- NotUI - [https://wago.io/hD1c8fIif](https://wago.io/hD1c8fIif "https://wago.io/hD1c8fIif")
+- **Cooldown Manager and full UI imports:** Wowhead's [Mistweaver UI & Macros page](https://www.wowhead.com/guide/classes/monk/mistweaver/addons-macro-ui-imports) has ready-made Mistweaver layouts.
+- **Clique** for click-casting, and **Grid2** for lighter, more flexible raid frames.
+- **Better Cooldown Manager** to customise the Cooldown Manager.
+- **Plater** for nameplates.
+- **Boss mods and meters:** BigWigs with LittleWigs, or Deadly Boss Mods, plus Details.
 
 ## Macros
 
 **Mouseover Macro Example:**
 
 ```
-#showtooltip /cast [@mouseover,nodead,help] [] Vivify
+#showtooltip
+/cast [@mouseover,nodead,help] [] Vivify
+```
+
+**Detox on Mouseover:**
+
+```
+#showtooltip Detox
+/cast [@mouseover,help,nodead] Detox; Detox
 ```
 
 **Talent Swapping Macro Example (Uses Revival / Restoral):**
@@ -266,44 +402,16 @@ For full WA Packs for MW, please check out [Wago.io](https://wago.io/). Some hig
 /cast [known:Revival] Revival; [known:Restoral] Restoral
 ```
 
-If you don't use the english client, you will have to use the spell id for the [known:] conditional, like this:
+If you don't use the English client, use the spell ID in the [known:] conditional, like this:
 
 ```
 #showtooltip [known:325197]Invoke Chi-Ji, the Red Crane; [known:322118]Invoke Yu'lon, the Jade Serpent
 /cast [known:325197]Invoke Chi-Ji, the Red Crane; [known:322118]Invoke Yu'lon, the Jade Serpent
 ```
 
-**Zen Pulse Macro**
-
-```
-#showtooltip Zen Pulse
-/cleartarget
-/cast [@mouseover, exists] [] Zen Pulse
-/targetlasttarget
-```
-
-**Stopcasting Macro for [Rising Mist](https://bfa.wowhead.com/spell=274909/rising-mist)**
-
-```
-#showtooltip
-/stopmacro [channeling: Essence Font]
-/cast Rising Sun Kick
-```
-
-This macro allows you to cast [Rising Sun Kick](https://bfa.wowhead.com/spell=107428/rising-sun-kick) when you want, GCDs permitting, except when you’re channeling [Essence Font](https://bfa.wowhead.com/spell=191837/essence-font).
-
 ## Changelog
 
-- Mar 22, 2023 - Mostly updated for Patch 10.0.7 (Didn't take me THAT long this time!)
-- Feb 9, 2023 - Mostly updated for Patch 10.0.5 (Yep, took me that long. Thank you Raszageth!)
+- Nov 3, 2026 - Rewritten for Midnight Patch 12.1.5 (Season 2)
+- Mar 22, 2023 - Mostly updated for Patch 10.0.7
+- Feb 9, 2023 - Mostly updated for Patch 10.0.5
 - Jan 1, 2023 - New Year, New Me: This Guide was taken over by Mymiro and updated for Dragonflight
-
-##### Further Reading
-
-[**Soothing Mist**](/tww/mistweaver/pve-guide/)
-
-[**Thunder Focus Tea**](/tww/mistweaver/pve-guide/)
-
-[**Renewing Mist**](/tww/mistweaver/pve-guide/)
-
-[**Celestial**](/2020/12/05/how-to-train-your-celestial-yulon-and-chi-ji-edition/)
