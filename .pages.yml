@@ -44,6 +44,7 @@ components:
       - seiryoku
       - shrike
       - sinzhu
+      - swirl
       - syrupsss
       - talby
       - total
@@ -521,22 +522,20 @@ content:
         description: Optional. Shown between the heading and the tabs.
         options: *id001
       - name: raid_sheilun
-        label: 'Tab: Standard Raid Talents (Sheilun''s Gift)'
+        label: 'Tab: Raid'
         type: rich-text
-        description: Everything shown when a reader clicks the "Standard Raid Talents (Sheilun's Gift)" tab. Paste talent
-          import strings exactly as they are.
-        options: *id001
-      - name: raid_upwelling
-        label: 'Tab: Standard Raid Talents (Upwelling)'
-        type: rich-text
-        description: Everything shown when a reader clicks the "Standard Raid Talents (Upwelling)" tab. Paste talent import
-          strings exactly as they are.
+        description: Everything shown when a reader clicks the "Raid" tab. Paste talent import strings exactly as they are.
         options: *id001
       - name: mythicplus
-        label: 'Tab: M+ Default'
+        label: 'Tab: Mythic+'
         type: rich-text
-        description: Everything shown when a reader clicks the "M+ Default" tab. Paste talent import strings exactly as they
+        description: Everything shown when a reader clicks the "Mythic+" tab. Paste talent import strings exactly as they
           are.
+        options: *id001
+      - name: raid_upwelling
+        label: 'Tab: Delves'
+        type: rich-text
+        description: Everything shown when a reader clicks the "Delves" tab. Paste talent import strings exactly as they are.
         options: *id001
     - name: priority
       label: Ability Priority
