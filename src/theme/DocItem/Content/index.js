@@ -4,17 +4,23 @@ import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import GuideTabs from '@site/src/components/GuideTabs';
 import SearchIndexMeta, {specsFrom} from '@site/src/components/SearchIndexMeta';
 import guideTypes from '@site/src/guideTypes';
+import {GuideByline} from '@site/src/components/GuideAuthors';
 
 // Guides with a `guide_type` get their tab groups rendered above the Markdown body.
 // Every listed guide is marked for site search; unlisted pages such as /writers/ are not.
 export default function ContentWrapper(props) {
   const {frontMatter, metadata} = useDoc();
   const spec = guideTypes[frontMatter.guide_type]?.spec;
+  // Pages that list authors get a byline under the title (GuideAuthors).
   const body = !frontMatter.guide_type ? (
-    <Content {...props} />
+    <Content {...props}>
+      <GuideByline />
+      {props.children}
+    </Content>
   ) : (
     <div className={spec ? `spec-${spec}` : undefined}>
       <Content {...props}>
+        <GuideByline />
         <GuideTabs frontMatter={frontMatter} />
         {props.children}
       </Content>
