@@ -14,7 +14,7 @@ export default function Hub() {
         'New articles are written about any changes to Windwalkers on Live or the PTR, many abilities that require clarification, and pretty much everything else that has to do with Windwalkers.',
         'Not sure where to start? Check below.',
       ]}
-      links={[{label: 'PvE Guide', to: '/tww/windwalker/pve-guide/'}, {label: 'Recent Articles', to: '/tag/windwalker/'}]}
+      links={[{label: 'PvE Guide', to: '/windwalker/pve-guide/'}, {label: 'Recent Articles', to: '/tag/windwalker/'}]}
     />
   );
 }

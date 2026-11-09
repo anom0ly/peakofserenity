@@ -14,7 +14,7 @@ export default function BlogTagsPostsPage({tag, items, sidebar, listMetadata}) {
   const defaultTitle = useBlogTagsPostsPageTitle(tag);
   const spec = SPECS.find((s) => tag.permalink.replace(/\/$/, '') === `/tag/${s.tag}`);
   const title = spec ? `${spec.label} Articles` : defaultTitle;
-  const hub = spec && spec.tag !== 'general' ? `/tww/${spec.tag}/` : null;
+  const hub = spec && spec.tag !== 'general' ? `/${spec.tag}/` : null;
   return (
     <HtmlClassNameProvider className={clsx(ThemeClassNames.wrapper.blogPages, ThemeClassNames.page.blogTagPostListPage)}>
       <PageMetadata title={title} description={spec ? spec.intro : tag.description} />

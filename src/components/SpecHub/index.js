@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-// Spec landing page (/tww/windwalker/ etc.): Jari banner plus big buttons, like the old Divi hub pages.
+// Spec landing page (/windwalker/ etc.): Jari banner plus big buttons, like the old Divi hub pages.
 export default function SpecHub({title, spec, banner, intro = [], links}) {
   return (
     <Layout title={title}>

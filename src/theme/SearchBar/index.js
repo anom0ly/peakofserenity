@@ -188,8 +188,8 @@ function Search() {
   } else if (status === 'ready' && !results.length) {
     message = (
       <p className={styles.empty}>
-        No results for “{query}”. Try a spell name, or browse the <Link to="/tww/windwalker/">Windwalker</Link>,{' '}
-        <Link to="/tww/brewmaster/">Brewmaster</Link> or <Link to="/tww/mistweaver/">Mistweaver</Link> pages.
+        No results for “{query}”. Try a spell name, or browse the <Link to="/windwalker/">Windwalker</Link>,{' '}
+        <Link to="/brewmaster/">Brewmaster</Link> or <Link to="/mistweaver/">Mistweaver</Link> pages.
       </p>
     );
   }

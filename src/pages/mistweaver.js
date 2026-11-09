@@ -14,7 +14,7 @@ export default function Hub() {
         'New articles are written about any changes to Mistweavers on Live or the PTR, many abilities that require clarification, and pretty much everything else that has to do with Mistweavers.',
         'Not sure where to start? Check below.',
       ]}
-      links={[{label: 'PvE Guide', to: '/tww/mistweaver/pve-guide/'}, {label: 'Recent Articles', to: '/tag/mistweaver/'}]}
+      links={[{label: 'PvE Guide', to: '/mistweaver/pve-guide/'}, {label: 'Recent Articles', to: '/tag/mistweaver/'}]}
     />
   );
 }

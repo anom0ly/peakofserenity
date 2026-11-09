@@ -18,7 +18,7 @@ export default function SearchIndexMeta({title, type, date, specs = []}) {
 
 export const SPEC_NAMES = ['Brewmaster', 'Mistweaver', 'Windwalker'];
 
-// Spec names found in a guide's address or title, e.g. "/tww/windwalker/pve-guide/" gives Windwalker.
+// Spec names found in a guide's address or title, e.g. "/windwalker/pve-guide/" gives Windwalker.
 export function specsFrom(...sources) {
   const text = sources.join(' ').toLowerCase();
   return SPEC_NAMES.filter((spec) => text.includes(spec.toLowerCase()));

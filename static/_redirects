@@ -4,21 +4,23 @@
 # Hand-written rules go here; tools/wp2mdx.py --all rewrites everything below the marker.
 
 # Retired Mistweaver guides (decision 2026-10-17) -> current Mistweaver guide
-/tww/mistweaver/pve-guide-shadowlands/ /tww/mistweaver/pve-guide/ 301
-/tww/mistweaver/pve-guide/advanced-rising-mist/ /tww/mistweaver/pve-guide/ 301
-/tww/mistweaver/pve-guide/advanced-soothing-mist/ /tww/mistweaver/pve-guide/ 301
-/tww/mistweaver/pve-guide/advanced-thunder-focus-tea/ /tww/mistweaver/pve-guide/ 301
-/tww/mistweaver/pve-guide/advanced-renewing-mist/ /tww/mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide-shadowlands/ /mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-rising-mist/ /mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-soothing-mist/ /mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-thunder-focus-tea/ /mistweaver/pve-guide/ 301
+/tww/mistweaver/pve-guide/advanced-renewing-mist/ /mistweaver/pve-guide/ 301
 
 # WordPress pages with no static equivalent
 /bfa/authors/ /authors/ 301
 /login/ / 301
 /tww/ / 301
+# Guides and spec hubs dropped the /tww/ prefix (2026-11-09), e.g. /tww/windwalker/pve-guide/ -> /windwalker/pve-guide/
+/tww/* /:splat 301
 /mop/ /mop/windwalker/ 301
 
 # Dead links from old posts -> nearest current page (decision 2026-10-26)
-/how-to-simcraft/ /tww/windwalker/pve-guide/sim101/ 301
-/2017/06/24/post-ama-discussion-round-2/ /tww/windwalker/ 301
+/how-to-simcraft/ /windwalker/pve-guide/sim101/ 301
+/2017/06/24/post-ama-discussion-round-2/ /windwalker/ 301
 
 # Feeds: the news feed, and the old podcast feed Apple Podcasts and other apps subscribed to
 /feed/ /rss.xml 301
@@ -161,71 +163,71 @@
 /series/* /podcast/archive/ 301
 
 # Links in old content to /df/, /sl/, /bfa/ and unprefixed guide paths
-/bfa/brewmaster/azerite/ /tww/brewmaster/ 301
-/bfa/brewmaster/bfa-tank-trinket-guide/ /tww/brewmaster/ 301
-/bfa/brewmaster/dungeons/motherlode/ /tww/brewmaster/ 301
-/bfa/brewmaster/essences/ /tww/brewmaster/ 301
-/bfa/brewmaster/stagger-strength/ /tww/brewmaster/ 301
-/bfa/mistweaver/talents/ /tww/mistweaver/ 301
-/bfa/windwalker/guide/ /tww/windwalker/ 301
-/bfa/windwalker/guide/advanced/ /tww/windwalker/ 301
-/brewmaster/brewmaster-pve-changes-in-battle-for-azeroth/ /tww/brewmaster/ 301
-/df/windwalker/pve-guide/ /tww/windwalker/pve-guide/ 301
-/df/windwalker/pve-guide/log-analysis/ /tww/windwalker/pve-guide/log-analysis/ 301
-/df/windwalker/pve-guide/log-analysis/mythicplus/ /tww/windwalker/pve-guide/log-analysis/mythicplus/ 301
-/df/windwalker/pve-guide/log-analysis/raid/ /tww/windwalker/pve-guide/log-analysis/raid/ 301
-/df/windwalker/pve-guide/log-analysis/tools/ /tww/windwalker/pve-guide/log-analysis/tools/ 301
-/df/windwalker/pve-guide/references/ /tww/windwalker/pve-guide/references/ 301
-/mistweaver/analysing-your-healing-logs/ /tww/mistweaver/ 301
-/mistweaver/guide/healing/ /tww/mistweaver/ 301
-/mistweaver/guide/legendaries/ /tww/mistweaver/ 301
-/sl/brewmaster/castle-nathria/ /tww/brewmaster/ 301
-/sl/brewmaster/dungeons/ /tww/brewmaster/ 301
-/sl/brewmaster/pve-guide/ /tww/brewmaster/pve-guide/ 301
-/sl/brewmaster/pve-guide/advanced-conduits/ /tww/brewmaster/pve-guide/ 301
-/sl/brewmaster/pve-guide/advanced-kyrian/ /tww/brewmaster/pve-guide/ 301
-/sl/brewmaster/pve-guide/advanced-legendaries/ /tww/brewmaster/pve-guide/ 301
-/sl/brewmaster/pve-guide/advanced-necrolord/ /tww/brewmaster/pve-guide/ 301
-/sl/brewmaster/pve-guide/advanced-night-fae/ /tww/brewmaster/pve-guide/ 301
-/sl/brewmaster/pve-guide/advanced-talents/ /tww/brewmaster/pve-guide/ 301
-/sl/brewmaster/pve-guide/advanced-venthyr/ /tww/brewmaster/pve-guide/ 301
-/sl/mistweaver/pve-guide/ /tww/mistweaver/pve-guide/ 301
-/sl/mistweaver/pve-guide/advanced-conduits/ /tww/mistweaver/pve-guide/ 301
-/sl/mistweaver/pve-guide/advanced-renewing-mist/ /tww/mistweaver/pve-guide/ 301
-/sl/mistweaver/pve-guide/advanced-soothing-mist/ /tww/mistweaver/pve-guide/ 301
-/sl/mistweaver/pve-guide/advanced-thunder-focus-tea/ /tww/mistweaver/pve-guide/ 301
-/sl/mistweaver/pve-guide/indepth-mistweaver-talents/ /tww/mistweaver/pve-guide/ 301
-/sl/windwalker/changes/ /tww/windwalker/ 301
-/sl/windwalker/pve-guide/ /tww/windwalker/pve-guide/ 301
-/sl/windwalker/pve-guide/advanced-tricks/ /tww/windwalker/pve-guide/advanced-tricks/ 301
-/windwalker/encounters/antorus/ /tww/windwalker/ 301
-/windwalker/encounters/tomb-of-sargeras/ /tww/windwalker/ 301
-/windwalker/encounters/tomb-of-sargeras/demonic-inquisition/ /tww/windwalker/ 301
-/windwalker/encounters/tomb-of-sargeras/goroth/ /tww/windwalker/ 301
-/windwalker/encounters/tomb-of-sargeras/harjatan/ /tww/windwalker/ 301
-/windwalker/guide/acronyms/ /tww/windwalker/ 301
-/windwalker/guide/pve/ /tww/windwalker/ 301
-/windwalker/guide/pve/artifact/ /tww/windwalker/ 301
-/windwalker/guide/pve/gear/ /tww/windwalker/ 301
-/windwalker/guide/pve/legendaries/ /tww/windwalker/ 301
-/windwalker/guide/pve/rotations/ /tww/windwalker/ 301
-/windwalker/guide/pve/sim-compendium/ /tww/windwalker/ 301
-/windwalker/guide/pve/stats-gems-and-enchants/ /tww/windwalker/ 301
-/windwalker/guide/pve/talents/ /tww/windwalker/ 301
-/windwalker/guide/pve/trinkets/ /tww/windwalker/ 301
-/windwalker/mythic-plus/ /tww/windwalker/ 301
+/bfa/brewmaster/azerite/ /brewmaster/ 301
+/bfa/brewmaster/bfa-tank-trinket-guide/ /brewmaster/ 301
+/bfa/brewmaster/dungeons/motherlode/ /brewmaster/ 301
+/bfa/brewmaster/essences/ /brewmaster/ 301
+/bfa/brewmaster/stagger-strength/ /brewmaster/ 301
+/bfa/mistweaver/talents/ /mistweaver/ 301
+/bfa/windwalker/guide/ /windwalker/ 301
+/bfa/windwalker/guide/advanced/ /windwalker/ 301
+/brewmaster/brewmaster-pve-changes-in-battle-for-azeroth/ /brewmaster/ 301
+/df/windwalker/pve-guide/ /windwalker/pve-guide/ 301
+/df/windwalker/pve-guide/log-analysis/ /windwalker/pve-guide/log-analysis/ 301
+/df/windwalker/pve-guide/log-analysis/mythicplus/ /windwalker/pve-guide/log-analysis/mythicplus/ 301
+/df/windwalker/pve-guide/log-analysis/raid/ /windwalker/pve-guide/log-analysis/raid/ 301
+/df/windwalker/pve-guide/log-analysis/tools/ /windwalker/pve-guide/log-analysis/tools/ 301
+/df/windwalker/pve-guide/references/ /windwalker/pve-guide/references/ 301
+/mistweaver/analysing-your-healing-logs/ /mistweaver/ 301
+/mistweaver/guide/healing/ /mistweaver/ 301
+/mistweaver/guide/legendaries/ /mistweaver/ 301
+/sl/brewmaster/castle-nathria/ /brewmaster/ 301
+/sl/brewmaster/dungeons/ /brewmaster/ 301
+/sl/brewmaster/pve-guide/ /brewmaster/pve-guide/ 301
+/sl/brewmaster/pve-guide/advanced-conduits/ /brewmaster/pve-guide/ 301
+/sl/brewmaster/pve-guide/advanced-kyrian/ /brewmaster/pve-guide/ 301
+/sl/brewmaster/pve-guide/advanced-legendaries/ /brewmaster/pve-guide/ 301
+/sl/brewmaster/pve-guide/advanced-necrolord/ /brewmaster/pve-guide/ 301
+/sl/brewmaster/pve-guide/advanced-night-fae/ /brewmaster/pve-guide/ 301
+/sl/brewmaster/pve-guide/advanced-talents/ /brewmaster/pve-guide/ 301
+/sl/brewmaster/pve-guide/advanced-venthyr/ /brewmaster/pve-guide/ 301
+/sl/mistweaver/pve-guide/ /mistweaver/pve-guide/ 301
+/sl/mistweaver/pve-guide/advanced-conduits/ /mistweaver/pve-guide/ 301
+/sl/mistweaver/pve-guide/advanced-renewing-mist/ /mistweaver/pve-guide/ 301
+/sl/mistweaver/pve-guide/advanced-soothing-mist/ /mistweaver/pve-guide/ 301
+/sl/mistweaver/pve-guide/advanced-thunder-focus-tea/ /mistweaver/pve-guide/ 301
+/sl/mistweaver/pve-guide/indepth-mistweaver-talents/ /mistweaver/pve-guide/ 301
+/sl/windwalker/changes/ /windwalker/ 301
+/sl/windwalker/pve-guide/ /windwalker/pve-guide/ 301
+/sl/windwalker/pve-guide/advanced-tricks/ /windwalker/pve-guide/advanced-tricks/ 301
+/windwalker/encounters/antorus/ /windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/ /windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/demonic-inquisition/ /windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/goroth/ /windwalker/ 301
+/windwalker/encounters/tomb-of-sargeras/harjatan/ /windwalker/ 301
+/windwalker/guide/acronyms/ /windwalker/ 301
+/windwalker/guide/pve/ /windwalker/ 301
+/windwalker/guide/pve/artifact/ /windwalker/ 301
+/windwalker/guide/pve/gear/ /windwalker/ 301
+/windwalker/guide/pve/legendaries/ /windwalker/ 301
+/windwalker/guide/pve/rotations/ /windwalker/ 301
+/windwalker/guide/pve/sim-compendium/ /windwalker/ 301
+/windwalker/guide/pve/stats-gems-and-enchants/ /windwalker/ 301
+/windwalker/guide/pve/talents/ /windwalker/ 301
+/windwalker/guide/pve/trinkets/ /windwalker/ 301
+/windwalker/mythic-plus/ /windwalker/ 301
 
 # Anything else under the old expansion prefixes -> that spec's hub, else the homepage
-/df/brewmaster/* /tww/brewmaster/ 301
-/df/mistweaver/* /tww/mistweaver/ 301
-/df/windwalker/* /tww/windwalker/ 301
+/df/brewmaster/* /brewmaster/ 301
+/df/mistweaver/* /mistweaver/ 301
+/df/windwalker/* /windwalker/ 301
 /df/* / 301
-/sl/brewmaster/* /tww/brewmaster/ 301
-/sl/mistweaver/* /tww/mistweaver/ 301
-/sl/windwalker/* /tww/windwalker/ 301
+/sl/brewmaster/* /brewmaster/ 301
+/sl/mistweaver/* /mistweaver/ 301
+/sl/windwalker/* /windwalker/ 301
 /sl/* / 301
-/bfa/brewmaster/* /tww/brewmaster/ 301
-/bfa/mistweaver/* /tww/mistweaver/ 301
-/bfa/windwalker/* /tww/windwalker/ 301
+/bfa/brewmaster/* /brewmaster/ 301
+/bfa/mistweaver/* /mistweaver/ 301
+/bfa/windwalker/* /windwalker/ 301
 /bfa/* / 301
 
