@@ -39,16 +39,16 @@ const fullNavbar = [
   // Mirrors the live "TWW Main Menu".
   {
     label: 'Brewmaster',
-    to: '/tww/brewmaster/',
+    to: '/brewmaster/',
     items: [
-      {label: 'PvE Quick Guide', to: '/tww/brewmaster/pve-guide/'},
-      {label: 'Acronyms', to: '/tww/brewmaster/acronyms/'},
+      {label: 'PvE Quick Guide', to: '/brewmaster/pve-guide/'},
+      {label: 'Acronyms', to: '/brewmaster/acronyms/'},
       {label: 'Articles/News', to: '/tag/brewmaster/'},
     ],
   },
   {
     label: 'Mistweaver',
-    to: '/tww/mistweaver/',
+    to: '/mistweaver/',
     items: [
       {label: 'Questionably Epic', href: 'https://questionablyepic.com/mistweaver-monk/11.1-FAQ/'},
       {label: 'Wowhead', href: 'https://www.wowhead.com/mistweaver-monk-guide'},
@@ -58,18 +58,18 @@ const fullNavbar = [
   },
   {
     label: 'Windwalker',
-    to: '/tww/windwalker/',
+    to: '/windwalker/',
     items: [
       {label: 'Articles/News', to: '/tag/windwalker/'},
-      {label: 'Acronyms', to: '/tww/windwalker/acronyms/'},
-      {label: 'Advanced Tricks', to: '/tww/windwalker/pve-guide/advanced-tricks/'},
-      {label: 'Class Tree In-Depth', to: '/tww/windwalker/pve-guide/class-tree-in-depth/'},
+      {label: 'Acronyms', to: '/windwalker/acronyms/'},
+      {label: 'Advanced Tricks', to: '/windwalker/pve-guide/advanced-tricks/'},
+      {label: 'Class Tree In-Depth', to: '/windwalker/pve-guide/class-tree-in-depth/'},
       {label: 'Storm, Earth, and Fire', to: '/2021/08/01/storm-earth-and-fire-past-present-and-future/'},
       {label: 'Cooldown Management', to: '/2021/07/31/windwalker-approaching-cooldowns-and-desyncs/'},
       {label: 'Target/Spell Caps', to: '/2025/02/23/how-capped-am-i/'},
-      {label: 'Retail PvE Guide', to: '/tww/windwalker/pve-guide/'},
-      {label: 'Log Analysis', to: '/tww/windwalker/pve-guide/log-analysis/'},
-      {label: 'References', to: '/tww/windwalker/pve-guide/references/'},
+      {label: 'Retail PvE Guide', to: '/windwalker/pve-guide/'},
+      {label: 'Log Analysis', to: '/windwalker/pve-guide/log-analysis/'},
+      {label: 'References', to: '/windwalker/pve-guide/references/'},
       {label: 'Classic PvE Guide', to: '/mop/windwalker/pve-guide/'},
     ],
   },
@@ -151,11 +151,11 @@ const config = {
           ...(migrationMode && {include: migrationGuides}),
         },
         blog: false,
-        // In migration mode the spec hub pages (/tww/<spec>/, /mop/windwalker/) are left out too.
+        // In migration mode the spec hub pages (/<spec>/, /mop/windwalker/) are left out too.
         ...(migrationMode && {
           pages: {
             // The first four are Docusaurus's default excludes.
-            exclude: ['**/_*.{js,jsx,ts,tsx,md,mdx}', '**/_*/**', '**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**', 'tww/**', 'mop/**'],
+            exclude: ['**/_*.{js,jsx,ts,tsx,md,mdx}', '**/_*/**', '**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**', 'brewmaster.js', 'mistweaver.js', 'windwalker.js', 'mop/**'],
           },
         }),
         theme: {customCss: require.resolve('./src/css/custom.css')},

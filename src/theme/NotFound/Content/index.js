@@ -21,9 +21,9 @@ export default function NotFoundContentWrapper(props) {
             offline until we finish. Our spec guides are up now:
           </p>
           <ul>
-            <li><Link to="/tww/brewmaster/pve-guide/">Brewmaster Tank Guide</Link></li>
-            <li><Link to="/tww/mistweaver/pve-guide/">Mistweaver PvE Quick Guide</Link></li>
-            <li><Link to="/tww/windwalker/pve-guide/">Windwalker PvE Guide</Link></li>
+            <li><Link to="/brewmaster/pve-guide/">Brewmaster Tank Guide</Link></li>
+            <li><Link to="/mistweaver/pve-guide/">Mistweaver PvE Quick Guide</Link></li>
+            <li><Link to="/windwalker/pve-guide/">Windwalker PvE Guide</Link></li>
           </ul>
           <p>
             Looking for something specific? Ask on <Link href="https://discord.gg/peakofserenity">Discord</Link>.

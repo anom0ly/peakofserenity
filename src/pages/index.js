@@ -7,16 +7,16 @@ import styles from './index.module.css';
 
 // Tiles and order match the live homepage (Brewmaster, Mistweaver, Windwalker).
 const tiles = [
-  {spec: 'Brewmaster', img: '/img/uploads/2018/02/6.png', to: '/tww/brewmaster/'},
-  {spec: 'Mistweaver', img: '/img/uploads/2018/02/5.png', to: '/tww/mistweaver/pve-guide/'},
-  {spec: 'Windwalker', img: '/img/uploads/2018/02/WW.png', to: '/tww/windwalker/'},
+  {spec: 'Brewmaster', img: '/img/uploads/2018/02/6.png', to: '/brewmaster/'},
+  {spec: 'Mistweaver', img: '/img/uploads/2018/02/5.png', to: '/mistweaver/pve-guide/'},
+  {spec: 'Windwalker', img: '/img/uploads/2018/02/WW.png', to: '/windwalker/'},
 ];
 
 // Migration mode (see docusaurus.config.js): the notice plus the three spec guides.
 const guides = [
-  {title: 'Brewmaster Tank Guide', note: 'Midnight Season 2 (12.1.0)', img: '/img/uploads/2018/02/6.png', to: '/tww/brewmaster/pve-guide/'},
-  {title: 'Mistweaver PvE Quick Guide', note: 'Healing in raids and Mythic+', img: '/img/uploads/2018/02/5.png', to: '/tww/mistweaver/pve-guide/'},
-  {title: 'Windwalker PvE Guide', note: 'Damage in raids and Mythic+', img: '/img/uploads/2018/02/WW.png', to: '/tww/windwalker/pve-guide/'},
+  {title: 'Brewmaster Tank Guide', note: 'Midnight Season 2 (12.1.0)', img: '/img/uploads/2018/02/6.png', to: '/brewmaster/pve-guide/'},
+  {title: 'Mistweaver PvE Quick Guide', note: 'Healing in raids and Mythic+', img: '/img/uploads/2018/02/5.png', to: '/mistweaver/pve-guide/'},
+  {title: 'Windwalker PvE Guide', note: 'Damage in raids and Mythic+', img: '/img/uploads/2018/02/WW.png', to: '/windwalker/pve-guide/'},
 ];
 
 function SupportButtons({news}) {

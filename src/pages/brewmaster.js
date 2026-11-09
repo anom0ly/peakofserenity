@@ -14,7 +14,7 @@ export default function Hub() {
         'New articles are written about any changes to Brewmaster on Live or the PTR, many abilities that require clarification, and pretty much everything else that has to do with Brewmaster.',
         'Not sure where to start? Check below.',
       ]}
-      links={[{label: 'PvE Guide', to: '/tww/brewmaster/pve-guide/'}, {label: 'Recent Articles', to: '/tag/brewmaster/'}]}
+      links={[{label: 'PvE Guide', to: '/brewmaster/pve-guide/'}, {label: 'Recent Articles', to: '/tag/brewmaster/'}]}
     />
   );
 }
