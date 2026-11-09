@@ -215,12 +215,12 @@
         "wp_tabs": "Ability Priority Tabs",
         "tabs": [
           [
-            "dungeon",
-            "Dungeon Healing"
-          ],
-          [
             "raid",
             "Raid Healing"
+          ],
+          [
+            "dungeon",
+            "Dungeon Healing"
           ]
         ]
       }

@@ -550,17 +550,17 @@ content:
         type: rich-text
         description: Optional. Shown between the heading and the tabs.
         options: *id001
-      - name: dungeon
-        label: 'Tab: Dungeon Healing'
-        type: rich-text
-        description: Everything shown when a reader clicks the "Dungeon Healing" tab. Paste talent import strings exactly
-          as they are.
-        options: *id001
       - name: raid
         label: 'Tab: Raid Healing'
         type: rich-text
         description: Everything shown when a reader clicks the "Raid Healing" tab. Paste talent import strings exactly as
           they are.
+        options: *id001
+      - name: dungeon
+        label: 'Tab: Dungeon Healing'
+        type: rich-text
+        description: Everything shown when a reader clicks the "Dungeon Healing" tab. Paste talent import strings exactly
+          as they are.
         options: *id001
     - name: body
       label: Rest of the guide
